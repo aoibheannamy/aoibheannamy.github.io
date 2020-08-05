@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Tyrion Visual Novel Example </title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="p5/p5.js"></script>
+    <link href="https://unpkg.com/tabulator-tables@4.6.3/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.6.3/dist/js/tabulator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.5/jspdf.plugin.autotable.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <button id="add-row">Add Blank Row to bottom</button>
+    </div>
+    <div>
+        <button id="download-csv">Download CSV</button>
+        <button id="download-json">Download JSON</button>
+        <button id="download-xlsx">Download XLSX</button>
+        <button id="download-pdf">Download PDF</button>
+        <button id="download-html">Download HTML</button>
+    </div>
+
+    <div id="example-table"></div>
+
+    <script>
+
+        //Build Tabulator
+        var table = new Tabulator("#example-table", {
+            height: "311px",
+            columns: [
+                {
+                    title: "Name of Film/TV Show", field: "name", width: 160, editor: "input", editorParams: {
+                        search: true,
+                        elementAttributes: {
+                            maxlength: "50", // sets max character length of input element to 50 chars
+                        }
+                    }
+                },
+                {// create column group
+                    title: "Character Information",
+                    columns: [
+                        { title: "Character(s)", field: "character", width: 150, editor: "input" },
+                        { title: "Actor(s)", field: "actor", width: 150, editor: "input" },
+                        { title: "Gender", field: "gender", editor: "select", editorParams: { values: { "male": "Male", "female": "Female", "unknown": "Unknown" } } },
+
+                    ],
+                },
+                {// create column group
+                    title: "Scene Information",
+                    columns: [
+                        { title: "Location", field: "location", width: 130, editor: "input", editorParams: { allowEmpty: true, showListOnEmpty: true, values: true } },
+                        { title: "Background Music/Sound Effect(s)", field: "music", width: 150, editor: "input" },
+                        { title: "Key Prop(s)", field: "props", width: 150, editor: "input" },
+                    ],
+                },
+                {// create column group
+                    title: "Plot Information",
+                    columns: [
+                        {
+                            title: "What is occuring in this scene?", field: "scene", width: 150, editor: "input", editorParams: {
+                                search: true,
+                                elementAttributes: {
+                                    maxlength: "350", // sets max character length of input element to 50 chars
+                                }
+                            }
+                        },
+                        {
+                            title: "Plot Summary", field: "plot", width: 150, editor: "input", editorParams: {
+                                search: true,
+                                elementAttributes: {
+                                    maxlength: "350", // sets max character length of input element to 50 chars
+                                }
+                            },
+                        }
+                    ],
+                },
+
+            ],
+        });
+
+        //Add row on "Add Row" button click
+        document.getElementById("add-row").addEventListener("click", function () {
+            table.addRow({});
+        });
+
+
+        //trigger download of data.csv file
+        document.getElementById("download-csv").addEventListener("click", function () {
+            table.download("csv", "scenedata.csv");
+        });
+
+        //trigger download of data.json file
+        document.getElementById("download-json").addEventListener("click", function () {
+            table.download("json", "scenedata.json");
+        });
+
+        //trigger download of data.xlsx file
+        document.getElementById("download-xlsx").addEventListener("click", function () {
+            table.download("xlsx", "scenedata.xlsx", { sheetName: "My Scene Data" });
+        });
+
+        //trigger download of data.pdf file
+        document.getElementById("download-pdf").addEventListener("click", function () {
+            table.download("pdf", "scenedata.pdf", {
+                orientation: "portrait", //set page orientation to portrait
+                title: "Scene Data", //add title to report
+            });
+        });
+
+        //trigger download of data.html file
+        document.getElementById("download-html").addEventListener("click", function () {
+            table.download("html", "scenedata.html", { style: true });
+        });
+
+        //load sample data into the table
+    //table.setData(tabledata);
+
+
+    </script>
+
+
+</body>
+
+</html>

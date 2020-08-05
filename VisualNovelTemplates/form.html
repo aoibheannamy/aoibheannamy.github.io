@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Form </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        function characterNumber(that) {
+            if (that.value == "one") {
+                document.getElementById("characterdiv1").style.display = "block";
+                document.getElementById("characterdiv2").style.display = "none";
+                document.getElementById("characterdiv3").style.display = "none";
+                document.getElementById("characterdiv4").style.display = "none";
+            }
+            if (that.value == "two") {
+                document.getElementById("characterdiv1").style.display = "block";
+                document.getElementById("characterdiv2").style.display = "block";
+                document.getElementById("characterdiv3").style.display = "none";
+                document.getElementById("characterdiv4").style.display = "none";
+            }
+            if (that.value == "three") {
+                document.getElementById("characterdiv1").style.display = "block";
+                document.getElementById("characterdiv2").style.display = "block";
+                document.getElementById("characterdiv3").style.display = "block";
+                document.getElementById("characterdiv4").style.display = "none";
+            }
+            if (that.value == "four") {
+                document.getElementById("characterdiv1").style.display = "block";
+                document.getElementById("characterdiv2").style.display = "block";
+                document.getElementById("characterdiv3").style.display = "block";
+                document.getElementById("characterdiv4").style.display = "block";
+            }
+            if (that.value == "five") {
+                document.getElementById("characterdiv1").style.display = "block";
+                document.getElementById("characterdiv2").style.display = "block";
+                document.getElementById("characterdiv3").style.display = "block";
+                document.getElementById("characterdiv4").style.display = "block";
+                document.getElementById("characterdiv5").style.display = "block";
+            }
+
+        }
+
+
+    </script>
+
+<body>
+
+
+    <!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+    <!-- You must include crowd-form so that your task submits answers to MTurk -->
+    <crowd-form answer-format="flatten-objects">
+
+        <crowd-instructions link-text="View instructions" link-type="button">
+            <short-summary>
+                <p>The video contains a scene from a film or TV show. Your job is to identify key metadata from the
+                    scene, including identifying the film/TV show, identifying characters, recording key props used etc.
+                    Fill in the form to the best of your ability.</p>
+            </short-summary>
+
+            <detailed-instructions>
+                <ul>
+
+                    <h5><u>Identify the film/TV show this scene appears in.</u></h5>
+                    <br>
+
+                    <h5><u>Character Information:</u></h5>
+
+                    <li>Identify the main characters (excluding extras) who are important to the scene.</li>
+                    <li>Identify the actor who plays the character.</li>
+                    <li>Determine the gender of the character.</li>
+                    <br>
+
+                    <h5><u>Scene Information:</u></h5>
+                    <li>Describe the location the scene is set in using keywords.</li>
+                    <li>Describe the background music: this can include the emotion is presents, e.g. calming, scary,
+                        sad etc.</li>
+                    <li>Identify any sound effects used in the scene, e.g. rain, traffic etc.</li>
+                    <li>Identify any key props in the scene, e.g. weapons in a fight scene.</li>
+                    <br>
+
+                    <h5><u>Plot Information:</u></h5>
+                    <li>Describe what happens in the scene in succinct sentences/bullet points if possible: for example,
+                        fight scene, begins with argument, ends with one character being defeated etc.</li>
+                    <li>Source the IMDB plot summary/synopsis from www.imdb.com, find the section which reflects the
+                        scene and copy and paste it into the form.</li>
+
+                </ul>
+
+            </detailed-instructions>
+
+            <positive-example>
+                <p>Looking at https://www.youtube.com/watch?v=zE7PKRjrid4&t=1s</p>
+                <p>Scene is from The Matrix(1999).</p>
+                <p>Characters are Morpheus and Neo, played by Laurence Fishburne and Keanu Reeves respectively, both
+                    characters are male. </p>
+                <p>Location is in a room with large ornate fireplace and two red leather armchairs facing each other,
+                    with a table in between.
+                </p>
+                <p>Sound effects include the sounds of a storm: with rain, thunder and lightning. The backgrund music
+                    begins halfway through the scene - it gives the sense of building up to a big moment - getting more
+                    eerie as the scene continues. The lightning gives a sense of foreboding and danger. This leads to a
+                    crescendo whe Neo reaches for the pill, and follows with a slightly eerie sound.</p>
+                <p>Key Props: the red and blue pill, along with the case they come in, the glass of water, Morpheus'
+                    glasses (reflects the scene), the armchairs facing each other.</p>
+                <p>In this scene, Morpheus introduces the idea of the Matrix to Neo, going into detail. Neo asks about
+                    what truth is being hidden and Morpheus reveals he is a slave in an invisible prison for your mind.
+                    He reveals the Matrix cannot be explained, only experienced for yourself. Morpheus offers Neo two
+                    pills, one red, the other blue. The blue makes him forget about the conversation and he goes back to
+                    normal. The red pill lets him stay and experience the Matrix for himself.
+                    Neo reaches for a pill and Morpheus reminds him he is only offering the truth. Neo takes the red
+                    pill and swallows it with a drink of water. Morpheus tells Neo to follow him.</p>
+                <p>From IMDB, the plot is: "Morpheus explains that he's been searching for Neo his entire life and asks
+                    if Neo feels like "Alice in Wonderland, falling down the rabbit hole." He explains to Neo that they
+                    exist in the Matrix, a false reality that has been constructed for humans to hide the truth. The
+                    truth is that everyone in the world is a slave, born into bondage. Morpheus holds out two pills. In
+                    his left palm is a blue pill. If Neo takes it he will wake up in his bed and "believe whatever you
+                    want to believe." But if he takes the red pill in Morpheus's right hand, then "you stay in
+                    Wonderland and I show you how deep the rabbit hole goes." Neo takes the red pill."</p>
+                <br>
+                <p>This answer fully answers each part of the form, trying to be as succinct a possible, but not missing
+                    out any of the key points.</p>
+            </positive-example>
+
+            <negative-example>
+                <p>A bad answer doesn't fill out all of the parts of the form, leaves out key information like plot
+                    posints, props etc.</p>
+
+            </negative-example>
+
+        </crowd-instructions>
+
+        <classification-target>
+            <iframe width="820" height="515" src="${video_url}" type="video/mp4" frameborder="0" allowfullscreen>
+            </iframe>
+        </classification-target>
+
+        <br>
+        <div>
+            <p>Name the film/TV show this scene appears in:</p>
+            <crowd-input name="showname" placeholder="example: Lord of the Rings" required></crowd-input>
+        </div>
+
+
+        <div>
+            <h3>Character Information</h3>
+
+            <label for="chars">Select number of characters in this scene:</label>
+            <select name="chars" id="chars" onchange="characterNumber(this)">
+                <option value="">Select:</option>
+                <option id="one" value="one">One character</option>
+                <option id="two" value="two">Two characters</option>
+                <option id="three" value="three">Three characters</option>
+                <option id="four" value="four">Four characters</option>
+                <option id="five" value="five">Five characters</option>
+            </select>
+
+
+            <div id="characterdiv1" style="display: none;">
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <label for="chars1">Character name one:</label>
+                        <crowd-input name="name1" id="name1" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars1">Which actor plays this character?</label>
+                        <crowd-input name="actor1" id="actor1" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars1">Select gender of character:</label>
+                        <select name="gender" id="gender">
+                            <option value="">Select:</option>
+                            <option id="female" value="female">Female</option>
+                            <option id="male" value="male">Male</option>
+                            <option id="unsure" value="unsure">Cannot determine from this scene</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div id="characterdiv2" style="display: none;">
+                <div class="row">
+                    <div class="col">
+                        <label for="chars2">Character name two:</label>
+                        <crowd-input name="name2" id="name2" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars2">Which actor plays this character?</label>
+                        <crowd-input name="actor2" id="actor2" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars2">Select gender of character:</label>
+                        <select name="gender" id="gender">
+                            <option value="">Select:</option>
+                            <option id="female" value="female">Female</option>
+                            <option id="male" value="male">Male</option>
+                            <option id="unsure" value="unsure">Cannot determine from this scene</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div id="characterdiv3" style="display: none;">
+                <div class="row">
+                    <div class="col">
+                        <label for="chars3">Character name three:</label>
+                        <crowd-input name="name3" id="name3" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars3">Which actor plays this character?</label>
+                        <crowd-input name="actor3" id="actor4" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars3">Select gender of character:</label>
+                        <select name="gender" id="gender">
+                            <option value="">Select:</option>
+                            <option id="female" value="female">Female</option>
+                            <option id="male" value="male">Male</option>
+                            <option id="unsure" value="unsure">Cannot determine from this scene</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div id="characterdiv4" style="display: none;">
+                <div class="row">
+                    <div class="col">
+                        <label for="chars4">Character name four:</label>
+                        <crowd-input name="name4" id="name4" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars4">Which actor plays this character?</label>
+                        <crowd-input name="actor4" id="actor4" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars4">Select gender of character:</label>
+                        <select name="gender" id="gender">
+                            <option value="">Select:</option>
+                            <option id="female" value="female">Female</option>
+                            <option id="male" value="male">Male</option>
+                            <option id="unsure" value="unsure">Cannot determine from this scene</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div id="characterdiv5" style="display: none;">
+                <div class="row">
+                    <div class="col">
+                        <label for="chars5">Character name five:</label>
+                        <crowd-input name="name5" id="name5" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars5">Which actor plays this character?</label>
+                        <crowd-input name="actor5" id="actor5" required></crowd-input>
+                    </div>
+                    <div class="col">
+                        <label for="chars5">Select gender of character:</label>
+                        <select name="gender" id="gender">
+                            <option value="">Select:</option>
+                            <option id="female" value="female">Female</option>
+                            <option id="male" value="male">Male</option>
+                            <option id="unsure" value="unsure">Cannot determine from this scene</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        <div>
+            <h3>Scene Information</h3>
+            <br>
+            <p>Describe the location of the scene using keywords:</p>
+            <crowd-text-area name="location" rows="2" required></crowd-text-area>
+            <br>
+            <p>Describe background music if there is any:</p>
+            </p>
+            <crowd-text-area name="essay" rows="2" required></crowd-text-area>
+            <br>
+
+            <p>List any important sound effects used, e.g. rain, gunshots etc.</p>
+            <div id="soundeffects">
+            </div>
+            <input type="button" name="soundeffect" id="add" value="Add Sound Effect" />
+            <br>
+            <br>
+            <p>List any important props used, e.g. weapons etc.</p>
+            <div id="props">
+            </div>
+            <input type="button" name="prop" id="addprop" value="Add Prop" />
+
+        </div>
+
+        <div>
+            <h3>Plot Information</h3>
+            <br>
+            <p>Describe what is occuring in this scene using keywords:</p>
+            <crowd-text-area name="location" rows="4" required></crowd-text-area>
+            <br>
+            <p>Search for the IMDB plot synopsis for this film/TV show and copy and paste the section which reflects
+                what occurs in this scene: </p>
+            <crowd-text-area name="location" rows="6" required></crowd-text-area>
+            <br>
+
+
+        </div>
+
+
+        <script>
+            var num = 1;
+            document.getElementById('add').addEventListener("click", addInput);
+            function addInput() {
+                var newInput = '<crowd-input type="text" name="soundeffect"></crowd-input>';
+                document.getElementById('soundeffects').innerHTML += newInput;
+                num++;
+            }
+
+            var numProp = 1;
+            document.getElementById('addprop').addEventListener("click", addInputProp);
+            function addInputProp() {
+                var newInput = '<crowd-input type="text" name="prop"></crowd-input>';
+                document.getElementById('props').innerHTML += newInput;
+                numProp++;
+            }
+
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,578 @@
+    <script>
+        let bg;
+        let img;
+        //let fontsize = 30;
+        let textWords = "x";
+
+        var myFont, fontReady = false;
+
+        function fontRead() {
+            fontReady = true;
+        }
+
+        function preload() {
+            myFont = loadFont('fonts/MontserratAlternates-Medium.otf', fontRead);
+        }
+
+        function setup() {
+            // create the canvas
+            var canvas = createCanvas(windowWidth, windowHeight);
+            // position canvas
+            canvas.position(50, 50);
+            // display as block
+            canvas.style('display', 'block');
+
+            // set background as image
+            bg = loadImage('Images/MeetingRoom.jpg');
+            // any additional images loaded here
+            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
+
+            // set font size
+            //textSize(fontsize);
+            // align text
+            //textAlign(CENTER, CENTER);
+            // define where canvas is to be placed
+            canvas.parent('sketch-holder');
+
+            // set variable for text bubble
+            if(fontReady){
+                let bbox = myFont.textBounds(textWords, 10, 20, 10);
+                fill(255);
+                stroke(0);
+                rect(bbox.x, bbox.y, bbox.w, bbox.h);
+                fill(0);
+                noStroke();
+
+                textFont(myFont);
+                textSize(6);
+                text(textWords, 10, 30);
+            }
+           
+
+        }
+
+
+
+        function draw() {
+            // set/insert background
+            background(bg);
+            // insert image
+            image(img, 0, height / 2, img.width / 2, img.height / 2);
+            // align text
+            //textAlign(CENTER);
+            // call drawWords function
+            //drawWords(width * 0.5);
+        }
+/*
+                function drawWords() {
+                    // colour of text
+                    fill(0);
+                    stroke(0);
+                    // text itself
+                    drawSpeechBubble();
+                    text(textWords, 370, 80, 200, 200);
+        
+                }
+        
+                function drawSpeechBubble() {
+                    fill(290);
+                    stroke(0);
+                    ellipse(370, 80, 200, 160);
+        
+                }
+        */
+    </script>
+
+
+better format...
+
+    <script>
+        let bg;
+        let img;
+        //let fontsize = 30;
+        let textWords = "";
+        let inputElem;
+        let myFont;
+
+
+        function preload() {
+            myFont = loadFont('fonts/MontserratAlternates-Medium.otf');
+        }
+
+        function setup() {
+            // create the canvas
+            var canvas = createCanvas(windowWidth, windowHeight);
+            // position canvas
+            canvas.position(50, 50);
+            // display as block
+            canvas.style('display', 'block');
+
+            // set background as image
+            bg = loadImage('Images/MeetingRoom.jpg');
+            // any additional images loaded here
+            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
+
+            // set font size
+            //textSize(fontsize);
+            // align text
+            //textAlign(CENTER, CENTER);
+            // define where canvas is to be placed
+            canvas.parent('sketch-holder');
+
+            textFont(myFont);
+
+        }
+
+
+
+        function draw() {
+            // set/insert background
+            background(bg);
+            // insert image
+            image(img, 0, height / 2, img.width / 2, img.height / 2);
+           // set variable for text bubble
+           textSize(16);
+            let fontSizeSmall = 16;
+            textSize(fontSizeSmall)
+            let bounding_box = myFont.textBounds(textWords,20,50,fontSizeSmall);
+            // draw bounding box
+            fill(255);
+            stroke(0);
+            rect(bounding_box.x,bounding_box.y,bounding_box.w,bounding_box.h);
+            fill(0);
+            noStroke();
+            // show text
+            text(textWords,20,50);
+
+           
+        }
+
+    </script>
+
+
+
+    function draw() {
+            // set/insert background
+            background(bg);
+            // insert image
+            image(img, 0, height / 2, img.width / 2, img.height / 2);
+            // align text
+            //textAlign(CENTER);
+            // call drawWords function
+            drawWords(width * 0.5);
+        }
+
+        function drawWords() {
+            // colour of text
+            fill(0);
+            stroke(0);
+            // text itself
+            drawSpeechBubble();
+            text(textWords, 370, 80, 200, 200);
+
+        }
+
+        function drawSpeechBubble() {
+            fill(290);
+            stroke(0);
+            ellipse(370, 80, 200, 160);
+
+        }
+
+
+// doesn't work - unitsPerEm error
+    <script>
+        let bg;
+        let img;
+        //let fontsize = 30;
+        let textWords = "";
+        let myFont;
+        let charSpeaking = "";
+
+
+        function preload() {
+            myFont = loadFont('fonts/MontserratAlternates-Medium.otf');
+        }
+
+        function setup() {
+            // create the canvas
+            var canvas = createCanvas(windowWidth, windowHeight);
+            // position canvas
+            canvas.position(50, 50);
+            // display as block
+            canvas.style('display', 'block');
+
+            // set background as image
+            bg = loadImage('Images/MeetingRoom.jpg');
+            // any additional images loaded here
+            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
+
+            // set font size
+            //textSize(fontsize);
+            // align text
+            //textAlign(CENTER, CENTER);
+            // define where canvas is to be placed
+            canvas.parent('sketch-holder');
+
+            textFont(myFont);
+            textSize(20);
+            textAlign(CENTER, CENTER);
+
+        }
+
+
+
+        function draw() {
+            // set/insert background
+            background(bg);
+            // insert image
+            image(img, 0, height / 2, img.width / 2, img.height / 2);
+            // set variable for text bubble
+            
+            text(textWords, 100, 150);
+            text(charSpeaking, 100, 100);
+            drawWords();
+
+        }
+
+        function drawWords() {
+            let bounding_box = myFont.textBounds(textWords, 100, 150, 20);
+            // draw bounding box
+            fill(255);
+            stroke(0);
+            rect(bounding_box.x, bounding_box.y, bounding_box.w, bounding_box.h);
+            fill(0);
+            noStroke();
+            // show text
+        }
+
+    </script>
+
+
+yes
+
+    <script>
+        let bg;
+        let img;
+        //let fontsize = 30;
+        let textWords = "";
+        let myFont;
+        let charSpeaking = "";
+
+
+        //function preload() {
+        //    myFont = loadFont('fonts/MontserratAlternates-Medium.otf');
+        //}
+
+        function setup() {
+            // create the canvas
+            var canvas = createCanvas(windowWidth, windowHeight);
+            // position canvas
+            canvas.position(50, 50);
+            // display as block
+            canvas.style('display', 'block');
+
+            // set background as image
+            bg = loadImage('Images/MeetingRoom.jpg');
+            // any additional images loaded here
+            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
+
+            // set font size
+            //textSize(fontsize);
+            // align text
+            //textAlign(CENTER, CENTER);
+            // define where canvas is to be placed
+            canvas.parent('sketch-holder');
+
+            //textFont(myFont);
+            //textSize(22);
+            textAlign(CENTER, CENTER);
+
+        }
+
+
+        function draw() {
+            clear();
+            // set/insert background
+            if (rowLocIndex >= 1) {
+                background(bg);
+            }
+            // insert image
+            // start blank
+            if (rowIndex >= 1) {
+                image(img, 0, height / 2, img.width / 2, img.height / 2);
+            }
+            // align text
+            //textAlign(CENTER);
+            // call drawWords function
+            drawWords(width * 0.5);
+        }
+
+        function drawWords() {
+            if (rowIndex >= 1) {
+                drawSpeechBubble();
+                fill(0);
+                stroke(0);
+                strokeWeight(2);
+                textSize(20);
+                text(textWords, 330, 80, 200, 200);
+                textSize(16);
+                fill(0);
+                stroke(0);
+                strokeWeight(1);
+                text(charSpeaking, 430, 130);
+            }
+
+
+
+        }
+
+        function drawSpeechBubble() {
+            fill(290);
+            stroke(0);
+            ellipse(430, 150, 250, 160);
+
+        }
+
+    </script>
+
+
+
+
+// tabulator
+ columns: [
+                { title: "Character", field: "numberOfCharacters", editor: "input" },
+                { title: "Gender", field: "gender", editor: "select", editorParams: { values: { "male": "Male", "female": "Female", "unknown": "Unknown" } } },
+                { title: "Build", field: "build", editor: "select", editorParams: { values: { "plump": "Plump", "stocky": "Stocky", "overweight": "Overweight", "medium": "Medium build", "athletic": "Athletic", "slender": "Slender", "slim": "Slim", "skinny": "Skinny", "buff": "Buff", "muscular": "Muscular", "wellbuilt": "Well built" } } },
+                { title: "Height", field: "height", editor: "select", editorParams: { values: { "short": "Short", "tall": "Tall", "Petite": "Petite", "average": "Average Height", "gigantic": "Gigantic" } } },
+                { title: "Race", field: "race", editor: "select", editorParams: { values: { "native": "American Indian or Alaska Native", "asian": "Asian", "black": "Black or African American", "latino": "Hispanic or Latino", "islander": "Native Hawaiian or Other Pacific Islander", "white": "White" } } },
+                { title: "Complexion", field: "complexion", editor: "select", editorParams: { values: { "light": "Light/Fair", "medium": "Medium", "olive": "Olive", "tanbrown": "Tan Brown", "black": "Black Brown/Dark" } } },
+                {
+                    title: "Agreeableness", field: "rateAgreeableness/Niceness", editor: "number", editorParams: {
+                        min: 0,
+                        max: 10,
+                    }
+                },
+                {
+                    title: "Attractiveness", field: "rateAttractiveness", editor: "number", editorParams: {
+                        min: 0,
+                        max: 10,
+                    }
+                },
+                {
+                    title: "Confidence", field: "rateConfidence", editor: "number", editorParams: {
+                        min: 0,
+                        max: 10,
+                    }
+                },
+                { title: "Eye Colour", field: "eyeColour", editor: "select", editorParams: { values: { "blue": "Blue", "brown": "Brown", "hazel": "Hazel", "grey": "Grey", "green": "Green", "black": "Black" } } },
+                { title: "Hair Colour", field: "hairColour", editor: "select", editorParams: { values: { "blonde": "Blond(e)", "brown": "Brown", "black": "Black", "red": "Red", "grey": "Grey", "white": "White" } } },
+                { title: "Hair Length", field: "hairLength", editor: "select", editorParams: { values: { "short": "Short", "med": "Medium", "long": "Long" } } },
+                { title: "Hair Style", field: "hairStyle", editor: "select", editorParams: { values: { "straight": "Straight", "curly": "Curly", "afro": "Afro", "Wavy": "Wavy", "pony": "Ponytail", "Gelled": "Gelled", "slicked": "Slicked Back" } } },
+                { title: "Attire", field: "attire", editor: "select", editorParams: { values: { "casual": "Casual", "smart": "Smart", "business": "Business", "semi": "Semi-Formal", "blacktie": "Black Tie" } } },
+                { title: "Distinctive Features", field: "distinctiveFeatures", editor: "select", editorParams: { values: { "tattoo": "Tattoos", "glasses": "Glasses", "piercing": "Piercings", "mask": "Mask", "makeup": "Dramatic Makeup" } } },
+                { title: "Facial Hair", field: "facialHair", editor: "select", editorParams: { values: { "cleanShaven": "Clean Shaven", "goatee": "Goatee", "beard": "Beard", "longBeard": "Long Beard", "moustache": "Moustache", "sideburns": "Sideburns" } } },
+                { title: "Social Class", field: "socialClass", editor: "select", editorParams: { values: { "upper": "Upper Class", "middle": "Middle Class", "working": "Working Class" } } },
+                { title: "Sexuality", field: "sexuality", editor: "select", editorParams: { values: { "hetero": "Heterosexual", "homo": "Homosexual", "bi": "Bisexual", "pan": "Pansexual", "ace": "Asexual" } } },
+
+            ],
+
+
+var maleForm1 = { Iris: ["default"], Facialhair: ["", "beard_boxed", "beard_guru", "goatee", "moustache", "muttonchops"], Hair: ["", "afro", "balding", "crewcut", "down", "emo", "spider", "gelled", "wavy", "manga"], Emotion: ["neutral", "alertness", "amusement", "anger", "anxiety", "aversion", "betrayal", "caged", "concern", "cruel", "dejection", "desperation", "disdain", "disgust", "eeww", "fear", "grief", "horror", "indignation", "joy", "laughing", "melancholy", "omg", "outrage", "pain", "rage", "revulsion", "sadness", "satisfaction", "shock", "sterness", "surprise", "terror", "wonder", "wtf"] }, maleForm2 = {}, maleForm3 = { Shirt: ["", "colar", "tshirt"], Tie: ["", "neck", "bow"], Vest: ["", "vest"] }, maleForm4 = { Jacket: ["", "suit"]}, maleForm5 = { Pants: ["", "suit", "jeans"]}, maleForm6 = { Shoes: ["", "hightops", "leather"] }, femaleForm1 = { Iris: ["default"], Hair: ["", "afro", "bangs", "down", "flowing", "manga", "mohawk", "pigtails", "ponytail", "short", "short_slick", "starlet", "odango", "emo", "punky", "spider", "wreckingball"], Emotion: ["neutral", "alertness", "amusement", "anger", "aversion", "dejection", "disdain", "disgust", "grief", "indignation", "joy", "laughter", "melancholy", "rage", "sadness", "sterness", "surprise", "shock", "wonder"] }, femaleForm2 = {}, femaleForm3 = { Bra: [""],Shirt: ["", "sweat"] }, femaleForm4 = { Blouse: ["", "cherry"], Dress: ["", "accolade", "corset", "suit", "parisian_fall", "german_expression"] }, femaleForm5 = { Skirt: ["", "a-line", "draped", "school"], Pants: ["", "jeans"] }, femaleForm6 = { Shoes: ["", "hightops", "highheels"] },
+
+
+
+
+        //var local_data = data;  //name inside json file -->	
+        var table = new Tabulator("#example-table", {
+            // data: local_data,
+            pagination: "local",
+            paginationSize: 5,
+            layout: "fitColumns",
+            placeholder: "No Data Available",
+            columns: [
+                { title: "Character", field: "numberOfCharacters", editor: "input" },
+                { title: "Gender", field: "gender", editor: "select", editorParams: { values: { "male": "Male", "female": "Female", "unknown": "Unknown" } } },
+                { title: "Build", field: "build", editor: "select", editorParams: { values: { "plump": "Plump", "stocky": "Stocky", "overweight": "Overweight", "medium": "Medium build", "athletic": "Athletic", "slender": "Slender", "slim": "Slim", "skinny": "Skinny", "buff": "Buff", "muscular": "Muscular", "wellbuilt": "Well built" } } },
+                { title: "Height", field: "height", editor: "select", editorParams: { values: { "short": "Short", "tall": "Tall", "Petite": "Petite", "average": "Average Height", "gigantic": "Gigantic" } } },
+                { title: "Race", field: "race", editor: "select", editorParams: { values: { "native": "American Indian or Alaska Native", "asian": "Asian", "black": "Black or African American", "latino": "Hispanic or Latino", "islander": "Native Hawaiian or Other Pacific Islander", "white": "White" } } },
+                { title: "Complexion", field: "complexion", editor: "select", editorParams: { values: { "light": "Light/Fair", "medium": "Medium", "olive": "Olive", "tanbrown": "Tan Brown", "black": "Black Brown/Dark" } } },
+                { title: "Eye Colour", field: "eyeColour", editor: "select", editorParams: { values: { "blue": "Blue", "brown": "Brown", "hazel": "Hazel", "grey": "Grey", "green": "Green", "black": "Black" } } },
+                { title: "Hair Colour", field: "colourHair", editor: "select", editorParams: { values: { "blonde": "Blond(e)", "brown": "Brown", "black": "Black", "red": "Red", "grey": "Grey", "white": "White" } } },
+                { title: "Hair Style", field: "hairStyle", editor: "select", editorParams: { values: { "bangs": "Bangs", "down": "Down", "afro": "Afro", "Flowing": "Flowing", "manga": "Manga", "Gelled": "Gelled", "balding": "Balding", "default": "Bald", "crewcut": "Crewcut", "emo": "Emo", "spider": "Spider", "wavy": "Wavy", "pigtails": "Pigtails", "ponytail": "Ponytail", "short": "Short", "short_slick": "Short slicked", "starlet": "Starlet", "odango": "Odango", "punky": "Punky", "wreckingball": "Shaved sides" } } },
+                { title: "Attire", field: "attire", editor: "select", editorParams: { values: { "casual": "Casual", "smart": "Smart", "business": "Business", "semi": "Semi-Formal", "blacktie": "Black Tie" } } },
+                { title: "Distinctive Features", field: "distinctiveFeatures", editor: "select", editorParams: { values: { "tattoo": "Tattoos", "glasses": "Glasses", "piercing": "Piercings", "mask": "Mask", "makeup": "Dramatic Makeup" } } },
+                { title: "Facial Hair", field: "facial_hair", editor: "select", editorParams: { values: { "cleanShaven": "Clean Shaven", "goatee": "Goatee", "beard": "Beard", "longBeard": "Long Beard", "moustache": "Moustache", "sideburns": "Sideburns" } } },
+            ],
+
+
+        });
+
+
+
+   <div id="example-table"></div>
+
+    <script type="text/javascript">
+        document.getElementById("done").onclick = function () { myFunction() };
+
+        var sex, skinColour, irisColour, charHairColour, pupils, charFacialHair, hair, emotion, charShirt, charTie, charVest, charJacket, charPants, charShoes, charBlouse, charDress, charSkirt;
+
+        function myFunction() {
+            const queryString = window.location.hash;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+
+            const
+                //keys = urlParams.keys(),
+                //values = urlParams.values(),
+                entries = urlParams.entries();
+
+            //for (const key of keys) console.log(key);
+            //for (const value of values) console.log(value);
+
+            for (const entry of entries) {
+                // set paramters to variables to use to fill in table
+                if (entry[0] == "#sex") {
+                    sex = entry[1];
+                    console.log("Sex:" + sex);
+                    if (sex == "m") {
+                        sex == "male";
+                    } else if (sex == "f") {
+                        sex == "female";
+                    }
+                }
+                if (entry[0] == "skinColor") {
+                    skinColour = entry[1];
+                    console.log("Skin colour:" + skinColour);
+                }
+                if (entry[0] == "irisColor") {
+                    irisColour = entry[1];
+                    console.log("Iris colour:" + irisColour);
+                }
+                if (entry[0] == "hairColor") {
+                    charHairColour = entry[1];
+                    console.log("Hair colour:" + hairColour);
+                } else {
+                    charHairColour = "N/A";
+                }
+                if (entry[0] == "pupils") {
+                    pupils = entry[1];
+                    console.log("Pupils:" + pupils);
+                }
+                if (entry[0] == "facialHair") {
+                    charFacialHair = entry[1];
+                    console.log("Facial Hair:" + hairColour);
+                } else {
+                    charFacialHair = "N/A";
+                }
+                if (entry[0] == "hair") {
+                    hair = entry[1];
+                    console.log("Hair:" + hair);
+                } else {
+                    hair = "N/A";
+                }
+                if (entry[0] == "emotion") {
+                    emotion = entry[1];
+                    console.log("Emotion:" + emotion);
+                } else {
+                    emotion = "N/A";
+                }
+                if (entry[0] == "shirt") {
+                    charShirt = entry[1];
+                    console.log("Shirt:" + shirt);
+                } else {
+                    charShirt = "N/A";
+                }
+                if (entry[0] == "tie") {
+                    charTie = entry[1];
+                    console.log("Tie:" + tie);
+                } else {
+                    charTie = "N/A";
+                }
+                if (entry[0] == "vest") {
+                    charVest = entry[1];
+                    console.log("Vest:" + vest);
+                } else {
+                    charVest = "N/A";
+                }
+                if (entry[0] == "jacket") {
+                    charJacket = entry[1];
+                    console.log("Jacket:" + jacket);
+                } else {
+                    charJacket = "N/A";
+                }
+                if (entry[0] == "pants") {
+                    charPants = entry[1];
+                    console.log("Pants:" + pants);
+                } else {
+                    charPants = "N/A";
+                }
+                if (entry[0] == "shoes") {
+                    charShoes = entry[1];
+                    console.log("Shoes:" + shoes);
+                } else {
+                    charShoes = "N/A";
+                }
+                if (entry[0] == "blouse") {
+                    charBlouse = entry[1];
+                    console.log("Blouse:" + blouse);
+                } else {
+                    charBlouse = "N/A";
+                }
+                if (entry[0] == "dress") {
+                    charDress = entry[1];
+                    console.log("Dress:" + dress);
+                } else {
+                    charDress = "N/A";
+                }
+                if (entry[0] == "skirt") {
+                    charSkirt = entry[1];
+                    console.log("Skirt:" + skirt);
+                } else {
+                    charSkirt = "N/A";
+                }
+
+
+                console.log("test" + sex);
+
+                var tableData = [
+                    { numberOfCharacters: 1, gender: sex, complexion: skinColour, eyeColour: irisColour, colourHair: charHairColour, hairStyle: hair, shirt: charShirt, blouse: charBlouse, dress: charDress, tie: charTie, vest: charVest, pants: charPants, skirt: charSkirt, shoes: charShoes, distinctiveFeatures: 1, facial_hair: charFacialHair },
+                ]
+                table.setData(tableData);
+
+            }
+        }
+
+
+
+        //var local_data = data;  //name inside json file -->	
+        var table = new Tabulator("#example-table", {
+            // data: local_data,
+            pagination: "local",
+            paginationSize: 5,
+            layout: "fitColumns",
+            placeholder: "No Data Available",
+            columns: [
+                { title: "Character", field: "numberOfCharacters", editor: "input" },
+                { title: "Gender", field: "gender", editor: "select", editorParams: { values: { "male": "Male", "female": "Female", "unknown": "Unknown" } } },
+                { title: "Complexion", field: "complexion", editor: "select", editorParams: { values: { "light": "Light/Fair", "medium": "Medium", "olive": "Olive", "tanbrown": "Tan Brown", "black": "Black Brown/Dark" } } },
+                { title: "Eye Colour", field: "eyeColour", editor: "select", editorParams: { values: { "blue": "Blue", "brown": "Brown", "hazel": "Hazel", "grey": "Grey", "green": "Green", "black": "Black" } } },
+                { title: "Hair Colour", field: "colourHair", editor: "select", editorParams: { values: { "blonde": "Blond(e)", "brown": "Brown", "black": "Black", "red": "Red", "grey": "Grey", "white": "White" } } },
+                { title: "Hair Style", field: "hairStyle", editor: "select", editorParams: { values: { "bangs": "Bangs", "down": "Down", "afro": "Afro", "Flowing": "Flowing", "manga": "Manga", "Gelled": "Gelled", "balding": "Balding", "default": "Bald", "crewcut": "Crewcut", "emo": "Emo", "spider": "Spider", "wavy": "Wavy", "pigtails": "Pigtails", "ponytail": "Ponytail", "short": "Short", "short_slick": "Short slicked", "starlet": "Starlet", "odango": "Odango", "punky": "Punky", "wreckingball": "Shaved sides" } } },
+                { title: "Shirt", field: "shirt", editor: "select", editorParams: { values: { "sweat": "Sweat", "colar": "Collared shirt", "tshirt": "T-shirt" } } },
+                { title: "Blouse", field: "blouse", editor: "select", editorParams: { value: { "cherry": "Blouse" } } },
+                { title: "Dress", field: "dress", editor: "select", editorParams: { values: { "accolade": "Accolade", "corset": "Corset", "suit": "Suit", "parisian_fall": "Parisian", "german_expression": "German" } } },
+                { title: "Tie", field: "tie", editor: "select", editorParams: { values: { "neck": "Tie", "bow": "Bowtie" } } },
+                { title: "Vest", field: "vest", editor: "select", editorParams: { value: { "vest": "Vest" } } },
+                { title: "Trousers", field: "pants", editor: "select", editorParams: { values: { "suit": "Suit Trousers", "jeans": "Jeans" } } },
+                { title: "Skirt", field: "skirt", editor: "select", editorParams: { values: { "a-line": "A-line", "draped": "Draped", "school": "Pleated" } } },
+                { title: "Shoes", field: "shoes", editor: "select", editorParams: { values: { "hightops": "Hightops", "highheels": "High Heels", "leather": "Leather" } } },
+                { title: "Distinctive Features", field: "distinctiveFeatures", editor: "select", editorParams: { values: { "tattoo": "Tattoos", "glasses": "Glasses", "piercing": "Piercings", "mask": "Mask", "makeup": "Dramatic Makeup" } } },
+                { title: "Facial Hair", field: "facial_hair", editor: "select", editorParams: { values: { "cleanShaven": "Clean Shaven", "goatee": "Goatee", "beard": "Beard", "longBeard": "Long Beard", "moustache": "Moustache", "sideburns": "Sideburns" } } },
+            ],
+
+
+        });
+        for (var loop = 1; loop < 10; loop++) {
+            table.addRow({ numberOfCharacters: loop }, false);
+        }

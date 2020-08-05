@@ -1,0 +1,7 @@
+-Maybe if instead of using the table to dictate the changes of the character appearance, i.e. choose hair colour and it be reflected on the character, INSTEAD just utilise the choices in the character customisation and from that the table can be filled automatically - pick hair style, and the style is recorded in the table
+
+- only problem with this is how to create multiple characters at the same time
+
+- the dropdowns don't hide again when you click out of them/into another
+
+- for visual novel part, would need to adapt character image so that emotion could be placed on top like with the character customisation or just have emotion displayed in word form

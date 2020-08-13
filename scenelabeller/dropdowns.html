@@ -26,40 +26,7 @@
 
     <script type="text/javascript">
 
-        function characterNumber(that) {
-            if (that.value == "one") {
-                document.getElementById("characterdiv1").style.display = "block";
-                document.getElementById("characterdiv2").style.display = "none";
-                document.getElementById("characterdiv3").style.display = "none";
-                document.getElementById("characterdiv4").style.display = "none";
-            }
-            if (that.value == "two") {
-                document.getElementById("characterdiv1").style.display = "block";
-                document.getElementById("characterdiv2").style.display = "block";
-                document.getElementById("characterdiv3").style.display = "none";
-                document.getElementById("characterdiv4").style.display = "none";
-            }
-            if (that.value == "three") {
-                document.getElementById("characterdiv1").style.display = "block";
-                document.getElementById("characterdiv2").style.display = "block";
-                document.getElementById("characterdiv3").style.display = "block";
-                document.getElementById("characterdiv4").style.display = "none";
-            }
-            if (that.value == "four") {
-                document.getElementById("characterdiv1").style.display = "block";
-                document.getElementById("characterdiv2").style.display = "block";
-                document.getElementById("characterdiv3").style.display = "block";
-                document.getElementById("characterdiv4").style.display = "block";
-            }
-            if (that.value == "five") {
-                document.getElementById("characterdiv1").style.display = "block";
-                document.getElementById("characterdiv2").style.display = "block";
-                document.getElementById("characterdiv3").style.display = "block";
-                document.getElementById("characterdiv4").style.display = "block";
-                document.getElementById("characterdiv5").style.display = "block";
-            }
-
-        }
+       
         function characterGender(that) {
             if (that.value == "other") {
                 document.getElementById("gender1").style.display = "block";
@@ -185,17 +152,7 @@
         <div>
             <h3>Character Information</h3>
 
-            <!--
-            <label for="chars">Select number of characters in this scene:</label>
-            <select name="chars" id="chars" onchange="characterNumber(this)">
-                <option value="">Select:</option>
-                <option id="one" value="one">One character</option>
-                <option id="two" value="two">Two characters</option>
-                <option id="three" value="three">Three characters</option>
-                <option id="four" value="four">Four characters</option>
-                <option id="five" value="five">Five characters</option>
-            </select>
--->
+ 
             <div class="row" style="margin-left:10%;">
                 <div class="col">
                     <input type="radio" name="character" id="char1" class="input-hidden" />
@@ -268,7 +225,7 @@
 
 
 
-            <div id="characterdiv1" style="display: none; margin-left: 20px;">
+            <div id="characterdiv1" style="margin-left: 20px;">
                 <br>
                 <h4 for="chars1">Character one:</h4>
                 <div class="row" id="row">

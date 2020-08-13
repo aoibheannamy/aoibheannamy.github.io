@@ -1,46 +1,48 @@
-#image-dropdown {
-    /*style the "box" in its minimzed state*/
-    border:1px solid black; width:200px; height:50px; overflow:hidden;
-    /*animate collapsing the dropdown from open to closed state (v. fast)*/
-    -moz-transition: height 0.1s; 
-    -webkit-transition: height 0.1s; 
-    -ms-transition: height 0.1s;  
-    -o-transition: height 0.1s;  
-    transition: height 0.1s;
-}
-#image-dropdown:hover {
-    /*when expanded, the dropdown will get native means of scrolling*/
-    height:200px; overflow-y:scroll;
-    /*nice and smooth expand - speed this up at your preference or remove animation altogether*/
-    -moz-transition: height 0.5s; 
-    -webkit-transition: height 0.5s; 
-    -ms-transition: height 0.5s;  
-    -o-transition: height 0.5s;  
-    transition: height 0.5s;
-}
-#image-dropdown input {
-    /*hide the nasty default radio buttons. like, completely!*/
-    position:absolute;top:0;left:0;opacity:0;
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
 }
 
-
-#image-dropdown label {
-    /*style the labels to look like dropdown options, kinda*/
-    display:none; margin:2px; height:46px; opacity:0.2; 
-    /*setting correct backgrounds - add additional rules with selectors based on "for" attribute, something like label[for=line2]{background-image:...}*/
-    
-    background:url("http://www.google.com/images/srpr/logo3w.png") 50% 50%;}
-#image-dropdown:hover label{
-    /*this is how labels render in the "expanded" state. we want to see only the selected radio button in the collapsed menu, and all of them when expanded*/
-    display:block;
-}
-#image-dropdown label:hover {
-    opacity:0.5;
-}
-#image-dropdown input:checked + label {
-    /*tricky! labels immediately following a checked radio button (with our markup they are semantically related) should be fully opaque regardless of hover, and they should always be visible (i.e. even in the collapsed menu*/
-    opacity:1 !important; display:block;
+.cc-selector-2 input{
+    position:absolute;
+    z-index:999;
 }
 
-/*pfft, nothing as cool here, just the value trace*/
-#trace {margin:0 0 20px;}
+.char1{background-image:url(https://raw.githubusercontent.com/aoibheannamy/MScProject/master/ImagesForMechTurk/Snatch4180.jpg?token=APCQXYWEADJJMYZQGI2GRL27GQSN4);}
+.char2{background-image:url(https://raw.githubusercontent.com/aoibheannamy/MScProject/master/ImagesForMechTurk/video4frame1080.jpg?token=APCQXYTRFUBUZQF4N4BVC2K7GQSSK);}
+
+.cc-selector-2 input:active +.drinkcard-cc, .cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector-2 input:checked +.drinkcard-cc, .cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}
+* { font-family:monospace; }
+.cc-selector-2 input{ margin: 5px 0 0 12px; }
+.cc-selector-2 label{ margin-left: 7px; }
+span.cc{ color:#6d84b4 }

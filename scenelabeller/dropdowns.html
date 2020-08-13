@@ -26,7 +26,7 @@
 
     <script type="text/javascript">
 
-       
+
         function characterGender(that) {
             if (that.value == "other") {
                 document.getElementById("gender1").style.display = "block";
@@ -152,7 +152,7 @@
         <div>
             <h3>Character Information</h3>
 
- 
+
             <div class="row" style="margin-left:10%;">
                 <div class="col">
                     <input type="radio" name="character" id="char1" class="input-hidden" />
@@ -817,8 +817,8 @@
 
             <p>List any important sound effects used, e.g. rain, gunshots etc.</p>
             <div class="row" id="row" id="soundEffects">
-                <label for="chars1">Sound Effects:</label>
-                <select name="chars" id="chars" onchange="soundEffects(this)">
+                <label for="chars1">Sound Effect 1:</label>
+                <select name="chars" id="chars">
                     <option value="">Select:</option>
                     <option>Crickets</option>
                     <option>Birdsong</option>
@@ -837,57 +837,165 @@
                     <option>Alarm Clock</option>
                     <option>Shower</option>
                     <option>Gunshots</option>
+                    <option>No sound effects in this frame</option>
                     <option>Cannot determine in this frame</option>
                     <option id="other" value="other">Other</option>
                 </select>
                 <crowd-input name="soundEffect1" id="soundEffect1" style="display: none;">
                 </crowd-input>
-                <div id="soundEffects">
-                </div>
+            </div>
+            <br>
+            <div class="row" id="row" id="soundEffects">
+                <label for="chars1">Sound Effect 2:</label>
+                <select name="chars" id="chars">
+                    <option value="">Select:</option>
+                    <option>Crickets</option>
+                    <option>Birdsong</option>
+                    <option>Dog Barking</option>
+                    <option>Traffic</option>
+                    <option>Police Siren</option>
+                    <option>Car Horn</option>
+                    <option>Street Crowd</option>
+                    <option>Rain</option>
+                    <option>Wind</option>
+                    <option>Storm - Thunder and Lightning</option>
+                    <option>Ocean Waves</option>
+                    <option>Doorbell</option>
+                    <option>Door opening and closing</option>
+                    <option>Telephone ringing</option>
+                    <option>Alarm Clock</option>
+                    <option>Shower</option>
+                    <option>Gunshots</option>
+                    <option>No sound effects in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="soundEffect2" id="soundEffect2" style="display: none;">
+                </crowd-input>
                 <br>
-                <input type="button" name="soundEffect" id="addSoundEffect" value="Add Another Sound Effect" />
-            </div><br>
+            </div>
+            <div class="row" id="row" id="soundEffects">
+                <label for="chars1">Sound Effect 3:</label>
+                <select name="chars" id="chars">
+                    <option value="">Select:</option>
+                    <option>Crickets</option>
+                    <option>Birdsong</option>
+                    <option>Dog Barking</option>
+                    <option>Traffic</option>
+                    <option>Police Siren</option>
+                    <option>Car Horn</option>
+                    <option>Street Crowd</option>
+                    <option>Rain</option>
+                    <option>Wind</option>
+                    <option>Storm - Thunder and Lightning</option>
+                    <option>Ocean Waves</option>
+                    <option>Doorbell</option>
+                    <option>Door opening and closing</option>
+                    <option>Telephone ringing</option>
+                    <option>Alarm Clock</option>
+                    <option>Shower</option>
+                    <option>Gunshots</option>
+                    <option>No sound effects in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="soundEffect3" id="soundEffect3" style="display: none;">
+                </crowd-input>
+                <br>
+                <br>
+            </div>
             <br>
             <p>List any important props used, e.g. weapons etc.</p>
-            <div id="props">
+
+            <div class="row" id="row" id="props">
+                <label for="chars1">Prop 1:</label>
+                <select name="chars" id="chars">
+                    <option value="">Select:</option>
+                    <option>Food</option>
+                    <option>Coffee Mug</option>
+                    <option>Gun</option>
+                    <option>Flashlight</option>
+                    <option>Book</option>
+                    <option>Game console</option>
+                    <option>Car</option>
+                    <option>Cigarette/Cigar</option>
+                    <option>Glass</option>
+                    <option>Bottle</option>
+                    <option>Phone</option>
+                    <option>No props in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="prop1" id="prop1" style="display: none;">
+                </crowd-input>
+                <br>
+                <br>
             </div>
-            <input type="button" name="prop" id="addprop" value="Add Prop" />
+            <div class="row" id="row" id="props">
+                <label for="chars1">Prop 2:</label>
+                <select name="chars" id="chars" >
+                    <option value="">Select:</option>
+                    <option>Food</option>
+                    <option>Coffee Mug</option>
+                    <option>Gun</option>
+                    <option>Flashlight</option>
+                    <option>Book</option>
+                    <option>Game console</option>
+                    <option>Car</option>
+                    <option>Cigarette/Cigar</option>
+                    <option>Glass</option>
+                    <option>Bottle</option>
+                    <option>Phone</option>
+                    <option>No props in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="prop2" id="prop2" style="display: none;">
+                </crowd-input>
+                <br>
+                <br>
+            </div>
+            <div class="row" id="row" id="props">
+                <label for="chars1">Prop 3:</label>
+                <select name="chars" id="chars" >
+                    <option value="">Select:</option>
+                    <option>Food</option>
+                    <option>Coffee Mug</option>
+                    <option>Gun</option>
+                    <option>Flashlight</option>
+                    <option>Book</option>
+                    <option>Game console</option>
+                    <option>Car</option>
+                    <option>Cigarette/Cigar</option>
+                    <option>Glass</option>
+                    <option>Bottle</option>
+                    <option>Phone</option>
+                    <option>No props in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="prop3" id="prop3" style="display: none;">
+                </crowd-input>
+                <br>
+                <br>
+            </div>
 
-        </div>
-
-        <div>
-            <h3>Plot Information</h3>
-            <br>
-            <p>Describe what is occuring in this scene using keywords:</p>
-            <crowd-text-area name="location" rows="4" required></crowd-text-area>
-            <br>
-            <p>Search for the IMDB plot synopsis for this film/TV show and copy and paste the section which reflects
-                what occurs in this scene: </p>
-            <crowd-text-area name="location" rows="6" required></crowd-text-area>
-            <br>
 
 
-        </div>
 
 
-        <script>
-            var num = 1;
-            document.getElementById('addSoundEffect').addEventListener("click", addInput);
-            function addInput() {
-                var newInput = "<select name='chars' id='chars' onchange='soundEffects(this)'><option>Select:</option><option>Crickets</option><option>Birdsong</option><option>Dog Barking</option><option>Traffic</option><option>Police Siren</option><option>Car Horn</option><option>Street Crowd</option><option>Rain</option><option>Wind</option><option>Storm - Thunder and Lightning</option> <option>Ocean Waves</option><option>Doorbell</option><option>Door opening and closing</option><option>Telephone ringing</option><option>Alarm Clock</option><option>Shower</option><option>Cannot determine in this frame</option><option id='other' value='other'>Other</option></select><crowd-input name='soundEffect1' id='soundEffect1' style='display: none;'></crowd-input>";
-                document.getElementById('soundEffects').innerHTML += newInput;
-                num++;
-            }
 
-            var numProp = 1;
-            document.getElementById('addprop').addEventListener("click", addInputProp);
-            function addInputProp() {
-                var newInput = '<crowd-input type="text" name="prop"></crowd-input>';
-                document.getElementById('props').innerHTML += newInput;
-                numProp++;
-            }
+            <script>
 
-        </script>
+                var numProp = 1;
+                document.getElementById('addprop').addEventListener("click", addInputProp);
+                function addInputProp() {
+                    var newInput = '<crowd-input type="text" name="prop"></crowd-input>';
+                    document.getElementById('props').innerHTML += newInput;
+                    numProp++;
+                }
+
+            </script>
 
 
 

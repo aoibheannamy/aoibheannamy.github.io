@@ -9,6 +9,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/labeller.css">
 
     <style>
         #row {
@@ -184,6 +185,7 @@
         <div>
             <h3>Character Information</h3>
 
+            <!--
             <label for="chars">Select number of characters in this scene:</label>
             <select name="chars" id="chars" onchange="characterNumber(this)">
                 <option value="">Select:</option>
@@ -193,6 +195,26 @@
                 <option id="four" value="four">Four characters</option>
                 <option id="five" value="five">Five characters</option>
             </select>
+-->
+
+            <ul id="menu">
+                <li>
+                    <a href="#"><img src="" alt="" /></a> <!-- Selected -->
+                    <ul>
+                        <li><a href="#"><img src="https://raw.githubusercontent.com/aoibheannamy/MScProject/master/ImagesForMechTurk/Snatch4180.jpg?token=APCQXYWEADJJMYZQGI2GRL27GQSN4" alt="" /></a></li>
+                        <li><a href="#"><img src="" alt="" /></a></li>
+                        <li><a href="#"><img src="" alt="" /></a></li>
+                        <li><a href="#"><img src="" alt="" /></a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <script>
+                $('#menu ul li').click(function () {
+                    var $a = $(this).find('a');
+                    $(this).parents('#menu').children('li a').replaceWith($a)
+                });
+            </script>
 
 
             <div id="characterdiv1" style="display: none; margin-left: 20px;">

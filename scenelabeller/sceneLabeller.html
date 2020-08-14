@@ -152,13 +152,16 @@
 
     </script>
 
-
-
-    <!-- For the full list of available Crowd HTML Elements and their input/output documentation,
-      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
-
-    <!-- You must include crowd-form so that your task submits answers to MTurk -->
     <crowd-form answer-format="flatten-objects">
+
+        <ul>
+            <li>
+                Label the following frames for the following character <strong>only</strong>.
+            </li>
+            <li>
+                Even if the character does not appear in the frame, check if they are speaking in that frame instead. 
+            </li>
+        </ul>
 
 
         <div>
@@ -167,71 +170,7 @@
 
 
             <h5></h5>
-            <div class="row"  onchange="chooseCharacter(this)">
-                <div class="col">
-                    <input type="radio" name="character" id="char1" class="input-hidden" />
-                    <label for="char1">
-                        <img src="/Images/Gangster1.jpg" style="max-width: 100%;" alt="Character 1" />
-                    </label>
-
-                    <input type="radio" name="character" id="char2" class="input-hidden" />
-                    <label for="char2">
-                        <img src="/Images/Gangster2.jpg" style="max-width: 100%;" alt="Character 2" />
-                    </label>
-
-                    <input type="radio" name="character" id="char3" class="input-hidden" />
-                    <label for="char3">
-                        <img src="/Images/Gangster3.jpg" style="max-width: 100%;" alt="Character 3" />
-                    </label>
-
-                    <input type="radio" name="character" id="char4" class="input-hidden" />
-                    <label for="char4">
-                        <img src="/Images/TheJoker.jpg" style="max-width: 100%;" alt="Character 4" />
-                    </label>
-                </div>
-                <div class="col">
-                    <input type="radio" name="character" id="char5" class="input-hidden" />
-                    <label for="char5">
-                        <img src="/Images/Snatch.jpg" style="max-width: 100%;" alt="Character 5" />
-                    </label>
-
-                    <input type="radio" name="character" id="char6" class="input-hidden" />
-                    <label for="char6">
-                        <img src="/Images/Snatch4180.jpg" style="max-width: 100%;" alt="Character 6" />
-                    </label>
-
-                    <input type="radio" name="character" id="char7" class="input-hidden" />
-                    <label for="char7">
-                        <img src="/Images/spectacularNow1.jpg" style="max-width: 100%;" alt="Character 7" />
-                    </label>
-
-                    <input type="radio" name="character" id="char8" class="input-hidden" />
-                    <label for="char8">
-                        <img src="/Images/SpectacularNow2.jpg" style="max-width: 100%;" alt="Character 8" />
-                    </label>
-                </div>
-                <div class="col">
-                    <input type="radio" name="character" id="char9" class="input-hidden" />
-                    <label for="char9">
-                        <img src="/Images/GoodWillHunting.jpg" style="max-width: 100%;" alt="Character 9" />
-                    </label>
-
-                    <input type="radio" name="character" id="char10" class="input-hidden" />
-                    <label for="char10">
-                        <img src="/Images/GoodWillHunting2.jpg" style="max-width: 100%;" alt="Character 10" />
-                    </label>
-
-                    <input type="radio" name="character" id="char11" class="input-hidden" />
-                    <label for="char11">
-                        <img src="/Images/TheBreakUpMale.jpg" style="max-width: 100%;" alt="Character 11" />
-                    </label>
-
-                    <input type="radio" name="character" id="char12" class="input-hidden" />
-                    <label for="char12">
-                        <img src="/Images/TheBreakUpFemale.jpg" style="max-width: 100%;" alt="Character 12" />
-                    </label>
-                </div>
-            </div>
+            
 
 
 
@@ -239,47 +178,6 @@
             <br><br><br>
 
             <h4>Appearance</h4>
-
-            <div class="row" id="row">
-                <label for="chars1">Character's Build:</label>
-                <select name="build" id="build" onchange="characterBuild(this)">
-                    <option value="">Select:</option>
-                    <option>Plump</option>
-                    <option>Stocky</option>
-                    <option>Overweight</option>
-                    <option>Pudgy</option>
-                    <option>Medium build</option>
-                    <option>Athletic</option>
-                    <option>Slender</option>
-                    <option>Lanky</option>
-                    <option>Fit</option>
-                    <option>Slim</option>
-                    <option>Trim</option>
-                    <option>Skinny</option>
-                    <option>Buff</option>
-                    <option>Muscular</option>
-                    <option>Well built</option>
-                    <option id="unsure" value="unsure">Cannot determine from this scene</option>
-                    <option id="other" value="other">Other</option>
-                </select>
-                <crowd-input name="build1" id="build1" style="display: none;"></crowd-input>
-            </div><br>
-            <div class="row" id="row">
-                <label for="chars1">Character Height:</label>
-                <select name="height" id="height" onchange="characterHeight(this)">
-                    <option value="">Select:</option>
-                    <option>Short</option>
-                    <option>Tall</option>
-                    <option>Petite</option>
-                    <option>Average height</option>
-                    <option>Gigantic</option>
-                    <option id="unsure" value="unsure">Cannot determine from this scene</option>
-                    <option id="other" value="other">Other</option>
-                </select>
-                <crowd-input name="height1" id="height1" style="display: none;"></crowd-input>
-            </div><br>
-
-
 
             <div class="row" id="row" id="facialExpression">
                 <label for="chars1">Character's Head Movement:</label>

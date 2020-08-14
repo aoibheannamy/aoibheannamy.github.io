@@ -518,9 +518,9 @@
 
 
 
-                <div class="row" id="row" id="emotionMale" style="display: none;">
+                <div class="row" id="row" id="emotion" >
                     <label for="chars1">Character Emotion:</label>
-                    <select name="chars" id="emotionMale" onchange="characterEmotion(this)">
+                    <select name="chars" id="emotionMale" style="display: none;" onchange="characterEmotion(this)">
                         <option value="">Select:</option>
                         <option value="alertness">Alertness</option>
                         <option value="amusement">Amusement</option>
@@ -560,10 +560,8 @@
                         <option id="other" value="other">Other</option>
                     </select>
                     <crowd-input name="emotion1" id="emotion1" style="display: none;"></crowd-input>
-                </div>
-                <div class="row" id="row" id="emotionFemale" style="display: none;">
-                    <label for="chars1">Character Emotion:</label>
-                    <select name="chars" id="emotionFemale" onchange="characterEmotion(this)">
+
+                    <select name="chars" id="emotionFemale" style="display: none;" onchange="characterEmotion(this)">
                         <option value="">Select:</option>
                         <option value="alertness">Alertness</option>
                         <option value="amusement">Amusement</option>
@@ -588,8 +586,8 @@
                         <option id="other" value="other">Other</option>
                     </select>
                     <crowd-input name="emotion1" id="emotion1" style="display: none;"></crowd-input>
-                </div>
 
+                </div>
 
                 <br><br>
 

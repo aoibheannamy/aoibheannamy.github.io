@@ -135,16 +135,13 @@
             }
         }
 
-        var char1 = "m", char2 = "m", char3 = "m", char4 = "m", char5 = "m", char6 = "m", char7 = "m", char9 = "m", char10 = "m", char11 = "m";
-        var char8 = "f", char12 = "f";
 
-        function chooseCharacter(that) {
-            if (document.getElementById('char1').checked || document.getElementById('char2').checked || document.getElementById('char3') || document.getElementById('char4') || document.getElementById('char5') || document.getElementById('char6') || document.getElementById('char7') || document.getElementById('char9') || document.getElementById('char10') || document.getElementById('char11')) {
-                document.getElementById("emotionMale").style.display = "block";
-            } else if (document.getElementById('char8').checked || document.getElementById('char12')) {
+
+        function characterGender(that) {
+            if (that.value == "f") {
                 document.getElementById("emotionFemale").style.display = "block";
-            } else {
-                alert("No character chosen! Please choose one and continue with the form.")
+            } else if (that.value == "m") {
+                document.getElementById("emotionMale").style.display = "block";
             }
         }
 
@@ -159,11 +156,11 @@
                 Label the following frames for the following character <strong>only</strong>.
             </li>
             <li>
-                Even if the character does not appear in the frame, check if they are speaking in that frame instead. 
+                Even if the character does not appear in the frame, check if they are speaking in that frame instead.
             </li>
         </ul>
 
-        
+
         <div class="row">
             <div class="col">
                 <h5>Label for this character</h5>
@@ -175,29 +172,32 @@
                 </iframe>
             </div>
 
-            
+
         </div>
 
         <h5>Frame to label</h5>
         <div class="container"><img src="${image2_url}" style="width:80%;" /></div>
 
-        
+
 
 
         <div>
-            <h3>Character Information</h3>
+            <h5>Character Information</h5>
+
+            <div class="row" id="gender">
+                <label for="chars1">Gender of character:</label>
+                <select name="chars" id="gender" onchange="characterGender(this)">
+                    <option value="">Select:</option>
+                    <option value="f">Female</option>
+                    <option value="m">Male</option>
+                </select>
+            </div>
 
 
 
-            <h5></h5>
-            
+            <br><br>
 
-
-
-
-            <br><br><br>
-
-            <h4>Appearance</h4>
+            <h5>Appearance</h5>
 
             <div class="row" id="row" id="facialExpression">
                 <label for="chars1">Character's Head Movement:</label>

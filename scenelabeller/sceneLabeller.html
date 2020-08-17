@@ -179,7 +179,7 @@
                     </source>
                 </video>
                 <div id="controls">
-                    <button id="play-pause">Play</button>
+                    <button id="play-button">Play</button>
                 </div>
 
             </div>
@@ -191,15 +191,17 @@
         <div class="container"><img src="${image2_url}" style="width:80%;" /></div>
 
         <script>
-            var stopframes = [30, 60, 90, 132];
+            // list of frames which need labelled
+            // the video will stop playing/pause for 2000ms at each frame so Worker can label
+            var stopFrames = [30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360, 390, 420, 450, 480, 510, 540, 570, 600, 630, 660, 690, 720, 750, 780, 810, 840, 870, 900, 930, 960, 990, 1020, 1050, 1080, 1110];
 
             var currentFrame = $('#currentFrame');
             var video = VideoFrame({
                 id: 'video',
                 frameRate: 29.97,
                 callback: function (frame) {
-                    if (stopframes.includes(frame)) {
-                        stopVideoFor(1000);
+                    if (stopFrames.includes(frame)) {
+                        stopVideoFor(2000);
                     }
                 }
             });
@@ -214,17 +216,17 @@
                 }, ms);
             }
 
-            document.getElementById("play-pause").onclick = function () { myFunction() };
+            document.getElementById("play-button").onclick = function () { myFunction() };
 
             function myFunction() {
                 if (video.video.paused) {
                     video.video.play();
                     video.listen('frame');
-                    $("#play-pause").html('Pause');
+                    $("#play-button").html('Pause');
                 } else {
                     video.video.pause();
                     video.stopListen();
-                    $("#play-pause").html('Play');
+                    $("#play-button").html('Play');
                 }
                 console.log("Clicked");
             }

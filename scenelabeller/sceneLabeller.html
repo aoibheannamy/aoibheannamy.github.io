@@ -140,8 +140,10 @@
         function characterGender(that) {
             if (that.value == "f") {
                 document.getElementById("emotionFemale").style.display = "block";
+                document.getElementById("emotionMale").style.display = "none";
             } else if (that.value == "m") {
                 document.getElementById("emotionMale").style.display = "block";
+                document.getElementById("emotionFemale").style.display = "none";
             }
         }
 

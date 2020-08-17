@@ -172,7 +172,9 @@
             }, ms);
         }
 
-        $('#play-pause').click(function () {
+        document.getElementById("done").onclick = function () { myFunction() };
+
+        function myFunction() {
             if (video.video.paused) {
                 video.video.play();
                 video.listen('frame');
@@ -183,7 +185,7 @@
                 $("#play-pause").html('Play');
             }
             console.log("Clicked");
-        });
+        }
 
 
 

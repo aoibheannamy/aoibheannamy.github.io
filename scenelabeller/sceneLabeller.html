@@ -9,6 +9,8 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/allensarkisyan/VideoFrame/master/VideoFrame.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/labeller.css">
 
     <style>
@@ -147,6 +149,41 @@
             }
         }
 
+        var stopframes = [30, 60, 90, 132];
+
+        var currentFrame = $('#currentFrame');
+        var video = VideoFrame({
+            id: 'video',
+            frameRate: 29.97,
+            callback: function (frame) {
+                if (stopframes.includes(frame)) {
+                    stopVideoFor(1000);
+                }
+            }
+        });
+
+        function stopVideoFor(ms) {
+            video.video.pause();
+            video.stopListen();
+
+            setTimeout(() => {
+                video.video.play();
+                video.listen('frame');
+            }, ms);
+        }
+
+        $('#play-pause').click(function () {
+            if (video.video.paused) {
+                video.video.play();
+                video.listen('frame');
+                $("#play-pause").html('Pause');
+            } else {
+                video.video.pause();
+                video.stopListen();
+                $("#play-pause").html('Play');
+            }
+        });
+
 
 
     </script>
@@ -170,8 +207,14 @@
             </div>
             <div class="col">
                 <h5>Video of scene</h5>
-                <iframe width="820" height="515" src="${video_url}" type="video/mp4" frameborder="0" allowfullscreen>
-                </iframe>
+                <video height="180" width="100%" id="video">
+                    <source src="https://www.youtube.com/watch?v=ItJr9dtRon4">
+                    </source>
+                </video>
+                <div id="controls">
+                    <button id="play-pause">Play</button>
+                </div>
+
             </div>
 
 

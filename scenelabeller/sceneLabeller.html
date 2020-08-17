@@ -149,43 +149,7 @@
             }
         }
 
-        var stopframes = [30, 60, 90, 132];
 
-        var currentFrame = $('#currentFrame');
-        var video = VideoFrame({
-            id: 'video',
-            frameRate: 29.97,
-            callback: function (frame) {
-                if (stopframes.includes(frame)) {
-                    stopVideoFor(1000);
-                }
-            }
-        });
-
-        function stopVideoFor(ms) {
-            video.video.pause();
-            video.stopListen();
-
-            setTimeout(() => {
-                video.video.play();
-                video.listen('frame');
-            }, ms);
-        }
-
-        document.getElementById("play-pause").onclick = function () { myFunction() };
-
-        function myFunction() {
-            if (video.video.paused) {
-                video.video.play();
-                video.listen('frame');
-                $("#play-pause").html('Pause');
-            } else {
-                video.video.pause();
-                video.stopListen();
-                $("#play-pause").html('Play');
-            }
-            console.log("Clicked");
-        }
 
 
 
@@ -226,6 +190,45 @@
         <h5>Frame to label</h5>
         <div class="container"><img src="${image2_url}" style="width:80%;" /></div>
 
+        <script>
+            var stopframes = [30, 60, 90, 132];
+
+            var currentFrame = $('#currentFrame');
+            var video = VideoFrame({
+                id: 'video',
+                frameRate: 29.97,
+                callback: function (frame) {
+                    if (stopframes.includes(frame)) {
+                        stopVideoFor(1000);
+                    }
+                }
+            });
+
+            function stopVideoFor(ms) {
+                video.video.pause();
+                video.stopListen();
+
+                setTimeout(() => {
+                    video.video.play();
+                    video.listen('frame');
+                }, ms);
+            }
+
+            document.getElementById("play-pause").onclick = function () { myFunction() };
+
+            function myFunction() {
+                if (video.video.paused) {
+                    video.video.play();
+                    video.listen('frame');
+                    $("#play-pause").html('Pause');
+                } else {
+                    video.video.pause();
+                    video.stopListen();
+                    $("#play-pause").html('Play');
+                }
+                console.log("Clicked");
+            }
+        </script>
 
 
 

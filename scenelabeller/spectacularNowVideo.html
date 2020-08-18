@@ -16,17 +16,25 @@
         #row {
             padding-bottom: 5px;
         }
-        #header{
-            margin:5%;
-        }
-        #list{
+
+        #header {
             margin: 5%;
         }
-        #videoRow{
+
+        #list {
+            margin: 5%;
+        }
+
+        #videoRow {
             margin: 5%;
             align-content: center;
         }
-        #controls{
+
+        #controls {
+            margin: 2%;
+        }
+
+        #pausecontrols {
             margin: 2%;
         }
     </style>
@@ -47,16 +55,20 @@
             Press <strong>Play</strong> to start the video.
         </li>
         <li>
-            You will need to match up the frame image given in the mechanical Turk task with the moment in the video in order to label correctly.
+            You will need to match up the frame image given in the mechanical Turk task with the moment in the video in
+            order to label correctly.
         </li>
         <li>
-            The video will pause at each frame so label <strong>everything up to the pause moment</strong> for that one frame, before moving on to the next HIT.
-        </li>
-        <li> 
-            The video will automatically pause at each frame but if you need to pause completely, just click the <strong>Pause</strong> button. 
+            The video will pause at each frame so label <strong>everything up to the pause moment</strong> for that one
+            frame, before moving on to the next HIT.
         </li>
         <li>
-            the video plays the whole way through, but you can press the <strong>Play</strong> button to start the video again.
+            The video will automatically pause at each frame but if you need to pause completely, just click the
+            <strong>Pause</strong> button.
+        </li>
+        <li>
+            the video plays the whole way through, but you can press the <strong>Play</strong> button to start the video
+            again.
         </li>
 
     </ul>
@@ -64,7 +76,7 @@
 
     <div class="row" id="videoRow">
 
-        
+
         <video height="80%" width="80%" id="video">
             <source src="../video/TheSpectacularNow-FirstKiss.mp4">
             </source>
@@ -73,6 +85,9 @@
 
         <div id="controls">
             <button type="button" class="btn btn-info" id="play-button">Play</button>
+        </div>
+        <div id="pausecontrols">
+            <button type="button" class="btn btn-info" onclick="pauseVid()" id="pause-button">Pause completely</button>
         </div>
 
 
@@ -123,11 +138,16 @@
             console.log("Clicked");
         }
 
+       var vid = document.getElementById("video");
+       function pauseVid(){
+           vid.pause();
+       }
+
     </script>
 
 
 
-  
+
 
 
 </body>

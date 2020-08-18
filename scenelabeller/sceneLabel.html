@@ -1,0 +1,575 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Form </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/allensarkisyan/VideoFrame/master/VideoFrame.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/labeller.css">
+
+    <style>
+        #row {
+            padding-bottom: 5px;
+        }
+
+        #spokenWords #howSpeaking {
+            display: none;
+        }
+        body{
+            margin: 2%;
+        }
+    </style>
+
+
+<body>
+
+    <script type="text/javascript">
+
+
+        function characterGender(that) {
+            if (that.value == "other") {
+                document.getElementById("gender1").style.display = "block";
+            }
+        }
+        function characterBuild(that) {
+            if (that.value == "other") {
+                document.getElementById("build1").style.display = "block";
+            }
+        }
+        function characterHeight(that) {
+            if (that.value == "other") {
+                document.getElementById("height1").style.display = "block";
+            }
+        }
+        
+         function characterFacialExpression(that) {
+            if (that.value == "other") {
+                document.getElementById("facialExpression1").style.display = "block";
+            }
+        }
+
+        function characterEmotion(that) {
+            if (that.value == "other") {
+                document.getElementById("emotion1").style.display = "block";
+            }
+        }
+
+       
+        function characterSpeaking(that) {
+            if (that.value == "yes") {
+                document.getElementById("spokenWords").style.display = "block";
+                document.getElementById("howSpeaking").style.display = "block";
+
+            }
+            if (that.value == "other") {
+                document.getElementById("speaking1").style.display = "block";
+            }
+        }
+
+        function characterHowSpeaking(that) {
+            if (that.value == "other") {
+                document.getElementById("howSpeaking1").style.display = "block";
+            }
+        }
+
+        function frameShotType(that) {
+            if (that.value == "other") {
+                document.getElementById("shotType").style.display = "block";
+            }
+        }
+        function frameCameraAngle(that) {
+            if (that.value == "other") {
+                document.getElementById("cameraAngle").style.display = "block";
+            }
+        }
+
+
+
+        function characterGender(that) {
+            if (that.value == "f") {
+                document.getElementById("emotionFemale").style.display = "block";
+                document.getElementById("emotionMale").style.display = "none";
+            } else if (that.value == "m") {
+                document.getElementById("emotionMale").style.display = "block";
+                document.getElementById("emotionFemale").style.display = "none";
+            }
+        }
+
+
+
+
+
+    </script>
+
+    <crowd-form answer-format="flatten-objects">
+
+        <ul>
+            <li>
+                Label the following frames for the following character <strong>only</strong>.
+            </li>
+            <li>
+                Even if the character does not appear in the frame, check if they are speaking in that frame instead.
+            </li>
+            <li>
+                More instrutions are on the video link page.
+            </li>
+            <li>
+                Make sure to choose the gender of the character in each HIT so the charcter emotion dropdown will appear!
+            </li>
+        </ul>
+
+
+        <div class="row">
+            <h5>Label for this character</h5>
+            <div class="container"><img src="${image_url}" style="width:50%;" /></div>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <h6>Click the following link to open the video of scene:</h6>
+            <a href="https://aoibheannamy.github.io/scenelabeller/spectacularNowVideo.html" target="_blank">https://aoibheannamy.github.io/scenelabeller/spectacularNowVideo.html</a>
+        </div>
+        <br><br>
+
+        <h5>Frame to label</h5>
+        <div class="container"><img src="${image2_url}" style="width:80%;" /></div>
+        <br><br>
+
+
+
+
+
+        <div>
+            <h5>Character Information</h5>
+
+            <div class="row" id="gender">
+                <label for="chars1">Gender of character:</label>
+                <select name="charGender" id="gender" onchange="characterGender(this)">
+                    <option value="">Select:</option>
+                    <option value="f">Female</option>
+                    <option value="m">Male</option>
+                </select>
+            </div>
+
+
+
+            <br><br>
+
+            <h5>Appearance</h5>
+
+            <div class="row" id="row" id="facialExpression">
+                <label for="chars1">Character's Head Movement:</label>
+                <select name="charHeadMove" id="chars" onchange="characterFacialExpression(this)">
+                    <option value="">Select:</option>
+                    <option>Normal/Resting Position</option>
+                    <option>Turn left</option>
+                    <option>Turn right</option>
+                    <option>Up</option>
+                    <option>Down</option>
+                    <option>Tilt left</option>
+                    <option>Tilt right</option>
+                    <option>Head forward</option>
+                    <option>Head back</option>
+                    <option>Head shake up and down</option>
+                    <option>Head shake side to side</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name=facialExpression1" id="facialExpression1" style="display: none;">
+                </crowd-input>
+            </div>
+            <br>
+
+
+
+
+            <div class="row" id="row" id="emotion">
+                <label for="chars1">Character Emotion:</label>
+                <select name="charEmotionMale" id="emotionMale" style="display: none;" onchange="characterEmotion(this)">
+                    <option value="">Select:</option>
+                    <option value="alertness">Alertness</option>
+                    <option value="amusement">Amusement</option>
+                    <option value="anger">Anger</option>
+                    <option value="anxiety">Anxiety</option>
+                    <option value="aversion">Aversion</option>
+                    <option value="betrayal">Betrayal</option>
+                    <option value="concerned">Concerned</option>
+                    <option value="cruel">Cruel</option>
+                    <option value="dejection">Dejection</option>
+                    <option value="desperation">Desperation</option>
+                    <option value="disdain">Disdain</option>
+                    <option value="disgust">Disgust</option>
+                    <option value="eeww">Eww</option>
+                    <option value="fear">Fear</option>
+                    <option value="grief">Grief</option>
+                    <option value="horror">Horror</option>
+                    <option value="indignation">Indignation</option>
+                    <option value="joy">Joy</option>
+                    <option value="laughing">Laughing</option>
+                    <option value="melancholy">Melancholy</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="omg">OMG</option>
+                    <option value="outrage">Outrage</option>
+                    <option value="pain">Pain</option>
+                    <option value="rage">Rage</option>
+                    <option value="revulsion">Revulsion</option>
+                    <option value="sadness">Sadness</option>
+                    <option value="satisfaction">Satisfaction</option>
+                    <option value="shock">Shock</option>
+                    <option value="sterness">Sterness</option>
+                    <option value="surprise">Surprise</option>
+                    <option value="terror">Terror</option>
+                    <option value="wonder">Wonder</option>
+                    <option value="wtf">WTF</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="emotion1" id="emotion1" style="display: none;"></crowd-input>
+
+                <select name="charEmotionFemale" id="emotionFemale" style="display: none;" onchange="characterEmotion(this)">
+                    <option value="">Select:</option>
+                    <option value="alertness">Alertness</option>
+                    <option value="amusement">Amusement</option>
+                    <option value="anger">Anger</option>
+                    <option value="aversion">Aversion</option>
+                    <option value="dejection">Dejection</option>
+                    <option value="disdain">Disdain</option>
+                    <option value="disgust">Disgust</option>
+                    <option value="grief">Grief</option>
+                    <option value="indignation">Indignation</option>
+                    <option value="joy">Joy</option>
+                    <option value="laughter">Laughing</option>
+                    <option value="melancholy">Melancholy</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="rage">Rage</option>
+                    <option value="sadness">Sadness</option>
+                    <option value="shock">Shock</option>
+                    <option value="sterness">Sterness</option>
+                    <option value="surprise">Surprise</option>
+                    <option value="wonder">Wonder</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="emotion1" id="emotion1" style="display: none;"></crowd-input>
+
+            </div>
+
+            <br><br>
+            <br>
+            <h3>Dialogue</h3>
+
+            <div class="row" id="row" id="speaking">
+                <label for="chars1">Is this character speaking?</label>
+                <select name="charSpeak" id="chars" onchange="characterSpeaking(this)">
+                    <option value="">Select:</option>
+                    <option id="yes" value="yes">Yes</option>
+                    <option id="no" value="no">No</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="speaking1" id="speaking1" style="display: none;"></crowd-input>
+            </div>
+
+            <div class="row" id="row" id="spokenWords">
+                <label for="charSpokenWords" id="spokenWords">What is this character saying?</label>
+                <crowd-input name="spokenWords1" id="spokenWords"></crowd-input>
+            </div>
+            <div class="row" id="row" id="howSpeaking">
+                <label for="charInflection" id="howSpeaking">How does the character say these words? For example,
+                    shouts/whispers</label>
+                <select name="chars" id="chars" id="howSpeaking" onchange="characterHowSpeaking(this)">
+                    <option value="">Select:</option>
+                    <option>Shouts</option>
+                    <option>Begs</option>
+                    <option>Demands</option>
+                    <option>Mumbles</option>
+                    <option>Suggests</option>
+                    <option>Whispers</option>
+                    <option>Wonders</option>
+                    <option>Yells</option>
+                    <option>Cries</option>
+                    <option>Retorts</option>
+                    <option>Murmurs</option>
+                    <option>Agrees</option>
+                    <option>Laughs</option>
+                    <option>Teases</option>
+                    <option>Chuckles</option>
+                    <option>Asks</option>
+                    <option>Offers</option>
+                    <option>Threatens</option>
+                    <option>Cautions</option>
+                    <option>Drawls</option>
+                    <option>Jokes</option>
+                    <option>States</option>
+                    <option>Disdains</option>
+                    <option>Sadly</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="howSpeaking" id="howSpeaking" style="display: none;"></crowd-input>
+            </div>
+
+
+
+            <br><br>
+
+            <div class="row" id="row" id="characterAction">
+                <label for="charAction">Character Action:</label>
+                <select name="charAction" id="charAction" onchange="characterAction(this)">
+                    <option value="">Select:</option>
+                    <option>Laughing</option>
+                    <option>Singing</option>
+                    <option>Shaking head</option>
+                    <option>Nodding</option>
+                    <option>Shrugging shoulders</option>
+                    <option>Shiver</option>
+                    <option>Swallowing</option>
+                    <option>Winking</option>
+                    <option>Blinking</option>
+                    <option>Chewing</option>
+                    <option>Pointing</option>
+                    <option>Gesturing</option>
+                    <option>Hand(s) covering mouth</option>
+                    <option>Walking</option>
+                    <option>Running</option>
+                    <option>Crawling</option>
+                    <option>Stopping</option>
+                    <option>Crossing arms</option>
+                    <option>Turning towards other character</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="characterAction1" id="characterAction1" style="display: none;">
+                </crowd-input>
+            </div>
+
+
+
+            <br>
+        </div>
+
+
+        </div>
+
+
+
+        <div>
+
+            <div class="row" id="row" id="shotType">
+                <label for="frame1" id="shotType">Shot Type:</label>
+                <select name="frames" id="frames" id="shotType" onchange="frameShotType(this)">
+                    <option value="">Select:</option>
+                    <option>Extreme Wide/Long Shot</option>
+                    <option>Full Shot</option>
+                    <option>Wise Shot</option>
+                    <option>Medium Shot</option>
+                    <option>Establishing Shot</option>
+                    <option>Point-of-View Shot</option>
+                    <option>Master Shot</option>
+                    <option>Close-up Shot</option>
+                    <option>Choker Shot</option>
+                    <option>Two Shot</option>
+                    <option>Cutaway</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="shotType" id="shotType" style="display: none;"></crowd-input>
+            </div>
+            <br><br>
+
+            <div class="row" id="row" id="cameraAngle">
+                <label for="cameraA" id="cameraAngle">Camera Angle:</label>
+                <select name="cameraA" id="cameraA" id="cameraAngle" onchange="frameCameraAngle(this)">
+                    <option value="">Select:</option>
+                    <option>Eye Level</option>
+                    <option>High Angle</option>
+                    <option>Low Angle</option>
+                    <option>Dutch Angle/Tilt</option>
+                    <option>Over-the-Shoulder</option>
+                    <option>Bird's-eye-view/Top Shot</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="cameraAngle" id="cameraAngle" style="display: none;"></crowd-input>
+            </div>
+            <br><br>
+
+
+            <p>Identify any important sound effects used, e.g. rain, gunshots etc.</p>
+            <div class="row" id="row" id="soundEffects">
+                <label for="soundE1">Sound Effect 1:</label>
+                <select name="soundE1" id="soundE1">
+                    <option value="">Select:</option>
+                    <option>Crickets</option>
+                    <option>Birdsong</option>
+                    <option>Dog Barking</option>
+                    <option>Traffic</option>
+                    <option>Police Siren</option>
+                    <option>Car Horn</option>
+                    <option>Street Crowd</option>
+                    <option>Rain</option>
+                    <option>Wind</option>
+                    <option>Storm - Thunder and Lightning</option>
+                    <option>Ocean Waves</option>
+                    <option>Doorbell</option>
+                    <option>Door opening and closing</option>
+                    <option>Telephone ringing</option>
+                    <option>Alarm Clock</option>
+                    <option>Shower</option>
+                    <option>Gunshots</option>
+                    <option>No sound effects in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="soundEffect1" id="soundEffect1" style="display: none;">
+                </crowd-input>
+            </div>
+            <br>
+            <div class="row" id="row" id="soundEffects">
+                <label for="soundE2">Sound Effect 2:</label>
+                <select name="soundE2" id="soundE2">
+                    <option value="">Select:</option>
+                    <option>Crickets</option>
+                    <option>Birdsong</option>
+                    <option>Dog Barking</option>
+                    <option>Traffic</option>
+                    <option>Police Siren</option>
+                    <option>Car Horn</option>
+                    <option>Street Crowd</option>
+                    <option>Rain</option>
+                    <option>Wind</option>
+                    <option>Storm - Thunder and Lightning</option>
+                    <option>Ocean Waves</option>
+                    <option>Doorbell</option>
+                    <option>Door opening and closing</option>
+                    <option>Telephone ringing</option>
+                    <option>Alarm Clock</option>
+                    <option>Shower</option>
+                    <option>Gunshots</option>
+                    <option>No sound effects in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="soundEffect2" id="soundEffect2" style="display: none;">
+                </crowd-input>
+                <br>
+            </div>
+            <div class="row" id="row" id="soundEffects">
+                <label for="soundE3">Sound Effect 3:</label>
+                <select name="soundE3" id="soundE3">
+                    <option value="">Select:</option>
+                    <option>Crickets</option>
+                    <option>Birdsong</option>
+                    <option>Dog Barking</option>
+                    <option>Traffic</option>
+                    <option>Police Siren</option>
+                    <option>Car Horn</option>
+                    <option>Street Crowd</option>
+                    <option>Rain</option>
+                    <option>Wind</option>
+                    <option>Storm - Thunder and Lightning</option>
+                    <option>Ocean Waves</option>
+                    <option>Doorbell</option>
+                    <option>Door opening and closing</option>
+                    <option>Telephone ringing</option>
+                    <option>Alarm Clock</option>
+                    <option>Shower</option>
+                    <option>Gunshots</option>
+                    <option>No sound effects in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="soundEffect3" id="soundEffect3" style="display: none;">
+                </crowd-input>
+                <br>
+                <br>
+            </div>
+            <br>
+            <p>Identify any important props used, e.g. weapons etc.</p>
+
+            <div class="row" id="row" id="props">
+                <label for="prop1">Prop 1:</label>
+                <select name="prop1" id="prop1">
+                    <option value="">Select:</option>
+                    <option>Food</option>
+                    <option>Coffee Mug</option>
+                    <option>Gun</option>
+                    <option>Flashlight</option>
+                    <option>Book</option>
+                    <option>Game console</option>
+                    <option>Car</option>
+                    <option>Cigarette/Cigar</option>
+                    <option>Glass</option>
+                    <option>Bottle</option>
+                    <option>Phone</option>
+                    <option>No props in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="prop1" id="prop1" style="display: none;">
+                </crowd-input>
+                <br>
+                <br>
+            </div>
+            <div class="row" id="row" id="props">
+                <label for="prop2">Prop 2:</label>
+                <select name="prop2" id="prop2">
+                    <option value="">Select:</option>
+                    <option>Food</option>
+                    <option>Coffee Mug</option>
+                    <option>Gun</option>
+                    <option>Flashlight</option>
+                    <option>Book</option>
+                    <option>Game console</option>
+                    <option>Car</option>
+                    <option>Cigarette/Cigar</option>
+                    <option>Glass</option>
+                    <option>Bottle</option>
+                    <option>Phone</option>
+                    <option>No props in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="prop2" id="prop2" style="display: none;">
+                </crowd-input>
+                <br>
+                <br>
+            </div>
+            <div class="row" id="row" id="props">
+                <label for="prop3">Prop 3:</label>
+                <select name="prop3" id="prop3">
+                    <option value="">Select:</option>
+                    <option>Food</option>
+                    <option>Coffee Mug</option>
+                    <option>Gun</option>
+                    <option>Flashlight</option>
+                    <option>Book</option>
+                    <option>Game console</option>
+                    <option>Car</option>
+                    <option>Cigarette/Cigar</option>
+                    <option>Glass</option>
+                    <option>Bottle</option>
+                    <option>Phone</option>
+                    <option>No props in this frame</option>
+                    <option>Cannot determine in this frame</option>
+                    <option id="other" value="other">Other</option>
+                </select>
+                <crowd-input name="prop3" id="prop3" style="display: none;">
+                </crowd-input>
+                <br>
+                <br>
+            </div>
+
+
+
+
+
+</body>
+
+</html>

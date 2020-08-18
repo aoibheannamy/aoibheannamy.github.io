@@ -171,58 +171,19 @@
             <h5>Label for this character</h5>
             <img src="${image_url}" style="width:80%;" />
         </div>
+        <br><br>
 
         <div class="row">
             <h6>Click the following link to open the video of scene:</h6>
             <a href="https://aoibheannamy.github.io/scenelabeller/spectacularNowVideo.html" target="_blank">https://aoibheannamy.github.io/scenelabeller/spectacularNowVideo.html</a>
         </div>
+        <br><br>
 
         <h5>Frame to label</h5>
         <div class="container"><img src="${image2_url}" style="width:80%;" /></div>
+        <br><br>
 
-        <script>
-            // list of frames which need labelled
-            // the video will stop playing/pause for 2000ms at each frame so Worker can label          
 
-            var stopFrames = [40, 80, 120, 160, 200, 240, 280, 320, 360, 400, 440, 480, 520, 560, 600, 640, 680, 720, 760, 800, 840, 880, 920, 960, 1000, 1040, 1080, 1120, 1160, 1200, 1240, 1280, 1320, 1360, 1400, 1440];
-
-            var currentFrame = $('#currentFrame');
-            var video = VideoFrame({
-                id: 'video',
-                frameRate: 29.97,
-                callback: function (frame) {
-                    if (stopFrames.includes(frame)) {
-                        stopVideoFor(2000);
-                    }
-                }
-            });
-
-            function stopVideoFor(ms) {
-                video.video.pause();
-                video.stopListen();
-
-                setTimeout(() => {
-                    video.video.play();
-                    video.listen('frame');
-                }, ms);
-            }
-
-            document.getElementById("play-button").onclick = function () { myFunction() };
-
-            function myFunction() {
-                if (video.video.paused) {
-                    video.video.play();
-                    video.listen('frame');
-                    $("#play-button").html('Pause');
-                } else {
-                    video.video.pause();
-                    video.stopListen();
-                    $("#play-button").html('Play');
-                }
-                console.log("Clicked");
-            }
-
-        </script>
 
 
 

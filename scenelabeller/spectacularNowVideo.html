@@ -89,6 +89,9 @@
         <div id="pausecontrols">
             <button type="button" class="btn btn-info" onclick="pauseVid()" id="pause-button">Pause completely</button>
         </div>
+        <div id="controls">
+            <button type="button" class="btn btn-info" onclick="restartVideo()" id="restart-button">Restart Video</button>
+        </div>
 
 
 
@@ -138,10 +141,14 @@
             console.log("Clicked");
         }
 
-       var vid = document.getElementById("video");
-       function pauseVid(){
-           vid.pause();
-       }
+        var vid = document.getElementById("video");
+        function pauseVid() {
+            vid.pause();
+        }
+
+        function restartVideo() {
+            vid.currentTime = 0;
+        }
 
     </script>
 

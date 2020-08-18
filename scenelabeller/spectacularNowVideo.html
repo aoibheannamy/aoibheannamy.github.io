@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Form </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/allensarkisyan/VideoFrame/master/VideoFrame.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/labeller.css">
+
+    <style>
+        #row {
+            padding-bottom: 5px;
+        }
+        body{
+            margin-top: 5%;
+        }
+    </style>
+
+
+<body>
+
+    <h4>Video of scene</h4>
+
+    <ul>
+        <li>
+            Label the frames for the character <strong>only</strong> on the Mechanical Turk page.
+        </li>
+        <li>
+            Even if the character does not appear in the frame, check if they are speaking in that frame instead.
+        </li>
+        <li>
+            Press <strong>Play</strong> to start the video.
+        </li>
+        <li>
+            You will need to match up the frame image given in the mechanical Turk task with the moment in the video in order to label correctly.
+        </li>
+        <li>
+            The video will pause at each frame so label <strong>everything up to the pause moment</strong> for that one frame, before moving on to the next HIT.
+        </li>
+        <li> 
+            The video will automatically pause at each frame but if you need to pause completely, just click the <strong>Pause</strong> button. 
+        </li>
+        <li>
+            the video plays the whole way through, but you can press the <strong>Play</strong> button to start the video again.
+        </li>
+
+    </ul>
+
+
+    <div class="row">
+
+        
+        <video height="100%" width="100%" id="video">
+            <source src="../video/TheSpectacularNow-FirstKiss.mp4">
+            </source>
+        </video>
+
+
+        <div id="controls">
+            <button id="play-button">Play</button>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script>
+        // list of frames which need labelled
+        // the video will stop playing/pause for 2000ms at each frame so Worker can label          
+
+        var stopFrames = [40, 80, 120, 160, 200, 240, 280, 320, 360, 400, 440, 480, 520, 560, 600, 640, 680, 720, 760, 800, 840, 880, 920, 960, 1000, 1040, 1080, 1120, 1160, 1200, 1240, 1280, 1320, 1360, 1400, 1440];
+
+        var currentFrame = $('#currentFrame');
+        var video = VideoFrame({
+            id: 'video',
+            frameRate: 29.97,
+            callback: function (frame) {
+                if (stopFrames.includes(frame)) {
+                    stopVideoFor(2000);
+                }
+            }
+        });
+
+        function stopVideoFor(ms) {
+            video.video.pause();
+            video.stopListen();
+
+            setTimeout(() => {
+                video.video.play();
+                video.listen('frame');
+            }, ms);
+        }
+
+        document.getElementById("play-button").onclick = function () { myFunction() };
+
+        function myFunction() {
+            if (video.video.paused) {
+                video.video.play();
+                video.listen('frame');
+                $("#play-button").html('Pause');
+            } else {
+                video.video.pause();
+                video.stopListen();
+                $("#play-button").html('Play');
+            }
+            console.log("Clicked");
+        }
+
+    </script>
+
+
+
+  
+
+
+</body>
+
+</html>

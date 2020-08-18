@@ -174,13 +174,11 @@
             </div>
             <div class="col">
                 <h5>Video of scene</h5>
-               <!-- <video height="100%" width="100%" id="video">
-                    <source src="../video/TheSpectacularNow-FirstKiss.mp4">
+               <video height="100%" width="100%" id="video">
+                    <source src="https://www.youtube.com/embed/ItJr9dtRon4">
                     </source>
-                </video>-->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ItJr9dtRon4" id="iframe" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                </video>
+               
 
                 <div id="controls">
                     <button id="play-button">Play</button>
@@ -201,36 +199,36 @@
             var stopFrames = [40, 80, 120, 160, 200, 240, 280, 320, 360, 400, 440, 480, 520, 560, 600, 640, 680, 720, 760, 800, 840, 880, 920, 960, 1000, 1040, 1080, 1120, 1160, 1200, 1240, 1280, 1320, 1360, 1400, 1440];
 
             var currentFrame = $('#currentFrame');
-            var iframe = VideoFrame({
-                id: 'iframe',
+            var video = VideoFrame({
+                id: 'video',
                 frameRate: 29.97,
                 callback: function (frame) {
                     if (stopFrames.includes(frame)) {
-                        stopiframeFor(2000);
+                        stopVideoFor(2000);
                     }
                 }
             });
 
-            function stopiframeFor(ms) {
-                iframe.iframe.pause();
-                iframe.stopListen();
+            function stopVideoFor(ms) {
+                video.video.pause();
+                video.stopListen();
 
                 setTimeout(() => {
-                    iframe.iframe.play();
-                    iframe.listen('frame');
+                    video.video.play();
+                    video.listen('frame');
                 }, ms);
             }
 
             document.getElementById("play-button").onclick = function () { myFunction() };
 
             function myFunction() {
-                if (iframe.iframe.paused) {
-                    iframe.iframe.play();
-                    iframe.listen('frame');
+                if (video.video.paused) {
+                    video.video.play();
+                    video.listen('frame');
                     $("#play-button").html('Pause');
                 } else {
-                    iframe.iframe.pause();
-                    iframe.stopListen();
+                    video.video.pause();
+                    video.stopListen();
                     $("#play-button").html('Play');
                 }
                 console.log("Clicked");

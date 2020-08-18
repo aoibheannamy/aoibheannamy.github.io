@@ -83,15 +83,28 @@
         </video>
 
 
-        <div id="controls">
-            <button type="button" class="btn btn-info" id="play-button">Play</button>
+        <div class="row">
+            <div class="col" id="controls">
+
+                <button type="button" class="btn btn-info" id="play-button">Play</button>
+
+            </div>
+            <div class="col" id="controls">
+
+                <button type="button" class="btn btn-info" onclick="pauseVid()" id="pause-button">Pause
+                    completely</button>
+
+            </div>
+            <div class="col" id="controls">
+
+                <button type="button" class="btn btn-info" onclick="restartVideo()" id="restart-button">Restart
+                    Video</button>
+
+            </div>
         </div>
-        <div id="pausecontrols">
-            <button type="button" class="btn btn-info" onclick="pauseVid()" id="pause-button">Pause completely</button>
-        </div>
-        <div id="controls">
-            <button type="button" class="btn btn-info" onclick="restartVideo()" id="restart-button">Restart Video</button>
-        </div>
+
+
+
 
 
 
@@ -132,7 +145,6 @@
             if (video.video.paused) {
                 video.video.play();
                 video.listen('frame');
-                $("#play-button").html('Pause');
             } else {
                 video.video.pause();
                 video.stopListen();

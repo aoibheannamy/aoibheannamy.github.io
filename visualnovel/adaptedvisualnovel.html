@@ -42,7 +42,7 @@
 
 </head>
 
-<body  data-gr-c-s-loaded="true">
+<body id="pagewrap" data-gr-c-s-loaded="true">
 
     <h1>Character Customisation</h1>
 
@@ -353,7 +353,56 @@
                                 <input id="zoomLevel" type="range" orient="vertical" name="viewBoxZoom" min="0" max="3"
                                     value="0">
                             </div>
-   
+                            <aside id="sidebar-left" class="sidebar sidebar-left cherry" style="display: none;">
+                                <ul class="section__list">
+                                </ul>
+                            </aside>
+                            <aside id="sidebar" class="sidebar sidebar-right" style="display: none;">
+                                <h3 class="sidebar__title">Customize</h3>
+                                <div class="hud">
+                                    <section class="accordeon__section-label">
+                                        <span class="accordeon__section-title">Controls</span>
+                                        <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
+                                                height="1em">
+                                                <use xlink:href="#accordeon_btn"></use>
+                                            </svg></div>
+                                    </section>
+                                    <div class="accordeon__content section--hide">
+                                        <div class="hud__list-item">
+                                            <div>
+                                                <input id="mButton" type="radio" name="sex" value="male"
+                                                    onclick="trans(value[0]);"><label for="mButton">M<span
+                                                        class="abbreviation">ale</span></label>
+                                            </div>
+                                            <div>
+                                                <input id="fButton" type="radio" name="sex" value="female"
+                                                    onclick="trans(value[0]);"><label for="fButton">F<span
+                                                        class="abbreviation">emale</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="accordeon__section-label section__color" >
+                                    <span class="accordeon__section-title">Colors</span>
+                                    <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
+                                            height="1em">
+                                            <use xlink:href="#accordeon_btn"></use>
+                                        </svg></div>
+                                </section>
+                                <div class="colorpicker-wrapper accordeon__content section--hide">
+                                </div>
+                                <section class="accordeon__section-label">
+                                    <span class="accordeon__section-title">Items</span>
+                                    <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
+                                            height="1em">
+                                            <use xlink:href="#accordeon_btn"></use>
+                                        </svg></div>
+                                </section>
+                                <section class="widget accordeon__content section--hide">
+                                    <div id="content_1" class="content"></div>
+                                </section>
+                            </aside>
+                            <div class="skin-color__container" style="display: none;"></div>
 
                             <footer>
                                 <script type="text/javascript" src="all.js" defer=""></script>

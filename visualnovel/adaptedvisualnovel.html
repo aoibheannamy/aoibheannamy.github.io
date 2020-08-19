@@ -328,10 +328,10 @@
                                 <input id="zoomLevel" type="range" orient="vertical" name="viewBoxZoom" min="0" max="3"
                                     value="0">
                             </div>
-                            
+
 
                             <footer>
-                                <script type="text/javascript" src="../javascript/all.js" defer=""></script>
+                                <script type="text/javascript" src="all.js" defer=""></script>
                                 <script type="text/javascript">
                                     var infolinks_pid = 3243090;
                                     var infolinks_wsid = 0;
@@ -340,56 +340,7 @@
                             </footer>
                         </main>
 
-                        <!--
-                    <div class="overlay__modal js-download-options overlay--show">
-                        <div class="overlay__wrapper">
-                            <div class="overlay__header">
-                                <span class="overlay__title">Download Options</span>
-                                <svg class="icon close-btn">
-                                    <use xlink:href="#x"></use>
-                                </svg>
-                            </div>
-                            <div class="overlay__panel">
-                                <p>Select which <strong>zoom</strong> to crop image:</p>
-                                <div class="overlay__char-camera">
-                                    <div class="camera-view"><input type="radio" id="camera-full" name="camera-zoom"
-                                            value="full" checked="checked"><label for="camera-full"><svg class=""
-                                                viewBox="10 10 540 540" preserveAspectRatio="xMidYMin" width="10em"
-                                                height="10em">
-                                                <use xlink:href="#character-container" viewBox="10 50 540 540"></use>
-                                            </svg><span>Full</span></label></div>
-                                    <div class="camera-view"><input type="radio" id="camera-torso" name="camera-zoom"
-                                            value="torso"><label for="camera-torso"><svg class=""
-                                                viewBox="136 73 290 290" preserveAspectRatio="xMidYMin" width="10em"
-                                                height="10em">
-                                                <use xlink:href="#character-container" viewBox="204 85 150 150"></use>
-                                            </svg><span>Upper body</span></label></div>
-                                    <div class="camera-view"><input type="radio" id="camera-closeup" name="camera-zoom"
-                                            value="closeup"><label for="camera-closeup"><svg class=""
-                                                viewBox="242.6 97 80 80" preserveAspectRatio="xMidYMin" width="10em"
-                                                height="10em">
-                                                <use xlink:href="#character-container" viewBox="242.6 99 80 80"></use>
-                                            </svg><span>Close-up</span></label></div>
-                                </div>
-                                <p>Choose the <strong>file format</strong> of your download:</p>
-                                <div class="overlay__filetype">
-                                    <div class="download-filetype"><input type="radio" id="download-svg"
-                                            name="download-format" value="svg"><label
-                                            for="download-svg"><span><strong>SVG</strong> (Scalable Vector
-                                                Graphics)</span></label></div>
-                                    <div class="download-filetype"><input type="radio" id="download-png"
-                                            name="download-format" value="png" checked="checked"><label
-                                            for="download-png"><span><strong>PNG</strong> (Portable Network
-                                                Graphics)</span></label></div>
-                                </div>
-                                <div class="overlay__char-new-form--create ui-buttons phat">
-                                    <button id="proceed-download"
-                                        class="overlay__proceed-download-btn js-proceed-download">Proceed with
-                                        Download</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
+
                     </div>
                 </div>
             </div>
@@ -519,12 +470,12 @@
 
 
                 var tableData = [
-                    { numberOfCharacters: 1, gender: sex, complexion: skinColour, eyeColour: irisColour, colourHair: charHairColour, hairStyle: hair, shirt: charShirt, blouse: charBlouse, dress: charDress, tie: charTie, vest: charVest, jacket: charJacket ,pants: charPants, skirt: charSkirt, shoes: charShoes, glasses: charGlasses, hat: charHat, earrings: charEarrings, makeup: charMakeup, tattoos: charTattoo, scars: charScar, facial_hair: charFacialHair },
+                    { numberOfCharacters: 1, gender: sex, complexion: skinColour, eyeColour: irisColour, colourHair: charHairColour, hairStyle: hair, shirt: charShirt, blouse: charBlouse, dress: charDress, tie: charTie, vest: charVest, jacket: charJacket, pants: charPants, skirt: charSkirt, shoes: charShoes, glasses: charGlasses, hat: charHat, earrings: charEarrings, makeup: charMakeup, tattoos: charTattoo, scars: charScar, facial_hair: charFacialHair },
                     { numberOfCharacters: 2 }
                 ]
                 table.setData(tableData);
 
-                
+
 
             }
             alert("Thank you for creating this avatar. The final step is to copy and paste the data in the table below into the form on Amazon's mechanical turk page.");
@@ -567,7 +518,7 @@
                         { title: "Scars", field: "scars", hozAlign: "center", },
                     ],
                 },
-                
+
             ],
 
 
@@ -603,7 +554,7 @@
 
         function setup() {
             // create the canvas
-            var canvas = createCanvas(5*windowWidth/6, windowHeight);
+            var canvas = createCanvas(5 * windowWidth / 6, windowHeight);
             // position canvas
             canvas.position(50, 50);
             // display as block

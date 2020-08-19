@@ -2,13 +2,8 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="description"
-        content="Create realistic characters for fun or for use in creative projects. Choose from a series of options to build your full body avatar in vector graphics.">
-    <meta name="author" content="Frederic Guimont">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Customisation</title>
+    <title>Visual Novel</title>
     <link rel="stylesheet" href="../styles/characterstyle.css">
-    <link rel="canonical" href="https://charactercreator.org">
     <link href="https://unpkg.com/tabulator-tables@4.6.3/dist/css/tabulator.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.6.3/dist/js/tabulator.min.js"></script>
     <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Character Customisation>
@@ -53,8 +48,38 @@
 
 
 
-    <div class="container" style="max-height: 350px; width: 80%;">
-        <div class="container" style="max-height: 400px;">
+    <div class="container" style="max-height: 350px; width: 80%; display: none;">
+        <header class="header">
+            <nav class="links">
+                <button class="hamburger-btn" type="button">
+                    <svg class="icon-hamburger" width="1.25em" height="1.25em" style="padding-top:0.25em;">
+                        <use xlink:href="#icon-hamburger"></use>
+                    </svg>
+                </button>
+                <ul id="horizontal" class="">
+                    <li><a href="#" alt="Download SVG" opacity="0" id="downloadButton" class="enabled"><span
+                                class="menu-text">Download</span><svg class="icon icon-arrow-down" width="1em"
+                                height="1em">
+                                <use xlink:href="#icon-arrow-down"></use>
+                            </svg></a>
+                    </li>
+                    <li id="nightModeButton"><input id="nightModeBox" type="checkbox"
+                            style="opacity:0;position:absolute;left:-25;"><label for="nightModeBox"><span
+                                class="dark-text"><span class="menu-text">Dark</span><svg class="icon" width="1em"
+                                    height="1em">
+                                    <use xlink:href="#icon-dark"></use>
+                                </svg></span><span class="light-text"><span class="menu-text">Light</span><svg
+                                    class="icon" width="1em" height="1em">
+                                    <use xlink:href="#icon-light"></use>
+                                </svg></span></label></li>
+                </ul>
+
+            </nav>
+            <button id="done">Character Finished!</button>
+
+        </header>
+
+        <div class="container" style="max-height: 400px; display: none;">
             <div class="row">
                 <div class="col">
 
@@ -328,7 +353,56 @@
                                 <input id="zoomLevel" type="range" orient="vertical" name="viewBoxZoom" min="0" max="3"
                                     value="0">
                             </div>
-
+                            <aside id="sidebar-left" class="sidebar sidebar-left cherry">
+                                <ul class="section__list">
+                                </ul>
+                            </aside>
+                            <aside id="sidebar" class="sidebar sidebar-right">
+                                <h3 class="sidebar__title">Customize</h3>
+                                <div class="hud">
+                                    <section class="accordeon__section-label">
+                                        <span class="accordeon__section-title">Controls</span>
+                                        <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
+                                                height="1em">
+                                                <use xlink:href="#accordeon_btn"></use>
+                                            </svg></div>
+                                    </section>
+                                    <div class="accordeon__content section--hide">
+                                        <div class="hud__list-item">
+                                            <div>
+                                                <input id="mButton" type="radio" name="sex" value="male"
+                                                    onclick="trans(value[0]);"><label for="mButton">M<span
+                                                        class="abbreviation">ale</span></label>
+                                            </div>
+                                            <div>
+                                                <input id="fButton" type="radio" name="sex" value="female"
+                                                    onclick="trans(value[0]);"><label for="fButton">F<span
+                                                        class="abbreviation">emale</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="accordeon__section-label section__color">
+                                    <span class="accordeon__section-title">Colors</span>
+                                    <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
+                                            height="1em">
+                                            <use xlink:href="#accordeon_btn"></use>
+                                        </svg></div>
+                                </section>
+                                <div class="colorpicker-wrapper accordeon__content section--hide">
+                                </div>
+                                <section class="accordeon__section-label">
+                                    <span class="accordeon__section-title">Items</span>
+                                    <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
+                                            height="1em">
+                                            <use xlink:href="#accordeon_btn"></use>
+                                        </svg></div>
+                                </section>
+                                <section class="widget accordeon__content section--hide">
+                                    <div id="content_1" class="content"></div>
+                                </section>
+                            </aside>
+                            <div class="skin-color__container"></div>
 
                             <footer>
                                 <script type="text/javascript" src="all.js" defer=""></script>
@@ -340,7 +414,7 @@
                             </footer>
                         </main>
 
-
+                    
                     </div>
                 </div>
             </div>
@@ -470,12 +544,12 @@
 
 
                 var tableData = [
-                    { numberOfCharacters: 1, gender: sex, complexion: skinColour, eyeColour: irisColour, colourHair: charHairColour, hairStyle: hair, shirt: charShirt, blouse: charBlouse, dress: charDress, tie: charTie, vest: charVest, jacket: charJacket, pants: charPants, skirt: charSkirt, shoes: charShoes, glasses: charGlasses, hat: charHat, earrings: charEarrings, makeup: charMakeup, tattoos: charTattoo, scars: charScar, facial_hair: charFacialHair },
+                    { numberOfCharacters: 1, gender: sex, complexion: skinColour, eyeColour: irisColour, colourHair: charHairColour, hairStyle: hair, shirt: charShirt, blouse: charBlouse, dress: charDress, tie: charTie, vest: charVest, jacket: charJacket ,pants: charPants, skirt: charSkirt, shoes: charShoes, glasses: charGlasses, hat: charHat, earrings: charEarrings, makeup: charMakeup, tattoos: charTattoo, scars: charScar, facial_hair: charFacialHair },
                     { numberOfCharacters: 2 }
                 ]
                 table.setData(tableData);
 
-
+                
 
             }
             alert("Thank you for creating this avatar. The final step is to copy and paste the data in the table below into the form on Amazon's mechanical turk page.");
@@ -518,7 +592,7 @@
                         { title: "Scars", field: "scars", hozAlign: "center", },
                     ],
                 },
-
+                
             ],
 
 
@@ -530,6 +604,20 @@
 
     </script>
 
+
+
+
+
+
+
+
+
+
+    <!--
+    <iframe width="820" height="515" src="https://www.youtube.com/embed/n1TqCGEBdLw" frameborder="0" allowfullscreen>
+    </iframe
+
+-->
 
     <div class="row">
         <div id="sketch-holder">
@@ -554,7 +642,7 @@
 
         function setup() {
             // create the canvas
-            var canvas = createCanvas(5 * windowWidth / 6, windowHeight);
+            var canvas = createCanvas(5*windowWidth/6, windowHeight);
             // position canvas
             canvas.position(50, 50);
             // display as block

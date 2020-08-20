@@ -54,7 +54,35 @@
 
 
     <div class="container" style="max-height: 350px; width: 80%;">
+        <header class="header" style="display: none;">
+            <nav class="links">
+                <button class="hamburger-btn" type="button">
+                    <svg class="icon-hamburger" width="1.25em" height="1.25em" style="padding-top:0.25em;">
+                        <use xlink:href="#icon-hamburger"></use>
+                    </svg>
+                </button>
+                <ul id="horizontal" class="">
+                    <li><a href="#" alt="Download SVG" opacity="0" id="downloadButton" class="enabled"><span
+                                class="menu-text">Download</span><svg class="icon icon-arrow-down" width="1em"
+                                height="1em">
+                                <use xlink:href="#icon-arrow-down"></use>
+                            </svg></a>
+                    </li>
+                    <li id="nightModeButton"><input id="nightModeBox" type="checkbox"
+                            style="opacity:0;position:absolute;left:-25;"><label for="nightModeBox"><span
+                                class="dark-text"><span class="menu-text">Dark</span><svg class="icon" width="1em"
+                                    height="1em">
+                                    <use xlink:href="#icon-dark"></use>
+                                </svg></span><span class="light-text"><span class="menu-text">Light</span><svg
+                                    class="icon" width="1em" height="1em">
+                                    <use xlink:href="#icon-light"></use>
+                                </svg></span></label></li>
+                </ul>
 
+            </nav>
+            <button id="done">Character Finished!</button>
+
+        </header>
 
         <div class="container" style="max-height: 400px;">
             <div class="row">
@@ -629,6 +657,365 @@
 
 
     </script>
+
+<script>
+    let bg;
+    let img;
+    //let fontsize = 30;
+    let textWords = "";
+    let myFont;
+    let charSpeaking = "";
+
+
+    //function preload() {
+    //    myFont = loadFont('fonts/MontserratAlternates-Medium.otf');
+    //}
+
+    function setup() {
+        // create the canvas
+        var canvas = createCanvas(5*windowWidth/6, windowHeight);
+        // position canvas
+        canvas.position(50, 50);
+        // display as block
+        canvas.style('display', 'block');
+
+        // set background as image
+        bg = loadImage('Images/MeetingRoom.jpg');
+        // any additional images loaded here
+        img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
+
+        // set font size
+        //textSize(fontsize);
+        // align text
+        //textAlign(CENTER, CENTER);
+        // define where canvas is to be placed
+        canvas.parent('sketch-holder');
+
+        //textFont(myFont);
+        //textSize(22);
+        textAlign(CENTER, CENTER);
+
+    }
+
+
+    function draw() {
+        clear();
+        // set/insert background
+        if (rowLocIndex >= 1) {
+            background(bg);
+        }
+        // insert image
+        // start blank
+        if (rowIndex >= 1) {
+            image(img, 0, height / 2, img.width / 2, img.height / 2);
+        }
+        // align text
+        //textAlign(CENTER);
+        // call drawWords function
+        drawWords(width * 0.5);
+    }
+
+    function drawWords() {
+        if (rowIndex >= 1) {
+            drawSpeechBubble();
+            fill(0);
+            stroke(0);
+            strokeWeight(2);
+            textSize(20);
+            text(textWords, 330, 80, 200, 200);
+            textSize(16);
+            fill(0);
+            stroke(0);
+            strokeWeight(1);
+            text(charSpeaking, 430, 130);
+        }
+
+
+
+    }
+
+    function drawSpeechBubble() {
+        fill(290);
+        stroke(0);
+        ellipse(430, 150, 250, 160);
+
+    }
+
+</script>
+
+
+<!--
+<div class="row">
+    <div class='container' id="appearanceTable">
+        <h4>Physical Appearance of Characters</h4>
+        <div id="example-table"></div>
+        
+        <script type="text/javascript">
+            var local_data = data;  //name inside json file 
+            var appearanceTable = new Tabulator("#example-table", {
+                data: local_data,
+                pagination: "local",
+                paginationSize: 10,
+                layout: "fitColumns",
+                placeholder: "No Data Available",
+                columns: [
+                    { title: "Character", field: "Number of characters", editor: "input" },
+                    { title: "Gender", field: "Gender", editor: "input" },
+                    { title: "Build", field: "Build", editor: "input" },
+                    { title: "Height", field: "Height", editor: "input" },
+                    { title: "Race", field: "Race", editor: "input" },
+                    { title: "Complexion", field: "Complexion", editor: "input" },
+                    { title: "Attractiveness", field: "Rate Attractiveness", editor: "input" },
+                    { title: "Eye Colour", field: "Eye Colour", editor: "input" },
+                    { title: "Hair Colour", field: "Hair Colour", editor: "input" },
+                    { title: "Hair Length", field: "Hair Length", editor: "input" },
+                    { title: "Hair Style", field: "Hair Style", editor: "input" },
+                    { title: "Attire", field: "Attire", editor: "input" },
+                    { title: "Distinctive Features", field: "Distinctive Features", editor: "input" },
+                    { title: "Social Class", field: "Social Class", editor: "input" },
+
+                ],
+            });					
+        </script>
+     
+    </div>
+</div>
+-->
+
+<div class="container" id="table">
+    <h4>Location/Background of Scene</h4>
+    <div id="example-table-loc"></div>
+    <script type="text/javascript">
+        //var loc_data = location_data;
+        var rowLocIndex = 0;
+        var locTable = new Tabulator("#example-table-loc", {
+            index: "ID",
+            selectable: 1,
+            //data: loc_data,
+            pagination: "local",
+            paginationSize: 10,
+            layout: "fitColumns",
+            //selectable: true,
+            placeholder: "No Data Available",
+            columns: [
+                {
+                    title: "ID", field: "ID", editor: "input", cellClick: function (e, cell) {
+                        var cellValue = cell.getValue();
+                        // console.log(cellValue);
+                        var data = cell.getData();
+                        //console.log("Data: "+data.toString());
+                    }
+                },
+                {
+                    title: "Location", field: "Location", editor: "select", editorParams: {
+                        values: {
+                            "BoardRoom": "Board Room", "Forest": "Forest", "Beach": "Beach", "Office": "Office", "Warehouse": "Warehouse", "Club/Bar": "Club/Bar", "Supermarket": "Supermarket", "Bedroom": "Bedroom", "Street": "Street", "Prison": "Prison"
+                        }, cellClick: function (e, cell) {
+                            var loccellValue = cell.getValue();
+                            console.log(loccellValue);
+                            var locdata = cell.getData();
+                            console.log("Data: " + locdata.toString());
+
+                            if (locdata == "BoardRoom") {
+                                bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/MeetingRoom.jpg?token=APCQXYUESEDSP6NUMJJCLY27EK4EU');
+
+                                draw();
+                            }
+                        }
+                    }
+
+                },
+
+            ],
+            rowClick: function (e, row) {
+                rowLocIndex = row.getIndex();
+                // displays index
+                console.log("Row index: " + rowLocIndex);
+                var rowLocData = row.getData();
+                // displays row data for that index
+                console.log(rowLocData);
+
+                // get number of rows
+                var rowLocCount = table.getDataCount();
+                console.log("Number of rows: " + rowLocCount);
+
+                // need to find the character number for each frame index
+                // and then display whichever one it represents
+                // then need to iterate through the frame number/index
+                // and repeat
+
+
+                for (var loop = rowLocIndex; loop <= rowLocCount; loop++) {
+                    var location = row.getData().Location;
+                    var selectedLoc = locTable.getSelectedData();
+
+                    if (selectedLoc == "BoardRoom") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/MeetingRoom.jpg?token=APCQXYUESEDSP6NUMJJCLY27EK4EU');
+
+                        draw();
+                    } else if (location == "Forest") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/forest.jpg?token=APCQXYTFTFDXSCQWFRPD6427EK4JK');
+
+                        draw();
+                    } else if (location == "Beach") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/beach.jpg?token=APCQXYTQDZM5IRAWKSJIL6C7EK4GA');
+
+                        draw();
+                    } else if (location == "Office") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/office.jpg?token=APCQXYSAZBC5DATTEB4FIHK7EK4JU');
+
+                        draw();
+                    } else if (location == "Warehouse") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/warehouse.jpg?token=APCQXYUQBTMXCQ44YD4CT527EK4N2');
+
+                        draw();
+                    } else if (location == "Club/Bar") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/club.jpg?token=APCQXYSWUWYXMD2Z52R4DJK7EK4JC');
+
+                        draw();
+                    } else if (location == "Supermarket") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/supermarket.jpg?token=APCQXYTBBBAOIWDW3V23MRK7EK4NQ');
+
+                        draw();
+                    } else if (location == "Bedroom") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/bedroom.jpg?token=APCQXYQIHD5LQYEB5FCBHR27EK4G6');
+
+                        draw();
+                    } else if (location == "Street") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/street.jpg?token=APCQXYXOCBPUFMSMTUMU4ES7EK4NI');
+
+                        draw();
+                    } else if (location == "Prison") {
+                        bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/prison.jpg?token=APCQXYXACXG5LEW2WJVLD7S7EK4RC');
+
+                        draw();
+                    }
+                }
+            }
+
+        });
+
+        locTable.addRow({ ID: 1 }, false);
+
+    </script>
+</div>
+
+
+<div class='container'>
+    <h4>Frame by Frame</h4>
+    <div id="example-table2"></div>
+    <!-- ---------------------------------------------------------------- -->
+    <script type="text/javascript">
+        var local_data = esp_data;  //name inside json file -->	
+        var rowIndex = 0;
+        var table = new Tabulator("#example-table2", {
+            index: "FrameNumber",
+            selectable: 1,
+            data: local_data,
+            pagination: "local",
+            paginationSize: 10,
+            layout: "fitColumns",
+            placeholder: "No Data Available",
+            columns: [
+                {
+                    title: "Frame", field: "FrameNumber", editor: "input", cellClick: function (e, cell) {
+                        var cellValue = cell.getValue();
+                        // console.log(cellValue);
+                        var data = cell.getData();
+                        //console.log("Data: "+data.toString());
+                    }
+                },
+                { title: "Character", field: "CharacterNumber", editor: "input" },
+                { title: "Niceness", field: "Agreeableness/Niceness", editor: "input" },
+                { title: "Confidence", field: "Confidence", editor: "input" },
+                { title: "Facial Expression", field: "FacialExpression", editor: "input" },
+                { title: "Eyes/Brows", field: "Eyes/Brows", editor: "input" },
+                { title: "Nose", field: "Nose", editor: "input" },
+                { title: "Mouth", field: "Mouth", editor: "input" },
+                { title: "Skin", field: "Skin", editor: "input" },
+                { title: "Whole-Face Expression", field: "WholeFace", editor: "input" },
+                { title: "Head Movement", field: "HeadMovement", editor: "input" },
+                { title: "Emotion", field: "Emotion", editor: "input" },
+                { title: "Is a Character Speaking?", field: "CharacterSpeaking", editor: "input" },
+                { title: "What are they saying?", field: "WhatDoTheySay", editor: "input" },
+                { title: "Inflection?", field: "Inflection", editor: "input" },
+                { title: "Action", field: "Action", editor: "input" },
+                { title: "Sound Effects", field: "SoundEffects", editor: "input" },
+                { title: "Props", field: "Props", editor: "input" },
+            ],
+            rowClick: function (e, row) {
+                rowIndex = row.getIndex();
+                // displays index
+                console.log("Row index: " + rowIndex);
+                var rowData = row.getData();
+                // displays row data for that index
+                console.log(rowData);
+
+                // get number of rows
+                var rowCount = table.getDataCount();
+                console.log("Number of rows: " + rowCount);
+
+                // need to find the character number for each frame index
+                // and then display whichever one it represents
+                // then need to iterate through the frame number/index
+                // and repeat
+
+
+                for (var loop = rowIndex; loop <= rowCount; loop++) {
+                    var charNo = row.getData().CharacterNumber;
+                    if (charNo == "1") {
+                        img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
+
+                        draw();
+                    } else if (charNo == "2") {
+                        img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Gangster1.png?token=APCQXYSCPDMMHSXIMWMJ2MC7EAUOI');
+
+                        draw();
+                    } else if (charNo == "3") {
+                        img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Gangster2.png?token=APCQXYQ7H3VJIZPO7OWW36S7EAUPA');
+
+                        draw();
+                    } else if (charNo == "4") {
+                        img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Gangster3.png?token=APCQXYT7QKMVODACD62FNC27EAUSE');
+
+                        draw();
+                    } else if (charNo == "5") {
+                        img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Gangster4.png?token=APCQXYVP4M7URD4YQNNU3JK7EAUTC');
+
+                        draw();
+                    }
+
+
+                    // is the character speaking and who is it?
+                    var charSpeak = row.getData().CharacterSpeaking;
+                    // what do they say?
+                    var spokenWords = row.getData().WhatDoTheySay;
+                    // set text variable to words in table
+                    textWords = spokenWords;
+                    // call drawWords() to print to screen
+                    if (charSpeak == "1") {
+                        charSpeaking = "Character " + charSpeak + " is speaking:";
+                    } else if (charSpeak == "2") {
+                        charSpeaking = "Character " + charSpeak + " is speaking:";
+                    } else if (charSpeak = "3") {
+                        charSpeaking = "Character " + charSpeak + " is speaking:";
+                    } else if (charSpeak = "4") {
+                        charSpeak = "Character " + charSpeak + " is speaking:";
+                    } else if (charSpeak == "0") {
+                        charSpeaking = "No Character is speaking.";
+                    }
+                    rowIndex++;
+                }
+
+            },
+        });
+
+
+    </script>
+    <!-- -------------------------------------------------------------------- -->
+</div>
+</div>
+</div>
 
 
 

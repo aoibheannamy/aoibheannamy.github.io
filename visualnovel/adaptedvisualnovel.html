@@ -15,9 +15,6 @@
     <meta property=" og:description" content="Create characters from scenes to create a realistic visual novel.">
     <meta prefix="og: http://ogp.me/ns#" property="og:url"
         content="https://amaye02.lampt.eeecs.qub.ac.uk/VisualNovelTemplates/char.html">
-        <script type="text/javascript" src="../KillTheBatmanFrame.json"></script>
-        <script type="text/javascript" src="../KillTheBatmanAppearances.json"></script>
-        <script type="text/javascript" src="../locations.json"></script>
     <script async="" src="//www.google-analytics.com/analytics.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -52,11 +49,41 @@
 
 <body id="pagewrap" data-gr-c-s-loaded="true">
 
-    <h3>Visual Novel</h3>
+    <h2>Visual Novel</h2>
 
 
 
     <div class="container" style="max-height: 350px; width: 80%;">
+        <header class="header" style="display: none;">
+            <nav class="links">
+                <button class="hamburger-btn" type="button">
+                    <svg class="icon-hamburger" width="1.25em" height="1.25em" style="padding-top:0.25em;">
+                        <use xlink:href="#icon-hamburger"></use>
+                    </svg>
+                </button>
+                <ul id="horizontal" class="">
+                    <li><a href="#" alt="Download SVG" opacity="0" id="downloadButton" class="enabled"><span
+                                class="menu-text">Download</span><svg class="icon icon-arrow-down" width="1em"
+                                height="1em">
+                                <use xlink:href="#icon-arrow-down"></use>
+                            </svg></a>
+                    </li>
+                    <li id="nightModeButton"><input id="nightModeBox" type="checkbox"
+                            style="opacity:0;position:absolute;left:-25;"><label for="nightModeBox"><span
+                                class="dark-text"><span class="menu-text">Dark</span><svg class="icon" width="1em"
+                                    height="1em">
+                                    <use xlink:href="#icon-dark"></use>
+                                </svg></span><span class="light-text"><span class="menu-text">Light</span><svg
+                                    class="icon" width="1em" height="1em">
+                                    <use xlink:href="#icon-light"></use>
+                                </svg></span></label></li>
+                </ul>
+
+            </nav>
+            <button id="done">Character Finished!</button>
+
+        </header>
+
         <div class="container" style="max-height: 400px;">
             <div class="row">
                 <div class="col">
@@ -392,14 +419,64 @@
                             </footer>
                         </main>
 
+                        <!--
+                    <div class="overlay__modal js-download-options overlay--show">
+                        <div class="overlay__wrapper">
+                            <div class="overlay__header">
+                                <span class="overlay__title">Download Options</span>
+                                <svg class="icon close-btn">
+                                    <use xlink:href="#x"></use>
+                                </svg>
+                            </div>
+                            <div class="overlay__panel">
+                                <p>Select which <strong>zoom</strong> to crop image:</p>
+                                <div class="overlay__char-camera">
+                                    <div class="camera-view"><input type="radio" id="camera-full" name="camera-zoom"
+                                            value="full" checked="checked"><label for="camera-full"><svg class=""
+                                                viewBox="10 10 540 540" preserveAspectRatio="xMidYMin" width="10em"
+                                                height="10em">
+                                                <use xlink:href="#character-container" viewBox="10 50 540 540"></use>
+                                            </svg><span>Full</span></label></div>
+                                    <div class="camera-view"><input type="radio" id="camera-torso" name="camera-zoom"
+                                            value="torso"><label for="camera-torso"><svg class=""
+                                                viewBox="136 73 290 290" preserveAspectRatio="xMidYMin" width="10em"
+                                                height="10em">
+                                                <use xlink:href="#character-container" viewBox="204 85 150 150"></use>
+                                            </svg><span>Upper body</span></label></div>
+                                    <div class="camera-view"><input type="radio" id="camera-closeup" name="camera-zoom"
+                                            value="closeup"><label for="camera-closeup"><svg class=""
+                                                viewBox="242.6 97 80 80" preserveAspectRatio="xMidYMin" width="10em"
+                                                height="10em">
+                                                <use xlink:href="#character-container" viewBox="242.6 99 80 80"></use>
+                                            </svg><span>Close-up</span></label></div>
+                                </div>
+                                <p>Choose the <strong>file format</strong> of your download:</p>
+                                <div class="overlay__filetype">
+                                    <div class="download-filetype"><input type="radio" id="download-svg"
+                                            name="download-format" value="svg"><label
+                                            for="download-svg"><span><strong>SVG</strong> (Scalable Vector
+                                                Graphics)</span></label></div>
+                                    <div class="download-filetype"><input type="radio" id="download-png"
+                                            name="download-format" value="png" checked="checked"><label
+                                            for="download-png"><span><strong>PNG</strong> (Portable Network
+                                                Graphics)</span></label></div>
+                                </div>
+                                <div class="overlay__char-new-form--create ui-buttons phat">
+                                    <button id="proceed-download"
+                                        class="overlay__proceed-download-btn js-proceed-download">Proceed with
+                                        Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div id="example-table" style="width: 90%; margin-bottom: 30px;"></div>
-    
-    <script type="text/javascript">/*
+
+    <script type="text/javascript">
         document.getElementById("done").onclick = function () { myFunction() };
 
         var sex, skinColour, irisColour, charHairColour, pupils, charFacialHair, hair, emotion, charShirt, charTie, charVest,
@@ -578,7 +655,7 @@
             table.addRow({ numberOfCharacters: loop }, false);
         }
 
-*/
+
     </script>
 
 

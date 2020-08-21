@@ -55,33 +55,6 @@
         <div id="sketch-holder">
             <div class="container" style="max-height: 350px; width: 80%;">
                 <header class="header" style="display: none;">
-                    <nav class="links">
-                        <button class="hamburger-btn" type="button">
-                            <svg class="icon-hamburger" width="1.25em" height="1.25em" style="padding-top:0.25em;">
-                                <use xlink:href="#icon-hamburger"></use>
-                            </svg>
-                        </button>
-                        <ul id="horizontal" class="">
-                            <li><a href="#" alt="Download SVG" opacity="0" id="downloadButton" class="enabled"><span
-                                        class="menu-text">Download</span><svg class="icon icon-arrow-down" width="1em"
-                                        height="1em">
-                                        <use xlink:href="#icon-arrow-down"></use>
-                                    </svg></a>
-                            </li>
-                            <li id="nightModeButton"><input id="nightModeBox" type="checkbox"
-                                    style="opacity:0;position:absolute;left:-25;"><label for="nightModeBox"><span
-                                        class="dark-text"><span class="menu-text">Dark</span><svg class="icon"
-                                            width="1em" height="1em">
-                                            <use xlink:href="#icon-dark"></use>
-                                        </svg></span><span class="light-text"><span class="menu-text">Light</span><svg
-                                            class="icon" width="1em" height="1em">
-                                            <use xlink:href="#icon-light"></use>
-                                        </svg></span></label></li>
-                        </ul>
-
-                    </nav>
-                    <button id="done">Character Finished!</button>
-
                 </header>
 
                 <div class="container" style="max-height: 400px;">
@@ -131,56 +104,6 @@
                                         <input id="zoomLevel" type="range" orient="vertical" name="viewBoxZoom" min="0"
                                             max="3" value="0">
                                     </div>
-                                    <aside id="sidebar-left" class="sidebar sidebar-left cherry" style="display: none;">
-                                        <ul class="section__list">
-                                        </ul>
-                                    </aside>
-                                    <aside id="sidebar" class="sidebar sidebar-right" style="display: none;">
-                                        <h3 class="sidebar__title">Customize</h3>
-                                        <div class="hud">
-                                            <section class="accordeon__section-label">
-                                                <span class="accordeon__section-title">Controls</span>
-                                                <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
-                                                        height="1em">
-                                                        <use xlink:href="#accordeon_btn"></use>
-                                                    </svg></div>
-                                            </section>
-                                            <div class="accordeon__content section--hide">
-                                                <div class="hud__list-item">
-                                                    <div>
-                                                        <input id="mButton" type="radio" name="sex" value="male"
-                                                            onclick="trans(value[0]);"><label for="mButton">M<span
-                                                                class="abbreviation">ale</span></label>
-                                                    </div>
-                                                    <div>
-                                                        <input id="fButton" type="radio" name="sex" value="female"
-                                                            onclick="trans(value[0]);"><label for="fButton">F<span
-                                                                class="abbreviation">emale</span></label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <section class="accordeon__section-label section__color">
-                                            <span class="accordeon__section-title">Colors</span>
-                                            <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
-                                                    height="1em">
-                                                    <use xlink:href="#accordeon_btn"></use>
-                                                </svg></div>
-                                        </section>
-                                        <div class="colorpicker-wrapper accordeon__content section--hide">
-                                        </div>
-                                        <section class="accordeon__section-label">
-                                            <span class="accordeon__section-title">Items</span>
-                                            <div class="accordeon__svg-container section-btn--hide"><svg width="1em"
-                                                    height="1em">
-                                                    <use xlink:href="#accordeon_btn"></use>
-                                                </svg></div>
-                                        </section>
-                                        <section class="widget accordeon__content section--hide">
-                                            <div id="content_1" class="content"></div>
-                                        </section>
-                                    </aside>
-                                    <div class="skin-color__container"></div>
 
                                     <footer>
                                         <script type="text/javascript" src="all.js" defer=""></script>

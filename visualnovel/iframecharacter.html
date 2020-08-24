@@ -7,6 +7,7 @@
     <title>Visual Novel</title>
     <link href="https://unpkg.com/tabulator-tables@4.6.3/dist/css/tabulator.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.6.3/dist/js/tabulator.min.js"></script>
+    <script type="text/javascript" src="../turkResults/CharactersLabelled.json"></script>
 
 </head>
 
@@ -14,8 +15,7 @@
 
     <div class="embed-responsive embed-responsive-16by9"
         style="border: 1px solid rgba(0,0,0,.1); border-radius: 0.25rem; min-height: 400px;">
-        <iframe class="embed-responsive-item"
-            src="https://charactercreator.org"></iframe>
+        <iframe class="embed-responsive-item" src="https://charactercreator.org"></iframe>
     </div>
 
 
@@ -158,38 +158,38 @@
 
 
         //var local_data = data;  //name inside json file -->	
+        var local_data = esp_data;
         var table = new Tabulator("#example-table", {
-            // data: local_data,
             pagination: "local",
             paginationSize: 5,
             layout: "fitColumns",
             placeholder: "No Data Available",
             columns: [
                 { title: "Character", field: "numberOfCharacters", editor: "input" },
-                { title: "Gender", field: "gender", editor: "input" },
-                { title: "Complexion", field: "complexion", editor: "input" },
-                { title: "Eye Colour", field: "eyeColour", editor: "input" },
-                { title: "Hair Colour", field: "colourHair", editor: "input" },
-                { title: "Hair Style", field: "hairStyle", editor: "input" },
-                { title: "Facial Hair", field: "facial_hair", editor: "input" },
-                { title: "Shirt", field: "shirt", editor: "input" },
-                { title: "Blouse", field: "blouse", editor: "input" },
-                { title: "Dress", field: "dress", editor: "input" },
-                { title: "Tie", field: "tie", editor: "input" },
-                { title: "Vest", field: "vest", editor: "input" },
-                { title: "Jacket", field: "jacket", editor: "input" },
-                { title: "Trousers", field: "pants", editor: "input" },
-                { title: "Skirt", field: "skirt", editor: "input" },
-                { title: "Shoes", field: "shoes", editor: "input" },
+                { title: "Gender", field: "Answer.gender", editor: "input" },
+                { title: "Complexion", field: "Answer.complexion", editor: "input" },
+                { title: "Eye Colour", field: "Answer.eyeColour", editor: "input" },
+                { title: "Hair Colour", field: "Answer.hairColour", editor: "input" },
+                { title: "Hair Style", field: "Answer.hair", editor: "input" },
+                { title: "Facial Hair", field: "Answer.facialHair", editor: "input" },
+                { title: "Shirt", field: "Answer.shirt", editor: "input" },
+                { title: "Blouse", field: "Answer.blouse", editor: "input" },
+                { title: "Dress", field: "Answer.dress", editor: "input" },
+                { title: "Tie", field: "Answer.tie", editor: "input" },
+                { title: "Vest", field: "Answer.vest", editor: "input" },
+                { title: "Jacket", field: "Answer.jacket", editor: "input" },
+                { title: "Trousers", field: "Answer.pants", editor: "input" },
+                { title: "Skirt", field: "Answer.skirt", editor: "input" },
+                { title: "Shoes", field: "Answer.shoes", editor: "input" },
                 {
                     title: "Distinctive Features", //create column group
                     columns: [
-                        { title: "Glasses", field: "glasses", hozAlign: "right" },
-                        { title: "Hat", field: "hat", hozAlign: "center" },
-                        { title: "Earrings", field: "earrings", hozAlign: "center", },
-                        { title: "Makeup", field: "makeup", hozAlign: "center", },
-                        { title: "Tattoos", field: "tattoos", hozAlign: "center", },
-                        { title: "Scars", field: "scars", hozAlign: "center", },
+                        { title: "Glasses", field: "Answer.glasses", hozAlign: "right" },
+                        { title: "Hat", field: "Answer.hat", hozAlign: "center" },
+                        { title: "Earrings", field: "Answer.earrings", hozAlign: "center", },
+                        { title: "Makeup", field: "Answer.makeup", hozAlign: "center", },
+                        { title: "Tattoos", field: "Answer.tattoos", hozAlign: "center", },
+                        { title: "Scars", field: "Answer.scars", hozAlign: "center", },
                     ],
                 },
 

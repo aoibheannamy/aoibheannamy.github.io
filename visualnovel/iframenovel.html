@@ -151,7 +151,29 @@
 
     </div>
 
-    <div id="sketch-holder"></div>
+    <div class="row">
+        <div class="contents" id="sketch-holder content" onload="buildImage()"></div>
+    </div>
+
+    
+
+    <script>
+        var backgroundImages = ['https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/MeetingRoom.jpg?token=APCQXYURBRJUJCIB2KFVYIK7JS222', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/beach.jpg?token=APCQXYTHQ3JXKPYALWSGWAK7JS23Y', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/forest.jpg?token=APCQXYUKE22EKUDAWOCUEWK7JS246'];
+        var index = 0;
+
+        function buildImage() {
+            var backImg = document.createElement('backImg');
+            backImg.src = backgroundImages[index];
+            document.getElementById('content').style.backgroundImage = (backImg);
+        }
+
+        function changeImage() {
+            var img = document.getElementById('content').getElementsByTagName('img')[0];
+            index++;
+            index = index % 4; // This is for if this is the last image then goto first image I have 4 images so I've given 4 change accordingly 
+            img.src = images[index];
+        }
+    </script>
 
 
     <script>

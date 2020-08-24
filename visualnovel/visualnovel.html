@@ -74,7 +74,7 @@
             // set background as image
             bg = loadImage('../Images/MeetingRoom.jpg');
             // any additional images loaded here
-            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
+            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Joker.png?token=APCQXYX22USK4MIYSAWWB5K7JS7JC');
 
             // set font size
             //textSize(fontsize);
@@ -207,9 +207,12 @@
                                 console.log(loccellValue);
                                 var locdata = cell.getData();
                                 console.log("Data: " + locdata.toString());
+                                var backgroundImages = ['https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/MeetingRoom.jpg?token=APCQXYURBRJUJCIB2KFVYIK7JS222', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/beach.jpg?token=APCQXYTHQ3JXKPYALWSGWAK7JS23Y', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/forest.jpg?token=APCQXYUKE22EKUDAWOCUEWK7JS246'];
+s
 
                                 if (locdata == "BoardRoom") {
-                                    bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/MeetingRoom.jpg?token=APCQXYUESEDSP6NUMJJCLY27EK4EU');
+                                    bg = loadImage(backgroundImages[0]);
+                                    
 
                                     draw();
                                 }

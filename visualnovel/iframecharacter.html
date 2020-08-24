@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Novel</title>
+    <link href="https://unpkg.com/tabulator-tables@4.6.3/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.6.3/dist/js/tabulator.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="embed-responsive embed-responsive-16by9"
+        style="border: 1px solid rgba(0,0,0,.1); border-radius: 0.25rem; min-height: 400px;">
+        <iframe class="embed-responsive-item"
+            src="https://charactercreator.org"></iframe>
+    </div>
+
+
+
+    <div id="example-table" style="width: 90%; margin-bottom: 30px;"></div>
+
+    <script type="text/javascript">
+        //document.getElementById("done").onclick = function () { myFunction() };
+
+        var sex, skinColour, irisColour, charHairColour, pupils, charFacialHair, hair, emotion, charShirt, charTie, charVest,
+            charJacket, charPants, charShoes, charBlouse, charDress, charSkirt, charGlasses, charHat, charEarrings, charMakeup, charTattoo, charScar;
+
+        function myFunction() {
+            const queryString = window.location.hash;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+
+            const
+                //keys = urlParams.keys(),
+                //values = urlParams.values(),
+                entries = urlParams.entries();
+
+            //for (const key of keys) console.log(key);
+            //for (const value of values) console.log(value);
+
+            for (const entry of entries) {
+                // set paramters to variables to use to fill in table
+                if (entry[0] == "#sex") {
+                    sex = entry[1];
+                    console.log("Sex:" + sex);
+                    if (sex == "m") {
+                        sex == "male";
+                    } else if (sex == "f") {
+                        sex == "female";
+                    }
+                }
+                if (entry[0] == "skinColor") {
+                    skinColour = entry[1];
+                    console.log("Skin colour:" + skinColour);
+                }
+                if (entry[0] == "irisColor") {
+                    irisColour = entry[1];
+                    console.log("Iris colour:" + irisColour);
+                }
+                if (entry[0] == "hairColor") {
+                    charHairColour = entry[1];
+                    console.log("Hair colour:" + charHairColour);
+                }
+                if (entry[0] == "pupils") {
+                    pupils = entry[1];
+                    console.log("Pupils:" + pupils);
+                }
+                if (entry[0] == "facialHair") {
+                    charFacialHair = entry[1];
+                    console.log("Facial Hair:" + charFacialHair);
+                }
+                if (entry[0] == "hair") {
+                    hair = entry[1];
+                    console.log("Hair:" + hair);
+                }
+                if (entry[0] == "emotion") {
+                    emotion = entry[1];
+                    console.log("Emotion:" + emotion);
+                }
+                if (entry[0] == "shirt") {
+                    charShirt = entry[1];
+                    console.log("Shirt:" + charShirt);
+                }
+                if (entry[0] == "tie") {
+                    charTie = entry[1];
+                    console.log("Tie:" + charTie);
+                }
+                if (entry[0] == "vest") {
+                    charVest = entry[1];
+                    console.log("Vest:" + charVest);
+                }
+                if (entry[0] == "jacket") {
+                    charJacket = entry[1];
+                    console.log("Jacket:" + charJacket);
+                }
+                if (entry[0] == "pants") {
+                    charPants = entry[1];
+                    console.log("Pants:" + charPants);
+                }
+                if (entry[0] == "shoes") {
+                    charShoes = entry[1];
+                    console.log("Shoes:" + charShoes);
+                }
+                if (entry[0] == "blouse") {
+                    charBlouse = entry[1];
+                    console.log("Blouse:" + charBlouse);
+                }
+                if (entry[0] == "dress") {
+                    charDress = entry[1];
+                    console.log("Dress:" + charDress);
+                }
+                if (entry[0] == "skirt") {
+                    charSkirt = entry[1];
+                    console.log("Skirt:" + charSkirt);
+                }
+                if (entry[0] == "glasses") {
+                    charGlasses = entry[1];
+                    console.log("Glasses:" + charGlasses);
+                }
+                if (entry[0] == "hat") {
+                    charHat = entry[1];
+                    console.log("Hat:" + charHat);
+                }
+                if (entry[0] == "earings") {
+                    charEarrings = entry[1];
+                    console.log("Earrings:" + charEarrings);
+                }
+                if (entry[0] == "makeup") {
+                    charMakeup = entry[1];
+                    console.log("Makeup:" + charMakeup);
+                }
+                if (entry[0] == "tatoo") {
+                    charTattoo = entry[1];
+                    console.log("Tattoo:" + charTattoo);
+                }
+                if (entry[0] == "scar") {
+                    charScar = entry[1];
+                    console.log("Scar:" + charScar);
+                }
+
+
+
+                var tableData = [
+                    { numberOfCharacters: 1, gender: sex, complexion: skinColour, eyeColour: irisColour, colourHair: charHairColour, hairStyle: hair, shirt: charShirt, blouse: charBlouse, dress: charDress, tie: charTie, vest: charVest, jacket: charJacket, pants: charPants, skirt: charSkirt, shoes: charShoes, glasses: charGlasses, hat: charHat, earrings: charEarrings, makeup: charMakeup, tattoos: charTattoo, scars: charScar, facial_hair: charFacialHair },
+                    { numberOfCharacters: 2 }
+                ]
+                table.setData(tableData);
+
+
+
+            }
+            alert("Thank you for creating this avatar. The final step is to copy and paste the data in the table below into the form on Amazon's mechanical turk page.");
+        }
+
+
+
+        //var local_data = data;  //name inside json file -->	
+        var table = new Tabulator("#example-table", {
+            // data: local_data,
+            pagination: "local",
+            paginationSize: 5,
+            layout: "fitColumns",
+            placeholder: "No Data Available",
+            columns: [
+                { title: "Character", field: "numberOfCharacters", editor: "input" },
+                { title: "Gender", field: "gender", editor: "input" },
+                { title: "Complexion", field: "complexion", editor: "input" },
+                { title: "Eye Colour", field: "eyeColour", editor: "input" },
+                { title: "Hair Colour", field: "colourHair", editor: "input" },
+                { title: "Hair Style", field: "hairStyle", editor: "input" },
+                { title: "Facial Hair", field: "facial_hair", editor: "input" },
+                { title: "Shirt", field: "shirt", editor: "input" },
+                { title: "Blouse", field: "blouse", editor: "input" },
+                { title: "Dress", field: "dress", editor: "input" },
+                { title: "Tie", field: "tie", editor: "input" },
+                { title: "Vest", field: "vest", editor: "input" },
+                { title: "Jacket", field: "jacket", editor: "input" },
+                { title: "Trousers", field: "pants", editor: "input" },
+                { title: "Skirt", field: "skirt", editor: "input" },
+                { title: "Shoes", field: "shoes", editor: "input" },
+                {
+                    title: "Distinctive Features", //create column group
+                    columns: [
+                        { title: "Glasses", field: "glasses", hozAlign: "right" },
+                        { title: "Hat", field: "hat", hozAlign: "center" },
+                        { title: "Earrings", field: "earrings", hozAlign: "center", },
+                        { title: "Makeup", field: "makeup", hozAlign: "center", },
+                        { title: "Tattoos", field: "tattoos", hozAlign: "center", },
+                        { title: "Scars", field: "scars", hozAlign: "center", },
+                    ],
+                },
+
+            ],
+
+
+        });
+        for (var loop = 1; loop < 10; loop++) {
+            table.addRow({ numberOfCharacters: loop }, false);
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -86,11 +86,11 @@
 
                 // split up row data into separate variables
                 // the following variables should always have a value
-                rowGender = row.getData().gender;
-                rowComplexion = row.getData().complexion;
-                rowEyeColour = row.getData().eyeColour;
-                rowHair = row.getData().hair;
-                rowHairColour = row.getData().hairColour;
+                rowGender = "gender="+row.getData().gender;
+                rowComplexion = "compexion="+row.getData().complexion;
+                rowEyeColour = "irisColor="+row.getData().eyeColour;
+                rowHair = "hair"+row.getData().hair;
+                rowHairColour = "hairColor"+row.getData().hairColour;
 
                 // these variables are optional, so need the check the value is not null before setting to the corresponding variable
                 if (rowFacialHair != null || rowShirt != null || rowBlouse != null || rowDress != null || rowSkirt != null || rowPants != null || rowJacket != null || rowShoes != null || rowTie != null || rowVest != null || rowTattoos != null || rowScars != null || rowGlasses != null || rowHat != null || rowEarrings != null || rowMakeup != null) {

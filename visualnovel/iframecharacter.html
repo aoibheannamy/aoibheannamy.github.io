@@ -209,6 +209,8 @@
             ],
 
             rowClick: function (e, row) {
+                // declare variables for row variables
+                var rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings;
                 // get index of row selected
                 rowIndex = row.getIndex();
                 // print index to console
@@ -217,8 +219,34 @@
                 var rowData = row.getData();
                 // print row data to console
                 console.log(rowData);
-                var rowGender = row.getData().gender;
-                console.log("Gender: "+rowGender);
+                // split up row data into separate variables
+                // the following variables should always have a value
+                rowGender = row.getData().gender;
+                rowComplexion = row.getData().complexion;
+                rowEyeColour = row.getData().eyeColour;
+                rowHair = row.getData().hair;
+                rowHairColour = row.getData().hairColour;
+                // these variables are optional, so need the check the value is not null before setting to the corresponding variable
+                if (rowFacialHair != null || rowShirt != null || rowBlouse != null || rowDress != null || rowSkirt != null || rowPants != null || rowJacket != null || rowShoes != null || rowTie != null || rowVest != null || rowTattoos != null || rowScars != null || rowGlasses != null || rowHat != null || rowEarrings != null || rowMakeup != null ||) {
+                    rowFacialHair = row.getData().facialHair;
+                    rowShirt = row.getData().shirt;
+                    rowBlouse = row.getData().blouse;
+                    rowDress = row.getData().dress;
+                    rowSkirt = row.getData().skirt;
+                    rowPants = row.getData().pants;
+                    rowJacket = row.getData().jacket;
+                    rowTie = row.getData().tie;
+                    rowVest = row.getData().vest;
+                    rowGlasses = row.getData().glasses;
+                    rowShoes = row.getData().shoes;
+                    rowTattoos = row.getData().tattoos;
+                    rowScars = row.getData().scars;
+                    rowHat = row.getData().hat;
+                    rowEarrings = row.getData().earrings;
+                    rowMakeup = row.getData().makeup;
+                }
+
+
 
 
 

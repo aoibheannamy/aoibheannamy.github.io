@@ -157,14 +157,15 @@
         alert("Thank you for creating this avatar. The final step is to copy and paste the data in the table below into the form on Amazon's mechanical turk page.");
     }
     */
-
-
-
+    </script>
+    <script type="text/javascript">
         //var local_data = data;  //name inside json file -->	
         var local_data = charDetails;
         var table = new Tabulator("#example-table", {
             index: "numberOfCharacters",
+            selectable: 1,
             pagination: "local",
+            data: local_data,
             paginationSize: 5,
             layout: "fitColumns",
             placeholder: "No Data Available",

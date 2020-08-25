@@ -65,7 +65,7 @@
 
         function setup() {
             // create the canvas
-            var canvas = createCanvas(5*windowWidth/6, windowHeight);
+            var canvas = createCanvas(5 * windowWidth / 6, windowHeight);
             // position canvas
             canvas.position(50, 50);
             // display as block
@@ -208,11 +208,11 @@
                                 var locdata = cell.getData();
                                 console.log("Data: " + locdata.toString());
                                 var backgroundImages = ['https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/MeetingRoom.jpg?token=APCQXYURBRJUJCIB2KFVYIK7JS222', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/beach.jpg?token=APCQXYTHQ3JXKPYALWSGWAK7JS23Y', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/forest.jpg?token=APCQXYUKE22EKUDAWOCUEWK7JS246'];
-s
+                                s
 
                                 if (locdata == "BoardRoom") {
                                     bg = loadImage(backgroundImages[0]);
-                                    
+
 
                                     draw();
                                 }
@@ -358,8 +358,17 @@ s
 
                     for (var loop = rowIndex; loop <= rowCount; loop++) {
                         var charNo = row.getData().CharacterNumber;
-
-                        var images = [];
+                        var jokerNeutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerNeutral.png?token=APCQXYV5CLFQQQFF2JAKB5K7JYOVI';
+                        var jokerAngry = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAngry.png?token=APCQXYXEFISHCUEXZB6TRUC7JYO2Q';
+                        var jokerStern = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerStern.png?token=APCQXYX5PBB425SMBS62EOC7JYOTW';
+                        var jokerSneer = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerSneer.png?token=APCQXYQHAFMMHCP55GQX54S7JYOUQ';
+                        var jokerLaughing = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerLaughing.png?token=APCQXYSJXJGTW6AQ3VCEU2S7JYOWA';
+                        var jokerSinisterGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrinSinister.png?token=APCQXYVDNV5ZBYH4GMYG2E27JYOXE';
+                        var jokerGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrin.png?token=APCQXYQK5TBN7SEGVIJHG2K7JYOYG';
+                        var jokerGrimace = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrimace.png?token=APCQXYQA5AYK3HOXU2QTCWS7JYOZA';
+                        var jokerAnxious = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAnxious.png?token=APCQXYSU2QFONJQABXYN4TC7JYOZ2';
+                        var jokerImages = [jokerNeutral,jokerAngry,jokerStern,jokerSneer,jokerLaughing,jokerSinisterGrin,jokerGrin,jokerGrimace,jokerAnxious];
+                        
                         if (charNo == "1") {
                             img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
 

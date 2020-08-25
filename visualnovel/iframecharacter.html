@@ -95,7 +95,7 @@
 
                 // these variables are optional, so need the check the value is not null before setting to the corresponding variable
                 
-                    rowFacialHair = "facialHair=" + row.getData().facialHair;
+                    rowFacialHair = "facialhair=" + row.getData().facialHair;
                     rowShirt = "shirt=" + row.getData().shirt;
                     rowBlouse = "blouse=" + row.getData().blouse;
                     rowDress = "dress=" + row.getData().dress;
@@ -133,9 +133,9 @@
                     urlParams = parameterArray.toString();
                     var ref = document.URL;
 
-                    var iframeUrl = mainUrl + '#' + urlParams + '&';
+                    var iframeUrl = mainUrl + '#' + urlParams ;
                     console.log(iframeUrl);
-                    //document.getElementById('myiframe')[0].src = iframeUrl;
+                    document.getElementById('myiframe').src = iframeUrl;
                 }
 
             }

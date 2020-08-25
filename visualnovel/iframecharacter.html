@@ -117,9 +117,9 @@
                 var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];
 
                 // remove commas from array and replace with & instead
-                let removeComma = () => {
-                    parameterArray = parameterArray.join('&');			// using join() method.
-                }
+
+                parameterArray = parameterArray.join('&');			// using join() method.
+
 
 
                 document.getElementById("generateAvatar").onclick = function () { generateAvatar() };

@@ -16,7 +16,8 @@
 
     <div class="embed-responsive embed-responsive-16by9"
         style="border: 1px solid rgba(0,0,0,.1); border-radius: 0.25rem; min-height: 400px;">
-        <iframe id="myiframe" class="embed-responsive-item" src="" style="width: 100%; height: 400px; display: none;">
+        <iframe id="myiframe" class="embed-responsive-item" src=""
+            style="width: 100%; height: 400px;">
         </iframe>
     </div>
 
@@ -93,30 +94,30 @@
                 rowHairColour = "hairColor=" + row.getData().hairColour;
 
                 // these variables are optional, so need the check the value is not null before setting to the corresponding variable
-
-                rowFacialHair = "facialhair=" + row.getData().facialHair;
-                rowShirt = "shirt=" + row.getData().shirt;
-                rowBlouse = "blouse=" + row.getData().blouse;
-                rowDress = "dress=" + row.getData().dress;
-                rowSkirt = "skirt=" + row.getData().skirt;
-                rowPants = "pants=" + row.getData().pants;
-                rowJacket = "jacket=" + row.getData().jacket;
-                rowTie = "tie=" + row.getData().tie;
-                rowVest = "vest=" + row.getData().vest;
-                rowGlasses = "glasses=" + row.getData().glasses;
-                rowShoes = "shoes=" + row.getData().shoes;
-                rowTattoos = "tatoo=" + row.getData().tattoos;
-                rowScars = "scar=" + row.getData().scars;
-                rowHat = "hat=" + row.getData().hat;
-                rowEarrings = "earings=" + row.getData().earrings;
-                rowMakeup = "makeup=" + row.getData().makeup;
-
+                
+                    rowFacialHair = "facialhair=" + row.getData().facialHair;
+                    rowShirt = "shirt=" + row.getData().shirt;
+                    rowBlouse = "blouse=" + row.getData().blouse;
+                    rowDress = "dress=" + row.getData().dress;
+                    rowSkirt = "skirt=" + row.getData().skirt;
+                    rowPants = "pants=" + row.getData().pants;
+                    rowJacket = "jacket=" + row.getData().jacket;
+                    rowTie = "tie=" + row.getData().tie;
+                    rowVest = "vest=" + row.getData().vest;
+                    rowGlasses = "glasses=" + row.getData().glasses;
+                    rowShoes = "shoes=" + row.getData().shoes;
+                    rowTattoos = "tatoo=" + row.getData().tattoos;
+                    rowScars = "scar=" + row.getData().scars;
+                    rowHat = "hat=" + row.getData().hat;
+                    rowEarrings = "earings=" + row.getData().earrings;
+                    rowMakeup = "makeup=" + row.getData().makeup;
+                
 
                 // pass parameters into current parent URL to be transferred into iframe URL
                 var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];
 
                 // remove commas from array and replace with & instead through the join() method
-                parameterArray = parameterArray.join('&');
+                parameterArray = parameterArray.join('&');			
 
 
 
@@ -127,17 +128,14 @@
                  * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
                  */
                 function generateAvatar() {
-                    var iframeSrc = document.getElementById('myiframe');
+                    var mainUrl = "https://charactercreator.org/";
+                    //var urlParams = new URLSearchParams(window.location.search);
                     urlParams = parameterArray.toString();
                     var ref = document.URL;
 
-                    // var iframeUrl = iframeSrc + '#' + urlParams;
-                    //console.log(iframeUrl);
-                    //Modify the src attribute of the iframe with the ID "myiframe"
-
-                    iframeSrc = "https://charactercreator.org/" + '#' + urlParams;
-                    console.log(iframeSrc);
-                    document.getElementById('myiframe').style.display = "block";
+                    var iframeUrl = mainUrl + '#' + urlParams ;
+                    console.log(iframeUrl);
+                    document.getElementById('myiframe')[0].src = iframeUrl;
                 }
 
             }

@@ -16,9 +16,8 @@
 
     <div class="embed-responsive embed-responsive-16by9"
         style="border: 1px solid rgba(0,0,0,.1); border-radius: 0.25rem; min-height: 400px;">
-        <iframe id="myiframe" class="embed-responsive-item" src="https://aoibheannamy.github.io/visualnovel/charactercreator.html/"
+        <iframe id="myiframe" class="embed-responsive-item" src="https://charactercreator.org/"
             style="width: 100%; height: 400px;">
-            
         </iframe>
     </div>
 
@@ -218,22 +217,19 @@
                 var rowData = row.getData();
                 // print row data to console
                 console.log(rowData);
-                var rowDataSplit = rowData.split(",");
-                console.log(rowDataSplit);
+                var rowGender = row.getData('gender');
+                console.log("Gender: "+rowGender);
+
+
 
                 function generateAvatar() {
-                    // get reference to the window inside the iframe
-                    var window = document.getElementById('myiframe').contentWindow;
-                    // postMessage arguments: data that needs sent and target origin
-                    window.postMessage(
-                        {
-                            event_id: "my_message",
-                            data: {
-                                d1: rowData,
-                            }
-                        }, 
-                        "https://charactercreator.org/"
-                    );
+                    var mainUrl = "https://charactercreator.org/";
+                    var urlParams = new URLSearchParams(window.location.search);
+                    urlParams = urlParams.toString();
+                    var ref = document.URL;
+
+                    var iframeUrl = mainUrl + '#' + urlParams + '&';
+                    document.getElementById('myiframe')[0].src = iframeUrl;
                 }
 
             }

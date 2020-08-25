@@ -16,8 +16,7 @@
 
     <div class="embed-responsive embed-responsive-16by9"
         style="border: 1px solid rgba(0,0,0,.1); border-radius: 0.25rem; min-height: 400px;">
-        <iframe id="myiframe" class="embed-responsive-item" src="https://charactercreator.org/"
-            style="width: 100%; height: 400px;">
+        <iframe id="myiframe" class="embed-responsive-item" src="" style="width: 100%; height: 400px; display: none;">
         </iframe>
     </div>
 
@@ -129,7 +128,6 @@
                  */
                 function generateAvatar() {
                     var iframeSrc = document.getElementById('myiframe');
-                    //var urlParams = new URLSearchParams(window.location.search);
                     urlParams = parameterArray.toString();
                     var ref = document.URL;
 
@@ -137,8 +135,9 @@
                     //console.log(iframeUrl);
                     //Modify the src attribute of the iframe with the ID "myiframe"
 
-                    iframeSrc.src = "https://charactercreator.org/" + '#' + urlParams;
+                    iframeSrc = "https://charactercreator.org/" + '#' + urlParams;
                     console.log(iframeSrc);
+                    document.getElementById('myiframe').style.display = "block";
                 }
 
             }

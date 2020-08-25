@@ -94,7 +94,7 @@
                 rowHairColour = "hairColor" + row.getData().hairColour;
 
                 // these variables are optional, so need the check the value is not null before setting to the corresponding variable
-                if (rowFacialHair != null || rowShirt != null || rowBlouse != null || rowDress != null || rowSkirt != null || rowPants != null || rowJacket != null || rowShoes != null || rowTie != null || rowVest != null || rowTattoos != null || rowScars != null || rowGlasses != null || rowHat != null || rowEarrings != null || rowMakeup != null) {
+                
                     rowFacialHair = "facialHair" + row.getData().facialHair;
                     rowShirt = "shirt" + row.getData().shirt;
                     rowBlouse = "blouse" + row.getData().blouse;
@@ -111,7 +111,7 @@
                     rowHat = "hat" + row.getData().hat;
                     rowEarrings = "earings" + row.getData().earrings;
                     rowMakeup = "makeup" + row.getData().makeup;
-                }
+                
 
                 // pass parameters into current parent URL to be transferred into iframe URL
                 var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];

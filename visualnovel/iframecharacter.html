@@ -95,22 +95,22 @@
 
                 // these variables are optional, so need the check the value is not null before setting to the corresponding variable
                 if (rowFacialHair != null || rowShirt != null || rowBlouse != null || rowDress != null || rowSkirt != null || rowPants != null || rowJacket != null || rowShoes != null || rowTie != null || rowVest != null || rowTattoos != null || rowScars != null || rowGlasses != null || rowHat != null || rowEarrings != null || rowMakeup != null) {
-                    rowFacialHair = row.getData().facialHair;
-                    rowShirt = row.getData().shirt;
-                    rowBlouse = row.getData().blouse;
-                    rowDress = row.getData().dress;
-                    rowSkirt = row.getData().skirt;
-                    rowPants = row.getData().pants;
-                    rowJacket = row.getData().jacket;
-                    rowTie = row.getData().tie;
-                    rowVest = row.getData().vest;
-                    rowGlasses = row.getData().glasses;
-                    rowShoes = row.getData().shoes;
-                    rowTattoos = row.getData().tattoos;
-                    rowScars = row.getData().scars;
-                    rowHat = row.getData().hat;
-                    rowEarrings = row.getData().earrings;
-                    rowMakeup = row.getData().makeup;
+                    rowFacialHair = "facialHair" +row.getData().facialHair;
+                    rowShirt = "shirt" +row.getData().shirt;
+                    rowBlouse = "blouse" +row.getData().blouse;
+                    rowDress = "dress" +row.getData().dress;
+                    rowSkirt = "skirt" +row.getData().skirt;
+                    rowPants = "pants" +row.getData().pants;
+                    rowJacket = "jacket" +row.getData().jacket;
+                    rowTie = "tie" +row.getData().tie;
+                    rowVest = "vest" +row.getData().vest;
+                    rowGlasses = "glasses" +row.getData().glasses;
+                    rowShoes = "shoes" +row.getData().shoes;
+                    rowTattoos = "tatoo" +row.getData().tattoos;
+                    rowScars = "scar" +row.getData().scars;
+                    rowHat = "hat" +row.getData().hat;
+                    rowEarrings = "earings" +row.getData().earrings;
+                    rowMakeup = "makeup" +row.getData().makeup;
                 }
 
                 // pass parameters into current parent URL to be transferred into iframe URL

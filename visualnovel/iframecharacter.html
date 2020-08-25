@@ -27,7 +27,7 @@
 
     <button type="button" class="btn btn-info" onclick="generateAvatar()">Generate Character Avatar!</button>
 
-    
+
     <script type="text/javascript">
         //var local_data = data;  //name inside json file -->	
         var local_data = charDetails;
@@ -82,6 +82,7 @@
                 var rowData = row.getData();
                 // print row data to console
                 console.log(rowData);
+
                 // split up row data into separate variables
                 // the following variables should always have a value
                 rowGender = row.getData().gender;
@@ -89,6 +90,7 @@
                 rowEyeColour = row.getData().eyeColour;
                 rowHair = row.getData().hair;
                 rowHairColour = row.getData().hairColour;
+
                 // these variables are optional, so need the check the value is not null before setting to the corresponding variable
                 if (rowFacialHair != null || rowShirt != null || rowBlouse != null || rowDress != null || rowSkirt != null || rowPants != null || rowJacket != null || rowShoes != null || rowTie != null || rowVest != null || rowTattoos != null || rowScars != null || rowGlasses != null || rowHat != null || rowEarrings != null || rowMakeup != null) {
                     rowFacialHair = row.getData().facialHair;
@@ -109,14 +111,19 @@
                     rowMakeup = row.getData().makeup;
                 }
 
+                // pass parameters into current parent URL to be transferred into iframe URL
+                var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];
 
 
 
 
+                /**
+                 * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
+                 */
                 function generateAvatar() {
                     var mainUrl = "https://charactercreator.org/";
-                    var urlParams = new URLSearchParams(window.location.search);
-                    urlParams = urlParams.toString();
+                    //var urlParams = new URLSearchParams(window.location.search);
+                    urlParams = parameterArray.toString();
                     var ref = document.URL;
 
                     var iframeUrl = mainUrl + '#' + urlParams + '&';

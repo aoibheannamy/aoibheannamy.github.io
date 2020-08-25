@@ -200,6 +200,17 @@
                 },
 
             ],
+            rowClick: function(e,row){
+                // get index of row selected
+                rowIndex = row.getIndex();
+                // print index to console
+                console.log("Row index: "+rowIndex);
+                // get data for the selected row
+                var rowData = row.getData();
+                // print row data to console
+                console.log(rowData);
+
+            }
 
 
         });

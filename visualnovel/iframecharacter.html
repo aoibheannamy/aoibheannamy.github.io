@@ -16,7 +16,7 @@
 
     <div class="embed-responsive embed-responsive-16by9"
         style="border: 1px solid rgba(0,0,0,.1); border-radius: 0.25rem; min-height: 400px;">
-        <iframe id="myiframe" class="embed-responsive-item" src=""
+        <iframe id="myiframe" class="embed-responsive-item" src="https://charactercreator.org/"
             style="width: 100%; height: 400px;">
         </iframe>
     </div>
@@ -128,12 +128,12 @@
                  * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
                  */
                 function generateAvatar() {
-                    var mainUrl = "https://charactercreator.org/";
+                    var iframeSrc = document.getElementById('myiframe').src;
                     //var urlParams = new URLSearchParams(window.location.search);
                     urlParams = parameterArray.toString();
                     var ref = document.URL;
 
-                    var iframeUrl = mainUrl + '#' + urlParams ;
+                    var iframeUrl = iframeSrc + '#' + urlParams ;
                     console.log(iframeUrl);
                     document.getElementById('myiframe').src = iframeUrl;
                 }

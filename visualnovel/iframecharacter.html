@@ -16,8 +16,7 @@
 
     <div class="embed-responsive embed-responsive-16by9"
         style="border: 1px solid rgba(0,0,0,.1); border-radius: 0.25rem; min-height: 400px;">
-        <iframe id="myiframe" class="embed-responsive-item" src=""
-            style="width: 100%; height: 400px;">
+        <iframe id="myiframe" class="embed-responsive-item" src="" style="width: 100%; height: 400px;">
         </iframe>
     </div>
 
@@ -26,6 +25,7 @@
     <div id="example-table" style="width: 90%; margin-bottom: 30px;"></div>
 
     <button type="button" class="btn btn-info" id="generateAvatar">Generate Character Avatar!</button>
+    <button type="button" class="btn btn-info" id="clearAvatar">Clear Character Avatar Selection!</button>
 
 
     <script type="text/javascript">
@@ -94,30 +94,30 @@
                 rowHairColour = "hairColor=" + row.getData().hairColour;
 
                 // these variables are optional, so need the check the value is not null before setting to the corresponding variable
-                
-                    rowFacialHair = "facialhair=" + row.getData().facialHair;
-                    rowShirt = "shirt=" + row.getData().shirt;
-                    rowBlouse = "blouse=" + row.getData().blouse;
-                    rowDress = "dress=" + row.getData().dress;
-                    rowSkirt = "skirt=" + row.getData().skirt;
-                    rowPants = "pants=" + row.getData().pants;
-                    rowJacket = "jacket=" + row.getData().jacket;
-                    rowTie = "tie=" + row.getData().tie;
-                    rowVest = "vest=" + row.getData().vest;
-                    rowGlasses = "glasses=" + row.getData().glasses;
-                    rowShoes = "shoes=" + row.getData().shoes;
-                    rowTattoos = "tatoo=" + row.getData().tattoos;
-                    rowScars = "scar=" + row.getData().scars;
-                    rowHat = "hat=" + row.getData().hat;
-                    rowEarrings = "earings=" + row.getData().earrings;
-                    rowMakeup = "makeup=" + row.getData().makeup;
-                
+
+                rowFacialHair = "facialhair=" + row.getData().facialHair;
+                rowShirt = "shirt=" + row.getData().shirt;
+                rowBlouse = "blouse=" + row.getData().blouse;
+                rowDress = "dress=" + row.getData().dress;
+                rowSkirt = "skirt=" + row.getData().skirt;
+                rowPants = "pants=" + row.getData().pants;
+                rowJacket = "jacket=" + row.getData().jacket;
+                rowTie = "tie=" + row.getData().tie;
+                rowVest = "vest=" + row.getData().vest;
+                rowGlasses = "glasses=" + row.getData().glasses;
+                rowShoes = "shoes=" + row.getData().shoes;
+                rowTattoos = "tatoo=" + row.getData().tattoos;
+                rowScars = "scar=" + row.getData().scars;
+                rowHat = "hat=" + row.getData().hat;
+                rowEarrings = "earings=" + row.getData().earrings;
+                rowMakeup = "makeup=" + row.getData().makeup;
+
 
                 // pass parameters into current parent URL to be transferred into iframe URL
                 var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];
 
                 // remove commas from array and replace with & instead through the join() method
-                parameterArray = parameterArray.join('&');			
+                parameterArray = parameterArray.join('&');
 
 
 
@@ -133,9 +133,15 @@
                     urlParams = parameterArray.toString();
                     var ref = document.URL;
 
-                    var iframeUrl = mainUrl + '#' + urlParams ;
+                    var iframeUrl = mainUrl + '#' + urlParams;
                     console.log(iframeUrl);
                     document.getElementById('myiframe').src = iframeUrl;
+                }
+                /**
+                 * This function clears the iframe src so that another selection can be made.
+                 */
+                function clearAvatar() {
+                    document.getElementById('myiframe').src = "";
                 }
 
             }

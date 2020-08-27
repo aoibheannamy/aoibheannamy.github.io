@@ -72,11 +72,9 @@
             canvas.style('display', 'block');
 
             // set background as image
-            //bg = loadImage('../Images/placeholderImage.jpg');
+            bg = loadImage('../Images/placeholderImage.jpg');
             // any additional images loaded here
-            //img = loadImage('../Images/placeholderImage.jpg');
-            fill(0);
-            color(0);
+            img = loadImage('../Images/placeholderImage.jpg');
 
             // set font size
             //textSize(fontsize);
@@ -95,10 +93,9 @@
         function draw() {
             clear();
             // set/insert background
-            //if (rowLocIndex >= 1) {
-              //  background(bg);
-                //color(0);
-            //}
+            if (rowLocIndex >= 1) {
+                background(bg);
+            }
             // insert image
             // start blank
             if (rowIndex >= 1) {
@@ -249,7 +246,7 @@
                          * Checks which background is selected and changes image dependent on the result
                          */
                         if (location == "BoardRoom") {
-                            background(bg) = loadImage(backgroundImages[0]);
+                            bg = loadImage(backgroundImages[0]);
                             draw();
                         } else if (location == "Beach") {
                             bg = loadImage(backgroundImages[1]);

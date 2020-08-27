@@ -207,50 +207,75 @@
                                 console.log(loccellValue);
                                 var locdata = cell.getData();
                                 console.log("Data: " + locdata.toString());
-                                // get image file paths and add to array
-                                var meetingRoom= '../Images/backgrounds/MeetingRoom.jpg';
-                                var backgroundImages = [meetingRoom, '../Images/backgrounds/beach.jpg', '../Images/backgrounds/forest.jpg','../Images/backgrounds/bedroom.jpg', '../Images/backgrounds/club.jpg', '../Images/backgrounds/office.jpg', '../Images/backgrounds/prison.jpg', '../Images/backgrounds/street.jpg', '../Images/backgrounds/supermarket.jpg', '../Images/backgrounds/warehouse.jpg'];
 
-                                /**
-                                 * Checks which background is selected and changes image dependent on the result
-                                 */
-                                if (locdata == "BoardRoom") {
-                                    bg = loadImage(backgroundImages[0]);
-                                    draw();
-                                } else if (locdata == "Beach") {
-                                    bg = loadImage(backgroundImages[1]);
-                                    draw();
-                                } else if (locdata == "Forest") {
-                                    bg = loadImage(backgroundImages[2]);
-                                    draw();
-                                } else if (locdata == "Bedroom") {
-                                    bg = loadImage(backgroundImages[3]);
-                                    draw();
-                                } else if (locdata == "Club/Bar") {
-                                    bg = loadImage(backgroundImages[4]);
-                                    draw();
-                                } else if (locdata == "Office") {
-                                    bg = loadImage(backgroundImages[5]);
-                                    draw();
-                                } else if (locdata == "Prison") {
-                                    bg = loadImage(backgroundImages[6]);
-                                    draw();
-                                } else if (locdata == "Street") {
-                                    bg = loadImage(backgroundImages[7]);
-                                    draw();
-                                } else if (locdata == "Supermarket") {
-                                    bg = loadImage(backgroundImages[8]);
-                                    draw();
-                                } else if (locdata == "Warehouse") {
-                                    bg = loadImage(backgroundImages[9]);
-                                    draw();
-                                }
                             }
                         }
 
                     },
 
                 ],
+                rowClick: function (e, row) {
+                    rowLocIndex = row.getIndex();
+                    // displays index
+                    console.log("Row index: " + rowLocIndex);
+                    var rowLocData = row.getData();
+                    // displays row data for that index
+                    console.log(rowLocData);
+
+                    // get number of rows
+                    var rowLocCount = table.getDataCount();
+                    console.log("Number of rows: " + rowLocCount);
+
+                    // need to find the character number for each frame index
+                    // and then display whichever one it represents
+                    // then need to iterate through the frame number/index
+                    // and repeat
+
+
+                    for (var loop = rowLocIndex; loop <= rowLocCount; loop++) {
+                        var location = row.getData().Location;
+                        var selectedLoc = locTable.getSelectedData();
+
+                        // get image file paths and add to array
+                        var meetingRoom = '../Images/backgrounds/MeetingRoom.jpg';
+                        var backgroundImages = [meetingRoom, '../Images/backgrounds/beach.jpg', '../Images/backgrounds/forest.jpg', '../Images/backgrounds/bedroom.jpg', '../Images/backgrounds/club.jpg', '../Images/backgrounds/office.jpg', '../Images/backgrounds/prison.jpg', '../Images/backgrounds/street.jpg', '../Images/backgrounds/supermarket.jpg', '../Images/backgrounds/warehouse.jpg'];
+
+                        /**
+                         * Checks which background is selected and changes image dependent on the result
+                         */
+                        if (selectedLoc == "BoardRoom") {
+                            bg = loadImage(backgroundImages[0]);
+                            draw();
+                        } else if (selectedLoc == "Beach") {
+                            bg = loadImage(backgroundImages[1]);
+                            draw();
+                        } else if (selectedLoc == "Forest") {
+                            bg = loadImage(backgroundImages[2]);
+                            draw();
+                        } else if (selectedLoc == "Bedroom") {
+                            bg = loadImage(backgroundImages[3]);
+                            draw();
+                        } else if (selectedLoc == "Club/Bar") {
+                            bg = loadImage(backgroundImages[4]);
+                            draw();
+                        } else if (selectedLoc == "Office") {
+                            bg = loadImage(backgroundImages[5]);
+                            draw();
+                        } else if (selectedLoc == "Prison") {
+                            bg = loadImage(backgroundImages[6]);
+                            draw();
+                        } else if (selectedLoc == "Street") {
+                            bg = loadImage(backgroundImages[7]);
+                            draw();
+                        } else if (selectedLoc == "Supermarket") {
+                            bg = loadImage(backgroundImages[8]);
+                            draw();
+                        } else if (selectedLoc == "Warehouse") {
+                            bg = loadImage(backgroundImages[9]);
+                            draw();
+                        }
+                    }
+                }
 
             });
 

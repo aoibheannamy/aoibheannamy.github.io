@@ -356,37 +356,28 @@
                     // and repeat
 
 
-                    for (var loop = rowIndex; loop <= rowCount; loop++) {
-                        var charNo = row.getData().CharacterNumber;
-                        var jokerNeutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerNeutral.png?token=APCQXYV5CLFQQQFF2JAKB5K7JYOVI';
-                        var jokerAngry = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAngry.png?token=APCQXYXEFISHCUEXZB6TRUC7JYO2Q';
-                        var jokerStern = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerStern.png?token=APCQXYX5PBB425SMBS62EOC7JYOTW';
-                        var jokerSneer = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerSneer.png?token=APCQXYQHAFMMHCP55GQX54S7JYOUQ';
-                        var jokerLaughing = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerLaughing.png?token=APCQXYSJXJGTW6AQ3VCEU2S7JYOWA';
-                        var jokerSinisterGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrinSinister.png?token=APCQXYVDNV5ZBYH4GMYG2E27JYOXE';
-                        var jokerGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrin.png?token=APCQXYQK5TBN7SEGVIJHG2K7JYOYG';
-                        var jokerGrimace = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrimace.png?token=APCQXYQA5AYK3HOXU2QTCWS7JYOZA';
-                        var jokerAnxious = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAnxious.png?token=APCQXYSU2QFONJQABXYN4TC7JYOZ2';
-                        var jokerImages = [jokerNeutral,jokerAngry,jokerStern,jokerSneer,jokerLaughing,jokerSinisterGrin,jokerGrin,jokerGrimace,jokerAnxious];
-                        
-                        if (charNo == "1") {
-                            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Joker.png?token=APCQXYVECEQKVFIN6BHR2SS7EAUB2');
 
+
+                    for (var loop = rowIndex; loop <= rowCount; loop++) {
+                        // get the character number in that row to figure out which character is in the scene
+                        var charNo = row.getData().CharacterNumber;
+                        // get the emotion of the character in that scene
+                        var charEmotion = row.getData().Emotion;
+
+
+                        if (charNo == "1") {
+                            callJokerImages();
                             draw();
                         } else if (charNo == "2") {
-                            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Gangster1.png?token=APCQXYSCPDMMHSXIMWMJ2MC7EAUOI');
 
                             draw();
                         } else if (charNo == "3") {
-                            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Gangster2.png?token=APCQXYQ7H3VJIZPO7OWW36S7EAUPA');
 
                             draw();
                         } else if (charNo == "4") {
-                            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Gangster3.png?token=APCQXYT7QKMVODACD62FNC27EAUSE');
 
                             draw();
                         } else if (charNo == "5") {
-                            img = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/Gangster4.png?token=APCQXYVP4M7URD4YQNNU3JK7EAUTC');
 
                             draw();
                         }
@@ -411,6 +402,46 @@
                             charSpeaking = "No Character is speaking.";
                         }
                         rowIndex++;
+
+
+                        /**
+                * Function to hold and call the avatar images for the Joker character
+                */
+                        function callJokerImages() {
+                            // store links in variables according to the emotion of avatar
+                            var jokerNeutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerNeutral.png?token=APCQXYV5CLFQQQFF2JAKB5K7JYOVI';
+                            var jokerAngry = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAngry.png?token=APCQXYXEFISHCUEXZB6TRUC7JYO2Q';
+                            var jokerStern = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerStern.png?token=APCQXYX5PBB425SMBS62EOC7JYOTW';
+                            var jokerSneer = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerSneer.png?token=APCQXYQHAFMMHCP55GQX54S7JYOUQ';
+                            var jokerLaughing = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerLaughing.png?token=APCQXYSJXJGTW6AQ3VCEU2S7JYOWA';
+                            var jokerSinisterGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrinSinister.png?token=APCQXYVDNV5ZBYH4GMYG2E27JYOXE';
+                            var jokerGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrin.png?token=APCQXYQK5TBN7SEGVIJHG2K7JYOYG';
+                            var jokerGrimace = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrimace.png?token=APCQXYQA5AYK3HOXU2QTCWS7JYOZA';
+                            var jokerAnxious = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAnxious.png?token=APCQXYSU2QFONJQABXYN4TC7JYOZ2';
+                            // store all images in an array
+                            var jokerImages = [jokerNeutral, jokerAngry, jokerStern, jokerSneer, jokerLaughing, jokerSinisterGrin, jokerGrin, jokerGrimace, jokerAnxious];
+                            // check what the emotion is in that particular row
+                            if (charEmotion == "Neutral") {
+                                img = loadImage(jokerImages[0]);
+                            } else if (charEmotion == "Angry") {
+                                img = loadImage(jokerImages[1]);
+                            } else if (charEmotion == "Stern") {
+                                img = loadImage(jokerImages[2]);
+                            } else if (charEmotion == "Sneer") {
+                                img = loadImage(jokerImages[3]);
+                            } else if (charEmotion == "Laughing") {
+                                img = loadImage(jokerImages[4]);
+                            } else if (charEmotion == "SinisterGrin") {
+                                img = loadImage(jokerImages[5]);
+                            } else if (charEmotion == "Grin") {
+                                img = loadImage(jokerImages[6]);
+                            } else if (charEmotion == "Grimace") {
+                                img = loadImage(jokerImages[7]);
+                            } else if (charEmotion == "Anxious") {
+                                img = loadImage(jokerImages[8]);
+                            }
+
+                        }
                     }
 
                 },

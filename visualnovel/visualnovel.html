@@ -14,6 +14,8 @@
     <script type="text/javascript" src="../KillTheBatmanFrame.json"></script>
     <script type="text/javascript" src="../KillTheBatmanAppearances.json"></script>
     <script type="text/javascript" src="../locations.json"></script>
+    <script type="text/javascript" src="../characterJson/batmanCharacters.json"></script>
+    <script type="text/javascript" src="../visualNovelJsons/backgroundLocations.json"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -82,6 +84,48 @@
             // set/insert background
             if (rowLocIndex >= 1) {
                 background(bg);
+                // read in background location json
+                locationBack = JSON.parse(backgrounds);
+
+                /**
+                 * Checks which background is selected and changes image dependent on the result
+                 */
+                switch (location) {
+                    case "BoardRoom":
+                        bg = loadImage(locationBack['BoardRoom']);
+                        break;
+                    case "Beach":
+                        bg = loadImage(locationBack['Beach']);
+                        break;
+                    case "Forest":
+                        bg = loadImage(locationBack['Forest']);
+                        break;
+                    case "Bedroom":
+                        bg = loadImage(locationBack['Bedroom']);
+                        break;
+                    case "Club/Bar":
+                        bg = loadImage(locationBack['Club/Bar']);
+                        break;
+                    case "Office":
+                        bg = loadImage(locationBack['Office']);
+                        break;
+                    case "Prison":
+                        bg = loadImage(locationBack['Prison']);
+                        break;
+                    case "Street":
+                        bg = loadImage(locationBack['Street']);
+                        break;
+                    case "Supermarket":
+                        bg = loadImage(locationBack['Supermarket']);
+                        break;
+                    case "Warehouse":
+                        bg = loadImage(locationBack['Warehouse']);
+                        break;
+                    default:
+                        break;
+                }
+
+
             }
             // insert image
             if (rowIndex >= 1) {
@@ -89,6 +133,11 @@
             }
             // call drawWords function
             drawWords(width * 0.5);
+
+            // call in character json files
+            batmanChars = JSON.parse(batmanCharacters);
+
+
         }
 
         function drawWords() {
@@ -150,46 +199,10 @@
                     var rowLocData = row.getData();
                     // displays row data for that index
                     console.log(rowLocData);
-
+                    // get location data
                     var location = row.getData().Location;
 
 
-
-
-                    /**
-                     * Checks which background is selected and changes image dependent on the result
-                     */
-                    if (location == "BoardRoom") {
-                        bg = loadImage(backgroundImages[0]);
-                        draw();
-                    } else if (location == "Beach") {
-                        bg = loadImage(backgroundImages[1]);
-                        draw();
-                    } else if (location == "Forest") {
-                        bg = loadImage(backgroundImages[2]);
-                        draw();
-                    } else if (location == "Bedroom") {
-                        bg = loadImage(backgroundImages[3]);
-                        draw();
-                    } else if (location == "Club/Bar") {
-                        bg = loadImage(backgroundImages[4]);
-                        draw();
-                    } else if (location == "Office") {
-                        bg = loadImage(backgroundImages[5]);
-                        draw();
-                    } else if (location == "Prison") {
-                        bg = loadImage(backgroundImages[6]);
-                        draw();
-                    } else if (location == "Street") {
-                        bg = loadImage(backgroundImages[7]);
-                        draw();
-                    } else if (location == "Supermarket") {
-                        bg = loadImage(backgroundImages[8]);
-                        draw();
-                    } else if (location == "Warehouse") {
-                        bg = loadImage(backgroundImages[9]);
-                        draw();
-                    }
                 }
 
 

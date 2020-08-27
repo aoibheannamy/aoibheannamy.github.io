@@ -218,31 +218,31 @@
                                     bg = loadImage(backgroundImages[0]);
                                     draw();
                                 } else if (locdata == "Beach") {
-                                    br = loadImage(backgroundImages[1]);
+                                    bg = loadImage(backgroundImages[1]);
                                     draw();
                                 } else if (locdata == "Forest") {
-                                    br = loadImage(backgroundImages[2]);
+                                    bg = loadImage(backgroundImages[2]);
                                     draw();
                                 } else if (locdata == "Bedroom") {
-                                    br = loadImage(backgroundImages[3]);
+                                    bg = loadImage(backgroundImages[3]);
                                     draw();
                                 } else if (locdata == "Club/Bar") {
-                                    br = loadImage(backgroundImages[4]);
+                                    bg = loadImage(backgroundImages[4]);
                                     draw();
                                 } else if (locdata == "Office") {
-                                    br = loadImage(backgroundImages[5]);
+                                    bg = loadImage(backgroundImages[5]);
                                     draw();
                                 } else if (locdata == "Prison") {
-                                    br = loadImage(backgroundImages[6]);
+                                    bg = loadImage(backgroundImages[6]);
                                     draw();
                                 } else if (locdata == "Street") {
-                                    br = loadImage(backgroundImages[7]);
+                                    bg = loadImage(backgroundImages[7]);
                                     draw();
                                 } else if (locdata == "Supermarket") {
-                                    br = loadImage(backgroundImages[8]);
+                                    bg = loadImage(backgroundImages[8]);
                                     draw();
                                 } else if (locdata == "Warehouse") {
-                                    br = loadImage(backgroundImages[9]);
+                                    bg = loadImage(backgroundImages[9]);
                                     draw();
                                 }
                             }
@@ -251,71 +251,6 @@
                     },
 
                 ],
-                rowClick: function (e, row) {
-                    rowLocIndex = row.getIndex();
-                    // displays index
-                    console.log("Row index: " + rowLocIndex);
-                    var rowLocData = row.getData();
-                    // displays row data for that index
-                    console.log(rowLocData);
-
-                    // get number of rows
-                    var rowLocCount = table.getDataCount();
-                    console.log("Number of rows: " + rowLocCount);
-
-                    // need to find the character number for each frame index
-                    // and then display whichever one it represents
-                    // then need to iterate through the frame number/index
-                    // and repeat
-
-
-                    for (var loop = rowLocIndex; loop <= rowLocCount; loop++) {
-                        var location = row.getData().Location;
-                        var selectedLoc = locTable.getSelectedData();
-
-                        if (selectedLoc == "BoardRoom") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/MeetingRoom.jpg?token=APCQXYUESEDSP6NUMJJCLY27EK4EU');
-
-                            draw();
-                        } else if (location == "Forest") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/forest.jpg?token=APCQXYTFTFDXSCQWFRPD6427EK4JK');
-
-                            draw();
-                        } else if (location == "Beach") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/beach.jpg?token=APCQXYTQDZM5IRAWKSJIL6C7EK4GA');
-
-                            draw();
-                        } else if (location == "Office") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/office.jpg?token=APCQXYSAZBC5DATTEB4FIHK7EK4JU');
-
-                            draw();
-                        } else if (location == "Warehouse") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/warehouse.jpg?token=APCQXYUQBTMXCQ44YD4CT527EK4N2');
-
-                            draw();
-                        } else if (location == "Club/Bar") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/club.jpg?token=APCQXYSWUWYXMD2Z52R4DJK7EK4JC');
-
-                            draw();
-                        } else if (location == "Supermarket") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/supermarket.jpg?token=APCQXYTBBBAOIWDW3V23MRK7EK4NQ');
-
-                            draw();
-                        } else if (location == "Bedroom") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/bedroom.jpg?token=APCQXYQIHD5LQYEB5FCBHR27EK4G6');
-
-                            draw();
-                        } else if (location == "Street") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/street.jpg?token=APCQXYXOCBPUFMSMTUMU4ES7EK4NI');
-
-                            draw();
-                        } else if (location == "Prison") {
-                            bg = loadImage('https://raw.githubusercontent.com/aoibheannamy/MScProject/master/Images/prison.jpg?token=APCQXYXACXG5LEW2WJVLD7S7EK4RC');
-
-                            draw();
-                        }
-                    }
-                }
 
             });
 

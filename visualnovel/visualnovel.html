@@ -58,11 +58,6 @@
         let myFont;
         let charSpeaking = "";
 
-
-        //function preload() {
-        //    myFont = loadFont('fonts/MontserratAlternates-Medium.otf');
-        //}
-
         function setup() {
             // create the canvas
             var canvas = createCanvas(5 * windowWidth / 6, windowHeight);
@@ -75,16 +70,8 @@
             bg = loadImage('../Images/placeholderImage.jpg');
             // any additional images loaded here
             img = loadImage('../Images/placeholderImage.jpg');
-
-            // set font size
-            //textSize(fontsize);
-            // align text
-            //textAlign(CENTER, CENTER);
-            // define where canvas is to be placed
+            // set container to hold the canvas
             canvas.parent('sketch-holder');
-
-            //textFont(myFont);
-            //textSize(22);
             textAlign(CENTER, CENTER);
 
         }
@@ -97,12 +84,9 @@
                 background(bg);
             }
             // insert image
-            // start blank
             if (rowIndex >= 1) {
                 image(img, 0, height / 2, img.width / 2, img.height / 2);
             }
-            // align text
-            //textAlign(CENTER);
             // call drawWords function
             drawWords(width * 0.5);
         }
@@ -121,9 +105,6 @@
                 strokeWeight(1);
                 text(charSpeaking, 430, 130);
             }
-
-
-
         }
 
         function drawSpeechBubble() {
@@ -135,45 +116,6 @@
 
     </script>
 
-
-    <!--
-    <div class="row">
-        <div class='container' id="appearanceTable">
-            <h4>Physical Appearance of Characters</h4>
-            <div id="example-table"></div>
-            
-            <script type="text/javascript">
-                var local_data = data;  //name inside json file 
-                var appearanceTable = new Tabulator("#example-table", {
-                    data: local_data,
-                    pagination: "local",
-                    paginationSize: 10,
-                    layout: "fitColumns",
-                    placeholder: "No Data Available",
-                    columns: [
-                        { title: "Character", field: "Number of characters", editor: "input" },
-                        { title: "Gender", field: "Gender", editor: "input" },
-                        { title: "Build", field: "Build", editor: "input" },
-                        { title: "Height", field: "Height", editor: "input" },
-                        { title: "Race", field: "Race", editor: "input" },
-                        { title: "Complexion", field: "Complexion", editor: "input" },
-                        { title: "Attractiveness", field: "Rate Attractiveness", editor: "input" },
-                        { title: "Eye Colour", field: "Eye Colour", editor: "input" },
-                        { title: "Hair Colour", field: "Hair Colour", editor: "input" },
-                        { title: "Hair Length", field: "Hair Length", editor: "input" },
-                        { title: "Hair Style", field: "Hair Style", editor: "input" },
-                        { title: "Attire", field: "Attire", editor: "input" },
-                        { title: "Distinctive Features", field: "Distinctive Features", editor: "input" },
-                        { title: "Social Class", field: "Social Class", editor: "input" },
-
-                    ],
-                });					
-            </script>
-         
-        </div>
-    </div>
--->
-
     <div class="container" id="table">
         <h4>Location/Background of Scene</h4>
         <div id="example-table-loc"></div>
@@ -183,32 +125,19 @@
             var locTable = new Tabulator("#example-table-loc", {
                 index: "ID",
                 selectable: 1,
-                //data: loc_data,
                 pagination: "local",
                 paginationSize: 10,
                 layout: "fitColumns",
-                //selectable: true,
                 placeholder: "No Data Available",
                 columns: [
                     {
-                        title: "ID", field: "ID", editor: "input", cellClick: function (e, cell) {
-                            var cellValue = cell.getValue();
-                            // console.log(cellValue);
-                            var data = cell.getData();
-                            //console.log("Data: "+data.toString());
-                        }
+                        title: "ID", field: "ID", editor: "input"
                     },
                     {
                         title: "Location", field: "Location", editor: "select", editorParams: {
                             values: {
                                 "BoardRoom": "Board Room", "Forest": "Forest", "Beach": "Beach", "Office": "Office", "Warehouse": "Warehouse", "Club/Bar": "Club/Bar", "Supermarket": "Supermarket", "Bedroom": "Bedroom", "Street": "Street", "Prison": "Prison"
-                            }, cellClick: function (e, cell) {
-                                var loccellValue = cell.getValue();
-                                console.log(loccellValue);
-                                var locdata = cell.getData();
-                                console.log("Data: " + locdata.toString());
-
-                            }
+                            },
                         }
 
                     },
@@ -222,62 +151,47 @@
                     // displays row data for that index
                     console.log(rowLocData);
 
-                    // get number of rows
-                    var rowLocCount = table.getDataCount();
-                    console.log("Number of rows: " + rowLocCount);
-
-                    // need to find the character number for each frame index
-                    // and then display whichever one it represents
-                    // then need to iterate through the frame number/index
-                    // and repeat
+                    var location = row.getData().Location;
 
 
-                    for (var loop = rowLocIndex; loop <= rowLocCount; loop++) {
-                        var location = row.getData().Location;
-                        var selectedLoc = locTable.getSelectedData();
-
-                        // get image file paths and add to array
-                        var meetingRoom = '../Images/backgrounds/MeetingRoom.jpg';
-                        //var backgroundImages = [meetingRoom, '../Images/backgrounds/beach.jpg', '../Images/backgrounds/forest.jpg', '../Images/backgrounds/bedroom.jpg', '../Images/backgrounds/club.jpg', '../Images/backgrounds/office.jpg', '../Images/backgrounds/prison.jpg', '../Images/backgrounds/street.jpg', '../Images/backgrounds/supermarket.jpg', '../Images/backgrounds/warehouse.jpg'];
-                        var backgroundImages = ['https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/MeetingRoom.jpg?token=APCQXYVIXNRRMOA5CHR3IG27KDDOU', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/beach.jpg?token=APCQXYRUZLEW34HTBKCZGMS7KDDQK', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/forest.jpg?token=APCQXYREMPAD3N5BTP2MPZC7KDDWY','https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/bedroom.jpg?token=APCQXYVWBO2EINFYBRR2WCS7KDDUY', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/club.jpg?token=APCQXYR5GIBD67WH6CHRBHS7KDDZO', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/office.jpg?token=APCQXYXMCQIBRJED734QS727KDD2E', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/prison.jpg?token=APCQXYXBE5OXS6DZEMRGJ7K7KDD7E', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/street.jpg?token=APCQXYTGEHPGB5RJOHA4XO27KDEAM', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/supermarket.jpg?token=APCQXYSWUVXBAKBCLEKLQ5C7KDECO', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/warehouse.jpg?token=APCQXYSGJAKN6LRXXNNFML27KDEDY'];
 
 
-                        /**
-                         * Checks which background is selected and changes image dependent on the result
-                         */
-                        if (location == "BoardRoom") {
-                            bg = loadImage(backgroundImages[0]);
-                            draw();
-                        } else if (location == "Beach") {
-                            bg = loadImage(backgroundImages[1]);
-                            draw();
-                        } else if (location == "Forest") {
-                            bg = loadImage(backgroundImages[2]);
-                            draw();
-                        } else if (location == "Bedroom") {
-                            bg = loadImage(backgroundImages[3]);
-                            draw();
-                        } else if (location == "Club/Bar") {
-                            bg = loadImage(backgroundImages[4]);
-                            draw();
-                        } else if (location == "Office") {
-                            bg = loadImage(backgroundImages[5]);
-                            draw();
-                        } else if (location == "Prison") {
-                            bg = loadImage(backgroundImages[6]);
-                            draw();
-                        } else if (location == "Street") {
-                            bg = loadImage(backgroundImages[7]);
-                            draw();
-                        } else if (location == "Supermarket") {
-                            bg = loadImage(backgroundImages[8]);
-                            draw();
-                        } else if (location == "Warehouse") {
-                            bg = loadImage(backgroundImages[9]);
-                            draw();
-                        }
+                    /**
+                     * Checks which background is selected and changes image dependent on the result
+                     */
+                    if (location == "BoardRoom") {
+                        bg = loadImage(backgroundImages[0]);
+                        draw();
+                    } else if (location == "Beach") {
+                        bg = loadImage(backgroundImages[1]);
+                        draw();
+                    } else if (location == "Forest") {
+                        bg = loadImage(backgroundImages[2]);
+                        draw();
+                    } else if (location == "Bedroom") {
+                        bg = loadImage(backgroundImages[3]);
+                        draw();
+                    } else if (location == "Club/Bar") {
+                        bg = loadImage(backgroundImages[4]);
+                        draw();
+                    } else if (location == "Office") {
+                        bg = loadImage(backgroundImages[5]);
+                        draw();
+                    } else if (location == "Prison") {
+                        bg = loadImage(backgroundImages[6]);
+                        draw();
+                    } else if (location == "Street") {
+                        bg = loadImage(backgroundImages[7]);
+                        draw();
+                    } else if (location == "Supermarket") {
+                        bg = loadImage(backgroundImages[8]);
+                        draw();
+                    } else if (location == "Warehouse") {
+                        bg = loadImage(backgroundImages[9]);
+                        draw();
                     }
                 }
+
 
             });
 
@@ -337,232 +251,178 @@
                     // displays row data for that index
                     console.log(rowData);
 
-                    // get number of rows
-                    var rowCount = table.getDataCount();
-                    console.log("Number of rows: " + rowCount);
-
-                    // need to find the character number for each frame index
-                    // and then display whichever one it represents
-                    // then need to iterate through the frame number/index
-                    // and repeat
+                    // get the character number in that row to figure out which character is in the scene
+                    var charNo = row.getData().CharacterNumber;
+                    // get the emotion of the character in that scene
+                    var charEmotion = row.getData().Emotion;
 
 
-
-
-                    for (var loop = rowIndex; loop <= rowCount; loop++) {
-                        // get the character number in that row to figure out which character is in the scene
-                        var charNo = row.getData().CharacterNumber;
-                        // get the emotion of the character in that scene
-                        var charEmotion = row.getData().Emotion;
-
-
-                        if (charNo == "1") {
-                            callJokerImages();
-                            draw();
-                        } else if (charNo == "2") {
-                            callGangster1Images();
-                            draw();
-                        } else if (charNo == "3") {
-                            callGangster2Images();
-                            draw();
-                        } else if (charNo == "4") {
-                            callGangster3Images();
-                            draw();
-                        } else if (charNo == "5") {
-                            callGangster4Images();
-                            draw();
-                        }
-
-
-                        // is the character speaking and who is it?
-                        var charSpeak = row.getData().CharacterSpeaking;
-                        // what do they say?
-                        var spokenWords = row.getData().WhatDoTheySay;
-                        // set text variable to words in table
-                        textWords = spokenWords;
-                        // call drawWords() to print to screen
-                        if (charSpeak == 1) {
-                            charSpeaking = "Character " + charSpeak + " is speaking:";
-                        } else if (charSpeak == 2) {
-                            charSpeaking = "Character " + charSpeak + " is speaking:";
-                        } else if (charSpeak = 3) {
-                            charSpeaking = "Character " + charSpeak + " is speaking:";
-                        } else if (charSpeak = 4) {
-                            charSpeaking = "Character " + charSpeak + " is speaking:";
-                        } else {
-                            charSpeaking = "No Character is speaking.";
-                        }
-                        rowIndex++;
-
-
-                        /**
-                            * Function to hold and call the avatar images for the Joker character
-                            * Checks the emotion in the table and matches with the correct image
-                        */
-                        function callJokerImages() {
-                            // store links in variables according to the emotion of avatar
-                            var jokerNeutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerNeutral.png?token=APCQXYV5CLFQQQFF2JAKB5K7JYOVI';
-                            var jokerAngry = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAngry.png?token=APCQXYXEFISHCUEXZB6TRUC7JYO2Q';
-                            var jokerStern = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerStern.png?token=APCQXYX5PBB425SMBS62EOC7JYOTW';
-                            var jokerSneer = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerSneer.png?token=APCQXYQHAFMMHCP55GQX54S7JYOUQ';
-                            var jokerLaughing = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerLaughing.png?token=APCQXYSJXJGTW6AQ3VCEU2S7JYOWA';
-                            var jokerSinisterGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrinSinister.png?token=APCQXYVDNV5ZBYH4GMYG2E27JYOXE';
-                            var jokerGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrin.png?token=APCQXYQK5TBN7SEGVIJHG2K7JYOYG';
-                            var jokerGrimace = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrimace.png?token=APCQXYQA5AYK3HOXU2QTCWS7JYOZA';
-                            var jokerAnxious = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAnxious.png?token=APCQXYSU2QFONJQABXYN4TC7JYOZ2';
-                            // store all images in an array
-                            var jokerImages = [jokerNeutral, jokerAngry, jokerStern, jokerSneer, jokerLaughing, jokerSinisterGrin, jokerGrin, jokerGrimace, jokerAnxious];
-
-                            // check what the emotion is in that particular row and match with the correct image 
-                            if (charEmotion == "Neutral") {
-                                img = loadImage(jokerImages[0]);
-                            } else if (charEmotion == "Angry") {
-                                img = loadImage(jokerImages[1]);
-                            } else if (charEmotion == "Stern") {
-                                img = loadImage(jokerImages[2]);
-                            } else if (charEmotion == "Sneer") {
-                                img = loadImage(jokerImages[3]);
-                            } else if (charEmotion == "Laughing") {
-                                img = loadImage(jokerImages[4]);
-                            } else if (charEmotion == "SinisterGrin") {
-                                img = loadImage(jokerImages[5]);
-                            } else if (charEmotion == "Grin") {
-                                img = loadImage(jokerImages[6]);
-                            } else if (charEmotion == "Grimace") {
-                                img = loadImage(jokerImages[7]);
-                            } else if (charEmotion == "Anxious") {
-                                img = loadImage(jokerImages[8]);
-                            }
-                        }
-
-                        /**
-                            * Function to hold and call the avatar images for Gangster1 character
-                            * Checks the emotion in the table and matches with the correct image
-                        */
-                        function callGangster1Images() {
-                            // store links in variables according to the emotion of avatar
-                            var gang1Neutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Neutral.png?token=APCQXYRX4CZAD4Z4IMJ7OA27KCY56';
-                            var gang1Angry = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Angry.png?token=APCQXYVWZI3VGPYLYAYOCB27KCY3C';
-                            var gang1Sneer = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Sneer.png?token=APCQXYQXNBFUUB6WMW7AVZC7KCZAY';
-                            var gang1Laughing = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Laughing.png?token=APCQXYWUHSYQMBG6FE4XTOC7KCY5I';
-                            var gang1Grin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Grin.png?token=APCQXYWGSQLH6PRUYZCFZRK7KCY4G';
-                            var gang1Shock = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Shock.png?token=APCQXYVCP2NUGCS4B7YE7NC7KCY74';
-                            var gang1Serious = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Serious.png?token=APCQXYSCOIPMQGHBIA7YNBC7KCY66';
-                            // store all images in an array
-                            var gang1Images = [gang1Neutral, gang1Angry, gang1Sneer, gang1Laughing, gang1Grin, gang1Shock, gang1Serious];
-                            // check what the emotion is in that particular row
-                            if (charEmotion == "Neutral") {
-                                img = loadImage(gang1Images[0]);
-                            } else if (charEmotion == "Angry") {
-                                img = loadImage(gang1Images[1]);
-                            } else if (charEmotion == "Sneer") {
-                                img = loadImage(gang1Images[2]);
-                            } else if (charEmotion == "Laughing") {
-                                img = loadImage(gang1Images[3]);
-                            } else if (charEmotion == "Grin") {
-                                img = loadImage(gang1Images[4]);
-                            } else if (charEmotion == "Shock") {
-                                img = loadImage(gang1Images[5]);
-                            } else if (charEmotion == "Serious") {
-                                img = loadImage(gang1Images[6]);
-                            }
-                        }
-
-
-                        /**
-                            * Function to hold and call the avatar images for Gangster2 character
-                            * Checks the emotion in the table and matches with the correct image
-                        */
-                        function callGangster2Images() {
-                            // store links in variables according to the emotion of avatar
-                            var gang2Neutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Neutral.png?token=APCQXYQBHEGUY4DORPZTSWC7KCZ4W';
-                            var gang2Angry = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Angry.png?token=APCQXYQGNYVPZNOTGEXEYFS7KCZ2Y';
-                            var gang2Sneer = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Sneer.png?token=APCQXYQQ5CJLEBA2OGOVIHC7KC2AI';
-                            var gang2Laughing = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Laughing.png?token=APCQXYUKQGL33LCI5CMVPUC7KCZ3S';
-                            var gang2Smile = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Smile.png?token=APCQXYRBBPTMXK3PJH6DIQK7KCZ7I';
-                            var gang2Shock = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Shock.png?token=APCQXYQWHQUWP7RXD2CP3QC7KCZ5S';
-                            var gang2Stern = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Stern.png?token=APCQXYQJD7GY5NJKPJPYMBK7KC2BG';
-                            var gang2SinisterGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2SinisterGrin.png?token=APCQXYWDTKVMAR63I2N6NIS7KCZ6M';
-                            // store all images in an array
-                            var gang2Images = [gang2Neutral, gang2Angry, gang2Sneer, gang2Laughing, gang2Smile, gang2Shock, gang2Stern, gang2SinisterGrin];
-                            // check what the emotion is in that particular row
-                            if (charEmotion == "Neutral") {
-                                img = loadImage(gang2Images[0]);
-                            } else if (charEmotion == "Angry") {
-                                img = loadImage(gang2Images[1]);
-                            } else if (charEmotion == "Sneer") {
-                                img = loadImage(gang2Images[2]);
-                            } else if (charEmotion == "Laughing") {
-                                img = loadImage(gang2Images[3]);
-                            } else if (charEmotion == "Grin") {
-                                img = loadImage(gang2Images[4]);
-                            } else if (charEmotion == "Shock") {
-                                img = loadImage(gang2Images[5]);
-                            } else if (charEmotion == "Serious") {
-                                img = loadImage(gang2Images[6]);
-                            } else if (charEmotion == "SinisterGrin") {
-                                img = loadImage(gang2Images[6]);
-                            }
-                        }
-                        /**
-                            * Function to hold and call the avatar images for Gangster3 character
-                            * Checks the emotion in the table and matches with the correct image
-                        */
-                        function callGangster3Images() {
-                            // store links in variables according to the emotion of avatar
-                            var gang3Neutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Neutral.png?token=APCQXYV3YAOBELBNO3DD4JC7KC2QS';
-                            var gang3Angry = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Angry.png?token=APCQXYQ3OXQ5Y3XJC6OF7F27KC2O6';
-                            var gang3Sneer = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Sneer.png?token=APCQXYSVYC7H4WNKH3KCKUK7KC2U4';
-                            var gang3Laughing = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Laughing.png?token=APCQXYTUMKQFG26LZTZ34ZK7KC2PW';
-                            var gang3Smile = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Smile.png?token=APCQXYR22BA6CGTZ4COOD2S7KC2UC';
-                            var gang3Shock = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Shock.png?token=APCQXYQOYGZDVQXV6WFXR2K7KC2RQ';
-                            var gang3SinisterGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3SinisterGrin.png?token=APCQXYVWMPYA3DTCSQ2PSX27KC2SI';
-                            // store all images in an array
-                            var gang3Images = [gang3Neutral, gang3Angry, gang3Sneer, gang3Laughing, gang3Smile, gang3Shock, gang3SinisterGrin];
-                            // check what the emotion is in that particular row
-                            if (charEmotion == "Neutral") {
-                                img = loadImage(gang3Images[0]);
-                            } else if (charEmotion == "Angry") {
-                                img = loadImage(gang3Images[1]);
-                            } else if (charEmotion == "Sneer") {
-                                img = loadImage(gang3Images[2]);
-                            } else if (charEmotion == "Laughing") {
-                                img = loadImage(gang3Images[3]);
-                            } else if (charEmotion == "Grin") {
-                                img = loadImage(gang3Images[4]);
-                            } else if (charEmotion == "Shock") {
-                                img = loadImage(gang3Images[5]);
-                            } else if (charEmotion == "SinisterGrin") {
-                                img = loadImage(gang3Images[6]);
-                            }
-                        }
-                        /**
-                            * Function to hold and call the avatar images for Gangster4 character
-                            * Checks the emotion in the table and matches with the correct image
-                        */
-                        function callGangster4Images() {
-                            // store links in variables according to the emotion of avatar
-                            var gang4Neutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Neutral.png?token=APCQXYUB24DNIFJ5TGCEME27KC25G';
-                            var gang4Sad = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Sad.png?token=APCQXYVUQMVPTXL4XKKRRMK7KC472';
-                            var gang4Scared = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Scared.png?token=APCQXYXIGRWABC7JLSTDHWS7KC262';
-                            var gang4Shock = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Shock.png?token=APCQXYXBWLVSCE5YG2KQ6HC7KC27W';
-                            // store all images in an array
-                            var gang4Images = [gang4Neutral, gang4Sad, gang4Scared, gang4Shock];
-                            // check what the emotion is in that particular row
-                            if (charEmotion == "Neutral") {
-                                img = loadImage(gang4Images[0]);
-                            } else if (charEmotion == "Sad") {
-                                img = loadImage(gang4Images[1]);
-                            } else if (charEmotion == "Scared") {
-                                img = loadImage(gang4Images[2]);
-                            } else if (charEmotion == "Shock") {
-                                img = loadImage(gang4Images[3]);
-                            }
-                        }
-
-
-
+                    if (charNo == "1") {
+                        callJokerImages();
+                        draw();
+                    } else if (charNo == "2") {
+                        callGangster1Images();
+                        draw();
+                    } else if (charNo == "3") {
+                        callGangster2Images();
+                        draw();
+                    } else if (charNo == "4") {
+                        callGangster3Images();
+                        draw();
+                    } else if (charNo == "5") {
+                        callGangster4Images();
+                        draw();
                     }
+
+
+                    // is the character speaking and who is it?
+                    var charSpeak = row.getData().CharacterSpeaking;
+                    // what do they say?
+                    var spokenWords = row.getData().WhatDoTheySay;
+                    // set text variable to words in table
+                    textWords = spokenWords;
+                    // call drawWords() to print to screen
+                    if (charSpeak == 1) {
+                        charSpeaking = "Character " + charSpeak + " is speaking:";
+                    } else if (charSpeak == 2) {
+                        charSpeaking = "Character " + charSpeak + " is speaking:";
+                    } else if (charSpeak = 3) {
+                        charSpeaking = "Character " + charSpeak + " is speaking:";
+                    } else if (charSpeak = 4) {
+                        charSpeaking = "Character " + charSpeak + " is speaking:";
+                    } else {
+                        charSpeaking = "No Character is speaking.";
+                    }
+                    rowIndex++;
+
+
+                    /**
+                        * Function to hold and call the avatar images for the Joker character
+                        * Checks the emotion in the table and matches with the correct image
+                    */
+                    function callJokerImages() {
+
+                        // check what the emotion is in that particular row and match with the correct image 
+                        if (charEmotion == "Neutral") {
+                            img = loadImage(jokerImages[0]);
+                        } else if (charEmotion == "Angry") {
+                            img = loadImage(jokerImages[1]);
+                        } else if (charEmotion == "Stern") {
+                            img = loadImage(jokerImages[2]);
+                        } else if (charEmotion == "Sneer") {
+                            img = loadImage(jokerImages[3]);
+                        } else if (charEmotion == "Laughing") {
+                            img = loadImage(jokerImages[4]);
+                        } else if (charEmotion == "SinisterGrin") {
+                            img = loadImage(jokerImages[5]);
+                        } else if (charEmotion == "Grin") {
+                            img = loadImage(jokerImages[6]);
+                        } else if (charEmotion == "Grimace") {
+                            img = loadImage(jokerImages[7]);
+                        } else if (charEmotion == "Anxious") {
+                            img = loadImage(jokerImages[8]);
+                        }
+                    }
+
+                    /**
+                        * Function to hold and call the avatar images for Gangster1 character
+                        * Checks the emotion in the table and matches with the correct image
+                    */
+                    function callGangster1Images() {
+                        // check what the emotion is in that particular row
+                        if (charEmotion == "Neutral") {
+                            img = loadImage(gang1Images[0]);
+                        } else if (charEmotion == "Angry") {
+                            img = loadImage(gang1Images[1]);
+                        } else if (charEmotion == "Sneer") {
+                            img = loadImage(gang1Images[2]);
+                        } else if (charEmotion == "Laughing") {
+                            img = loadImage(gang1Images[3]);
+                        } else if (charEmotion == "Grin") {
+                            img = loadImage(gang1Images[4]);
+                        } else if (charEmotion == "Shock") {
+                            img = loadImage(gang1Images[5]);
+                        } else if (charEmotion == "Serious") {
+                            img = loadImage(gang1Images[6]);
+                        }
+                    }
+
+
+                    /**
+                        * Function to hold and call the avatar images for Gangster2 character
+                        * Checks the emotion in the table and matches with the correct image
+                    */
+                    function callGangster2Images() {
+                        // store links in variables according to the emotion of avatar
+                        // store all images in an array
+                        // check what the emotion is in that particular row
+                        if (charEmotion == "Neutral") {
+                            img = loadImage(gang2Images[0]);
+                        } else if (charEmotion == "Angry") {
+                            img = loadImage(gang2Images[1]);
+                        } else if (charEmotion == "Sneer") {
+                            img = loadImage(gang2Images[2]);
+                        } else if (charEmotion == "Laughing") {
+                            img = loadImage(gang2Images[3]);
+                        } else if (charEmotion == "Grin") {
+                            img = loadImage(gang2Images[4]);
+                        } else if (charEmotion == "Shock") {
+                            img = loadImage(gang2Images[5]);
+                        } else if (charEmotion == "Serious") {
+                            img = loadImage(gang2Images[6]);
+                        } else if (charEmotion == "SinisterGrin") {
+                            img = loadImage(gang2Images[6]);
+                        }
+                    }
+                    /**
+                        * Function to hold and call the avatar images for Gangster3 character
+                        * Checks the emotion in the table and matches with the correct image
+                    */
+                    function callGangster3Images() {
+                        // check what the emotion is in that particular row
+                        if (charEmotion == "Neutral") {
+                            img = loadImage(gang3Images[0]);
+                        } else if (charEmotion == "Angry") {
+                            img = loadImage(gang3Images[1]);
+                        } else if (charEmotion == "Sneer") {
+                            img = loadImage(gang3Images[2]);
+                        } else if (charEmotion == "Laughing") {
+                            img = loadImage(gang3Images[3]);
+                        } else if (charEmotion == "Grin") {
+                            img = loadImage(gang3Images[4]);
+                        } else if (charEmotion == "Shock") {
+                            img = loadImage(gang3Images[5]);
+                        } else if (charEmotion == "SinisterGrin") {
+                            img = loadImage(gang3Images[6]);
+                        }
+                    }
+                    /**
+                        * Function to hold and call the avatar images for Gangster4 character
+                        * Checks the emotion in the table and matches with the correct image
+                    */
+                    function callGangster4Images() {
+                        // store links in variables according to the emotion of avatar
+                        var gang4Neutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Neutral.png?token=APCQXYUB24DNIFJ5TGCEME27KC25G';
+                        var gang4Sad = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Sad.png?token=APCQXYVUQMVPTXL4XKKRRMK7KC472';
+                        var gang4Scared = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Scared.png?token=APCQXYXIGRWABC7JLSTDHWS7KC262';
+                        var gang4Shock = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Shock.png?token=APCQXYXBWLVSCE5YG2KQ6HC7KC27W';
+                        // store all images in an array
+                        var gang4Images = [gang4Neutral, gang4Sad, gang4Scared, gang4Shock];
+                        // check what the emotion is in that particular row
+                        if (charEmotion == "Neutral") {
+                            img = loadImage(gang4Images[0]);
+                        } else if (charEmotion == "Sad") {
+                            img = loadImage(gang4Images[1]);
+                        } else if (charEmotion == "Scared") {
+                            img = loadImage(gang4Images[2]);
+                        } else if (charEmotion == "Shock") {
+                            img = loadImage(gang4Images[3]);
+                        }
+                    }
+
+
+
+
                 }
             });
 

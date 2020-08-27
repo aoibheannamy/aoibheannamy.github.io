@@ -207,13 +207,40 @@
                                 console.log(loccellValue);
                                 var locdata = cell.getData();
                                 console.log("Data: " + locdata.toString());
-                                var backgroundImages = ['https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/MeetingRoom.jpg?token=APCQXYURBRJUJCIB2KFVYIK7JS222', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/beach.jpg?token=APCQXYTHQ3JXKPYALWSGWAK7JS23Y', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/forest.jpg?token=APCQXYUKE22EKUDAWOCUEWK7JS246'];
-                                s
+                                var backgroundImages = ['https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/MeetingRoom.jpg?token=APCQXYURBRJUJCIB2KFVYIK7JS222', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/beach.jpg?token=APCQXYTHQ3JXKPYALWSGWAK7JS23Y', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/forest.jpg?token=APCQXYUKE22EKUDAWOCUEWK7JS246', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/bedroom.jpg?token=APCQXYUBKVMMGRMGGGUZOQK7KC5MO', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/club.jpg?token=APCQXYUKJ57W5XYKYWIYQHC7KC5PS', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/office.jpg?token=APCQXYSKAVC6VAZZRTOLS227KC5QM', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/prison.jpg?token=APCQXYQOYDTCJ6WQELERYB27KC5RW', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/street.jpg?token=APCQXYQIIVMRZCPZGH4XDDK7KC5SW', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/supermarket.jpg?token=APCQXYQWG7VUSVPRBHXFGES7KC5TY', 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/warehouse.jpg?token=APCQXYWBTP2UJZMCDKQ2RL27KC5U4'];
 
+                                /**
+                                 * Checks which background is selected and changes image dependent on the result
+                                 */
                                 if (locdata == "BoardRoom") {
                                     bg = loadImage(backgroundImages[0]);
-
-
+                                    draw();
+                                } else if (locdata == "Beach") {
+                                    br = loadImage(backgroundImages[1]);
+                                    draw();
+                                } else if (locdata == "Forest") {
+                                    br = loadImage(backgroundImages[2]);
+                                    draw();
+                                } else if (locdata == "Bedroom") {
+                                    br = loadImage(backgroundImages[3]);
+                                    draw();
+                                } else if (locdata == "Club/Bar") {
+                                    br = loadImage(backgroundImages[4]);
+                                    draw();
+                                } else if (locdata == "Office") {
+                                    br = loadImage(backgroundImages[5]);
+                                    draw();
+                                } else if (locdata == "Prison") {
+                                    br = loadImage(backgroundImages[6]);
+                                    draw();
+                                } else if (locdata == "Street") {
+                                    br = loadImage(backgroundImages[7]);
+                                    draw();
+                                } else if (locdata == "Supermarket") {
+                                    br = loadImage(backgroundImages[8]);
+                                    draw();
+                                } else if (locdata == "Warehouse") {
+                                    br = loadImage(backgroundImages[9]);
                                     draw();
                                 }
                             }

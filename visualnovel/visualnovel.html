@@ -95,10 +95,10 @@
         function draw() {
             clear();
             // set/insert background
-            if (rowLocIndex >= 1) {
-                background(bg);
-                color(0);
-            }
+            //if (rowLocIndex >= 1) {
+              //  background(bg);
+                //color(0);
+            //}
             // insert image
             // start blank
             if (rowIndex >= 1) {
@@ -249,7 +249,7 @@
                          * Checks which background is selected and changes image dependent on the result
                          */
                         if (location == "BoardRoom") {
-                            bg = loadImage(backgroundImages[0]);
+                            background(bg) = loadImage(backgroundImages[0]);
                             draw();
                         } else if (location == "Beach") {
                             bg = loadImage(backgroundImages[1]);

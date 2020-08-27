@@ -369,16 +369,16 @@
                             callJokerImages();
                             draw();
                         } else if (charNo == "2") {
-
+                            callGangster1Images();
                             draw();
                         } else if (charNo == "3") {
-
+                            callGangster2Images();
                             draw();
                         } else if (charNo == "4") {
-
+                            callGangster3Images();
                             draw();
                         } else if (charNo == "5") {
-
+                            callGangster4Images();
                             draw();
                         }
 
@@ -513,6 +513,62 @@
                                 img = loadImage(gang2Images[6]);
                             }
                         }
+                        /**
+                            * Function to hold and call the avatar images for Gangster3 character
+                            * Checks the emotion in the table and matches with the correct image
+                        */
+                        function callGangster3Images() {
+                            // store links in variables according to the emotion of avatar
+                            var gang3Neutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Neutral.png?token=APCQXYV3YAOBELBNO3DD4JC7KC2QS';
+                            var gang3Angry = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Angry.png?token=APCQXYQ3OXQ5Y3XJC6OF7F27KC2O6';
+                            var gang3Sneer = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Sneer.png?token=APCQXYSVYC7H4WNKH3KCKUK7KC2U4';
+                            var gang3Laughing = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Laughing.png?token=APCQXYTUMKQFG26LZTZ34ZK7KC2PW';
+                            var gang3Smile = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Smile.png?token=APCQXYR22BA6CGTZ4COOD2S7KC2UC';
+                            var gang3Shock = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Shock.png?token=APCQXYQOYGZDVQXV6WFXR2K7KC2RQ';
+                            var gang3SinisterGrin = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3SinisterGrin.png?token=APCQXYVWMPYA3DTCSQ2PSX27KC2SI';
+                            // store all images in an array
+                            var gang3Images = [gang3Neutral, gang3Angry, gang3Sneer, gang3Laughing, gang3Smile, gang3Shock, gang3SinisterGrin];
+                            // check what the emotion is in that particular row
+                            if (charEmotion == "Neutral") {
+                                img = loadImage(gang3Images[0]);
+                            } else if (charEmotion == "Angry") {
+                                img = loadImage(gang3Images[1]);
+                            } else if (charEmotion == "Sneer") {
+                                img = loadImage(gang3Images[2]);
+                            } else if (charEmotion == "Laughing") {
+                                img = loadImage(gang3Images[3]);
+                            } else if (charEmotion == "Grin") {
+                                img = loadImage(gang3Images[4]);
+                            } else if (charEmotion == "Shock") {
+                                img = loadImage(gang3Images[5]);
+                            } else if (charEmotion == "SinisterGrin") {
+                                img = loadImage(gang3Images[6]);
+                            }
+                        }
+                        /**
+                            * Function to hold and call the avatar images for Gangster4 character
+                            * Checks the emotion in the table and matches with the correct image
+                        */
+                        function callGangster4Images() {
+                            // store links in variables according to the emotion of avatar
+                            var gang4Neutral = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Neutral.png?token=APCQXYUB24DNIFJ5TGCEME27KC25G';
+                            var gang4Sad = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Sad.png?token=APCQXYVDRJZ4Q';
+                            var gang4Scared = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Scared.png?token=APCQXYXIGRWABC7JLSTDHWS7KC262';
+                            var gang4Shock = 'https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Shock.png?token=APCQXYXBWLVSCE5YG2KQ6HC7KC27W';
+                            // store all images in an array
+                            var gang4Images = [gang4Neutral, gang4Sad, gang4Scared, gang4Shock];
+                            // check what the emotion is in that particular row
+                            if (charEmotion == "Neutral") {
+                                img = loadImage(gang4Images[0]);
+                            } else if (charEmotion == "Sad") {
+                                img = loadImage(gang4Images[1]);
+                            } else if (charEmotion == "Scared") {
+                                img = loadImage(gang4Images[2]);
+                            } else if (charEmotion == "Shock") {
+                                img = loadImage(gang4Images[3]);
+                            }
+                        }
+
 
 
                     }

@@ -1,0 +1,266 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+}
+ li.nav-item{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+.imagebanner{
+    background-color:  white;
+    background-image: url(../img/barreheader.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 25%;
+    
+}
+
+.navbar{
+
+    background-color:  #e3f2fd;;
+    margin-bottom: 1%;
+}
+
+
+.nav-links a.active {
+    border-bottom: 4px solid rgba(3, 22, 85, 0.849);
+    color: rgba(3, 22, 85, 0.849);
+}
+
+.logoname{
+    padding-right: 5%;
+    text-align: left;
+}
+
+.subscribeform{
+    margin-top: 7%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+   
+}
+
+
+.mybuttons{
+    background-color: rgba(0, 68, 255, 0.514);
+    border: 2px solid  rgba(3, 22, 85, 0.849);
+    color:  rgba(3, 22, 85, 0.849);
+}
+
+.subbutton{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+}
+
+.headernewsletter{
+    text-align: center;
+}
+
+.onlineclass{
+    background-image: url(../img/singlebarre.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 25%;
+    background-position: top;
+}
+
+.inpersonclasses{
+    background-image: url(../img/barreclass.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 25%;
+    background-position: top;
+
+}
+
+footer{
+    margin-top: 30%;
+    background-color: rgba(0, 68, 255, 0.192);
+
+}
+
+.myform{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 40%;
+    align-content: center;
+    
+}
+
+.mybuttonlogin{
+    width: 30%;
+}
+
+.forminput{
+    padding-bottom: 3%;
+}
+
+.adminmenu{
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+
+div.card-block{
+    padding: 10%;
+}
+
+.admintitle {
+    margin-top: 5%;
+   color: rgba(3, 22, 85, 0.849);
+}
+
+.mytitles {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    color: rgba(3, 22, 85, 0.849);
+}
+
+.mycontactform{
+    margin: 10%;
+    border: thin solid rgba(3, 22, 85, 0.849);
+    background-color: rgba(0, 68, 255, 0.192);
+    padding: 5%;
+
+}
+
+.contactsuccess{
+    margin: 7%;
+    color: rgba(3, 22, 85, 0.849);
+}
+
+.mypara{
+    margin-bottom: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+.mydetails{
+    border: thin solid rgba(3, 22, 85, 0.849);
+    padding: 5%;
+}
+
+.mycards{
+    margin-bottom: 10%;
+    display: block;
+    min-width: 18rem;
+}
+
+
+.classimages img {
+    height:200px;
+    width:100%;
+   
+}
+.classimageone{
+    height:200px;
+    width: 50%;
+}
+
+.inboxtitle{
+    color: rgba(3, 22, 85, 0.849);
+}
+
+.inboxcards{
+    margin: 3%;
+    border: thin solid rgba(3, 22, 85, 0.849);
+    background-color: rgba(0, 68, 255, 0.192);
+}
+
+.myclientlist{
+    margin: 3%;
+    margin-bottom: 5%;
+}
+
+.star {
+    width: 25px;   
+}
+
+.halfstar{
+    background-color: white;
+    width: 35px;
+}
+
+.myspace{
+    margin-bottom: 3%;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.mybuttondetails{
+    margin: 3%;
+    width: 20%;
+    
+}
+
+table {
+    margin: 5%;
+}
+
+.mycomments{
+    margin-bottom: 5%;
+}
+
+.mycolimage{
+    background-image: url(../img/teacher.jpg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    padding: 3%;
+}
+
+.aboutme{
+    margin: 7%;
+}
+
+#graphCanvas #chart-container{
+    margin: 5%;
+    padding: 5%;
+    width: 70%;
+    height: 70%;
+}
+
+.mycommentcard{
+    width: 60rem;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+element.style{
+    margin: 5%;
+    padding: 5%;
+    width: 80%;
+    height: 80%;
+}
+.mycommentcardadmin{
+    width: 35rem;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.myclassimage{
+    height: 50%;
+    width: 50%;
+}
+
+@media screen and (max-width:1000px) {
+
+    .mycards .classimages{
+        width: 80%;
+        display: inline-block;
+    }
+
+
+
+}
+
+

@@ -1,0 +1,627 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Matching the Corresponding Heroes and Villains to Characters from Film and TV</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="105db722-c5ac-4aa9-ad7a-25cf7ea958fc" class="page sans"><header><h1 class="page-title">Matching the Corresponding Heroes and Villains to Characters from Film and TV</h1></header><div class="page-body"><p id="e79b104b-880a-4e33-bf89-52e0f86e12ab" class="">This is a short study of characters from the Open-Source Psychometrics Project Statistical &quot;Which Character&quot; Personality Quiz. The character&#x27;s personality data was sourced and put back into the test again to see which characters from other universes they would be most akin to. Finding the closest matches in both protagonists and antagonists provides a good insight to how similar personality types can lead to completely different world views.</p><p id="5df9d6fc-8822-4d6c-96bf-0d63769e6ecd" class=""><a href="https://openpsychometrics.org/tests/characters/">https://openpsychometrics.org/tests/characters/</a></p><h3 id="b8a78821-85f0-411d-a33d-0ac0ee9da0a4" class=""><strong>Arya Stark</strong></h3><ul id="748d1dd5-8ba0-4d9a-8c61-d77ffe9703b6" class="bulleted-list"><li>Hero/Protagonist:<ul id="5dc862f6-bfa0-448d-8430-f731148f602c" class="bulleted-list"><li>Malcolm Reynolds - Firefly + Serenity - 92%</li></ul><ul id="4a8c0be9-122b-44bb-82fe-4bcbacb57177" class="bulleted-list"><li>Ruth Langmore – Ozark - 91%</li></ul><ul id="9d7c4986-b88e-49e0-9613-37cbf46f3815" class="bulleted-list"><li>Kara &#x27;Starbuck&#x27; Thrace - Battlestar Galactica - 89%</li></ul><ul id="db963169-1900-4d46-b247-3bb94baf8dfd" class="bulleted-list"><li>Katniss Everdeen - The Hunger Games – 88%</li></ul><ul id="0a1a4955-301b-4337-a9e3-22a762443c29" class="bulleted-list"><li>Jo March - Little Women – 87%</li></ul><ul id="29cf0c9f-c292-4da2-800a-a1d4e1e49a06" class="bulleted-list"><li>Kate Austen – LOST - 87%</li></ul><ul id="57206540-76b7-45ca-b7b2-0ad93e413734" class="bulleted-list"><li>Buffy Summers - Buffy the Vampire Slayer – 86%</li></ul><ul id="be9f3741-354f-435a-a036-6ac48bbe97b5" class="bulleted-list"><li>Captain Marvel - Marvel Cinematic Universe – 85%</li></ul><ul id="2a0a2bf7-0291-46e2-be93-3f187ca89d57" class="bulleted-list"><li>Odafin Tutuola - Law &amp; Order SVU - 85%</li></ul><ul id="8a3eecce-703d-473b-b427-06d03f478023" class="bulleted-list"><li>Jack O&#x27;Neill - Stargate SG-1 - 85%</li></ul><ul id="4b20851d-5865-4c03-bee6-adb14d019269" class="bulleted-list"><li>Elizabeth Bennet – Pride and Prejudice – 83%</li></ul><ul id="07d94b9c-6799-497f-96f4-d9dd7929b000" class="bulleted-list"><li>Dom Cobb – Inception - 81%</li></ul><ul id="f9f892f6-b30c-4ffa-b6c4-d85c8f1211f7" class="bulleted-list"><li>Ellen Ripley – Alien - 81%</li></ul><ul id="3a7ba994-c7de-431f-a3d8-35697196f805" class="bulleted-list"><li>Dagny Taggart - Atlas Shrugged - 75%</li></ul></li></ul><ul id="0236d13c-ee54-4ede-bf25-a08641333b81" class="bulleted-list"><li>Villain/Antagonist:<ul id="8e5260c3-775d-46de-8a49-ac5c3233e0fe" class="bulleted-list"><li>Sid Phillips – Toy Story – 81%</li></ul><ul id="cb056d8d-8e64-4169-b6b8-b4b2d954ef1b" class="bulleted-list"><li>The Joker – The Dark Knight – 80%</li></ul><ul id="8dc19289-db74-44b2-ae37-d21f992f7f63" class="bulleted-list"><li>Man in Black – Westworld – 79%</li></ul><ul id="ab62dc7a-fac9-4ea1-8ded-559b4e2197ed" class="bulleted-list"><li>Thanos - Marvel Cinematic Universe - 76%</li></ul><ul id="93f53a6e-a659-439e-a2d6-8d40b458af02" class="bulleted-list"><li>Azula - Avatar - The Last Airbender - 75%</li></ul><ul id="f00cbe80-515e-4b81-b618-94b3b1db9556" class="bulleted-list"><li>The Operative - Firefly + Serenity - 69%</li></ul></li></ul><ul id="27ba87ef-106c-4e30-b1a7-185cfd3eb74b" class="bulleted-list"><li>Deuteragonist:<ul id="1192c669-2840-4dec-a5ba-c85c847fc8eb" class="bulleted-list"><li>Zuko – The Last Airbender – 82%</li></ul><ul id="e0438b64-ab2a-4041-aa6a-a31654fa98e4" class="bulleted-list"><li>Francisco d&#x27;Anconia - Atlas Shrugged - 77%</li></ul></li></ul><h3 id="c6f9f263-2839-49b5-a221-bcd58a51cb59" class=""><strong>Jon Snow:</strong></h3><ul id="dfd25121-bd9a-4ef1-8e68-6e0e938d7c06" class="bulleted-list"><li>Hero/Protagonist:<ul id="d7f25091-025d-4017-909d-9fe8cfcd88ea" class="bulleted-list"><li>Will Turner - Pirates of the Caribbean - 92%</li></ul><ul id="ac2340b7-2f3c-482f-af98-9a21f4d651b3" class="bulleted-list"><li>Aragorn - Lord of the Rings - 91%</li></ul><ul id="55492e8c-af03-464e-8ca9-96cfb1a2b343" class="bulleted-list"><li>Captain America - Marvel Cinematic Universe - 89%</li></ul><ul id="843ff315-173b-4f66-b337-f3e1c5f59445" class="bulleted-list"><li>Rick Grimes - The Walking Dead - 89%</li></ul><ul id="276a5d03-8722-429c-8d75-b24dfdfd33f5" class="bulleted-list"><li>William Adama - Battlestar Galactica - 86%</li></ul><ul id="e5349b39-bef2-421d-b713-fca9f26aab8b" class="bulleted-list"><li>Katniss Everdeen - The Hunger Games - 85%</li></ul><ul id="58fca896-3a39-438b-b2ed-23d471384a0e" class="bulleted-list"><li>Luke Skywalker - Star Wars - 83%</li></ul><ul id="b46175ea-35ff-44b0-9c38-458d1b1dd674" class="bulleted-list"><li>Neo - The Matrix - 83%</li></ul><ul id="e5073488-6c2a-49fa-af5a-cbd9c01a2d85" class="bulleted-list"><li>Frodo Baggins - Lord of the Rings - 82%</li></ul></li></ul><ul id="5e599bc4-e21c-43ed-958f-8661f876cabe" class="bulleted-list"><li>Villain/Antagonist:<ul id="8b30457a-6a4c-4fa0-b73f-b9dc880f7882" class="bulleted-list"><li>Harvey Dent - The Dark Knight - 62%</li></ul><ul id="191fc817-0212-4f98-97a0-a7d090446185" class="bulleted-list"><li>Darth Vader - Star Wars - 59%</li></ul></li></ul><ul id="fb156704-b86b-462b-b28f-fed0daffbf97" class="bulleted-list"><li>Deuteragonist:<ul id="65e8092e-d777-4bb7-b364-655401537dec" class="bulleted-list"><li>Gale Hawthorne - The Hunger Games - 90%</li></ul><ul id="15ea9b06-feb7-4b50-bda9-1b8ebc5ef0a2" class="bulleted-list"><li>Dr. John Watson – Sherlock - 86%</li></ul></li></ul><h3 id="9492bcf9-a201-4c05-a2b4-ab0cd7b1c365" class=""><strong>Daenerys Targaryen:</strong></h3><ul id="f7647ee4-71e8-443c-9dbb-0db1ae76c005" class="bulleted-list"><li>Hero/Protagonist:<ul id="7be93f73-b9ea-40b8-9948-51a1cec8ae99" class="bulleted-list"><li>Elizabeth Swann - Pirates of the Caribbean - 89%</li></ul><ul id="c14805e4-6412-4364-81e2-1f0444f37733" class="bulleted-list"><li>Dolores Abernathy - Westworld - 87%</li></ul><ul id="e34ecafc-d3df-4a67-adad-2e180592f055" class="bulleted-list"><li>Buffy Summers - Buffy the Vampire Slayer - 85%</li></ul><ul id="f8f37a1a-b415-4a73-9a59-ddf0841aa98f" class="bulleted-list"><li>Lady Mary Crawley - Downton Abbey - 84%</li></ul><ul id="10ee38b8-5234-479c-b354-d40321aa0d3b" class="bulleted-list"><li>Bruce Wayne - The Dark Knight - 83%</li></ul><ul id="ef0ca657-83e6-4403-b0bf-f82ed2f4b111" class="bulleted-list"><li>Sherlock Holmes – Sherlock - 83%</li></ul></li></ul><ul id="02f8a746-23bb-46d8-877a-96aadcc0f796" class="bulleted-list"><li>Villain/Antagonist:<ul id="3b378bdc-8746-42ad-bdd2-1105af342b7a" class="bulleted-list"><li>Mal Cobb – Inception - 94%</li></ul><ul id="14e70326-e29f-4c08-bac3-e502691d59b8" class="bulleted-list"><li>Azula – Avatar - The Last Airbender - 91%</li></ul><ul id="2c56dfdc-9b36-4263-8cdc-bd936d737df5" class="bulleted-list"><li>Cersei Lannister - Game of Thrones - 89%</li></ul><ul id="60897097-2c90-420c-9e0a-8be45b1d3b98" class="bulleted-list"><li>Lord Voldemort - Harry Potter - 86%</li></ul><ul id="faeeeca8-345b-48ce-9c5f-ebb98feea1bb" class="bulleted-list"><li>Regina George - Mean Girls - 85%</li></ul><ul id="2f03e9de-1ea2-47dc-9e90-6e1d184f33fb" class="bulleted-list"><li>Vicious - Cowboy Bebop - 83%</li></ul><ul id="df098319-045b-4be8-b01b-eda91834c19e" class="bulleted-list"><li>Joffrey Baratheon - Game of Thrones - 82%</li></ul><ul id="d2d83a6a-a779-403b-ae06-1a58c87353f5" class="bulleted-list"><li><em>Daenerys has a very high number of villains in top 50!!</em></li></ul></li></ul><ul id="12f19a85-edeb-456f-8ad7-63853dc386a6" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="31b384e2-f813-4f4c-b42d-18d814f3d276" class=""><strong>Cersei Lannister:</strong></h3><ul id="168eaec3-a225-4c7e-a18a-2c9ee7dc1946" class="bulleted-list"><li>Hero/Protagonist:<ul id="c77e9c00-dac2-47dd-81ee-5cb081db503c" class="bulleted-list"><li>Don Draper - Mad Men - 85%</li></ul><ul id="201ee843-900d-44b7-b040-210f76c9b20a" class="bulleted-list"><li>Sherlock Holmes – Sherlock - 85%</li></ul><ul id="06563361-5633-462a-bdeb-c2b0ff0cef9f" class="bulleted-list"><li>Daenerys Targaryen - Game of Thrones - 84% questionable!!</li></ul><ul id="a0676cfe-7615-4568-8dfb-4db2354a8951" class="bulleted-list"><li>Lady Mary Crawley - Downton Abbey - 84%</li></ul><ul id="4040ddcc-1c94-4c58-9764-5032ea26a17e" class="bulleted-list"><li>Tony Stark - Marvel Cinematic Universe - 83%</li></ul></li></ul><ul id="b57857ea-303b-411b-b9f4-4e9746c5d856" class="bulleted-list"><li>Villain/Antagonist:<ul id="7711a06f-1ca0-4652-aaa1-ece417ed0c01" class="bulleted-list"><li>Azula – Avatar - The Last Airbender - 93%</li></ul><ul id="81a8835a-0d55-46b4-88a1-1cb8cf68455c" class="bulleted-list"><li>Loki - Marvel Cinematic Universe - 93%</li></ul><ul id="82231047-7cb5-489b-9936-6c576001d884" class="bulleted-list"><li>Mal Cobb – Inception - 91%</li></ul><ul id="5acb04d2-7605-4cd9-9166-5353d1d348c4" class="bulleted-list"><li>Regina George - Mean Girls - 90%</li></ul><ul id="dc9eb00b-0afb-4a7a-a512-d277747ac236" class="bulleted-list"><li>Joffrey Baratheon - Game of Thrones - 89%</li></ul><ul id="9284fc3e-36e1-45cc-8e15-bd8970071e0e" class="bulleted-list"><li>Lord Voldemort - Harry Potter - 89%</li></ul><ul id="e441db42-4f7c-4016-abe8-72ea4e92ea55" class="bulleted-list"><li>Scar - The Lion King - 89%</li></ul><ul id="441de638-9e6f-42d6-afc3-d83a16ba5a1b" class="bulleted-list"><li>Gavin Belson - Silicon Valley - 89%</li></ul><ul id="d6d642a3-710a-4ba7-8af8-a41644b97872" class="bulleted-list"><li>Coriolanus Snow - The Hunger Games - 88%</li></ul><ul id="910bf810-3b0b-419b-812d-4ce614bad896" class="bulleted-list"><li>Ryan Howard - The Office - 87%</li></ul><ul id="0d1e913e-3583-4695-81c1-d1365adc6c99" class="bulleted-list"><li>Mr. Burns - The Simpsons - 86%</li></ul><ul id="3b299c16-f236-4faa-9260-af1701b5c052" class="bulleted-list"><li>Prince John - Robin Hood - 86%</li></ul></li></ul><ul id="68252f6a-e1a9-4efa-bde8-f8ab12e5c2e3" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="a86f3e6b-f3e5-4f8b-a249-6add6b21637b" class=""><strong>Joffrey Baratheon:</strong></h3><ul id="466cf901-8066-486f-9d50-581a02f02935" class="bulleted-list"><li>Hero/Protagonist:<ul id="48130501-6b4e-4a41-b834-68f19c71fb0a" class="bulleted-list"><li>Sherlock Holmes – Sherlock - 78%</li></ul><ul id="4d70242a-5467-4c40-aa55-398a34880f42" class="bulleted-list"><li>Jack Sparrow - Pirates of the Caribbean - 72%</li></ul></li></ul><ul id="bc589406-425d-42c5-b405-0958da866ceb" class="bulleted-list"><li>Villain/Antagonist:<ul id="24295060-5682-414a-8fa4-9553327238be" class="bulleted-list"><li>Prince John - Robin Hood - 95%</li></ul><ul id="38dd07ee-fbac-401f-96d4-3484bf52d83c" class="bulleted-list"><li>Lord Voldemort - Harry Potter - 91%</li></ul><ul id="e5827c29-aa78-4c72-96bd-e6be0c5ceea7" class="bulleted-list"><li>Roy Petty - Ozark - 91%</li></ul><ul id="1e102a1b-1eb1-46bf-aa7e-b20ee692e221" class="bulleted-list"><li>Cersei Lannister - Game of Thrones - 90%</li></ul><ul id="2601dc3a-ab2e-4f2a-9f8d-673e0e8fd243" class="bulleted-list"><li>Azula - Avatar: The Last Airbender - 90%</li></ul><ul id="2c047167-e778-439f-98a6-077989b815d9" class="bulleted-list"><li>Lisa – The Room - 89%</li></ul><ul id="46b36a93-ea7e-4b05-a72b-9ab4b574baef" class="bulleted-list"><li>Mal Cobb – Inception - 88%</li></ul><ul id="7820c453-62b1-4a77-82d3-c6dd5b035407" class="bulleted-list"><li>Scar - The Lion King - 87%</li></ul><ul id="5249d7d3-96db-4a2e-97b2-0e3adc394aeb" class="bulleted-list"><li>Tom Buchanan - The Great Gatsby - 87%</li></ul><ul id="89e28587-d05e-4c0c-8266-bf0100ac1064" class="bulleted-list"><li>Ryan Howard - The Office - 86%</li></ul></li></ul><ul id="d49d50b9-fe16-4b13-9e8f-c9c138f4ef1c" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="3226d03e-a3f4-4f44-bd53-8b3c969dc9e4" class=""><strong>Tyrion Lannister:</strong></h3><ul id="308ada8b-287d-4ad8-a155-d5b02b9b6b90" class="bulleted-list"><li>Hero/Protagonist:<ul id="0ac54593-63f2-49ec-a00d-37083b7b18b7" class="bulleted-list"><li>Tony Stark - Marvel Cinematic Universe – 91%</li></ul><ul id="13f9374e-a473-404b-bf57-f404742ef9c5" class="bulleted-list"><li>Albus Dumbledore - Harry Potter - 83%</li></ul><ul id="97596582-6ad0-472a-af86-e0795387a216" class="bulleted-list"><li>Francisco d&#x27;Anconia - Atlas Shrugged - 83%</li></ul><ul id="d30bdbaf-f2b3-4b16-a437-0e24e360b229" class="bulleted-list"><li>Sherlock Holmes – Sherlock - 82%</li></ul><ul id="e3872074-74a2-449e-9c2c-2d17cee99024" class="bulleted-list"><li>Derek Shepherd - Grey&#x27;s Anatomy - 81%</li></ul><ul id="17d39d8f-fbc8-4049-9eb4-067592697d2a" class="bulleted-list"><li>Sam Seaborn - The West Wing - 80%</li></ul><ul id="4ed56587-10dc-4744-8e16-73b29c1de8f2" class="bulleted-list"><li>Bruce Wayne - The Dark Knight - 80%</li></ul><ul id="8c79f994-0b5b-4f72-84f5-5d15fa07912c" class="bulleted-list"><li>Dr. Strange - Marvel Cinematic Universe - 79%</li></ul></li></ul><ul id="4ecdec27-6568-4b28-9180-4a5d627be8a3" class="bulleted-list"><li>Villain/Antagonist:<ul id="07f27562-48ed-454a-aab7-66f98f64f877" class="bulleted-list"><li>Loki - Marvel Cinematic Universe - 80%</li></ul><ul id="2d01e58e-5a56-4f4a-ba01-7782692b7c7c" class="bulleted-list"><li>Petyr Baelish - Game of Thrones - 79%</li></ul><ul id="280753b9-16de-4a9c-bd5a-c76c6f4f15e8" class="bulleted-list"><li>Cersei Lannister - Game of Thrones - 73%</li></ul><ul id="d0f15e45-fbe2-4ba9-a893-f9964b20cab9" class="bulleted-list"><li>Azula – Avatar: The Last Airbender - 69%</li></ul></li></ul><ul id="3a3254a0-78b8-43d3-b7f3-6e8524bac158" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="57f624f7-8bff-4354-8935-2711da46ed8c" class=""><strong>Petyr Baelish:</strong></h3><ul id="314d882d-adae-49cf-91d8-46b4baeaa477" class="bulleted-list"><li>Hero/Protagonist:<ul id="d6622610-ee86-4b3e-8774-f617ff73b1d1" class="bulleted-list"><li>Don Draper - Mad Men - 85%</li></ul><ul id="1669128b-79ec-4b05-8d76-8271e9b4a148" class="bulleted-list"><li>Sherlock Holmes – Sherlock - 82%</li></ul><ul id="1581eb27-7c4e-4cbb-8c42-175c3ad6a5a9" class="bulleted-list"><li>Tyrion Lannister - Game of Thrones - 80%</li></ul><ul id="b411bad4-b17f-4f59-b6ed-5acb86e74a14" class="bulleted-list"><li>Tony Stark - Marvel Cinematic Universe - 80%</li></ul><ul id="25c2206e-954a-4254-b12a-987ad0f57c98" class="bulleted-list"><li>Lady Mary Crawley - Downton Abbey - 80%</li></ul></li></ul><ul id="3065b511-a168-4c0f-a6eb-ea51aa4fbbd8" class="bulleted-list"><li>Villain/Antagonist:<ul id="0a2eebdd-6bfd-4101-a4ae-6337ec0c4902" class="bulleted-list"><li>Cersei Lannister - Game of Thrones - 94%</li></ul><ul id="3c8f23e5-11b4-40cb-8212-8fd7a9ee5e2c" class="bulleted-list"><li>Tommy Carcetti - The Wire - 93%</li></ul><ul id="f14e261e-61a3-4d47-b944-6f34cce04679" class="bulleted-list"><li>Loki - Marvel Cinematic Universe - 92%</li></ul><ul id="66353bc4-717d-49db-a6e5-c5143bab2551" class="bulleted-list"><li>Coriolanus Snow - The Hunger Games - 90%</li></ul><ul id="5a6ff988-1ca7-46a6-afca-df873d7d903f" class="bulleted-list"><li>Scar - The Lion King - 90%</li></ul><ul id="93105c76-1b35-4cc5-b4f8-06d4bc54b5e6" class="bulleted-list"><li>Lord Voldemort - Harry Potter - 87%</li></ul><ul id="ceb46e2f-c05a-4e85-a1f9-334ae74e37ef" class="bulleted-list"><li>Azula – Avatar: The Last Airbender - 87%</li></ul><ul id="50e0e917-3394-4f1d-9bab-57e7733f9a92" class="bulleted-list"><li>Ryan Howard - The Office - 84%</li></ul><ul id="21b861ba-7538-470c-beef-6efcc7d59f4a" class="bulleted-list"><li>Mr. Burns - The Simpsons - 84%</li></ul><ul id="0e5d28c5-fa82-4fff-b797-85c39fd6a631" class="bulleted-list"><li>Mal Cobb – Inception - 84%</li></ul></li></ul><ul id="9111825e-653f-45ab-96a9-2c5bb74a2347" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="9a5b2182-4664-43bc-88db-da1f6b366d6b" class=""><strong>Albus Dumbledore:</strong></h3><ul id="75f84fd8-a1eb-433d-83b6-cdadaa5e6403" class="bulleted-list"><li>Hero/Protagonist:<ul id="fd41229d-9b12-4a35-880e-e1918be65ff7" class="bulleted-list"><li>Gandalf - Lord of the Rings - 91%</li></ul><ul id="66cc0b1b-47d3-4ec4-8f60-14967c7ca8a2" class="bulleted-list"><li>Dale Cooper - Twin Peaks - 89%</li></ul><ul id="9dc11e66-19d3-429e-b7ca-534e9983313b" class="bulleted-list"><li>Dr. Strange - Marvel Cinematic Universe - 84%</li></ul><ul id="233354f7-975d-4674-83cb-ad604779a29d" class="bulleted-list"><li>Tyrion Lannister - Game of Thrones - 83%</li></ul><ul id="e35d1355-42c8-400d-9fed-02de087e5f91" class="bulleted-list"><li>Obi-Wan Kenobi - Star Wars - 77%</li></ul><ul id="fd8fe003-4a57-4fd9-9374-6a377f21e7bf" class="bulleted-list"><li>Sam Seaborn - The West Wing - 73%</li></ul></li></ul><ul id="958e2fa9-0bbb-492e-89c9-7f04ad5d1666" class="bulleted-list"><li>Villain/Antagonist:<ul id="b928a388-6945-45dc-9884-cd1c34c368fc" class="bulleted-list"><li>Daenerys Targaryen - Game of Thrones - 67%</li></ul><ul id="9e17787e-59fa-4c3d-a8fa-83623b3eb086" class="bulleted-list"><li>Loki - Marvel Cinematic Universe - 64%</li></ul></li></ul><ul id="0431693e-f2bd-4ec6-8426-509b3fe15b9c" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="28982357-31d3-464e-940e-3444e5ae130d" class=""><strong>Harry Potter:</strong></h3><ul id="99218da5-ef45-4a59-82cf-34044a191009" class="bulleted-list"><li>Hero/Protagonist:<ul id="4cb1f9b4-acce-42c9-9f4b-f42323be3dc8" class="bulleted-list"><li>Luke Skywalker - Star Wars - 90%</li></ul><ul id="21904ca2-ffd2-4afd-87bf-5d44f2b8bbb8" class="bulleted-list"><li>Neo - The Matrix - 88%</li></ul><ul id="52447da4-ff1b-4522-b7ac-a8eba29b4fe3" class="bulleted-list"><li>Will Turner - Pirates of the Caribbean - 82%</li></ul><ul id="e72b6cff-d7f4-4dcf-a68a-2a2da721d422" class="bulleted-list"><li>Jon Snow - Game of Thrones - 80%</li></ul><ul id="cfb54fc7-4d64-44e3-98bc-2c9a9e642f53" class="bulleted-list"><li>Katniss Everdeen - The Hunger Games - 80%</li></ul><ul id="fa31d840-bfbd-446d-8802-aa0e6363f48c" class="bulleted-list"><li>Fox Mulder - The X-Files - 80%</li></ul><ul id="1233b3d2-2052-4d0b-9977-b62e0fd3bd5c" class="bulleted-list"><li>Jo March - Little Women - 80%</li></ul><ul id="2c131da7-6d22-404a-8224-a5c1be827d09" class="bulleted-list"><li>Meredith Grey - Grey&#x27;s Anatomy - 79%</li></ul><ul id="7701f4b9-55b7-47a7-9699-489ff973522f" class="bulleted-list"><li>Buffy Summers - Buffy the Vampire Slayer - 79%</li></ul></li></ul><ul id="a49281c2-ad02-4326-94c6-f9c1ef931110" class="bulleted-list"><li>Villain/Antagonist:<ul id="29318bfe-e953-432b-8a70-275d0a4d1984" class="bulleted-list"><li>Daenerys Targaryen - Game of Thrones - 61%</li></ul><ul id="99a6f65c-b964-4735-a185-0c492ea2597c" class="bulleted-list"><li>Harvey Dent - The Dark Knight - 59%</li></ul></li></ul><ul id="b9d99cc9-7707-4c75-905e-13d60bbdcbc4" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="2aeb06da-7666-4ef7-bd2e-3294cb151969" class=""><strong>Lord Voldemort:</strong></h3><ul id="26292131-a156-4191-8f1b-e3ed96e0cd14" class="bulleted-list"><li>Hero/Protagonist:<ul id="706ca90c-f008-4779-ba94-f1e347bfc5b4" class="bulleted-list"><li>Daenerys Targaryen - Game of Thrones - 86%</li></ul><ul id="a56460e8-c869-4a78-a92a-07598291fb64" class="bulleted-list"><li>Sherlock Holmes – Sherlock - 86%</li></ul><ul id="2ad9889f-006e-444a-8cad-deac4d300159" class="bulleted-list"><li>Don Draper - Mad Men - 85%</li></ul><ul id="b21f5ad4-64f8-4ec9-af13-18e35f2fd1d7" class="bulleted-list"><li>Edward Cullen – Twilight- 79%</li></ul><ul id="e8668f8f-26ea-4667-bb68-f26459ac6908" class="bulleted-list"><li>Bruce Wayne - The Dark Knight - 78%</li></ul></li></ul><ul id="421ccf80-8690-4535-bc6b-11345272c56c" class="bulleted-list"><li>Villain/Antagonist:<ul id="0cb2b9af-9d86-4e22-b2ad-a5ef08d4657d" class="bulleted-list"><li>Scar - The Lion King - 97%</li></ul><ul id="c63b6697-d487-4551-8254-fabcaae75d46" class="bulleted-list"><li>Cersei Lannister - Game of Thrones - 94%</li></ul><ul id="1f52fe4f-209a-4b69-89c0-ab1ea8248af9" class="bulleted-list"><li>Thanos - Marvel Cinematic Universe - 94%</li></ul><ul id="b06c245e-6911-4950-ba04-f143d794d17f" class="bulleted-list"><li>Mr. Burns - The Simpsons - 94%</li></ul><ul id="f11fbd11-ff6f-449e-a4c7-b68246d471cc" class="bulleted-list"><li>Vicious - Cowboy Bebop - 94%</li></ul><ul id="7dfc27de-6726-4491-ac03-2451d997c1f5" class="bulleted-list"><li>Azula – Avatar: The Last Airbender - 93%</li></ul><ul id="cf78349d-abc5-4c1f-bff7-0d34f0ba16a1" class="bulleted-list"><li>Coriolanus Snow - The Hunger Games - 93%</li></ul><ul id="2273893c-8084-4424-ba34-e33e38de7948" class="bulleted-list"><li>Man in Black – Westworld - 93%</li></ul></li></ul><ul id="6b271ad1-8de7-4b4e-ab7c-36298ea642e8" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="c574f8f6-42fb-43d8-9ff2-602b9f0d82e8" class=""><strong>Gollum:</strong></h3><ul id="c92460e2-96eb-4101-a2b1-a7a0b786ac58" class="bulleted-list"><li>Hero/Protagonist:<ul id="5284ce7d-af2a-49fa-bbbb-469bf30d3fbc" class="bulleted-list"><li>George Costanza – Seinfeld - 86%</li></ul><ul id="4016c669-72c1-4627-8d4d-fa66c469fcf6" class="bulleted-list"><li>Jack Sparrow - Pirates of the Caribbean - 76%</li></ul><ul id="8d7d8577-e0fc-412d-a730-07bcee767f4b" class="bulleted-list"><li>Arya Stark - Game of Thrones - 74%</li></ul><ul id="64b75159-3f84-46fe-bd9d-4244edab9520" class="bulleted-list"><li>Don Draper - Mad Men - 74%</li></ul></li></ul><ul id="fa04a9c2-0c26-48a1-b1f7-383e709a042d" class="bulleted-list"><li>Villain/Antagonist:<ul id="2e29dc68-3e88-49cb-ae35-3944971ad40b" class="bulleted-list"><li>Sid Phillips - Toy Story - 88%</li></ul><ul id="056235ec-6c3a-49a4-8c1b-64089f7b262f" class="bulleted-list"><li>Hector Barbossa - Pirates of the Caribbean - 84%</li></ul><ul id="3a2b4d8d-24f5-4b25-82d4-5fe41f4793d9" class="bulleted-list"><li>Roy Petty – Ozark - 83%</li></ul><ul id="c66e33ef-73f4-4a54-8cca-cd2b73a7d813" class="bulleted-list"><li>Joffrey Baratheon - Game of Thrones - 82%</li></ul><ul id="0a7104a4-5855-4f69-9f07-56f619eb5598" class="bulleted-list"><li>The Joker - The Dark Knight - 82%</li></ul><ul id="c33d4d19-53f3-498e-b670-7085cc67e7cb" class="bulleted-list"><li>Man in Black – Westworld - 81%</li></ul><ul id="c047804b-54bc-4238-b227-702e403bcf3b" class="bulleted-list"><li>Scar - The Lion King - 81%</li></ul><ul id="8d5b6268-5ae5-48e3-a3ff-927d9c6e7e91" class="bulleted-list"><li>Lord Voldemort - Harry Potter - 79%</li></ul><ul id="dabe66f6-e075-4ea8-ac1a-feb17aec1286" class="bulleted-list"><li>Dennis Nedry - Jurassic Park - 79%</li></ul></li></ul><ul id="583272b5-40b5-4cc3-957a-abec42d80cb0" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="ac43d730-9bb5-4726-9a01-53a504bc5ff5" class=""><strong>Aragorn:</strong></h3><ul id="5117a5c6-9235-421c-84cf-1ca95cd59077" class="bulleted-list"><li>Hero/Protagonist:<ul id="e0fa5aa4-a34f-4ad4-a7b4-a57fcb7f00c9" class="bulleted-list"><li>Rick Grimes - The Walking Dead - 94%</li></ul><ul id="fe60e294-b611-478d-aed1-b44df8c30ca3" class="bulleted-list"><li>Dennis &#x27;Cutty&#x27; Wise - The Wire - 94%</li></ul><ul id="05c5ddd2-5200-4b53-993a-f50683c36576" class="bulleted-list"><li>Jon Snow - Game of Thrones - 91%</li></ul><ul id="b8729fd5-e47b-4cb1-95b5-7cca0ac786a7" class="bulleted-list"><li>Captain America - Marvel Cinematic Universe - 91%</li></ul><ul id="a2ea610f-7ea5-4f2e-8760-81cadbc8ca05" class="bulleted-list"><li>Dr. Alan Grant - Jurassic Park - 90%</li></ul><ul id="5f604592-aa92-4934-968c-9afd1a6c9c4f" class="bulleted-list"><li>Will Turner - Pirates of the Caribbean - 89%</li></ul><ul id="b044a602-151f-4914-8de6-a19955d73c44" class="bulleted-list"><li>Obi-Wan Kenobi - Star Wars - 86%</li></ul><ul id="b67d39b0-7360-4681-99b2-7203356cb097" class="bulleted-list"><li>Katniss Everdeen - The Hunger Games - 86%</li></ul></li></ul><ul id="290f6afc-301d-4f78-8b91-fef921f32d37" class="bulleted-list"><li>Villain/Antagonist:<ul id="ab191142-2087-488e-ae70-614f519bf88e" class="bulleted-list"><li>Harvey Dent - The Dark Knight - 70%</li></ul><ul id="bccb37ee-1e14-4649-8f57-9d4ba523d565" class="bulleted-list"><li>Thanos - Marvel Cinematic Universe - 66%</li></ul><ul id="69fc31b4-ca3c-4c96-94f5-3211512ed540" class="bulleted-list"><li>Agent Smith - The Matrix - 66%</li></ul></li></ul><ul id="ea623a11-8626-4726-8674-71639056a970" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="6f96c97b-5457-4b11-ba03-9bf2f79b2a98" class=""><strong>Frodo Baggins:</strong></h3><ul id="e7de3ad3-1bd4-4764-9644-6c87aec4c2e6" class="bulleted-list"><li>Hero/Protagonist:<ul id="b42dfa81-028f-4411-916a-60ccd8d771b9" class="bulleted-list"><li>Peeta Mellark – The Hunger Games – 92%</li></ul><ul id="11a53f4a-4614-427c-a742-2143627b3533" class="bulleted-list"><li>Jon Snow - Game of Thrones - 82%</li></ul><ul id="32902237-e1cf-41e2-8b10-ffbf1d8ad6d2" class="bulleted-list"><li>Obi-Wan Kenobi - Star Wars - 79%</li></ul><ul id="34fc60b7-65a0-42d0-b25b-3ad696a80e74" class="bulleted-list"><li>Bruce Banner - Marvel Cinematic Universe - 78%</li></ul><ul id="b222b854-9ab8-4ca3-877e-1728af4afb90" class="bulleted-list"><li>Captain America - Marvel Cinematic Universe - 75%</li></ul></li></ul><ul id="dfe98978-cf7d-406f-9e26-f56833d5eb03" class="bulleted-list"><li>Villain/Antagonist:<ul id="8a36e21c-f49b-4762-b00a-79a60bec5824" class="bulleted-list"><li>Harvey Dent - The Dark Knight - 45%</li></ul></li></ul><ul id="984b90e6-f2de-40f2-9d77-45e7d7860f54" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="652c45b8-c4af-4b3e-b296-eaaef015866b" class=""><strong>Gandalf:</strong></h3><ul id="e0bfc75a-164b-4276-ae77-a74faa9241a2" class="bulleted-list"><li>Hero/Protagonist:<ul id="8c0f18a9-b6b4-4af8-b4dd-cb7da679a06a" class="bulleted-list"><li>Dale Cooper - Twin Peaks - 92%</li></ul><ul id="4f3570ad-41d2-49cd-9734-ba96cadd5b58" class="bulleted-list"><li>Albus Dumbledore - Harry Potter - 88%</li></ul><ul id="d26ad69f-cf3a-4052-83a8-079f0a087c36" class="bulleted-list"><li>Dr. Strange - Marvel Cinematic Universe - 88%</li></ul><ul id="ad36dcf5-b1d9-4421-8a13-568d4a54ec23" class="bulleted-list"><li>Obi-Wan Kenobi - Star Wars - 88%</li></ul><ul id="75326bab-fa0a-48c6-9d12-95a21128aa49" class="bulleted-list"><li>John Munch - Law &amp; Order SVU - 83%</li></ul><ul id="7048419b-edc9-473e-a806-76b8271a77a3" class="bulleted-list"><li>Benjamin Sisko - Star Trek Deep Space Nine - 82%</li></ul><ul id="f0b05443-688d-47db-83c4-36fe2dfee770" class="bulleted-list"><li>Mr. Darcy - Pride and Prejudice - 80%</li></ul><ul id="0e23d310-36c8-4113-8930-053dece053d9" class="bulleted-list"><li>Elizabeth Bennet - Pride and Prejudice - 80%</li></ul><ul id="2492afbc-3f8f-483b-883c-2e246968b949" class="bulleted-list"><li>Dr. Alan Grant - Jurassic Park - 80%</li></ul><ul id="302b045e-028a-4289-8ca9-0543d3d4213f" class="bulleted-list"><li>William Adama - Battlestar Galactica - 79%</li></ul></li></ul><ul id="f12fd305-df42-43dc-b25d-38521b47fbcd" class="bulleted-list"><li>Villain/Antagonist:<ul id="e0855415-1f02-49d1-9fb0-e387e1d4966b" class="bulleted-list"><li>The Operative - Firefly + Serenity - 75%</li></ul><ul id="0a8eeb3a-8694-46c4-9422-d041be22e6e7" class="bulleted-list"><li>Dolores Abernathy - Westworld - 67%</li></ul><ul id="f85f18a3-a088-4ee9-bb60-730aa8cf2ff2" class="bulleted-list"><li>Darth Vader - Star Wars - 66%</li></ul></li></ul><ul id="03834a06-b770-4b2f-9363-0988a360a1f0" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="4da055e3-17a6-4f0d-a644-15c7b652a4ed" class=""><strong>Captain America:</strong></h3><ul id="58fe9568-f5fa-43a1-b3b4-e08d7c7426a5" class="bulleted-list"><li>Hero/Protagonist:<ul id="b887e733-1cc5-4ead-8c0b-75420b15ccae" class="bulleted-list"><li>Eric Taylor - Friday Night Lights - 94%</li></ul><ul id="19a433ea-9ded-466a-b7f0-282455e94a9f" class="bulleted-list"><li>Mufasa - The Lion King - 92%</li></ul><ul id="17d1aa4d-883c-4502-b7ad-fadef0e733f0" class="bulleted-list"><li>Aragorn - Lord of the Rings - 91%</li></ul><ul id="25f8cb47-0364-4d18-9b99-671a8f5ad687" class="bulleted-list"><li>Woody - Toy Story - 91%</li></ul><ul id="adac8ebd-b717-4565-91e0-5b4124b35fd4" class="bulleted-list"><li>Dennis &#x27;Cutty&#x27; Wise - The Wire - 90%</li></ul><ul id="e440dc84-5bad-45e7-ac06-d50c954655f2" class="bulleted-list"><li>William Adama - Battlestar Galactica - 90%</li></ul><ul id="8613b281-cf93-4a93-b908-f360e78ea425" class="bulleted-list"><li>Jon Snow - Game of Thrones - 89%</li></ul><ul id="a0055f2a-13f5-4649-aa25-6039c5d7ed53" class="bulleted-list"><li>Rick Grimes - The Walking Dead - 89%</li></ul><ul id="005255b5-b887-45f9-8a22-3fb7835a507d" class="bulleted-list"><li>Leroy Jethro Gibbs – NCIS - 89%</li></ul><ul id="52018b0e-fd6f-4f3a-a4fd-cf3009acc5c8" class="bulleted-list"><li>Jack Shephard – LOST – 88%</li></ul><ul id="2e225e7f-ab40-47e3-b62d-a76916f24d77" class="bulleted-list"><li>Benjamin Sisko - Star Trek Deep Space Nine - 88%</li></ul></li></ul><ul id="cc930e4f-5f52-4228-aab2-9a061c25e2a6" class="bulleted-list"><li>Villain/Antagonist:<ul id="771eb5d3-aead-449a-b612-df0526f2d0bf" class="bulleted-list"><li>Harvey Dent - The Dark Knight - 67%</li></ul><ul id="79564fe9-9dc0-44cb-a060-8cdc4ef2c7fc" class="bulleted-list"><li>Agent Smith - The Matrix - 67%</li></ul></li></ul><ul id="c1d2162c-507f-4b8a-be32-7b53c96e2a95" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="252876f7-ec3d-4ff5-808f-d8ce6b7a410c" class=""><strong>Tony Stark:</strong></h3><ul id="9c288d75-1991-4783-b578-f601fcc078db" class="bulleted-list"><li>Hero/Protagonist:<ul id="294edc48-71c0-4732-a760-40b61886308b" class="bulleted-list"><li>Bruce Wayne - The Dark Knight - 88%</li></ul><ul id="5cd9f092-1405-4429-bf3f-b9303ab67b9f" class="bulleted-list"><li>Francisco d&#x27;Anconia - Atlas Shrugged - 88%</li></ul><ul id="054a5d3b-e0fe-4f44-b76c-785d06d10346" class="bulleted-list"><li>Sherlock Holmes – Sherlock - 86%</li></ul><ul id="673889d2-fec2-48a4-a2b2-63a797f24140" class="bulleted-list"><li>Jay Gatsby - The Great Gatsby - 84%</li></ul><ul id="e438b9db-59fa-484c-8e31-8051cc05d479" class="bulleted-list"><li>Derek Shepherd - Grey&#x27;s Anatomy - 83%</li></ul><ul id="f64eea22-ad27-4094-96a0-49a4d930bcdd" class="bulleted-list"><li>Sam Seaborn - The West Wing - 81%</li></ul></li></ul><ul id="1c1a71f9-719e-45c5-b3ec-d2c114598cfa" class="bulleted-list"><li>Villain/Antagonist:<ul id="868e95e7-0c50-4dc7-9166-e7c972e4338a" class="bulleted-list"><li>Loki - Marvel Cinematic Universe - 84%</li></ul><ul id="48bc5fd2-eeb9-46be-a246-690ad829daeb" class="bulleted-list"><li>Tommy Carcetti - The Wire - 83%</li></ul><ul id="dbe3c29b-2577-4397-b1b6-7fda1ae609aa" class="bulleted-list"><li>Ryan Howard - The Office - 82%</li></ul><ul id="4e59384b-710e-4f4d-8b6e-520f1bf1409e" class="bulleted-list"><li>Azula – Avatar: The Last Airbender - 80%</li></ul><ul id="bc4f8557-1a3e-4131-b797-a5ea98203aae" class="bulleted-list"><li>Petyr Baelish - Game of Thrones - 79%</li></ul><ul id="81825507-c6b8-41b8-9470-da0f1cad2d57" class="bulleted-list"><li>Cersei Lannister - Game of Thrones - 79%</li></ul></li></ul><ul id="6bf065a6-b1c9-48e8-a295-bb056553860b" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="80968e1e-678d-497f-9d80-f15e6c147a58" class=""><strong>Loki:</strong></h3><ul id="82c240c3-80c6-48bb-862e-1dcc76493dad" class="bulleted-list"><li>Hero/Protagonist:<ul id="aa17345f-3e24-48e6-b426-ced140185071" class="bulleted-list"><li>Francisco d&#x27;Anconia - Atlas Shrugged - 88%</li></ul><ul id="d13cc017-cc03-4c96-a2ec-9ed09b5b5d0b" class="bulleted-list"><li>Jay Gatsby - The Great Gatsby - 87%</li></ul><ul id="ee829e90-262a-49ec-98dd-fe446a488946" class="bulleted-list"><li>Don Draper – Mad Men – 86%</li></ul><ul id="72df6c1f-7201-46bf-b1e4-6e8890436e83" class="bulleted-list"><li>Tony Stark - Marvel Cinematic Universe - 85%</li></ul><ul id="517a1c23-aaa3-4526-bf43-5fc0e074106c" class="bulleted-list"><li>Jack Sparrow - Pirates of the Caribbean - 83%</li></ul></li></ul><ul id="8b8fb463-ab6e-485d-80b7-5f82292399f3" class="bulleted-list"><li>Villain/Antagonist:<ul id="9f36ce1f-11c0-4680-85c1-3752bba9c5f8" class="bulleted-list"><li>Petyr Baelish - Game of Thrones - 92%</li></ul><ul id="c1864154-9058-4cc1-afe2-a6e894bfccff" class="bulleted-list"><li>The Joker - The Dark Knight - 89%</li></ul><ul id="8cb8e093-212c-4b71-9530-886d26c55f53" class="bulleted-list"><li>Mal Cobb – Inception - 88%</li></ul><ul id="b65350c7-1f60-4c9b-82bb-d32dd24bc50f" class="bulleted-list"><li>Ryan Howard - The Office - 87%</li></ul><ul id="77411736-f8b0-4b2e-a0bc-913aa4d806c3" class="bulleted-list"><li>Tommy Carcetti - The Wire - 86%</li></ul><ul id="bd63cdf5-2bc2-4322-9d0a-1546e1148e41" class="bulleted-list"><li>Joffrey Baratheon - Game of Thrones - 84%</li></ul><ul id="5136048f-aa5d-4c9b-bdee-bc6e66714d4e" class="bulleted-list"><li>Azula – Avatar: The Last Airbender - 84%</li></ul><ul id="e0548563-1f45-44ef-84d2-15d3978417ad" class="bulleted-list"><li>Scar - The Lion King - 84%</li></ul><ul id="33cd91a4-c81c-4b0d-b52b-a109033b4565" class="bulleted-list"><li>George Wickham - Pride and Prejudice - 83%</li></ul><ul id="57e626e4-4c49-4f6e-b74c-a6992fc889c8" class="bulleted-list"><li>Hector Barbossa - Pirates of the Caribbean - 83%</li></ul></li></ul><ul id="207f9abb-5bcc-4d0f-afc6-9ca2440125e9" class="bulleted-list"><li>Deuteragonist:</li></ul><h3 id="4304ac01-99d8-4594-997f-697df10db3b9" class=""><strong>Thanos:</strong></h3><ul id="cb289f89-5605-4458-8e47-6f959240e4ca" class="bulleted-list"><li>Hero/Protagonist:<ul id="d7eed079-cc63-4810-960c-0eed7349de55" class="bulleted-list"><li>Walter White - Breaking Bad - 87%</li></ul><ul id="06467f78-e8f0-44cc-94b6-b098c34dd736" class="bulleted-list"><li>Dom Cobb – Inception - 86%</li></ul><ul id="682455e3-6deb-4ef3-87d3-54f32b03b183" class="bulleted-list"><li>Bruce Wayne - The Dark Knight - 84%</li></ul><ul id="c628279b-588d-442e-a931-efa8f43ba2c0" class="bulleted-list"><li>Daenerys Targaryen - Game of Thrones - 83%</li></ul><ul id="0a4308a4-1af7-477f-a1d5-4b48b2caf2ea" class="bulleted-list"><li>Arya Stark - Game of Thrones - 83%</li></ul><ul id="16a8e64e-1ed2-4c89-bcc0-5d273ac4c771" class="bulleted-list"><li>Don Draper - Mad Men - 82%</li></ul><ul id="70986450-9ca9-4c73-976c-ff0d2a5e5d8d" class="bulleted-list"><li>Sherlock Holmes – Sherlock - 82%</li></ul></li></ul><ul id="d7ff549f-9730-49c4-a96c-5ca6da5e0650" class="bulleted-list"><li>Villain/Antagonist:<ul id="76772cf8-4a92-47c8-8307-a00f512af1f4" class="bulleted-list"><li>Darth Vader - Star Wars - 95%</li></ul><ul id="d748c732-666e-4f5c-be4c-aaf3f443903b" class="bulleted-list"><li>Man in Black – Westworld - 94%</li></ul><ul id="0df12664-21a7-4297-9d44-5daa069e8eb1" class="bulleted-list"><li>Lord Voldemort - Harry Potter - 92%</li></ul><ul id="e7edc41b-31d7-4f98-b935-a8f2b5b73416" class="bulleted-list"><li>Vicious - Cowboy Bebop - 92%</li></ul><ul id="e989eea9-98c0-4d24-94d9-f526cdab2a3a" class="bulleted-list"><li>Marsellus Wallace - Pulp Fiction - 92%</li></ul><ul id="8d218838-a472-409b-8ff3-6c9e32b0a8ac" class="bulleted-list"><li>Firelord Ozai – Avatar: The Last Airbender - 91%</li></ul><ul id="da986553-1e7f-445b-991b-1b45429645e9" class="bulleted-list"><li>Dukat - Star Trek Deep Space Nine - 91%</li></ul><ul id="47c0047c-c168-4bd5-814b-af2825b12f6e" class="bulleted-list"><li>Scar - The Lion King - 89%</li></ul><ul id="aa8d028c-5fcd-47b0-b006-50008c554314" class="bulleted-list"><li>Azula – Avatar: The Last Airbender - 87%</li></ul><ul id="c9e7403e-06f2-481b-9059-bd53b1c7dc6d" class="bulleted-list"><li>Coriolanus Snow - The Hunger Games - 86%</li></ul><ul id="2540a457-f492-44b2-ad51-fe0f788e5c9b" class="bulleted-list"><li>Agent Smith - The Matrix - 86%</li></ul><ul id="5ad10c9b-a574-4541-a875-e0efa07b564c" class="bulleted-list"><li>The Operative - Firefly + Serenity - 85%</li></ul><ul id="7de00dcc-aced-4dfb-9c8b-38b422fb865f" class="bulleted-list"><li>Harvey Dent - The Dark Knight - 85%</li></ul><ul id="2317a2c5-a09f-45bb-bf0a-5b15087dfbde" class="bulleted-list"><li>Hector Barbossa - Pirates of the Caribbean - 85%</li></ul><ul id="67ba8c19-41fd-4cd5-b576-8209be7390f1" class="bulleted-list"><li>Mr. Burns - The Simpsons - 84%</li></ul></li></ul><ul id="57e30be6-3abf-40fe-97b9-aa563fcd8968" class="bulleted-list"><li>Deuteragonist:</li></ul></div></article></body></html>

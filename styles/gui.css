@@ -8,15 +8,6 @@ body{
 }
 
 
-.imagebanner{
-    background-color:  white;
-    background-image: url(../img/barreheader.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding: 25%;
-    
-}
-
 .navbar{
 
     background-color:  #e3f2fd;;
@@ -32,15 +23,6 @@ body{
 .logoname{
     padding-right: 5%;
     text-align: left;
-}
-
-.subscribeform{
-    margin-top: 7%;
-    margin-bottom: 5%;
-    margin-left: 20%;
-    margin-right: 20%;
-    
-   
 }
 
 

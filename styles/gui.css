@@ -1,9 +1,3 @@
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: white;
-    text-align: center;
-}
-
 li.nav-item {
     padding-left: 2%;
     padding-right: 2%;
@@ -15,7 +9,13 @@ li.nav-item {
     margin-bottom: 1%;
     width: 100%;
 }
-
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
 .nav-links a.active {
     border-bottom: 4px solid rgba(3, 22, 85, 0.849);
     color: rgba(3, 22, 85, 0.849);

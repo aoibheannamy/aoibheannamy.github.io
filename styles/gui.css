@@ -1,50 +1,49 @@
-body{
+body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: white;
     text-align: center;
 }
 
- li.nav-item{
+li.nav-item {
     padding-left: 2%;
     padding-right: 2%;
 }
 
-
-.navbar{
-
-    background-color:  #7addee;;
+.navbar {
+    background-color: #7addee;
+    ;
     margin-bottom: 1%;
     width: 100%;
 }
-
 
 .nav-links a.active {
     border-bottom: 4px solid rgba(3, 22, 85, 0.849);
     color: rgba(3, 22, 85, 0.849);
 }
 
-.logoname{
+.logoname {
     padding-right: 5%;
     text-align: left;
 }
 
-
-.mybuttons{
+.mybuttons {
     background-color: rgba(0, 68, 255, 0.514);
-    border: 2px solid  rgba(3, 22, 85, 0.849);
-    color:  rgba(3, 22, 85, 0.849);
+    border: 2px solid rgba(3, 22, 85, 0.849);
+    color: rgba(3, 22, 85, 0.849);
 }
 
-
-.myArticle{
+.myArticle {
     margin-right: 5%;
     margin-left: 5%;
     text-align: center;
 }
 
+.myText {
+ 
+    text-align: justify;
+}
 
-
-.onlineclass{
+.onlineclass {
     background-image: url(../img/singlebarre.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -52,51 +51,48 @@ body{
     background-position: top;
 }
 
-.inpersonclasses{
+.inpersonclasses {
     background-image: url(../img/barreclass.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     padding-bottom: 25%;
     background-position: top;
-
 }
 
-footer{
+footer {
     margin-top: 30%;
     background-color: rgba(0, 68, 255, 0.192);
-
 }
 
-.myform{
+.myform {
     margin-left: 30%;
     margin-right: 30%;
     margin-top: 5%;
     margin-bottom: 5%;
     width: 40%;
     align-content: center;
-    
 }
 
-.mybuttonlogin{
+.mybuttonlogin {
     width: 30%;
 }
 
-.forminput{
+.forminput {
     padding-bottom: 3%;
 }
 
-.adminmenu{
+.adminmenu {
     margin-top: 5%;
     margin-bottom: 7%;
 }
 
-div.card-block{
+div.card-block {
     padding: 10%;
 }
 
 .admintitle {
     margin-top: 5%;
-   color: rgba(3, 22, 85, 0.849);
+    color: rgba(3, 22, 85, 0.849);
 }
 
 .mytitles {
@@ -106,145 +102,137 @@ div.card-block{
     color: rgba(3, 22, 85, 0.849);
 }
 
-.mycontactform{
+.mycontactform {
     margin: 10%;
     border: thin solid rgba(3, 22, 85, 0.849);
     background-color: rgba(0, 68, 255, 0.192);
     padding: 5%;
-
 }
 
-.contactsuccess{
+.contactsuccess {
     margin: 7%;
     color: rgba(3, 22, 85, 0.849);
 }
 
-.mypara{
+.mypara {
     margin-bottom: 3%;
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
 }
 
-.mydetails{
+.mydetails {
     border: thin solid rgba(3, 22, 85, 0.849);
     padding: 5%;
 }
 
-.mycards{
+.mycards {
     margin-bottom: 10%;
     display: block;
     min-width: 18rem;
 }
 
-
 .classimages img {
-    height:200px;
-    width:100%;
-   
+    height: 200px;
+    width: 100%;
 }
-.classimageone{
-    height:200px;
+
+.classimageone {
+    height: 200px;
     width: 50%;
 }
 
-.inboxtitle{
+.inboxtitle {
     color: rgba(3, 22, 85, 0.849);
 }
 
-.inboxcards{
+.inboxcards {
     margin: 3%;
     border: thin solid rgba(3, 22, 85, 0.849);
     background-color: rgba(0, 68, 255, 0.192);
 }
 
-.myclientlist{
+.myclientlist {
     margin: 3%;
     margin-bottom: 5%;
 }
 
 .star {
-    width: 25px;   
+    width: 25px;
 }
 
-.halfstar{
+.halfstar {
     background-color: white;
     width: 35px;
 }
 
-.myspace{
+.myspace {
     margin-bottom: 3%;
 }
 
-.justify{
+.justify {
     text-align: justify;
 }
 
-.mybuttondetails{
+.mybuttondetails {
     margin: 3%;
     width: 20%;
-    
 }
 
 table {
     margin: 5%;
 }
 
-.mycomments{
+.mycomments {
     margin-bottom: 5%;
 }
 
-.mycolimage{
+.mycolimage {
     background-image: url(../img/teacher.jpg);
     background-size: 80%;
     background-repeat: no-repeat;
     padding: 3%;
 }
 
-.aboutme{
+.aboutme {
     margin: 7%;
 }
 
-#graphCanvas #chart-container{
+#graphCanvas #chart-container {
     margin: 5%;
     padding: 5%;
     width: 70%;
     height: 70%;
 }
 
-.mycommentcard{
+.mycommentcard {
     width: 60rem;
     margin-bottom: 5%;
     margin-top: 5%;
 }
 
-element.style{
+element.style {
     margin: 5%;
     padding: 5%;
     width: 80%;
     height: 80%;
 }
-.mycommentcardadmin{
+
+.mycommentcardadmin {
     width: 35rem;
     margin-bottom: 5%;
     margin-top: 5%;
     margin-right: 5%;
 }
 
-.myclassimage{
+.myclassimage {
     height: 50%;
     width: 50%;
 }
 
 @media screen and (max-width:1000px) {
-
-    .mycards .classimages{
+    .mycards .classimages {
         width: 80%;
         display: inline-block;
     }
-
-
-
 }
-
-

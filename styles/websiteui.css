@@ -13,6 +13,11 @@ li.nav-item {
     margin-bottom: 1%;
     width: 100%;
     color: aliceblue;
+    height: 5%;
+
+}
+a.nav-link{
+    color: aliceblue;
 }
 
 .intro{

@@ -1,6 +1,6 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: white;    
+    background-color: white;  
 }
 
 li.nav-item {
@@ -45,6 +45,9 @@ a.nav-link{
 }
 #myquote{
     text-align: center;
+}
+#mylist{
+    padding: 5%;
 }
 
 figure{

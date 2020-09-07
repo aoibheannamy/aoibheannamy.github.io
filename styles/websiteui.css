@@ -5,14 +5,13 @@ li.nav-item {
 
 .navbar {
     background-color: #7addee;
-    ;
     margin-bottom: 1%;
     width: 100%;
 }
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: white;
-    text-align: center;
+    
     
 }
 .nav-links a.active {
@@ -31,12 +30,6 @@ body {
     margin-right: 5%;
     margin-left: 5%;
     
-}
-
-.myText {
-    margin-right: 5%;
-    margin-left: 5%;
-    text-align: justify;
 }
 
 

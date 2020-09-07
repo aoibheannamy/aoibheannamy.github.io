@@ -10,10 +10,7 @@ li.nav-item {
 }
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: white;
-    margin-right: 5%;
-    margin-left: 5%;
-    
+    background-color: white;    
 }
 .nav-links a.active {
     border-bottom: 4px solid rgba(3, 22, 85, 0.849);
@@ -30,7 +27,6 @@ body {
 .myArticle {
     margin-right: 5%;
     margin-left: 5%;
-    
 }
 
 

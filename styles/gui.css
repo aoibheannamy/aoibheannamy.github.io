@@ -64,36 +64,7 @@ footer {
     background-color: rgba(0, 68, 255, 0.192);
 }
 
-.myform {
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 40%;
-    align-content: center;
-}
 
-.mybuttonlogin {
-    width: 30%;
-}
-
-.forminput {
-    padding-bottom: 3%;
-}
-
-.adminmenu {
-    margin-top: 5%;
-    margin-bottom: 7%;
-}
-
-div.card-block {
-    padding: 10%;
-}
-
-.admintitle {
-    margin-top: 5%;
-    color: rgba(3, 22, 85, 0.849);
-}
 
 .mytitles {
     margin-top: 5%;
@@ -102,17 +73,7 @@ div.card-block {
     color: rgba(3, 22, 85, 0.849);
 }
 
-.mycontactform {
-    margin: 10%;
-    border: thin solid rgba(3, 22, 85, 0.849);
-    background-color: rgba(0, 68, 255, 0.192);
-    padding: 5%;
-}
 
-.contactsuccess {
-    margin: 7%;
-    color: rgba(3, 22, 85, 0.849);
-}
 
 .mypara {
     margin-bottom: 3%;

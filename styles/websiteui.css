@@ -15,6 +15,10 @@ li.nav-item {
     color: aliceblue;
 }
 
+.intro{
+    text-align: center;
+}
+
 .nav-links a.active {
     border-bottom: 4px solid rgba(3, 22, 85, 0.849);
     color: rgba(3, 22, 85, 0.849);

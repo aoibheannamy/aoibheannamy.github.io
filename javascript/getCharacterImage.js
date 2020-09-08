@@ -24,7 +24,7 @@ function setCharacterImage() {
     alert("character images: "+characterImage[0]);
 
     // get count of length of data entries in JSON object
-//
+
     /*
     let neutralArray = [];
     for (var i = 0; i <= characterImage.length; i++) {

@@ -11,6 +11,7 @@
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.6.3/dist/js/tabulator.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.5/jspdf.plugin.autotable.js"></script>
+    <script type="text/javascript" src="../javascript/getBackgrounds.js"></script>
     <script type="text/javascript" src="../KillTheBatmanFrame.json"></script>
     <script type="text/javascript" src="../KillTheBatmanAppearances.json"></script>
     <script type="text/javascript" src="../locations.json"></script>
@@ -28,47 +29,48 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-		<div class="d-flex flex-grow-1">
-			<span class="w-100 d-lg-none d-block">
-				<!-- hidden spacer to center brand on mobile --></span>
-			<a class='navbar-brand' href='../../index.html'>Scene to Visual Novel</a>
-			<div class="w-100 text-right">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-			</div>
-		</div>
-		<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
-			<ul class="navbar-nav ml-auto flex-nowrap">
-				<li class='nav-item'>
-					<a class='nav-link' href='../../index.html'>Home <span class='sr-only'>(current)</span></a>
-				</li>
-				<li class='nav-item'>
-					<a class='nav-link' href='../../about.html'>About</a>
-				</li>
-				<li class='nav-item dropdown'>
-					<a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button'
-						data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-						Personality Information
-					</a>
-					<div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-						<a class='dropdown-item' href='../personality/myersBriggsDoc.html'>Myers Briggs
-							Description</a>
-						<a class='dropdown-item ' href='../personality/heroVsVillain.html'>Heroes V. Villain
-							Personalities</a>
-						<a class='dropdown-item' href='../personality/goodvbadvambig.html'>Antagonist/protagonist
-							Database</a>
-						<a class='dropdown-item' href='../personality/matchesFromOtherUniverses.html'>Personality Matches
-							from other Universes</a>
-						<a class='dropdown-item' href='../personality/gameOfThrones/gotHome.html'>Game of Thrones</a>
-					</div>
-				</li>
-				<li class='nav-item'>
-					<a class='nav-link active' href='visualnovel.html'>Visual Novel</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block">
+                <!-- hidden spacer to center brand on mobile --></span>
+            <a class='navbar-brand' href='../../index.html'>Scene to Visual Novel</a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class='nav-item'>
+                    <a class='nav-link' href='../../index.html'>Home <span class='sr-only'>(current)</span></a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link' href='../../about.html'>About</a>
+                </li>
+                <li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button'
+                        data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                        Personality Information
+                    </a>
+                    <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+                        <a class='dropdown-item' href='../personality/myersBriggsDoc.html'>Myers Briggs
+                            Description</a>
+                        <a class='dropdown-item ' href='../personality/heroVsVillain.html'>Heroes V. Villain
+                            Personalities</a>
+                        <a class='dropdown-item' href='../personality/goodvbadvambig.html'>Antagonist/protagonist
+                            Database</a>
+                        <a class='dropdown-item' href='../personality/matchesFromOtherUniverses.html'>Personality
+                            Matches
+                            from other Universes</a>
+                        <a class='dropdown-item' href='../personality/gameOfThrones/gotHome.html'>Game of Thrones</a>
+                    </div>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link active' href='visualnovel.html'>Visual Novel</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
     <div class="row">
@@ -111,46 +113,7 @@
             // set/insert background
             if (rowLocIndex >= 1) {
                 background(bg);
-                // read in background location json
-                locationBack = JSON.parse(backgrounds);
-
-                /**
-                 * Checks which background is selected and changes image dependent on the result
-                 */
-                switch (location) {
-                    case "BoardRoom":
-                        bg = loadImage(locationBack['BoardRoom']);
-                        break;
-                    case "Beach":
-                        bg = loadImage(locationBack['Beach']);
-                        break;
-                    case "Forest":
-                        bg = loadImage(locationBack['Forest']);
-                        break;
-                    case "Bedroom":
-                        bg = loadImage(locationBack['Bedroom']);
-                        break;
-                    case "Club/Bar":
-                        bg = loadImage(locationBack['Club/Bar']);
-                        break;
-                    case "Office":
-                        bg = loadImage(locationBack['Office']);
-                        break;
-                    case "Prison":
-                        bg = loadImage(locationBack['Prison']);
-                        break;
-                    case "Street":
-                        bg = loadImage(locationBack['Street']);
-                        break;
-                    case "Supermarket":
-                        bg = loadImage(locationBack['Supermarket']);
-                        break;
-                    case "Warehouse":
-                        bg = loadImage(locationBack['Warehouse']);
-                        break;
-                    default:
-                        break;
-                }
+                setBackgroundImage();
 
 
             }

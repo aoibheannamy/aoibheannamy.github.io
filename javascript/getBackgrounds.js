@@ -11,7 +11,7 @@ function setBackgroundImage() {
 
     try {
         // Parse a JSON
-        locationBack = JSON.parse(payload);
+        locationBack = JSON.parse(backgrounds);
     } catch (e) {
         // display error
         console.log("There was an error in parsing the JSON file!");

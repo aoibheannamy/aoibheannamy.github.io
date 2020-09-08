@@ -7,7 +7,7 @@ function setCharacterImage() {
 
     // create variable to hold the parsed JSON file
     let characterImage = null;
-    let img, charNo;
+    let img, charNo, characterEmotion;
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
@@ -20,10 +20,24 @@ function setCharacterImage() {
         console.log("There was an error in parsing the JSON file!");
     }
 
-    getCharacterEmotion();
+    // get count of length of data entries in JSON object
+    var count = Object.keys(characterImage).length;
+    let emotionArray;
+    for (var i = 0; i <= count; i++) {
+        emotionArray = characterImage[i].characters.emotionImgs;
+    }
+    console.log(emotionArray);
+
+
+
+
 
     if (charNo == "1") {
+        switch (charEmotion) {
+            case "Neutral":
+                emotions = "Neutral"
 
+        }
 
     } else if (charNo == "2") {
 
@@ -36,15 +50,4 @@ function setCharacterImage() {
     }
 }
 
-function getCharacterEmotion(){
-
-    let charEmotion, emotions;
-
-    switch(charEmotion){
-        case "Neutral":
-        emotions = "Neutral"
-
-    }
-
-}
 

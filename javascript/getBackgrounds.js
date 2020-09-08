@@ -5,7 +5,7 @@
  */
 function setBackgroundImage() {
 
-    // payload 
+    // create variable to hold the parsed JSON file
     let locationBack = null;
     let bg;
 
@@ -17,7 +17,7 @@ function setBackgroundImage() {
         console.log("There was an error in parsing the JSON file!");
     }
 
-    // Now userData is the parsed result
+    // Now locationBack is the parsed result
 
 
     /**

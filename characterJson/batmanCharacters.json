@@ -5,15 +5,15 @@ batmanCharacters =[{
 		"name": "Joker",
 		"emotionImgs":[
 			{
-			"jokerNeutral" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerNeutral.png?token=APCQXYV5CLFQQQFF2JAKB5K7JYOVI",
-"jokerAngry" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAngry.png?token=APCQXYXEFISHCUEXZB6TRUC7JYO2Q",
-"jokerStern" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerStern.png?token=APCQXYX5PBB425SMBS62EOC7JYOTW",
-"jokerSneer" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerSneer.png?token=APCQXYQHAFMMHCP55GQX54S7JYOUQ",
-"jokerLaughing" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerLaughing.png?token=APCQXYSJXJGTW6AQ3VCEU2S7JYOWA",
-"jokerSinisterGrin" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrinSinister.png?token=APCQXYVDNV5ZBYH4GMYG2E27JYOXE",
-"jokerGrin" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrin.png?token=APCQXYQK5TBN7SEGVIJHG2K7JYOYG",
-"jokerGrimace" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrimace.png?token=APCQXYQA5AYK3HOXU2QTCWS7JYOZA",
-"jokerAnxious" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAnxious.png?token=APCQXYSU2QFONJQABXYN4TC7JYOZ2"
+			"Neutral" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerNeutral.png?token=APCQXYV5CLFQQQFF2JAKB5K7JYOVI",
+"Angry" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAngry.png?token=APCQXYXEFISHCUEXZB6TRUC7JYO2Q",
+"Stern" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerStern.png?token=APCQXYX5PBB425SMBS62EOC7JYOTW",
+"Sneer" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerSneer.png?token=APCQXYQHAFMMHCP55GQX54S7JYOUQ",
+"Laughing" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerLaughing.png?token=APCQXYSJXJGTW6AQ3VCEU2S7JYOWA",
+"SinisterGrin" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrinSinister.png?token=APCQXYVDNV5ZBYH4GMYG2E27JYOXE",
+"Grin" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrin.png?token=APCQXYQK5TBN7SEGVIJHG2K7JYOYG",
+"Grimace" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerGrimace.png?token=APCQXYQA5AYK3HOXU2QTCWS7JYOZA",
+"Anxious" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/jokerImages/JokerAnxious.png?token=APCQXYSU2QFONJQABXYN4TC7JYOZ2"
 			}
 		]
 		},
@@ -22,8 +22,8 @@ batmanCharacters =[{
 		"name": "Gangster1",
 		"emotionImgs":[
 			{
-"gang1Neutral":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Neutral.png?token=APCQXYRX4CZAD4Z4IMJ7OA27KCY56", 	"gang1Angry":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Angry.png?token=APCQXYVWZI3VGPYLYAYOCB27KCY3C", 	"gang1Sneer":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Sneer.png?token=APCQXYQXNBFUUB6WMW7AVZC7KCZAY", 	"gang1Laughing":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Laughing.png?token=APCQXYWUHSYQMBG6FE4XTOC7KCY5I", 	"gang1Grin":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Grin.png?token=APCQXYWGSQLH6PRUYZCFZRK7KCY4G", 	"gang1Shock":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Shock.png?token=APCQXYVCP2NUGCS4B7YE7NC7KCY74",
-	"gang1Serious":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Serious.png?token=APCQXYSCOIPMQGHBIA7YNBC7KCY66"
+"Neutral":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Neutral.png?token=APCQXYRX4CZAD4Z4IMJ7OA27KCY56", 	"Angry":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Angry.png?token=APCQXYVWZI3VGPYLYAYOCB27KCY3C", 	"Sneer":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Sneer.png?token=APCQXYQXNBFUUB6WMW7AVZC7KCZAY", 	"Laughing":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Laughing.png?token=APCQXYWUHSYQMBG6FE4XTOC7KCY5I", 	"Grin":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Grin.png?token=APCQXYWGSQLH6PRUYZCFZRK7KCY4G", 	"Shock":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Shock.png?token=APCQXYVCP2NUGCS4B7YE7NC7KCY74",
+	"Serious":"https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster1Images/Gangster1Serious.png?token=APCQXYSCOIPMQGHBIA7YNBC7KCY66"
 }
 ]
 },
@@ -31,35 +31,35 @@ batmanCharacters =[{
 		"number":3,
 		"name": "Gangster2",
 		"emotionImgs":[
-			{"gang2Neutral" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Neutral.png?token:APCQXYQBHEGUY4DORPZTSWC7KCZ4W",
-                             "gang2Angry" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Angry.png?token:APCQXYQGNYVPZNOTGEXEYFS7KCZ2Y",
-                             "gang2Sneer" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Sneer.png?token:APCQXYQQ5CJLEBA2OGOVIHC7KC2AI",
-                             "gang2Laughing" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Laughing.png?token:APCQXYUKQGL33LCI5CMVPUC7KCZ3S",
-                             "gang2Smile" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Smile.png?token:APCQXYRBBPTMXK3PJH6DIQK7KCZ7I",
-                             "gang2Shock" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Shock.png?token:APCQXYQWHQUWP7RXD2CP3QC7KCZ5S",
-                             "gang2Stern" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Stern.png?token:APCQXYQJD7GY5NJKPJPYMBK7KC2BG",
-                             "gang2SinisterGrin" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2SinisterGrin.png?token:APCQXYWDTKVMAR63I2N6NIS7KCZ6M"}]
+			{"Neutral" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Neutral.png?token:APCQXYQBHEGUY4DORPZTSWC7KCZ4W",
+                             "Angry" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Angry.png?token:APCQXYQGNYVPZNOTGEXEYFS7KCZ2Y",
+                             "Sneer" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Sneer.png?token:APCQXYQQ5CJLEBA2OGOVIHC7KC2AI",
+                             "Laughing" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Laughing.png?token:APCQXYUKQGL33LCI5CMVPUC7KCZ3S",
+                             "Smile" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Smile.png?token:APCQXYRBBPTMXK3PJH6DIQK7KCZ7I",
+                             "Shock" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Shock.png?token:APCQXYQWHQUWP7RXD2CP3QC7KCZ5S",
+                             "Stern" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2Stern.png?token:APCQXYQJD7GY5NJKPJPYMBK7KC2BG",
+                             "SinisterGrin" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster2Images/Gangster2SinisterGrin.png?token:APCQXYWDTKVMAR63I2N6NIS7KCZ6M"}]
 },
 {
 		"number":4,
 		"name": "Gangster3",
 		"emotionImgs":[
-			{"gang3Neutral" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Neutral.png?token:APCQXYV3YAOBELBNO3DD4JC7KC2QS",
-                             "gang3Angry" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Angry.png?token:APCQXYQ3OXQ5Y3XJC6OF7F27KC2O6",
-                             "gang3Sneer" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Sneer.png?token:APCQXYSVYC7H4WNKH3KCKUK7KC2U4",
-                             "gang3Laughing" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Laughing.png?token:APCQXYTUMKQFG26LZTZ34ZK7KC2PW",
-                             "gang3Smile" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Smile.png?token:APCQXYR22BA6CGTZ4COOD2S7KC2UC",
-                             "gang3Shock" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Shock.png?token:APCQXYQOYGZDVQXV6WFXR2K7KC2RQ",
-                             "gang3SinisterGrin" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3SinisterGrin.png?token:APCQXYVWMPYA3DTCSQ2PSX27KC2SI"
+			{"Neutral" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Neutral.png?token:APCQXYV3YAOBELBNO3DD4JC7KC2QS",
+                             "Angry" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Angry.png?token:APCQXYQ3OXQ5Y3XJC6OF7F27KC2O6",
+                             "Sneer" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Sneer.png?token:APCQXYSVYC7H4WNKH3KCKUK7KC2U4",
+                             "Laughing" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Laughing.png?token:APCQXYTUMKQFG26LZTZ34ZK7KC2PW",
+                             "Smile" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Smile.png?token:APCQXYR22BA6CGTZ4COOD2S7KC2UC",
+                             "Shock" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3Shock.png?token:APCQXYQOYGZDVQXV6WFXR2K7KC2RQ",
+                             "SinisterGrin" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster3Images/Gangster3SinisterGrin.png?token:APCQXYVWMPYA3DTCSQ2PSX27KC2SI"
 }]},
 {
 		"number":5,
 		"name": "Gangster4",
 		"emotionImgs":[
-			{ "gang4Neutral" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Neutral.png?token:APCQXYUB24DNIFJ5TGCEME27KC25G",
-                             "gang4Sad" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Sad.png?token:APCQXYVUQMVPTXL4XKKRRMK7KC472",
-                             "gang4Scared" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Scared.png?token:APCQXYXIGRWABC7JLSTDHWS7KC262",
-                             "gang4Shock" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Shock.png?token:APCQXYXBWLVSCE5YG2KQ6HC7KC27W"}]
+			{ "Neutral" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Neutral.png?token:APCQXYUB24DNIFJ5TGCEME27KC25G",
+                             "Sad" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Sad.png?token:APCQXYVUQMVPTXL4XKKRRMK7KC472",
+                             "Scared" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Scared.png?token:APCQXYXIGRWABC7JLSTDHWS7KC262",
+                             "Shock" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Shock.png?token:APCQXYXBWLVSCE5YG2KQ6HC7KC27W"}]
 }
 	]
 

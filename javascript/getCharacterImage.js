@@ -38,5 +38,13 @@ function setCharacterImage() {
 
 function getCharacterEmotion(){
 
+    let charEmotion, emotions;
+
+    switch(charEmotion){
+        case "Neutral":
+        emotions = "Neutral"
+
+    }
+
 }
 

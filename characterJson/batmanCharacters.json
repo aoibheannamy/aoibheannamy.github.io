@@ -9,14 +9,14 @@ var characters = [{
 "SinisterGrin" : "../Images/jokerImages/JokerGrinSinister.png",
 "Grin" : "../Images/jokerImages/JokerGrin.png",
 "Grimace" : "../Images/jokerImages/JokerGrimace.png",
-"Anxious" : "../Images/jokerImages/JokerAnxious.png",
+"Anxious" : "../Images/jokerImages/JokerAnxious.png"},{
 			
 		
 		"number":2,
 		"name": "Gangster1",
 		
 "Neutral":"../Images/Gangster1Images/Gangster1Neutral.png", 	"Angry":"../master/Images/Gangster1Images/Gangster1Angry.png", 	"Sneer":"../Images/Gangster1Images/Gangster1Sneer.png", 	"Laughing":"../Images/Gangster1Images/Gangster1Laughing.png", 	"Grin":"../Images/Gangster1Images/Gangster1Grin.png", 	"Shock":"../Images/Gangster1Images/Gangster1Shock.png",
-	"Serious":"../Images/Gangster1Images/Gangster1Serious.png",
+	"Serious":"../Images/Gangster1Images/Gangster1Serious.png"},{
 		"number":3,
 		"name": "Gangster2",
 	"Neutral" : "../Images/Gangster2Images/Gangster2Neutral.png",
@@ -26,7 +26,7 @@ var characters = [{
                              "Smile" : "../Images/Gangster2Images/Gangster2Smile.png",
                              "Shock" : "../Images/Gangster2Images/Gangster2Shock.png",
                              "Stern" : "../Images/Gangster2Images/Gangster2Stern.png",
-                             "SinisterGrin" : "../Images/Gangster2Images/Gangster2SinisterGrin.png",
+                             "SinisterGrin" : "../Images/Gangster2Images/Gangster2SinisterGrin.png"},{
 		"number":4,
 		"name": "Gangster3",
 	
@@ -36,14 +36,14 @@ var characters = [{
                              "Laughing" : "../Images/Gangster3Images/Gangster3Laughing.png",
                              "Smile" : "../Images/Gangster3Images/Gangster3Smile.png",
                              "Shock" : "../Images/Gangster3Images/Gangster3Shock.png",
-                             "SinisterGrin" : "../Images/Gangster3Images/Gangster3SinisterGrin.png"
-,
+                             "SinisterGrin" : "../Images/Gangster3Images/Gangster3SinisterGrin.png"}
+,{
 		"number":5,
 		"name": "Gangster4",
 		 "Neutral" : "../Images/Gangster4Images/Gangster4Neutral.png",
                              "Sad" : "../Images/Gangster4Images/Gangster4Sad.png",
                              "Scared" : "../Images/Gangster4Images/Gangster4Scared.png",
-                             "Shock" : "../Images/Gangster4Images/Gangster4Shock.png"
+                             "Shock" : "../Images/Gangster4Images/Gangster4Shock.png"}
 
 
 

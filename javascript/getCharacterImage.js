@@ -13,7 +13,7 @@ function setCharacterImage() {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
         var stringified = JSON.stringify(characters);
         // Now characterImage is the parsed result
-        console.log(typeof stringified);
+        //console.log(typeof stringified);
         characterImage = JSON.parse(stringified);
 
     } catch (e) {
@@ -27,7 +27,7 @@ function setCharacterImage() {
 
     let emotionArray = [];
     for (var i = 0; i <= characterImage.length; i++) {
-        emotionArray.push(characterImage[i].emotionImgs);
+        emotionArray.push(characterImage[i].Neutral);
     }
     console.log(emotionArray);
 

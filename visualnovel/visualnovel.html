@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../KillTheBatmanAppearances.json"></script>
     <script type="text/javascript" src="../locations.json"></script>
     <script type="text/javascript" src="../characterJson/batmanCharacters.json"></script>
-    <script type="text/javascript" src="../visualNovelJsons/backgroundLocations.json"></script>    
+    <script type="text/javascript" src="../visualNovelJsons/backgroundLocations.json"></script>
     <script type="text/javascript" src="../javascript/getBackgrounds.js"></script>
     <script type="text/javascript" src="../javascript/getCharacterImage.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -191,11 +191,10 @@
                     // displays index
                     console.log("Row index: " + rowLocIndex);
                     var rowLocData = row.getData();
-                    // displays row data for that index
-                    console.log(rowLocData);
                     // get location data
                     var backgroundLocation = row.getData().Location;
-
+                    // displays location data for that index
+                    console.log(backgroundLocation);
 
                 }
 
@@ -287,7 +286,7 @@
                     rowIndex++;
 
 
-                  
+
 
 
 

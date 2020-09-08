@@ -20,9 +20,10 @@ function setCharacterImage() {
         console.log("There was an error in parsing the JSON file!");
     }
 
-    
+    getCharacterEmotion();
 
     if (charNo == "1") {
+
 
     } else if (charNo == "2") {
 
@@ -33,5 +34,9 @@ function setCharacterImage() {
     } else if (charNo == "5") {
 
     }
+}
+
+function getCharacterEmotion(){
+
 }
 

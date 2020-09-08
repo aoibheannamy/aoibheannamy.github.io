@@ -10,19 +10,15 @@ function setBackgroundImage() {
     let bg;
 
     try {
-        // Parse a JSON
+        // use the JSON.stringify() method to convert the data into a string before attempting to parse it
         var stringified = JSON.stringify(backgrounds);
+        // Now locationBack is the parsed result
         locationBack = JSON.parse(stringified);
-        console.log(locationBack);
 
-        //locationBack = userData.data.userList;
     } catch (e) {
-        // display error
+        // display error if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!");
     }
-
-    // Now locationBack is the parsed result
-
 
     /**
      * Checks which background is selected and changes image dependent on the result

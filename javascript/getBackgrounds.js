@@ -13,10 +13,8 @@ function setBackgroundImage() {
         // Parse a JSON
         locationBack = JSON.parse(payload);
     } catch (e) {
-        // You can read e for more info
-        // Let's assume the error is that we already have parsed the payload
-        // So just return that
-        locationBack = payload;
+        // display error
+        console.log("There was an error in parsing the JSON file!");
     }
 
     // Now userData is the parsed result

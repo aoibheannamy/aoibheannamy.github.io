@@ -13,7 +13,8 @@ function setCharacterImage() {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
         var stringified = JSON.stringify(characters);
         // Now characterImage is the parsed result
-        characterImage = JSON.parse(characters);
+        console.log(typeof stringified);
+        characterImage = JSON.parse(stringified);
 
     } catch (e) {
         // display error message in console if the JSON file does not parse correctly

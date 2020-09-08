@@ -1,7 +1,5 @@
 function setBackgroundImage() {
 
-    // read in background location json
-    <script type="text/javascript" src="../visualNovelJsons/backgroundLocations.json"></script>
     // payload 
     let locationBack = null;
     let bg;

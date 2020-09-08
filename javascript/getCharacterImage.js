@@ -17,7 +17,7 @@ function setCharacterImage() {
 
     } catch (e) {
         // display error message in console if the JSON file does not parse correctly
-        console.log("There was an error in parsing the JSON file!");
+        console.log("There was an error in parsing the JSON file!!");
     }
     alert("character images: "+characterImage);
 

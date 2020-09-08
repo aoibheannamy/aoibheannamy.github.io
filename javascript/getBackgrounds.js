@@ -18,7 +18,9 @@ function setBackgroundImage() {
     } catch (e) {
         // display error if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!");
-    }    
+    }
+    
+    alert("Background location:"+locationBack);
  
     /**
      * Checks which background is selected and changes image dependent on the result

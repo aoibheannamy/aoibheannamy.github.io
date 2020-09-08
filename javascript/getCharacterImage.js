@@ -22,9 +22,9 @@ function setCharacterImage() {
 
     // get count of length of data entries in JSON object
     var count = characterImage.length;
-    let emotionArray;
+    let emotionArray = [];
     for (var i = 0; i <= count; i++) {
-        emotionArray = characterImage[i].emotionImgs;
+        emotionArray.push(characterImage[i].emotionImgs);
     }
     console.log(emotionArray);
 

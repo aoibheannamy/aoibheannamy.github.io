@@ -20,7 +20,7 @@ function setCharacterImage() {
         console.log("There was an error in parsing the JSON file!");
     }
 
-    alert("Location is: " + location + " url is: " + locationBack[0].BoardRoom)
+    
 
     if (charNo == "1") {
 

@@ -1,8 +1,6 @@
 var characters = [{
 		"number":1,
 		"name": "Joker",
-		"emotionImgs":[
-			{
 			"Neutral" : "../Images/jokerImages/JokerNeutral.png",
 "Angry" : "../Images/jokerImages/JokerAngry.png",
 "Stern" : "../Images/jokerImages/JokerStern.png",
@@ -11,48 +9,41 @@ var characters = [{
 "SinisterGrin" : "../Images/jokerImages/JokerGrinSinister.png",
 "Grin" : "../Images/jokerImages/JokerGrin.png",
 "Grimace" : "../Images/jokerImages/JokerGrimace.png",
-"Anxious" : "../Images/jokerImages/JokerAnxious.png"
-			}
-		],
-		
+"Anxious" : "../Images/jokerImages/JokerAnxious.png",
+			
 		
 		"number":2,
 		"name": "Gangster1",
-		"emotionImgs":[
-			{
+		
 "Neutral":"../Images/Gangster1Images/Gangster1Neutral.png", 	"Angry":"../master/Images/Gangster1Images/Gangster1Angry.png", 	"Sneer":"../Images/Gangster1Images/Gangster1Sneer.png", 	"Laughing":"../Images/Gangster1Images/Gangster1Laughing.png", 	"Grin":"../Images/Gangster1Images/Gangster1Grin.png", 	"Shock":"../Images/Gangster1Images/Gangster1Shock.png",
-	"Serious":"../Images/Gangster1Images/Gangster1Serious.png"
-}
-],
+	"Serious":"../Images/Gangster1Images/Gangster1Serious.png",
 		"number":3,
 		"name": "Gangster2",
-		"emotionImgs":[
-			{"Neutral" : "../Images/Gangster2Images/Gangster2Neutral.png",
+	"Neutral" : "../Images/Gangster2Images/Gangster2Neutral.png",
                              "Angry" : "../Images/Gangster2Images/Gangster2Angry.png",
                              "Sneer" : "../Images/Gangster2Images/Gangster2Sneer.png",
                              "Laughing" : "../Images/Gangster2Images/Gangster2Laughing.png",
                              "Smile" : "../Images/Gangster2Images/Gangster2Smile.png",
                              "Shock" : "../Images/Gangster2Images/Gangster2Shock.png",
                              "Stern" : "../Images/Gangster2Images/Gangster2Stern.png",
-                             "SinisterGrin" : "../Images/Gangster2Images/Gangster2SinisterGrin.png"}],
+                             "SinisterGrin" : "../Images/Gangster2Images/Gangster2SinisterGrin.png",
 		"number":4,
 		"name": "Gangster3",
-		"emotionImgs":[
-			{"Neutral" : "../Images/Gangster3Images/Gangster3Neutral.png",
+	
+			"Neutral" : "../Images/Gangster3Images/Gangster3Neutral.png",
                              "Angry" : "../Images/Gangster3Images/Gangster3Angry.png",
                              "Sneer" : "../Images/Gangster3Images/Gangster3Sneer.png",
                              "Laughing" : "../Images/Gangster3Images/Gangster3Laughing.png",
                              "Smile" : "../Images/Gangster3Images/Gangster3Smile.png",
                              "Shock" : "../Images/Gangster3Images/Gangster3Shock.png",
                              "SinisterGrin" : "../Images/Gangster3Images/Gangster3SinisterGrin.png"
-}],
+,
 		"number":5,
 		"name": "Gangster4",
-		"emotionImgs":[
-			{ "Neutral" : "../Images/Gangster4Images/Gangster4Neutral.png",
+		 "Neutral" : "../Images/Gangster4Images/Gangster4Neutral.png",
                              "Sad" : "../Images/Gangster4Images/Gangster4Sad.png",
                              "Scared" : "../Images/Gangster4Images/Gangster4Scared.png",
-                             "Shock" : "../Images/Gangster4Images/Gangster4Shock.png"}]
+                             "Shock" : "../Images/Gangster4Images/Gangster4Shock.png"
 
 
 

@@ -4,10 +4,10 @@ characters=[{
 		"name": "Joker",
 		"emotionImgs":[
 			{
-			"Neutral" : ""../Images/jokerImages/JokerNeutral.png"",
-"Angry" : ""../Images/jokerImages/JokerAngry.png",
-"Stern" : ""../Images/jokerImages/JokerStern.png",
-"Sneer" : ""../Images/jokerImages/JokerSneer.png",
+			"Neutral" : "../Images/jokerImages/JokerNeutral.png",
+"Angry" : "../Images/jokerImages/JokerAngry.png",
+"Stern" : "../Images/jokerImages/JokerStern.png",
+"Sneer" : "../Images/jokerImages/JokerSneer.png",
 "Laughing" : "../Images/jokerImages/JokerLaughing.png",
 "SinisterGrin" : "../Images/jokerImages/JokerGrinSinister.png",
 "Grin" : "../Images/jokerImages/JokerGrin.png",

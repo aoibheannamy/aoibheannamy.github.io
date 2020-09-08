@@ -19,7 +19,7 @@ function setCharacterImage() {
         // display error message in console if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!!");
     }
-    // pls print right thing
+    // pls print right thing i hateu
     alert("character images: "+characterImage[0].emotionImgs);
 
     // get count of length of data entries in JSON object

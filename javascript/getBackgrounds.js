@@ -20,13 +20,13 @@ function setBackgroundImage() {
         console.log("There was an error in parsing the JSON file!");
     }
 
-    alert("Location is: "+location+" url is: "+locationBack[0].BoardRoom)
+    alert("Location is: "+backgroundLocation+" url is: "+locationBack[0].BoardRoom)
     
  
     /**
      * Checks which background is selected and changes image dependent on the result
      */
-    switch (location) {
+    switch (backgroundLocation) {
         case "BoardRoom":
             bg = loadImage(locationBack[0].BoardRoom);
             console.log("Board room loaded")

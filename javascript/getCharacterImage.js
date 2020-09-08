@@ -4,25 +4,36 @@
  * then load the corresponding image
  */
 function setCharacterImage() {
+    // create variable to hold the parsed JSON file
+    let locationBack = null;
+    let bg;
+
+    try {
+        // use the JSON.stringify() method to convert the data into a string before attempting to parse it
+        var stringified = JSON.stringify(backgrounds);
+        // Now locationBack is the parsed result
+        locationBack = JSON.parse(stringified);
+
+    } catch (e) {
+        // display error if the JSON file does not parse correctly
+        console.log("There was an error in parsing the JSON file!");
+    }
+
+    alert("Location is: " + location + " url is: " + locationBack[0].BoardRoom)
+
+
+
+
     if (charNo == "1") {
-        callJokerImages();
-        draw();
+
     } else if (charNo == "2") {
-        callGangster1Images();
-        draw();
+
     } else if (charNo == "3") {
-        callGangster2Images();
-        draw();
+
     } else if (charNo == "4") {
-        callGangster3Images();
-        draw();
+
     } else if (charNo == "5") {
-        callGangster4Images();
-        draw();
+
     }
 }
 
-/**
-                      * Function to hold and call the avatar images for the Joker character
-                      * Checks the emotion in the table and matches with the correct image
-                  */

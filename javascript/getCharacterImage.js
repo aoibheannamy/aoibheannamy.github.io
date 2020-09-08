@@ -21,7 +21,7 @@ function setCharacterImage() {
     }
 
     // get count of length of data entries in JSON object
-    var count = Object.keys(characterImage).length;
+    var count = characterImage.length;
     let emotionArray;
     for (var i = 0; i <= count; i++) {
         emotionArray = characterImage[i].emotionImgs;

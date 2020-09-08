@@ -21,7 +21,7 @@ function setCharacterImage() {
         console.log("There was an error in parsing the JSON file!!");
     }
     
-    alert("character images: "+characterImage[0].emotionImgs);
+    alert("character images: "+characterImage[0].Neutral);
 
     // get count of length of data entries in JSON object
 

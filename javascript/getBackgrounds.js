@@ -12,7 +12,8 @@ function setBackgroundImage() {
     try {
         // Parse a JSON
         var stringified = JSON.stringify(backgrounds);
-        var parsedObj = JSON.parse(stringified);
+        var locationBack = JSON.parse(stringified);
+        console.log(locationBack);
 
         //locationBack = userData.data.userList;
     } catch (e) {

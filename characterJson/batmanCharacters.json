@@ -1,6 +1,5 @@
-batmanCharacters =[{
-	"characters":[
-		{
+characters=[{
+		
 		"number":1,
 		"name": "Joker",
 		"emotionImgs":[
@@ -61,7 +60,6 @@ batmanCharacters =[{
                              "Scared" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Scared.png?token:APCQXYXIGRWABC7JLSTDHWS7KC262",
                              "Shock" : "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/Gangster4Images/Gangster4Shock.png?token:APCQXYXBWLVSCE5YG2KQ6HC7KC27W"}]
 }
-	]
 
 
 }]

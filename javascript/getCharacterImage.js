@@ -37,7 +37,7 @@ function setCharacterImage() {
         charNo = 5;
         characterEmotion();
     } else {
-        alert("That character was not found!");
+        //alert("That character was not found!");
     }
 }
 

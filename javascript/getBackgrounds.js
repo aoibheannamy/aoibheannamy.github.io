@@ -26,6 +26,7 @@ function setBackgroundImage() {
     switch (location) {
         case "BoardRoom":
             bg = loadImage(locationBack['BoardRoom']);
+            console.log("Board room loaded")
             break;
         case "Beach":
             bg = loadImage(locationBack['Beach']);

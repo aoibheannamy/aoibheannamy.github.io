@@ -4,15 +4,16 @@
  * then load the corresponding image
  */
 function setCharacterImage() {
+
     // create variable to hold the parsed JSON file
-    let locationBack = null;
-    let bg;
+    let characterImage = null;
+    let img, charNo;
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
-        var stringified = JSON.stringify(backgrounds);
-        // Now locationBack is the parsed result
-        locationBack = JSON.parse(stringified);
+        var stringified = JSON.stringify(batmanCharacters);
+        // Now characterImage is the parsed result
+        characterImage = JSON.parse(stringified);
 
     } catch (e) {
         // display error if the JSON file does not parse correctly
@@ -20,9 +21,6 @@ function setCharacterImage() {
     }
 
     alert("Location is: " + location + " url is: " + locationBack[0].BoardRoom)
-
-
-
 
     if (charNo == "1") {
 

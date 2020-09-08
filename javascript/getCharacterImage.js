@@ -11,7 +11,7 @@ function setCharacterImage() {
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
-        //var stringified = JSON.stringify(characters);
+        var stringified = JSON.stringify(characters);
         // Now characterImage is the parsed result
         characterImage = JSON.parse(characters);
 
@@ -19,13 +19,13 @@ function setCharacterImage() {
         // display error message in console if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!!");
     }
-    // pls print right thing i hateu
+    
     alert("character images: "+characterImage[0].emotionImgs);
 
     // get count of length of data entries in JSON object
-    //var count = characterImage.length;
+
     let emotionArray = [];
-    for (var i = 0; i <= count; i++) {
+    for (var i = 0; i <= characterImage.length; i++) {
         emotionArray.push(characterImage[i].emotionImgs);
     }
     console.log(emotionArray);

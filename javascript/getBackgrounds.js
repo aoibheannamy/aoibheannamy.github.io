@@ -20,7 +20,7 @@ function setBackgroundImage() {
         console.log("There was an error in parsing the JSON file!");
     }
 
-    alert("Location is: "+backgroundLocation+" url is: "+locationBack[0].BoardRoom)
+    console.log("Location is: "+backgroundLocation+" url is: "+locationBack[0].BoardRoom)
     
  
     /**
@@ -29,7 +29,7 @@ function setBackgroundImage() {
     switch (backgroundLocation) {
         case "BoardRoom":
             bg = loadImage(locationBack[0].BoardRoom);
-            console.log("Board room loaded")
+            console.log("Board room loaded");
             break;
         case "Beach":
             bg = loadImage(locationBack[0].Beach);

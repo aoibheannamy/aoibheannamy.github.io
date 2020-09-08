@@ -20,6 +20,7 @@ function setBackgroundImage() {
         console.log("There was an error in parsing the JSON file!");
     }
 
+    console.log(locationBack);
     /**
      * Checks which background is selected and changes image dependent on the result
      */

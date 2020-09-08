@@ -1,3 +1,8 @@
+/**
+ * Function to read in JSON file of background images,
+ * check which has been selected in the table,
+ * load the corresponding image
+ */
 function setBackgroundImage() {
 
     // payload 

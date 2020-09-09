@@ -118,7 +118,7 @@
             // load and insert background
             if (rowLocIndex >= 1) {
                 // get all the data for the row
-                var rowLocData = row.getData();
+                var rowLocData = rowLocIndex.getData();
                 // get location data
                 var backgroundLocation = row.getData().Location;
                 // displays location data for that index
@@ -131,7 +131,7 @@
             // load and insert image
             if (rowIndex >= 1) {
                 // get data for the selected row
-                var rowData = row.getData();
+                var rowData = rowIndex.getData();
                 // displays row data for that index
                 console.log(rowData);
 

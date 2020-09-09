@@ -111,22 +111,42 @@
 
         /**
          * function to render the draw call of canvas elements
-         */ 
+         */
         function draw() {
             clear();
-            // set/insert background
+
+            // load and insert background
             if (rowLocIndex >= 1) {
+                // get all the data for the row
+                var rowLocData = row.getData();
+                // get location data
+                var backgroundLocation = row.getData().Location;
+                // displays location data for that index
+                console.log(backgroundLocation);
+
                 setBackgroundImage();
                 background(bg);
             }
-            // insert image
+
+            // load and insert image
             if (rowIndex >= 1) {
+                // get data for the selected row
+                var rowData = row.getData();
+                // displays row data for that index
+                console.log(rowData);
+
+                // get the character number in that row to figure out which character is in the scene
+                var charNo = row.getData().CharacterNumber;
+                // get the emotion of the character in that scene
+                var charEmotion = row.getData().Emotion;
+                // check
+                console.log("char no: " + charNo + " emotion: " + charEmotion);
+
                 // call in function to set and load the correct image
                 setCharacterImage();
-                
+
                 image(img, 0, height / 2, img.width / 2, img.height / 2);
-                // check what image has been loaded
-                //console.log("Image: "+img);
+
             }
             // call drawWords function
             drawWords(width * 0.5);
@@ -193,14 +213,8 @@
                     rowLocIndex = row.getIndex();
                     // displays index
                     console.log("Row index: " + rowLocIndex);
-                    var rowLocData = row.getData();
-                    // get location data
-                    var backgroundLocation = row.getData().Location;
-                    // displays location data for that index
-                    console.log(backgroundLocation);
 
                 }
-
 
             });
 
@@ -256,19 +270,6 @@
                     rowIndex = row.getIndex();
                     // displays index
                     console.log("Row index: " + rowIndex);
-                    var rowData = row.getData();
-                    // displays row data for that index
-                    console.log(rowData);
-
-                    // get the character number in that row to figure out which character is in the scene
-                    var charNo = row.getData().CharacterNumber;
-                    // get the emotion of the character in that scene
-                    var charEmotion = row.getData().Emotion;
-                    // check
-                    console.log("char no: "+charNo+" emotion: "+charEmotion);
-
-
-
 
                     // is the character speaking and who is it?
                     var charSpeak = row.getData().CharacterSpeaking;

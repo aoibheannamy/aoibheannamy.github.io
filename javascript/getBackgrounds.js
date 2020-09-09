@@ -28,6 +28,7 @@ function setBackgroundImage() {
  
     var dropdownBack = document.getElementById("ddlViewBy");
     var backgrounds = dropdownBack.value;
+    console.log("Background selected:"+backgrounds);
 
     switch (backgrounds) {
         case "BoardRoom":

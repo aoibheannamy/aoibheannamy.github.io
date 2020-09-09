@@ -50,37 +50,37 @@ function characterEmotion() {
     let img, charNo;
     switch (charEmotion) {
         case "Neutral":
-            img = loadImage(characterImage[charNo].Neutral);
+            img = loadImage('characterImage[charNo].Neutral');
             break;
         case "Angry":
-            img = loadImage(characterImage[charNo].Angry);
+            img = loadImage('characterImage[charNo].Angry');
             break;
         case "SinisterGrin":
-            img = loadImage(characterImage[charNo].SinisterGrin);
+            img = loadImage('characterImage[charNo].SinisterGrin');
             break;
         case "Smile":
-            img = loadImage(characterImage[charNo].Smile);
+            img = loadImage('characterImage[charNo].Smile');
             break;
         case "Laughing":
-            img = loadImage(characterImage[charNo].Laughing);
+            img = loadImage('characterImage[charNo].Laughing');
             break;
         case "Sneer":
-            img = loadImage(characterImage[charNo].Sneer);
+            img = loadImage('characterImage[charNo].Sneer');
             break;
         case "Stern":
-            img = loadImage(characterImage[charNo].Stern);
+            img = loadImage('characterImage[charNo].Stern');
             break;
         case "Grin":
-            img = loadImage(characterImage[charNo].Grin);
+            img = loadImage('characterImage[charNo].Grin');
             break;
         case "Shock":
-            img = loadImage(characterImage[charNo].Shock);
+            img = loadImage('characterImage[charNo].Shock');
             break;
         case "Sad":
-            img = loadImage(characterImage[charNo].Sad);
+            img = loadImage('characterImage[charNo].Sad');
             break;
         case "Scared":
-            img = loadImage(characterImage[charNo].Scared);
+            img = loadImage('characterImage[charNo].Scared');
             break;
         default:
             alert("No image file found");

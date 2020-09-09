@@ -19,6 +19,7 @@ function setBackgroundImage(that) {
         // display error if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!");
     }
+    alert("JSON stringified: "+stringified+" parsed: "+locationBack);
 
 
 

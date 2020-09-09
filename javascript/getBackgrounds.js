@@ -33,6 +33,7 @@ function setBackgroundImage(that) {
         bg = loadImage(locationBack[0].Beach);
     } else if (that.value == "Forest") {
         bg = loadImage(locationBack[0].Forest);
+        console.log("Value:"+that.value);
     } else if (that.value == "Bedroom") {
         bg = loadImage(locationBack[0].Bedroom);
     } else if (that.value == "Club/Value") {

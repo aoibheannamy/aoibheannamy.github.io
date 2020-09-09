@@ -11,6 +11,16 @@ li.nav-item {
     padding-right: 5%;
 }
 
+
+.imagebanner{
+    background-color:  white;
+    background-image: url(../Images/film.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 25%;
+    
+}
+
 .mynavbar {
     background-color: #000000;
     margin-bottom: 1%;

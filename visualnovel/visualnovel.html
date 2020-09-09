@@ -91,6 +91,7 @@
         let charSpeaking = "";
         var rowIndex = 0;
         var rowLocIndex = 0;
+        var row;
 
         /**
          * This sets up the canvas for drawing
@@ -138,7 +139,7 @@
             if (rowIndex >= 1) {
                 // get data for the selected row
                 var rowData = table.getData();
-                //var rowData = row[rowIndex].getData();
+                var rowData = row[rowIndex].getData();
                 // displays row data for that index
                 console.log(rowData);
 

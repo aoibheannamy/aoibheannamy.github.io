@@ -1,4 +1,4 @@
-var characters = '[{
+var characters = [{
 		"number": 1,
 		"name": "Joker",
 		"Neutral": "../Images/jokerImages/JokerNeutral.png",
@@ -52,4 +52,4 @@ var characters = '[{
 
 
 
-]'
+]

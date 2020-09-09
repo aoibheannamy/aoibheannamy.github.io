@@ -90,6 +90,8 @@
         let textWords = "";
         let myFont;
         let charSpeaking = "";
+        var rowIndex = 0;
+        var rowLocIndex = 0;
 
         function setup() {
             // create the canvas
@@ -187,7 +189,6 @@
         <div id="example-table-loc"></div>
         <script type="text/javascript">
             //var loc_data = location_data;
-            var rowLocIndex = 0;
             var locTable = new Tabulator("#example-table-loc", {
                 index: "ID",
                 selectable: 1,
@@ -230,7 +231,7 @@
         <!-- ---------------------------------------------------------------- -->
         <script type="text/javascript">
             var local_data = esp_data;  //name inside json file -->	
-            var rowIndex = 0;
+            
             var table = new Tabulator("#example-table2", {
                 index: "FrameNumber",
                 selectable: 1,

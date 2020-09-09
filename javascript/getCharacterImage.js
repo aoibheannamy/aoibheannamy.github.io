@@ -44,7 +44,7 @@ function setCharacterImage() {
 /**
  * This function takes the character emotion from the tabulator table of frames
  * and checks what the emotion is and matches it dependent on the character number
- * chosen
+ * chosen - loads the respective image
  */
 function characterEmotion() {
     let img, charNo;

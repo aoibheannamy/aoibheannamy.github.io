@@ -28,7 +28,7 @@ function setBackgroundImage(that) {
      */
 
     if (that.value == "BoardRoom") {
-        var id = JSON.Boardroom;
+        var id = JSON.backgrounds.Boardroom;
         console.log("ID: "+id);
 
         backgroundLocation = locationBack[0].BoardRoom;

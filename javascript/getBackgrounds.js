@@ -21,7 +21,7 @@ function setBackgroundImage(that) {
             }
         }
 
-        alert(strBuilder.join(":"));
+        alert(strBuilder.split(":"));
 
     } catch (e) {
         // display error if the JSON file does not parse correctly

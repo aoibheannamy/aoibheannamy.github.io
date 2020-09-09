@@ -7,7 +7,7 @@ function setBackgroundImage() {
 
     // create variable to hold the parsed JSON file
     let locationBack = null;
-    let bg, backgroundLocation;
+    //let bg, backgroundLocation;
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
@@ -19,13 +19,17 @@ function setBackgroundImage() {
         // display error if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!");
     }
-    
-    
- 
+
+
+
     /**
      * Checks which background is selected and changes image dependent on the result
      */
-    switch (backgroundLocation) {
+ 
+    var dropdownBack = document.getElementById("ddlViewBy");
+    var backgrounds = dropdownBack.value;
+
+    switch (backgrounds) {
         case "BoardRoom":
             bg = loadImage(locationBack[0].BoardRoom);
             console.log("Board room loaded");
@@ -40,7 +44,7 @@ function setBackgroundImage() {
             bg = loadImage(locationBack[0].Bedroom);
             break;
         case "Club/Bar":
-            bg = loadImage(locationBack[0].Club/Bar);
+            bg = loadImage(locationBack[0].Club / Bar);
             break;
         case "Office":
             bg = loadImage(locationBack[0].Office);

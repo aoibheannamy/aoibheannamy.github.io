@@ -95,7 +95,7 @@
 
         /**
          * This sets up the canvas for drawing
-         */ 
+         */
         function setup() {
             // create the canvas
             var canvas = createCanvas(5 * windowWidth / 6, windowHeight);
@@ -188,6 +188,19 @@
 
     </script>
 
+    <select id="backgrounds">
+        <option value="BoardRoom">Board Room</option>
+        <option value="Beach">Beach</option>
+        <option value="Forest">Forest</option>
+        <option value="Office">Office</option>
+        <option value="Warehouse">Warehouse</option>
+        <option value="Club/Bar">Club/Bar</option>
+        <option value="Supermarket">Supermarket</option>
+        <option value="Bedroom">Bedroom</option>
+        <option value="Street">Street</option>
+        <option value="Prison">Prison</option>
+    </select>
+
     <div class="container" id="table">
         <h4>Location/Background of Scene</h4>
         <div id="example-table-loc"></div>
@@ -235,7 +248,7 @@
         <!-- ---------------------------------------------------------------- -->
         <script type="text/javascript">
             var local_data = esp_data;  //name inside json file -->	
-            
+
             var table = new Tabulator("#example-table2", {
                 index: "FrameNumber",
                 selectable: 1,

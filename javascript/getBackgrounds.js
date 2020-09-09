@@ -14,20 +14,20 @@ function setBackgroundImage(that) {
         locationBack = JSON.stringify(backgrounds);
         // Now locationBack is the parsed result
         //locationBack = JSON.parse(stringified);
-        var strBuilder = [];
+       /* var strBuilder = [];
         for (key in locationBack) {
             if (locationBack.hasOwnProperty(key)) {
                 strBuilder.push("Key is " + key + ", value is " + locationBack[key] + "\n");
             }
         }
 
-        alert(strBuilder.split(":"));
+        alert(strBuilder.split(":"));*/
 
     } catch (e) {
         // display error if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!");
     }
-    alert(" parsed: " + backgrounds);
+    alert("stringified:"+locationBack);
 
 
 
@@ -36,7 +36,7 @@ function setBackgroundImage(that) {
      */
 
     if (that.value == "BoardRoom") {
-        bg = loadImage(locationBack[0].BoardRoom);
+        bg = loadImage('locationBack[0].BoardRoom');
         console.log("Value:" + that.value + " bg: " + bg);
     } else if (that.value == "Beach") {
         bg = loadImage(locationBack[0].Beach);

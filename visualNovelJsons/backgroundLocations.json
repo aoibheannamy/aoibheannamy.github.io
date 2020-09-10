@@ -1,14 +1,14 @@
 var backgrounds = {
 "data":[{
-	"BoardRoom": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/MeetingRoom.jpg?token=APCQXYSJED7RCALP5RWOCZ27MCYQY",
-	"Beach": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/beach.jpg?token=APCQXYTK3UMTKA537ZHW26C7MCYRY",
-	"Forest": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/forest.jpg?token=APCQXYVVVPQZVXASN4TKSRS7MCYT2",
-	"Bedroom": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/bedroom.jpg?token=APCQXYWKPY7P6PRGWIWC75C7MCYSO",
-	"Club/Bar": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/club.jpg?token=APCQXYTZSGLVI3IKZTHF6BK7MCYTE",
-	"Office": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/office.jpg?token=APCQXYXQHCBBFJ4OMNA32EC7MCYUW",
-	"Prison": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/prison.jpg?token=APCQXYS5XLU2DZIPCAYSIVC7MCYVS",
-	"Street": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/street.jpg?token=APCQXYXYTRTSLP5XSNDG6HS7MCYWG",
-	"Supermarket": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/supermarket.jpg?token=APCQXYXYTUN5OX7A4R4VWZS7MCYW2",
-	"Warehouse": "https://raw.githubusercontent.com/aoibheannamy/aoibheannamy.github.io/master/Images/backgrounds/warehouse.jpg?token=APCQXYRIHHAULAQOG55PVB27MCYXQ"
+	"BoardRoom": "../Images/backgrounds/MeetingRoom.jpg",
+	"Beach": "../Images/backgrounds/beach.jpg",
+	"Forest": "../Images/backgrounds/forest.jpg",
+	"Bedroom": "../Images/backgrounds/bedroom.jpg",
+	"Club/Bar": "../Images/backgrounds/club.jpg",
+	"Office": "../Images/backgrounds/office.jpg",
+	"Prison": "../Images/backgrounds/prison.jpg",
+	"Street": "../Images/backgrounds/street.jpg",
+	"Supermarket": "../Images/backgrounds/supermarket.jpg",
+	"Warehouse": "../Images/backgrounds/warehouse.jpg"
 }],
 }

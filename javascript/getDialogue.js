@@ -5,34 +5,21 @@
  */
 function readDialogue() {
 
+    var characterName;
 
-
-    if (charNo == "1") {
-        charNo = 1;
-        characterEmotion();
-    } else if (charNo == "2") {
-        charNo = 2;
-        characterEmotion();
-    } else if (charNo == "3") {
-        charNo = 3;
-        characterEmotion();
-    } else if (charNo == "4") {
-        charNo = 4;
-        characterEmotion();
-    } else if (charNo == "5") {
-        charNo = 5;
-        characterEmotion();
+    if (charSpeak == 1) {
+        charSpeaking = "Character " + charSpeak + " said " + inflection + ":";
+    } else if (charSpeak == 2) {
+        charSpeaking = "Character " + charSpeak + " said " + inflection + ":";
+    } else if (charSpeak = 3) {
+        charSpeaking = "Character " + charSpeak + " said " + inflection + ":";
+    } else if (charSpeak = 4) {
+        charSpeaking = "Character " + charSpeak + " said " + inflection + ":";
     } else {
-        //alert("That character was not found!");
+        charSpeaking = "No Character is speaking.";
     }
-}
 
-/**
- * This function takes the character emotion from the tabulator table of frames
- * and checks what the emotion is and matches it dependent on the character number
- * chosen - loads the respective image
- */
-function characterEmotion() {
+ 
     switch (charEmotion) {
         case "Neutral":
             img = loadImage(characterImage.number[charNo].Neutral);

@@ -128,7 +128,7 @@
 
             // set background as image
             bg = loadImage('../Images/placeholderImage.jpg');
-           
+
             // any additional images loaded here
             //img = loadImage('../Images/placeholderImage.jpg');
             // set container to hold the canvas
@@ -158,12 +158,24 @@
             setCharacterImage();
             image(img, 0, height / 2, img.width / 2, img.height / 2);
 
-            // call drawWords function
+
+            console.log("Char no: " + charNo + " emotion: " + charEmotion);
+
+            // find dialogue for rowIndex
+            // is the character speaking and who is it?
+            var charSpeak = data[rowIndex].CharacterSpeaking;
+            // what do they say? and set it to variable used in drawWords() function
+            textWords = data[rowIndex].WhatDoTheySay;
+            // get their inflection
+            var inflection = data[rowIndex].Inflection;
+            // set text variable to words in table
+            textWords = spokenWords;
+            // call drawWords() function to print to screen
             drawWords(width * 0.5);
 
         }
 
-        console.log("Char no: "+charNo+" emotion: "+charEmotion);
+
 
         function drawWords() {
             if (rowIndex >= 1) {
@@ -238,32 +250,6 @@
                     rowIndex = row.getIndex();
                     // displays index
                     console.log("Row index: " + rowIndex);
-
-                    // is the character speaking and who is it?
-                    var charSpeak = row.getData().CharacterSpeaking;
-                    // what do they say?
-                    var spokenWords = row.getData().WhatDoTheySay;
-                    // set text variable to words in table
-                    textWords = spokenWords;
-                    // call drawWords() to print to screen
-                    if (charSpeak == 1) {
-                        charSpeaking = "Character " + charSpeak + " is speaking:";
-                    } else if (charSpeak == 2) {
-                        charSpeaking = "Character " + charSpeak + " is speaking:";
-                    } else if (charSpeak = 3) {
-                        charSpeaking = "Character " + charSpeak + " is speaking:";
-                    } else if (charSpeak = 4) {
-                        charSpeaking = "Character " + charSpeak + " is speaking:";
-                    } else {
-                        charSpeaking = "No Character is speaking.";
-                    }
-                    rowIndex++;
-
-
-
-
-
-
 
                 }
             });

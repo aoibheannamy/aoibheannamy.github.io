@@ -7,14 +7,12 @@ function setCharacterImage() {
 
     // create variable to hold the parsed JSON file
     let characterImage = null;
-    let img, charNo, charEmotion;
 
     try {
-        // use the JSON.stringify() method to convert the data into a string before attempting to parse it
-        var stringified = JSON.stringify(characters);
+
         // Now characterImage is the parsed result
-        //console.log(typeof stringified);
-        characterImage = JSON.parse(stringified);
+        
+        characterImage = JSON.parse(characters);
 
     } catch (e) {
         // display error message in console if the JSON file does not parse correctly
@@ -47,7 +45,6 @@ function setCharacterImage() {
  * chosen - loads the respective image
  */
 function characterEmotion() {
-    let img, charNo;
     switch (charEmotion) {
         case "Neutral":
             img = loadImage('characterImage[charNo].Neutral');

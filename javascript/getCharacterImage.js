@@ -10,9 +10,8 @@ function setCharacterImage() {
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
-        var stringified = JSON.stringify(characters);
+        //var stringified = JSON.stringify(characters);
         // Now characterImage is the parsed result
-        
         characterImage = JSON.parse(characters);
 
     } catch (e) {
@@ -48,37 +47,37 @@ function setCharacterImage() {
 function characterEmotion() {
     switch (charEmotion) {
         case "Neutral":
-            img = loadImage('characterImage[charNo].Neutral');
+            img = loadImage(characterImage.number[charNo].Neutral);
             break;
         case "Angry":
-            img = loadImage('characterImage[charNo].Angry');
+            img = loadImage(characterImage.number[charNo].Angry);
             break;
         case "SinisterGrin":
-            img = loadImage('characterImage[charNo].SinisterGrin');
+            img = loadImage(characterImage.number[charNo].SinisterGrin);
             break;
         case "Smile":
-            img = loadImage('characterImage[charNo].Smile');
+            img = loadImage(characterImage.number[charNo].Smile);
             break;
         case "Laughing":
-            img = loadImage('characterImage[charNo].Laughing');
+            img = loadImage(characterImage.number[charNo].Laughing);
             break;
         case "Sneer":
-            img = loadImage('characterImage[charNo].Sneer');
+            img = loadImage(characterImage.number[charNo].Sneer);
             break;
         case "Stern":
-            img = loadImage('characterImage[charNo].Stern');
+            img = loadImage(characterImage.number[charNo].Stern);
             break;
         case "Grin":
-            img = loadImage('characterImage[charNo].Grin');
+            img = loadImage(characterImage.number[charNo].Grin);
             break;
         case "Shock":
-            img = loadImage('characterImage[charNo].Shock');
+            img = loadImage(characterImage.number[charNo].Shock);
             break;
         case "Sad":
-            img = loadImage('characterImage[charNo].Sad');
+            img = loadImage(characterImage.number[charNo].Sad);
             break;
         case "Scared":
-            img = loadImage('characterImage[charNo].Scared');
+            img = loadImage(characterImage.number[charNo].Scared);
             break;
         default:
             alert("No image file found");

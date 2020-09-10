@@ -1,14 +1,14 @@
 var backgrounds = {
 "data":[{
-	"BoardRoom": "../Images/backgrounds/MeetingRoom.jpg",
-	"Beach": "/backgrounds/beach.jpg",
-	"Forest": "/backgrounds/forest.jpg",
-	"Bedroom": "/backgrounds/bedroom.jpg",
-	"Club/Bar": "/backgrounds/club.jpg",
-	"Office": "/backgrounds/office.jpg",
-	"Prison": "/backgrounds/prison.jpg",
-	"Street": "/backgrounds/street.jpg",
-	"Supermarket": "/backgrounds/supermarket.jpg",
-	"Warehouse": "/backgrounds/warehouse.jpg"
+	"BoardRoom": "/visualnovel/backgrounds/MeetingRoom.jpg",
+	"Beach": "/visualnovel/backgrounds/beach.jpg",
+	"Forest": "/visualnovel/backgrounds/forest.jpg",
+	"Bedroom": "/visualnovel/backgrounds/bedroom.jpg",
+	"Club/Bar": "/visualnovel/backgrounds/club.jpg",
+	"Office": "/visualnovel/backgrounds/office.jpg",
+	"Prison": "/visualnovel/backgrounds/prison.jpg",
+	"Street": "/visualnovel/backgrounds/street.jpg",
+	"Supermarket": "/visualnovel/backgrounds/supermarket.jpg",
+	"Warehouse": "/visualnovel/backgrounds/warehouse.jpg"
 }],
 }

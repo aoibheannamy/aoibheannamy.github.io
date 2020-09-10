@@ -107,10 +107,9 @@
         let textWords = "";
         let myFont;
         let charSpeaking = "";
-        // index of row in frame table
         var rowIndex = 0;
         var rowLocIndex = 0;
-    
+        var row;
 
         /**
          * Try to preload images before
@@ -162,6 +161,11 @@
             preload();
             background(bg);
 
+
+
+
+
+            // load and insert image
             var rowCount = table.getDataCount();
             console.log("Row count: " + rowCount);
 
@@ -183,9 +187,6 @@
                 //setCharacterImage();
                 //image(img, 0, height / 2, img.width / 2, img.height / 2);
             }
-
-
-
             // call drawWords function
             drawWords(width * 0.5);
 
@@ -228,7 +229,7 @@
         <script type="text/javascript">
             var local_data = esp_data;  //name inside json file -->	
 
-           var table = new Tabulator("#example-table", {
+            var table = new Tabulator("#example-table2", {
                 index: "FrameNumber",
                 selectable: 1,
                 data: local_data,

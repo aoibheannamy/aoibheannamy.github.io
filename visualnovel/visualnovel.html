@@ -161,6 +161,7 @@
             preload();
             background(bg);
 
+            /*
             // try this to get rows when not in rowClick function
             var rows = $("#example-table2").tabulator("getColumns"); //get array of column components
 
@@ -172,14 +173,14 @@
                 });
             });
 
-            console.log("rows: " + rowsGet);
+            console.log("rows: " + rowsGet);*/
 
             // get data for the selected row
-            myTable = Tabulator.prototype.findTable('#example-table2')[0];
-            data = myTable.getData();
             console.log("data:" + data);
-            var tableData = table.getData();
-            console.log(tableData);
+            var data = table.getData();
+            console.log(data);
+            var charNo = data[rowIndex].CharacterNumber;
+            console.log("CHaracter number for rowIndex: "+charNo);
 
             // load and insert image
             if (rowIndex >= 1) {

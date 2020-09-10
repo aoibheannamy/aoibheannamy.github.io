@@ -7,8 +7,7 @@ function setBackgroundImage() {
 
     // create variable to hold the parsed JSON file
     let locationBack = null;
-    var id;
-
+    
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
         var stringified = JSON.stringify(backgrounds);

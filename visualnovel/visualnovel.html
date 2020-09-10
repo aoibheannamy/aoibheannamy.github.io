@@ -162,7 +162,7 @@
             background(bg);
 
             // try this to get rows when not in rowclick function - jQuery used here
-            var rows = $("#example-table2").tabulator("getRows"); //get array of column components
+            var rows = $("#example-table2").tabulator("getColumns"); //get array of column components
 
             rows.forEach(function (row) {
                 var rowsGet = row.getRows();

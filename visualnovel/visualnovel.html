@@ -161,10 +161,8 @@
             preload();
             background(bg);
 
-            // try this to get rows when not in rowclick function - jQuery
+            // try this to get rows when not in rowclick function - jQuery used here
             var rows = $("#example-table2").tabulator("getRows") //get array of column components
-            // $ is not defined
-            //var rows = Tabulator.prototype.findTable('#example-table2').Tabulator("getRows");
 
             rows.forEach(function (row) {
                 var rowsGet = row.getRows();

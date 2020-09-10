@@ -7,7 +7,8 @@ function setCharacterImage() {
 
     // create variable to hold the parsed JSON file
     let characterImage = null;
-    var charNo=0;
+    var charNo = data[rowIndex].CharacterNumber;
+
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it

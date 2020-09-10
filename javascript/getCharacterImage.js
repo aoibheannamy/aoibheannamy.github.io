@@ -12,7 +12,8 @@ function setCharacterImage() {
     var data = myTable.getData();
 
     // load and insert image
-    var charNo = data[rowIndex].CharacterNumber;
+    var charNo = ("\""+data[rowIndex].CharacterNumber+"\"");
+
     var charEmotion = data[rowIndex].Emotion;
 
     // read in JSON file of character images

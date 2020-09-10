@@ -109,7 +109,7 @@
         let charSpeaking = "";
         var rowIndex = 0;
         var rowLocIndex = 0;
-        var table;
+    
 
         /**
          * Try to preload images before
@@ -227,7 +227,7 @@
         <script type="text/javascript">
             var local_data = esp_data;  //name inside json file -->	
 
-            table = new Tabulator("#example-table", {
+           var table = new Tabulator("#example-table", {
                 index: "FrameNumber",
                 selectable: 1,
                 data: local_data,

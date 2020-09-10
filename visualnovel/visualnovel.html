@@ -183,22 +183,8 @@
                 var data = table.getData();
                 console.log("data:" + data);
                 var charNo = data[rowIndex].CharacterNumber;
-                console.log("CHaracter number for rowIndex: " + charNo);
-
-                // prior attempts
-
-                //var rowData = table.getData("active").FrameNumber(rowIndex);
-                // var rowData = row.table.getData("active");
-                // displays row data for that index
-
-                // console.log(rowData);
-
-                // get the character number in that row to figure out which character is in the scene
-                //var charNo = row.getData().CharacterNumber;
-                // get the emotion of the character in that scene
-                //var charEmotion = row.getData().Emotion;
-                // check
-                //console.log("char no: " + charNo + " emotion: " + charEmotion);
+                var charEmotion = data[rowIndex].Emotion;
+                console.log("Char no: " + charNo + ", Emotion: " + charEmotion);
 
                 // call in function to set and load the correct image
                 setCharacterImage();

@@ -11,9 +11,9 @@ function setBackgroundImage() {
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
-        stringified = JSON.stringify(backgrounds);
+        //stringified = JSON.stringify(backgrounds);
         // Now locationBack is the parsed result
-        locationBack = JSON.parse(stringified);
+        locationBack = JSON.parse(backgrounds);
     } catch (e) {
         // display error if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!");

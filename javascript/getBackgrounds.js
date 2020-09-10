@@ -14,6 +14,7 @@ function getBackgrounds() {
         stringified = JSON.stringify(backgrounds);
         // Now locationBack is the parsed result
         locationBack = JSON.parse(stringified);
+        // call function to load corresponding background image
         setBackgroundImage();
 
     } catch (e) {

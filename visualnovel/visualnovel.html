@@ -84,7 +84,7 @@
 
         </div>
     </div>
-        
+
     <select id="backgrounds">
         <option value="">Select:</option>
         <option value="BoardRoom">Board Room</option>
@@ -111,8 +111,8 @@
 
         /**
          * Try to preload images before
-         */ 
-        function preload(){
+         */
+        function preload() {
             setBackgroundImage();
         }
 
@@ -159,14 +159,16 @@
             preload();
             background(bg);
 
+            // get data for the selected row
+            myTable = Tabulator.prototype.findTable('#example-table2')[0];
+            data = myTable.getData();
+            console.log("data:" + data);
+            var tableData = table.getData();
+            console.log(tableData);
+
             // load and insert image
             if (rowIndex >= 1) {
-                // get data for the selected row
-                myTable = Tabulator.prototype.findTable('#example-table2')[0];
-                data = myTable.getData();
-                console.log("data:"+data);
-                var tableData = table.getData();
-                console.log(tableData);
+
 
                 //var rowData = table.getData("active").FrameNumber(rowIndex);
                 // var rowData = row.table.getData("active");

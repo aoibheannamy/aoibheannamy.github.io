@@ -56,6 +56,8 @@ function setBackgroundImage(that) {
     } else if (that.value == "Warehouse") {
         var id = locationBack.data[0].Warehouse;
         bg = loadImage("'"+id+"'");
+    } else{
+        console.log("No background selected yet!");
     }
 
 

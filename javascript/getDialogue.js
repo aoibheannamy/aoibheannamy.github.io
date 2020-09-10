@@ -1,24 +1,11 @@
 /**
- * Function to read in JSON file of character images,
- * check which character is in the selected row and what their emotion is,
- * then load the corresponding image
+ * Function to read dialogue, including who speaks and their inflection,
+ * from the tabulator table of frames
+ * to then load the corresponding text in the speech bubble
  */
-function setCharacterImage() {
+function readDialogue() {
 
-    // create variable to hold the parsed JSON file
-    let characterImage = null;
-    let charNo;
 
-    try {
-        // use the JSON.stringify() method to convert the data into a string before attempting to parse it
-        var stringified = JSON.stringify(characters);
-        // Now characterImage is the parsed result
-        characterImage = JSON.parse(stringified);
-
-    } catch (e) {
-        // display error message in console if the JSON file does not parse correctly
-        console.log("There was an error in parsing the JSON file!!");
-    }
 
     if (charNo == "1") {
         charNo = 1;

@@ -128,7 +128,7 @@
 
             // set background as image
             bg = loadImage('../Images/placeholderImage.jpg');
-            background(bg);
+           
             // any additional images loaded here
             //img = loadImage('../Images/placeholderImage.jpg');
             // set container to hold the canvas
@@ -142,19 +142,7 @@
          */
         function draw() {
             clear();
-
-            /*
-            // load and insert background
-            if (rowLocIndex >= 1) {
-                // get all the data for the row
-                //var rowLocData = rowLocIndex.getData();
-                // get location data
-                //var backgroundLocation = locTable.getData().Location;
-                // displays location data for that index
-                console.log(backgroundLocation);
-
-
-            }*/
+            background(bg);
 
             // load and insert image
             myTable = Tabulator.prototype.findTable('#example-table')[0];
@@ -163,15 +151,8 @@
             //console.log("Row count: " + rowCount);
 
             // load and insert image
-            // can we get the row data to adapt with every click??
-            // iterate the row index to automatically move to the next frame
-
-            //var data = table.getData();
             var charNo = data[rowIndex].CharacterNumber;
             var charEmotion = data[rowIndex].Emotion;
-            // delay console.log to see if iteration works correctly
-           // setTimeout(() => { console.log("Char no: " + charNo + ", Emotion: " + charEmotion); }, 4000);
-
 
             // call in function to set and load the correct image 
             // uncomment when iteration works correctly and image selection works
@@ -180,9 +161,6 @@
 
             // call drawWords function
             drawWords(width * 0.5);
-
-
-
 
         }
 

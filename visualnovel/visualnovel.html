@@ -166,6 +166,8 @@
 
 
             // load and insert image
+            table = Tabulator.prototype.findTable('#example-table')[0];
+            var data = table.getData();
             var rowCount = table.getDataCount();
             console.log("Row count: " + rowCount);
 
@@ -173,8 +175,7 @@
             // can we get the row data to adapt with every click??
             // iterate the row index to automatically move to the next frame
             for (rowIndex = 1; rowIndex <= rowCount; rowIndex++) {
-                table = Tabulator.prototype.findTable('#example-table')[0];
-                var data = table.getData();
+
                 //var data = table.getData();
                 var charNo = data[rowIndex].CharacterNumber;
                 var charEmotion = data[rowIndex].Emotion;
@@ -229,7 +230,7 @@
         <script type="text/javascript">
             var local_data = esp_data;  //name inside json file -->	
 
-            var table = new Tabulator("#example-table2", {
+            var table = new Tabulator("#example-table", {
                 index: "FrameNumber",
                 selectable: 1,
                 data: local_data,

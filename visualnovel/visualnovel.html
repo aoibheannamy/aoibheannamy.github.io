@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <select id="backgrounds">
+    <select id="backgrounds" onchange="handleSelectChange(event)">
         <option value="">Select:</option>
         <option value="BoardRoom">Board Room</option>
         <option value="Beach">Beach</option>
@@ -107,7 +107,7 @@
         let charSpeaking = "";
         var rowIndex = 0;
         var rowLocIndex = 0;
-        var row;
+        var value;
 
         /**
          * This sets up the canvas for drawing
@@ -149,7 +149,13 @@
 
             }*/
             // load and insert background
-            setBackgroundImage();
+            function handleSelectChange(event) {
+                var selectElement = event.target;
+                value = selectElement.value;
+                alert(value);
+                setBackgroundImage();
+            }
+            
             background(bg);
 
             // load and insert image

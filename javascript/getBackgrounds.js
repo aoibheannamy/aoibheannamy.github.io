@@ -24,79 +24,78 @@ function setBackgroundImage() {
     /**
      * Checks which background is selected and changes image dependent on the result
      */
-    document.getElementById('backgrounds').addEventListener('change', function () {
-        console.log('You selected: ', this.value);
-        if (this.value == "BoardRoom") {
-            id = locationBack.data[0].BoardRoom;
-            console.log("ID: " + id);
-            bg = loadImage(id);
-            console.log("Value:" + this.value + " bg: " + bg);
-        } else if (this.value == "Beach") {
-            id = locationBack.data[0].Beach;
-            bg = loadImage(id);
-        } else if (this.value == "Forest") {
-            id = locationBack.data[0].Forest;
-            bg = loadImage(id);
-        } else if (this.value == "Bedroom") {
-            id = locationBack.data[0].Bedroom;
-            bg = loadImage(id);
-        } else if (this.value == "Club/Bar") {
-            id = locationBack.data[0].Club / Bar;
-            bg = loadImage(id);
-        } else if (this.value == "Office") {
-            var id = locationBack.data[0].Office;
-            bg = loadImage(id);
-        } else if (this.value == "Prison") {
-            var id = locationBack.data[0].Prison;
-            bg = loadImage(id);
-        } else if (this.value == "Street") {
-            var id = locationBack.data[0].Street;
-            bg = loadImage(id);
-        } else if (this.value == "Supermarket") {
-            var id = locationBack.data[0].Supermarket;
-            bg = loadImage(id);
-        } else if (this.value == "Warehouse") {
-            var id = locationBack.data[0].Warehouse;
-            bg = loadImage(id);
-        } else if (this.value == "") {
-            bg = loadImage('../Images/placeholderImage.jpg');
-        }
-    });
-
-    /*
-        switch (backgrounds) {
-            case "BoardRoom":
-                bg = loadImage(locationBack[0].BoardRoom);
-                console.log("Board room loaded");
-                break;
-            case "Beach":
-                bg = loadImage(locationBack[0].Beach);
-                break;
-            case "Forest":
-                bg = loadImage(locationBack[0].Forest);
-                break;
-            case "Bedroom":
-                bg = loadImage(locationBack[0].Bedroom);
-                break;
-            case "Club/Bar":
-                bg = loadImage(locationBack[0].Club / Bar);
-                break;
-            case "Office":
-                bg = loadImage(locationBack[0].Office);
-                break;
-            case "Prison":
-                bg = loadImage(locationBack[0].Prison);
-                break;
-            case "Street":
-                bg = loadImage(locationBack[0].Street);
-                break;
-            case "Supermarket":
-                bg = loadImage(locationBack[0].Supermarket);
-                break;
-            case "Warehouse":
-                bg = loadImage(locationBack[0].Warehouse);
-                break;
-            default:
-                break;
-        }*/
+    //document.getElementById('backgrounds').addEventListener('change', function () {
+    //console.log('You selected: ', this.value);
+    if (value == "BoardRoom") {
+        id = locationBack.data[0].BoardRoom;
+        console.log("ID: " + id);
+        bg = loadImage(id);
+        console.log("Value:" + value + " bg: " + bg);
+    } else if (value == "Beach") {
+        id = locationBack.data[0].Beach;
+        bg = loadImage(id);
+    } else if (value == "Forest") {
+        id = locationBack.data[0].Forest;
+        bg = loadImage(id);
+    } else if (value == "Bedroom") {
+        id = locationBack.data[0].Bedroom;
+        bg = loadImage(id);
+    } else if (value == "Club/Bar") {
+        id = locationBack.data[0].Club / Bar;
+        bg = loadImage(id);
+    } else if (value == "Office") {
+        var id = locationBack.data[0].Office;
+        bg = loadImage(id);
+    } else if (value == "Prison") {
+        var id = locationBack.data[0].Prison;
+        bg = loadImage(id);
+    } else if (value == "Street") {
+        var id = locationBack.data[0].Street;
+        bg = loadImage(id);
+    } else if (value == "Supermarket") {
+        var id = locationBack.data[0].Supermarket;
+        bg = loadImage(id);
+    } else if (value == "Warehouse") {
+        var id = locationBack.data[0].Warehouse;
+        bg = loadImage(id);
+    } else if (value == "") {
+        bg = loadImage('../Images/placeholderImage.jpg');
+    }
 }
+
+/*
+    switch (backgrounds) {
+        case "BoardRoom":
+            bg = loadImage(locationBack[0].BoardRoom);
+            console.log("Board room loaded");
+            break;
+        case "Beach":
+            bg = loadImage(locationBack[0].Beach);
+            break;
+        case "Forest":
+            bg = loadImage(locationBack[0].Forest);
+            break;
+        case "Bedroom":
+            bg = loadImage(locationBack[0].Bedroom);
+            break;
+        case "Club/Bar":
+            bg = loadImage(locationBack[0].Club / Bar);
+            break;
+        case "Office":
+            bg = loadImage(locationBack[0].Office);
+            break;
+        case "Prison":
+            bg = loadImage(locationBack[0].Prison);
+            break;
+        case "Street":
+            bg = loadImage(locationBack[0].Street);
+            break;
+        case "Supermarket":
+            bg = loadImage(locationBack[0].Supermarket);
+            break;
+        case "Warehouse":
+            bg = loadImage(locationBack[0].Warehouse);
+            break;
+        default:
+            break;
+    }*/

@@ -2,10 +2,6 @@
  * Function to read in JSON file of character images,
  * check which character is in the selected row and what their emotion is,
  * then load the corresponding image
- * /**
- * This function takes the character emotion from the tabulator table of frames
- * and checks what the emotion is and matches it dependent on the character number
- * chosen - loads the respective image
  */
 function setCharacterImage() {
 
@@ -19,6 +15,7 @@ function setCharacterImage() {
     var charNo = data[rowIndex].CharacterNumber;
     var charEmotion = data[rowIndex].Emotion;
 
+    // read in JSON file of character images
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
         var stringified = JSON.stringify(characters);

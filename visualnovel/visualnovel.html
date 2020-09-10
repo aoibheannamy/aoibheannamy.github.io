@@ -109,7 +109,6 @@
         let charSpeaking = "";
         var rowIndex = 0;
         var rowLocIndex = 0;
-        var row;
 
         /**
          * Try to preload images before
@@ -225,7 +224,7 @@
 
     <div class='container'>
         <h4>Frame by Frame</h4>
-        <div id="example-table2"></div>
+        <div id="example-table"></div>
         <!-- ---------------------------------------------------------------- -->
         <script type="text/javascript">
             var local_data = esp_data;  //name inside json file -->	
@@ -238,7 +237,7 @@
                 paginationSize: 10,
                 layout: "fitColumns",
                 placeholder: "No Data Available",
-                columns: [
+                columns: [s
                     {
                         title: "Frame", field: "FrameNumber", editor: "input", cellClick: function (e, cell) {
                             var cellValue = cell.getValue();

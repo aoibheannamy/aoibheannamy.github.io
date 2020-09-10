@@ -10,10 +10,8 @@ function setBackgroundImage() {
     var id;
 
     try {
-        // use the JSON.stringify() method to convert the data into a string before attempting to parse it
-        stringified = JSON.stringify(backgrounds);
         // Now locationBack is the parsed result
-        locationBack = JSON.parse(stringified);
+        locationBack = JSON.parse(backgrounds);
 
     } catch (e) {
         // display error if the JSON file does not parse correctly
@@ -28,7 +26,6 @@ function setBackgroundImage() {
         console.log('You selected: ', this.value);
         if (this.value == "BoardRoom") {
             id = locationBack.data[0].BoardRoom;
-            console.log("ID: " + id);
             bg = loadImage(id);
             console.log("Value:" + this.value + " bg: " + bg);
         } else if (this.value == "Beach") {

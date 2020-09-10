@@ -27,7 +27,7 @@ function setBackgroundImage(that) {
     if (that.value == "BoardRoom") {
         id = locationBack.data[0].BoardRoom;
         console.log("ID: "+id);
-        bg = loadImage("'"+id+"'");
+        bg = loadImage(id);
         console.log("Value:" + that.value + " bg: " + bg);
     } else if (that.value == "Beach") {
         id = locationBack.data[0].Beach;

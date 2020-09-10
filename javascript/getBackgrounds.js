@@ -7,7 +7,7 @@ function setBackgroundImage(that) {
 
     // create variable to hold the parsed JSON file
     let locationBack = null;
-    //var id;
+    var id;
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
@@ -21,9 +21,12 @@ function setBackgroundImage(that) {
     }
     alert("stringified:" + locationBack);
 
+
+
     /**
      * Checks which background is selected and changes image dependent on the result
      */
+
     if (that.value == "BoardRoom") {
         id = locationBack.data[0].BoardRoom;
         console.log("ID: "+id);
@@ -56,9 +59,43 @@ function setBackgroundImage(that) {
     } else if (that.value == "Warehouse") {
         var id = locationBack.data[0].Warehouse;
         bg = loadImage(id);
-    } else{
-        console.log("No background selected yet!");
     }
 
 
+    /*
+        switch (backgrounds) {
+            case "BoardRoom":
+                bg = loadImage(locationBack[0].BoardRoom);
+                console.log("Board room loaded");
+                break;
+            case "Beach":
+                bg = loadImage(locationBack[0].Beach);
+                break;
+            case "Forest":
+                bg = loadImage(locationBack[0].Forest);
+                break;
+            case "Bedroom":
+                bg = loadImage(locationBack[0].Bedroom);
+                break;
+            case "Club/Bar":
+                bg = loadImage(locationBack[0].Club / Bar);
+                break;
+            case "Office":
+                bg = loadImage(locationBack[0].Office);
+                break;
+            case "Prison":
+                bg = loadImage(locationBack[0].Prison);
+                break;
+            case "Street":
+                bg = loadImage(locationBack[0].Street);
+                break;
+            case "Supermarket":
+                bg = loadImage(locationBack[0].Supermarket);
+                break;
+            case "Warehouse":
+                bg = loadImage(locationBack[0].Warehouse);
+                break;
+            default:
+                break;
+        }*/
 }

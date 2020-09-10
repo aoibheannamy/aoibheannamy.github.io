@@ -176,14 +176,15 @@
             console.log("rows: " + rowsGet);*/
 
             // get data for the selected row
-            console.log("data:" + data);
-            var data = table.getData();
-            console.log(data);
-            var charNo = data[rowIndex].CharacterNumber;
-            console.log("CHaracter number for rowIndex: "+charNo);
 
             // load and insert image
             if (rowIndex >= 1) {
+               
+                var data = table.getData();
+                console.log("data:" + data);
+                var charNo = data[rowIndex].CharacterNumber;
+                console.log("CHaracter number for rowIndex: " + charNo);
+
                 // prior attempts
 
                 //var rowData = table.getData("active").FrameNumber(rowIndex);
@@ -197,7 +198,7 @@
                 // get the emotion of the character in that scene
                 //var charEmotion = row.getData().Emotion;
                 // check
-                console.log("char no: " + charNo + " emotion: " + charEmotion);
+                //console.log("char no: " + charNo + " emotion: " + charEmotion);
 
                 // call in function to set and load the correct image
                 setCharacterImage();

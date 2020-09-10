@@ -168,10 +168,11 @@
             // iterate the row index to automatically move to the next frame
             for (rowIndex = 1; rowIndex <= rowCount; rowIndex++) {
                 var data = table.getData();
-                console.log("data:" + data);
                 var charNo = data[rowIndex].CharacterNumber;
                 var charEmotion = data[rowIndex].Emotion;
-                console.log("Char no: " + charNo + ", Emotion: " + charEmotion);
+                // delay console.log to see if it works
+                setTimeout(() => {  console.log("Char no: " + charNo + ", Emotion: " + charEmotion); }, 4000);
+                
 
                 // call in function to set and load the correct image
                 //setCharacterImage();

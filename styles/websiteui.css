@@ -66,10 +66,15 @@ h2{
 figure{
     margin: 5%;
 }
+.mycard{
+    margin-left: 40%;
+    margin-bottom: 20%;
+}
 
 footer {
     margin-top: 30%;
     background-color: rgba(0, 68, 255, 0.192);
+    text-align: center;
 }
 
 

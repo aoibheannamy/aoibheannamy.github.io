@@ -23,6 +23,7 @@ function setCharacterImage() {
     if (charNo == "1") {
         charNo = 1;
         characterEmotion();
+        console.log("image: "+img);
     } else if (charNo == "2") {
         charNo = 2;
         characterEmotion();

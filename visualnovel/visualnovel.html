@@ -109,6 +109,7 @@
         let charSpeaking = "";
         var rowIndex = 0;
         var rowLocIndex = 0;
+        var table;
 
         /**
          * Try to preload images before
@@ -167,12 +168,14 @@
             // can we get the row data to adapt with every click??
             // iterate the row index to automatically move to the next frame
             for (rowIndex = 1; rowIndex <= rowCount; rowIndex++) {
+                table = Tabulator.prototype.findTable('#example-table')[0];
                 var data = table.getData();
+                //var data = table.getData();
                 var charNo = data[rowIndex].CharacterNumber;
                 var charEmotion = data[rowIndex].Emotion;
                 // delay console.log to see if iteration works correctly
-                setTimeout(() => {  console.log("Char no: " + charNo + ", Emotion: " + charEmotion); }, 4000);
-                
+                setTimeout(() => { console.log("Char no: " + charNo + ", Emotion: " + charEmotion); }, 4000);
+
 
                 // call in function to set and load the correct image
                 //setCharacterImage();
@@ -226,7 +229,7 @@
         <script type="text/javascript">
             var local_data = esp_data;  //name inside json file -->	
 
-            var table = new Tabulator("#example-table2", {
+            table = new Tabulator("#example-table", {
                 index: "FrameNumber",
                 selectable: 1,
                 data: local_data,

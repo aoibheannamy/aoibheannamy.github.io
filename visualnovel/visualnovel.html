@@ -88,6 +88,7 @@
     </div>
 
     <select id="backgrounds">
+        <label>Select a background for the visual novel:</label>
         <option value="">Select:</option>
         <option value="BoardRoom">Board Room</option>
         <option value="Beach">Beach</option>
@@ -155,14 +156,15 @@
             var charEmotion = data[rowIndex].Emotion;
 
             // call in function to set and load the correct image for character dependent on rowIndex 
-            // uncomment when iteration works correctly and image selection works
-            //setCharacterImage();
-            //image(img, 0, height / 2, img.width / 2, img.height / 2);
+            setCharacterImage();
+            image(img, 0, height / 2, img.width / 2, img.height / 2);
 
             // call drawWords function
             drawWords(width * 0.5);
 
         }
+
+        console.log("Char no: "+charNo+" emotion: "+charEmotion);
 
         function drawWords() {
             if (rowIndex >= 1) {

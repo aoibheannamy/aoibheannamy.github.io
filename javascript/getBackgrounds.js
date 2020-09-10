@@ -24,7 +24,7 @@ function setBackgroundImage() {
     /**
      * Checks which background is selected and changes image dependent on the result
      */
-    document.getElementById('my-select').addEventListener('change', function () {
+    document.getElementById('backgrounds').addEventListener('change', function () {
         console.log('You selected: ', this.value);
         if (this.value == "BoardRoom") {
             id = locationBack.data[0].BoardRoom;

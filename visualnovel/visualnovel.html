@@ -26,6 +26,7 @@
         #table {
             margin-top: 750px;
         }
+
         #backgrounds {
             margin-top: 750px;
         }
@@ -84,7 +85,7 @@
         </div>
     </div>
 
-    
+
     <select id="backgrounds" onchange="setBackgroundImage(this)">
         <option value="">Select:</option>
         <option value="BoardRoom">Board Room</option>
@@ -139,24 +140,26 @@
         function draw() {
             clear();
 
+            /*
             // load and insert background
             if (rowLocIndex >= 1) {
                 // get all the data for the row
-                var rowLocData = rowLocIndex.getData();
+                //var rowLocData = rowLocIndex.getData();
                 // get location data
-                var backgroundLocation = locTable.getData().Location;
+                //var backgroundLocation = locTable.getData().Location;
                 // displays location data for that index
                 console.log(backgroundLocation);
 
-                setBackgroundImage();
-                background(bg);
-            }
+
+            }*/
+            setBackgroundImage();
+            background(bg);
 
             // load and insert image
             if (rowIndex >= 1) {
                 // get data for the selected row
                 var rowData = table.getData("active").FrameNumber(rowIndex);
-               // var rowData = row.table.getData("active");
+                // var rowData = row.table.getData("active");
                 // displays row data for that index
                 console.log(rowData);
 
@@ -206,47 +209,6 @@
         }
 
     </script>
-
-    <div class="container" id="table">
-        <h4>Location/Background of Scene</h4>
-        <div id="example-table-loc"></div>
-        <script type="text/javascript">
-            //var loc_data = location_data;
-            var locTable = new Tabulator("#example-table-loc", {
-                index: "ID",
-                selectable: 1,
-                pagination: "local",
-                paginationSize: 10,
-                layout: "fitColumns",
-                placeholder: "No Data Available",
-                columns: [
-                    {
-                        title: "ID", field: "ID", editor: "input"
-                    },
-                    {
-                        title: "Location", field: "Location", editor: "select", editorParams: {
-                            values: {
-                                "BoardRoom": "Board Room", "Forest": "Forest", "Beach": "Beach", "Office": "Office", "Warehouse": "Warehouse", "Club/Bar": "Club/Bar", "Supermarket": "Supermarket", "Bedroom": "Bedroom", "Street": "Street", "Prison": "Prison"
-                            },
-                        }
-
-                    },
-
-                ],
-                rowClick: function (e, row) {
-                    rowLocIndex = row.getIndex();
-                    // displays index
-                    console.log("Row index: " + rowLocIndex);
-
-                }
-
-            });
-
-            locTable.addRow({ ID: 1 }, false);
-
-        </script>
-    </div>
-
 
     <div class='container'>
         <h4>Frame by Frame</h4>

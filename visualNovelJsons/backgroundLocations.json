@@ -1,14 +1,14 @@
 var backgrounds = {
 "data":[{
 	"BoardRoom": "../Images/backgrounds/MeetingRoom.jpg",
-	"Beach": "../Images/backgrounds/beach.jpg",
-	"Forest": "../Images/backgrounds/forest.jpg",
-	"Bedroom": "../Images/backgrounds/bedroom.jpg",
-	"Club/Bar": "../Images/backgrounds/club.jpg",
-	"Office": "../Images/backgrounds/office.jpg",
-	"Prison": "../Images/backgrounds/prison.jpg",
-	"Street": "../Images/backgrounds/street.jpg",
-	"Supermarket": "../Images/backgrounds/supermarket.jpg",
-	"Warehouse": "../Images/backgrounds/warehouse.jpg"
+	"Beach": "/backgrounds/beach.jpg",
+	"Forest": "/backgrounds/forest.jpg",
+	"Bedroom": "/backgrounds/bedroom.jpg",
+	"Club/Bar": "/backgrounds/club.jpg",
+	"Office": "/backgrounds/office.jpg",
+	"Prison": "/backgrounds/prison.jpg",
+	"Street": "/backgrounds/street.jpg",
+	"Supermarket": "/backgrounds/supermarket.jpg",
+	"Warehouse": "/backgrounds/warehouse.jpg"
 }],
 }

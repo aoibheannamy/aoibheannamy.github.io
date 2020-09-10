@@ -159,6 +159,18 @@
             preload();
             background(bg);
 
+            var rows = $("#example-table2").tabulator("getRows") //get array of column components
+
+            rows.forEach(function (row) {
+                var rowsGet = row.getRows();
+
+                rowsGet.forEach(function (row) {
+                    customValidationFunction(row.getValue());
+                });
+            });
+
+            console.log("rows: "+rowsGet);
+
             // get data for the selected row
             myTable = Tabulator.prototype.findTable('#example-table2')[0];
             data = myTable.getData();
@@ -174,7 +186,7 @@
                 // var rowData = row.table.getData("active");
                 // displays row data for that index
 
-                console.log(rowData);
+                // console.log(rowData);
 
                 // get the character number in that row to figure out which character is in the scene
                 //var charNo = row.getData().CharacterNumber;

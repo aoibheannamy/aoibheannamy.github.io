@@ -164,7 +164,7 @@
 
             // load and insert image
             // can we get the row data to adapt with every click
-            for (var i = 1; i <= rowCount; i++) {
+            for (rowIndex = 1; rowIndex <= rowCount; rowIndex++) {
                 var data = table.getData();
                 console.log("data:" + data);
                 var charNo = data[rowIndex].CharacterNumber;
@@ -177,7 +177,6 @@
                 image(img, 0, height / 2, img.width / 2, img.height / 2);
                 // iterate the row index to automatically move to the next frame
 
-                rowIndex++;
             }
 
 

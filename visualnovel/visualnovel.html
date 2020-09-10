@@ -173,19 +173,18 @@
             // load and insert image
             // can we get the row data to adapt with every click??
             // iterate the row index to automatically move to the next frame
-            for (rowIndex = 1; rowIndex <= rowCount; rowIndex++) {
+            for (rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+            //var data = table.getData();
+            var charNo = data[rowIndex].CharacterNumber;
+            var charEmotion = data[rowIndex].Emotion;
+            // delay console.log to see if iteration works correctly
+            setTimeout(() => { console.log("Char no: " + charNo + ", Emotion: " + charEmotion); }, 4000);
 
-                //var data = table.getData();
-                var charNo = data[rowIndex].CharacterNumber;
-                var charEmotion = data[rowIndex].Emotion;
-                // delay console.log to see if iteration works correctly
-                setTimeout(() => { console.log("Char no: " + charNo + ", Emotion: " + charEmotion); }, 4000);
 
-
-                // call in function to set and load the correct image 
-                // uncomment when iteration works correctly and image selection works
-                //setCharacterImage();
-                //image(img, 0, height / 2, img.width / 2, img.height / 2);
+            // call in function to set and load the correct image 
+            // uncomment when iteration works correctly and image selection works
+            //setCharacterImage();
+            //image(img, 0, height / 2, img.width / 2, img.height / 2);
             }
             // call drawWords function
             drawWords(width * 0.5);

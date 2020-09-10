@@ -7,7 +7,7 @@ function setBackgroundImage() {
 
     // create variable to hold the parsed JSON file
     let locationBack = null;
-    var id;
+    //var id;
 
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
@@ -24,7 +24,6 @@ function setBackgroundImage() {
     /**
      * Checks which background is selected and changes image dependent on the result
      */
-
     switch (backgrounds) {
         case "BoardRoom":
             bg = loadImage("'" + locationBack[0].BoardRoom + "'");

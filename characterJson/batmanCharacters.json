@@ -1,4 +1,4 @@
-var characters = [{
+var characters = {
 		"number": 1,
 		"name": "Joker",
 "emotions":[{
@@ -53,4 +53,3 @@ var characters = [{
 
 
 
-]

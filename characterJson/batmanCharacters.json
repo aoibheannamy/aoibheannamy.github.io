@@ -14,7 +14,7 @@ var characters = {
 		{
 			id: 2,
 			"Neutral": "/visualnovel/Gangster1Images/Gangster1Neutral.png",
-			"Angry": "../master/Images/Gangster1Images/Gangster1Angry.png",
+			"Angry": "/visualnovel/Gangster1Images/Gangster1Angry.png",
 			"Sneer": "/visualnovel/Gangster1Images/Gangster1Sneer.png",
 			"Laughing": "/visualnovel/Gangster1Images/Gangster1Laughing.png",
 			"Grin": "/visualnovel/Gangster1Images/Gangster1Grin.png",

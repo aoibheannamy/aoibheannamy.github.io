@@ -12,10 +12,10 @@ var characters = [{
 		"Grimace": "/visualnovel/jokerImages/JokerGrimace.png",
 		"Anxious": "/visualnovel/jokerImages/JokerAnxious.png"
 	}]}, {
-"emotions":[{
+
 		"number": 2,
 		"name": "Gangster1",
-		"Neutral": "/visualnovel/Gangster1Images/Gangster1Neutral.png",
+"emotions":[{		"Neutral": "/visualnovel/Gangster1Images/Gangster1Neutral.png",
 		"Angry": "../master/Images/Gangster1Images/Gangster1Angry.png",
 		"Sneer": "/visualnovel/Gangster1Images/Gangster1Sneer.png",
 		"Laughing": "/visualnovel/Gangster1Images/Gangster1Laughing.png",
@@ -25,7 +25,7 @@ var characters = [{
 	}]}, {
 		"number": 3,
 		"name": "Gangster2",
-		"Neutral": "/visualnovel/Gangster2Images/Gangster2Neutral.png",
+"emotions":[{		"Neutral": "/visualnovel/Gangster2Images/Gangster2Neutral.png",
 		"Angry": "/visualnovel/Gangster2Images/Gangster2Angry.png",
 		"Sneer": "/visualnovel/Gangster2Images/Gangster2Sneer.png",
 		"Laughing": "/visualnovel/Gangster2Images/Gangster2Laughing.png",
@@ -34,10 +34,10 @@ var characters = [{
 		"Stern": "/visualnovel/Gangster2Images/Gangster2Stern.png",
 		"SinisterGrin": "/visualnovel/Gangster2Images/Gangster2SinisterGrin.png"
 	}, {
-"emotions":[{
+
 		"number": 4,
 		"name": "Gangster3",
-		"Neutral": "/visualnovel/Gangster3Images/Gangster3Neutral.png",
+"emotions":[{		"Neutral": "/visualnovel/Gangster3Images/Gangster3Neutral.png",
 		"Angry": "/visualnovel/Gangster3Images/Gangster3Angry.png",
 		"Sneer": "/visualnovel/Gangster3Images/Gangster3Sneer.png",
 		"Laughing": "/visualnovel/Gangster3Images/Gangster3Laughing.png",
@@ -45,10 +45,10 @@ var characters = [{
 		"Shock": "/visualnovel/Gangster3Images/Gangster3Shock.png",
 		"SinisterGrin": "/visualnovel/Gangster3Images/Gangster3SinisterGrin.png"
 	}]}, {
-"emotions":[{
+
 		"number": 5,
 		"name": "Gangster4",
-		"Neutral": "/visualnovel/Gangster4Images/Gangster4Neutral.png",
+"emotions":[{		"Neutral": "/visualnovel/Gangster4Images/Gangster4Neutral.png",
 		"Sad": "/visualnovel/Gangster4Images/Gangster4Sad.png",
 		"Scared": "/visualnovel/Gangster4Images/Gangster4Scared.png",
 		"Shock": "/visualnovel/Gangster4Images/Gangster4Shock.png"

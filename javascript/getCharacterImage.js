@@ -1,5 +1,5 @@
 /**
- * Function to read in JSON file of character images,
+ * Function to read in JSON file of character images, get table data for specific rowInex
  * check which character is in the selected row and what their emotion is,
  * then load the corresponding image
  */
@@ -7,14 +7,13 @@ function setCharacterImage() {
 
     // create variable to hold the parsed JSON file
     let characterImage = null;
-    // load and insert image
+    // get data from tabulator table to use to access the correct images
     myTable = Tabulator.prototype.findTable('#example-table')[0];
     var data = myTable.getData();
     // get the character number and respective emotion for that rowIndex
     var charNo = (data[rowIndex].CharacterNumber);
     var charEmotion = data[rowIndex].Emotion;
-    console.log("Char no: " + charNo + ", emotion: " + charEmotion);
-
+    
     // read in JSON file of character images
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it

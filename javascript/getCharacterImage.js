@@ -33,34 +33,34 @@ function setCharacterImage() {
             img = loadImage(characterImage.emotions[charNo - 1].Neutral);
             break;
         case "Angry":
-            img = loadImage(characterImage.number[charNo].Angry);
+            img = loadImage(characterImage.emotions[charNo - 1].Angry);
             break;
         case "SinisterGrin":
-            img = loadImage(characterImage.number[charNo].SinisterGrin);
+            img = loadImage(characterImage.emotions[charNo - 1].SinisterGrin);
             break;
         case "Smile":
-            img = loadImage(characterImage.number[charNo].Smile);
+            img = loadImage(characterImage.emotions[charNo - 1].Smile);
             break;
         case "Laughing":
-            img = loadImage(characterImage.number[charNo].Laughing);
+            img = loadImage(characterImage.emotions[charNo - 1].Laughing);
             break;
         case "Sneer":
-            img = loadImage(characterImage.number[charNo].Sneer);
+            img = loadImage(characterImage.emotions[charNo - 1].Sneer);
             break;
         case "Stern":
-            img = loadImage(characterImage.number[charNo].Stern);
+            img = loadImage(characterImage.emotions[charNo - 1].Stern);
             break;
         case "Grin":
-            img = loadImage(characterImage.number[charNo].Grin);
+            img = loadImage(characterImage.emotions[charNo - 1].Grin);
             break;
         case "Shock":
-            img = loadImage(characterImage.number[charNo].Shock);
+            img = loadImage(characterImage.emotions[charNo - 1].Shock);
             break;
         case "Sad":
-            img = loadImage(characterImage.number[charNo].Sad);
+            img = loadImage(characterImage.emotions[charNo - 1].Sad);
             break;
         case "Scared":
-            img = loadImage(characterImage.number[charNo].Scared);
+            img = loadImage(characterImage.emotions[charNo - 1].Scared);
             break;
         default:
             alert("No image file found");

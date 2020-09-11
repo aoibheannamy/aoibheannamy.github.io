@@ -30,9 +30,13 @@
         }
 
         .mybackgroundselect {
-            margin-top: 700px;
+            margin-top: 650px;
             margin-left: 10%;
             margin-bottom: 5%;
+        }
+
+        .mybutton {
+            margin-left: 35%;
         }
     </style>
 </head>
@@ -106,6 +110,10 @@
             <option value="Prison">Prison</option>
         </select>
     </div>
+
+    <button type="button" class="btn btn-info mybutton" onclick="startVisualNovel()" id="play-button">Play Visual
+        Novel</button>
+
     <script>
         let bg;
         let img;
@@ -114,6 +122,8 @@
         let charSpeaking = "";
         var rowIndex = 0;
         var rowLocIndex = 0;
+
+        document.getElementById("play-button").onclick = function () { playVisualNovel() };
 
         /**
          * Call function to load image based on dropdown choice
@@ -151,19 +161,18 @@
             // make sure the background image has been chosen before continuing
             if (background(bg)) {
                 // call in function to iterate through the table
-                //moveToNextFrame();
+                //playVisualNovel();
             }
-
-
-
         }
+
 
         /**
          * This function calls the functions to get the character images dependent on emotion
          * as well as to get the character's dialogue for rowIndex before slowly iterating
          * throughout all the table rows, with a 7s delay between each frame
+         *  When play button is clicked, the visual novel will play - iterating through every row in the table 
          */
-        function moveToNextFrame() {
+        function playVisualNovel() {
 
             var rowCount = table.getDataCount();
             // load and insert image
@@ -177,13 +186,13 @@
             // call drawWords() function to print to screen
             drawWords(width * 0.5);
 
-            /*
-            rowIndex++;
+            
+            //rowIndex++;
             if (rowIndex < rowCount) {
-                setTimeout(moveToNextFrame, 7000);
+                setTimeout(playVisualNovel, 7000);
             } else {
                 textWords = ("Visual Novel finished for this scene!");
-            }*/
+            }
         }
 
 

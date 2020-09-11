@@ -1,5 +1,5 @@
 /**
- * Function to read in JSON file of character images, get table data for specific rowInex
+ * Function to read in JSON file of character images, get table data for specific rowIndex,
  * check which character is in the selected row and what their emotion is,
  * then load the corresponding image
  */

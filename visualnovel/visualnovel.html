@@ -173,6 +173,7 @@
          *  When play button is clicked, the visual novel will play - iterating through every row in the table 
          */
         function playVisualNovel() {
+            console.log("Play button clicked!");
 
             var rowCount = table.getDataCount();
             // load and insert image
@@ -180,6 +181,7 @@
             setCharacterImage();
             // declare image as loaded img
             image(img, 0, height / 2, img.width / 2, img.height / 2);
+            console.log("Image: "+img);
             // call function to get dialogue from tabulator table for rowIndex 
             // - contains the data required for the drawWords() function
             readDialogue();
@@ -189,7 +191,8 @@
             
             //rowIndex++;
             if (rowIndex < rowCount) {
-                setTimeout(playVisualNovel, 7000);
+                //setTimeout(playVisualNovel, 7000);
+                setTimeout(7000);
             } else {
                 textWords = ("Visual Novel finished for this scene!");
             }

@@ -12,9 +12,10 @@ function readDialogue() {
     var charSpeak = data[rowIndex].CharacterSpeaking;
     // what do they say? and set it to variable used in drawWords() function
     textWords = data[rowIndex].WhatDoTheySay;
+
     // get their inflection
     var inflection = data[rowIndex].Inflection;
-
+    console.log("Character " + charSpeak + " says " + textWords + " " + inflection);
 
     if (charSpeak == 1) {
         charSpeaking = "Character " + charSpeak + " said " + inflection + ":";

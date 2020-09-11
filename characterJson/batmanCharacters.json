@@ -1,4 +1,4 @@
-var characters = {
+var characters = [{
 		"number": 1,
 		"name": "Joker",
 "emotions":[{
@@ -12,6 +12,7 @@ var characters = {
 		"Grimace": "/visualnovel/jokerImages/JokerGrimace.png",
 		"Anxious": "/visualnovel/jokerImages/JokerAnxious.png"
 	}]}, {
+"emotions":[{
 		"number": 2,
 		"name": "Gangster1",
 		"Neutral": "/visualnovel/Gangster1Images/Gangster1Neutral.png",
@@ -21,7 +22,7 @@ var characters = {
 		"Grin": "/visualnovel/Gangster1Images/Gangster1Grin.png",
 		"Shock": "/visualnovel/Gangster1Images/Gangster1Shock.png",
 		"Serious": "/visualnovel/Gangster1Images/Gangster1Serious.png"
-	}, {
+	}]}, {
 		"number": 3,
 		"name": "Gangster2",
 		"Neutral": "/visualnovel/Gangster2Images/Gangster2Neutral.png",
@@ -33,6 +34,7 @@ var characters = {
 		"Stern": "/visualnovel/Gangster2Images/Gangster2Stern.png",
 		"SinisterGrin": "/visualnovel/Gangster2Images/Gangster2SinisterGrin.png"
 	}, {
+"emotions":[{
 		"number": 4,
 		"name": "Gangster3",
 		"Neutral": "/visualnovel/Gangster3Images/Gangster3Neutral.png",
@@ -42,14 +44,16 @@ var characters = {
 		"Smile": "/visualnovel/Gangster3Images/Gangster3Smile.png",
 		"Shock": "/visualnovel/Gangster3Images/Gangster3Shock.png",
 		"SinisterGrin": "/visualnovel/Gangster3Images/Gangster3SinisterGrin.png"
-	}, {
+	}]}, {
+"emotions":[{
 		"number": 5,
 		"name": "Gangster4",
 		"Neutral": "/visualnovel/Gangster4Images/Gangster4Neutral.png",
 		"Sad": "/visualnovel/Gangster4Images/Gangster4Sad.png",
 		"Scared": "/visualnovel/Gangster4Images/Gangster4Scared.png",
 		"Shock": "/visualnovel/Gangster4Images/Gangster4Shock.png"
-	}
+	}]},
 
 
 
+]

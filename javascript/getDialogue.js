@@ -5,7 +5,16 @@
  */
 function readDialogue() {
 
-    var characterName;
+    myTable = Tabulator.prototype.findTable('#example-table')[0];
+    var data = myTable.getData();
+    // find dialogue for rowIndex
+    // is the character speaking and who is it?
+    var charSpeak = data[rowIndex].CharacterSpeaking;
+    // what do they say? and set it to variable used in drawWords() function
+    textWords = data[rowIndex].WhatDoTheySay;
+    // get their inflection
+    var inflection = data[rowIndex].Inflection;
+
 
     if (charSpeak == 1) {
         charSpeaking = "Character " + charSpeak + " said " + inflection + ":";
@@ -17,48 +26,6 @@ function readDialogue() {
         charSpeaking = "Character " + charSpeak + " said " + inflection + ":";
     } else {
         charSpeaking = "No Character is speaking.";
-    }
-
- 
-    switch (charEmotion) {
-        case "Neutral":
-            img = loadImage(characterImage.number[charNo].Neutral);
-            break;
-        case "Angry":
-            img = loadImage(characterImage.number[charNo].Angry);
-            break;
-        case "SinisterGrin":
-            img = loadImage(characterImage.number[charNo].SinisterGrin);
-            break;
-        case "Smile":
-            img = loadImage(characterImage.number[charNo].Smile);
-            break;
-        case "Laughing":
-            img = loadImage(characterImage.number[charNo].Laughing);
-            break;
-        case "Sneer":
-            img = loadImage(characterImage.number[charNo].Sneer);
-            break;
-        case "Stern":
-            img = loadImage(characterImage.number[charNo].Stern);
-            break;
-        case "Grin":
-            img = loadImage(characterImage.number[charNo].Grin);
-            break;
-        case "Shock":
-            img = loadImage(characterImage.number[charNo].Shock);
-            break;
-        case "Sad":
-            img = loadImage(characterImage.number[charNo].Sad);
-            break;
-        case "Scared":
-            img = loadImage(characterImage.number[charNo].Scared);
-            break;
-        default:
-            alert("No image file found");
-
-
-
     }
 
 }

@@ -146,23 +146,39 @@
             clear();
             background(bg);
 
-            // load and insert image
-            // call in function to set and load the correct image for character dependent on rowIndex 
-            setCharacterImage();
+            // call in function to iterate through the table
+            moveToNextFrame();
+
+            // declare image as loaded img
             image(img, 0, height / 2, img.width / 2, img.height / 2);
 
-
-            // find dialogue for rowIndex
-            // is the character speaking and who is it?
-            var charSpeak = data[rowIndex].CharacterSpeaking;
-            // what do they say? and set it to variable used in drawWords() function
-            textWords = data[rowIndex].WhatDoTheySay;
-            // get their inflection
-            var inflection = data[rowIndex].Inflection;
             // call drawWords() function to print to screen
             drawWords(width * 0.5);
 
         }
+
+        /**
+         * This function calls the functions to get the character images dependent on emotion
+         * as well as to get the character's dialogue for rowIndex before slowly iterating
+         * throughout all the table rows, with a 7s delay between each frame
+         */ 
+        function moveToNextFrame() {
+            var rowCount = table.getDataCount();
+            // load and insert image
+            // call in function to set and load the correct image for character dependent on rowIndex 
+            setCharacterImage();
+            // call function to get dialogue from tabulator table for rowIndex 
+            // - contains the data required for the drawWords() function
+            getDialogue();
+
+            rowIndex++;
+            if (rowIndex < rowCount) {
+                setTimeout(moveToNextFrame, 7000);
+            } else {
+                textWords = ("Visual Novel finished for this scene!");
+            }
+        }
+
 
 
 

@@ -69,9 +69,6 @@ function setCharacterImage() {
             break;
         default:
             alert("No image file found");
-
-
-
     }
 
 }

@@ -19,8 +19,6 @@ function setCharacterImage() {
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
         var stringified = JSON.stringify(characters);
-        // see stringified 
-        console.log("Stringified: " + stringified);
         // Now characterImage is the parsed result
         characterImage = JSON.parse(stringified);
 
@@ -28,8 +26,6 @@ function setCharacterImage() {
         // display error message in console if the JSON file does not parse correctly
         console.log("There was an error in parsing the JSON file!!");
     }
-
-    console.log("Character parsed: " + characterImage);
 
 
     switch (charEmotion) {

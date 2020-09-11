@@ -152,11 +152,7 @@
                 moveToNextFrame();
             }
 
-            // declare image as loaded img
-            image(img, 0, height / 2, img.width / 2, img.height / 2);
 
-            // call drawWords() function to print to screen
-            drawWords(width * 0.5);
 
         }
 
@@ -171,9 +167,13 @@
             // load and insert image
             // call in function to set and load the correct image for character dependent on rowIndex 
             setCharacterImage();
+            // declare image as loaded img
+            image(img, 0, height / 2, img.width / 2, img.height / 2);
             // call function to get dialogue from tabulator table for rowIndex 
             // - contains the data required for the drawWords() function
             readDialogue();
+            // call drawWords() function to print to screen
+            drawWords(width * 0.5);
 
             /*
             rowIndex++;

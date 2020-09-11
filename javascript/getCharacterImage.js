@@ -10,10 +10,8 @@ function setCharacterImage() {
     // load and insert image
     myTable = Tabulator.prototype.findTable('#example-table')[0];
     var data = myTable.getData();
-
-    // load and insert image
+    // get the character number and respective emotion for that rowIndex
     var charNo = (data[rowIndex].CharacterNumber);
-
     var charEmotion = data[rowIndex].Emotion;
     console.log("Char no: "+charNo+", emotion: "+charEmotion);
 

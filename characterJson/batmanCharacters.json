@@ -1,59 +1,69 @@
-var characters = [{
-		"number": 1,
-		"name": "Joker",
-"emotions":[{
-		"Neutral": "/visualnovel/jokerImages/JokerNeutral.png",
-		"Angry": "/visualnovel/jokerImages/JokerAngry.png",
-		"Stern": "/visualnovel/jokerImages/JokerStern.png",
-		"Sneer": "/visualnovel/jokerImages/JokerSneer.png",
-		"Laughing": "/visualnovel/jokerImages/JokerLaughing.png",
-		"SinisterGrin": "/visualnovel/jokerImages/JokerGrinSinister.png",
-		"Grin": "/visualnovel/jokerImages/JokerGrin.png",
-		"Grimace": "/visualnovel/jokerImages/JokerGrimace.png",
-		"Anxious": "/visualnovel/jokerImages/JokerAnxious.png"
-	}]}, {
+var characters = {
+	data: [{
+			"number": 1,
+			"name": "Joker",
+			"emotions": [{
+				"Neutral": "/visualnovel/jokerImages/JokerNeutral.png",
+				"Angry": "/visualnovel/jokerImages/JokerAngry.png",
+				"Stern": "/visualnovel/jokerImages/JokerStern.png",
+				"Sneer": "/visualnovel/jokerImages/JokerSneer.png",
+				"Laughing": "/visualnovel/jokerImages/JokerLaughing.png",
+				"SinisterGrin": "/visualnovel/jokerImages/JokerGrinSinister.png",
+				"Grin": "/visualnovel/jokerImages/JokerGrin.png",
+				"Grimace": "/visualnovel/jokerImages/JokerGrimace.png",
+				"Anxious": "/visualnovel/jokerImages/JokerAnxious.png"
+			}]
+		}, {
 
-		"number": 2,
-		"name": "Gangster1",
-"emotions":[{		"Neutral": "/visualnovel/Gangster1Images/Gangster1Neutral.png",
-		"Angry": "../master/Images/Gangster1Images/Gangster1Angry.png",
-		"Sneer": "/visualnovel/Gangster1Images/Gangster1Sneer.png",
-		"Laughing": "/visualnovel/Gangster1Images/Gangster1Laughing.png",
-		"Grin": "/visualnovel/Gangster1Images/Gangster1Grin.png",
-		"Shock": "/visualnovel/Gangster1Images/Gangster1Shock.png",
-		"Serious": "/visualnovel/Gangster1Images/Gangster1Serious.png"
-	}]}, {
-		"number": 3,
-		"name": "Gangster2",
-"emotions":[{		"Neutral": "/visualnovel/Gangster2Images/Gangster2Neutral.png",
-		"Angry": "/visualnovel/Gangster2Images/Gangster2Angry.png",
-		"Sneer": "/visualnovel/Gangster2Images/Gangster2Sneer.png",
-		"Laughing": "/visualnovel/Gangster2Images/Gangster2Laughing.png",
-		"Smile": "/visualnovel/Gangster2Images/Gangster2Smile.png",
-		"Shock": "/visualnovel/Gangster2Images/Gangster2Shock.png",
-		"Stern": "/visualnovel/Gangster2Images/Gangster2Stern.png",
-		"SinisterGrin": "/visualnovel/Gangster2Images/Gangster2SinisterGrin.png"
-	}, {
+			"number": 2,
+			"name": "Gangster1",
+			"emotions": [{
+				"Neutral": "/visualnovel/Gangster1Images/Gangster1Neutral.png",
+				"Angry": "../master/Images/Gangster1Images/Gangster1Angry.png",
+				"Sneer": "/visualnovel/Gangster1Images/Gangster1Sneer.png",
+				"Laughing": "/visualnovel/Gangster1Images/Gangster1Laughing.png",
+				"Grin": "/visualnovel/Gangster1Images/Gangster1Grin.png",
+				"Shock": "/visualnovel/Gangster1Images/Gangster1Shock.png",
+				"Serious": "/visualnovel/Gangster1Images/Gangster1Serious.png"
+			}]
+		}, {
 
-		"number": 4,
-		"name": "Gangster3",
-"emotions":[{		"Neutral": "/visualnovel/Gangster3Images/Gangster3Neutral.png",
-		"Angry": "/visualnovel/Gangster3Images/Gangster3Angry.png",
-		"Sneer": "/visualnovel/Gangster3Images/Gangster3Sneer.png",
-		"Laughing": "/visualnovel/Gangster3Images/Gangster3Laughing.png",
-		"Smile": "/visualnovel/Gangster3Images/Gangster3Smile.png",
-		"Shock": "/visualnovel/Gangster3Images/Gangster3Shock.png",
-		"SinisterGrin": "/visualnovel/Gangster3Images/Gangster3SinisterGrin.png"
-	}]}, {
-
-		"number": 5,
-		"name": "Gangster4",
-"emotions":[{		"Neutral": "/visualnovel/Gangster4Images/Gangster4Neutral.png",
-		"Sad": "/visualnovel/Gangster4Images/Gangster4Sad.png",
-		"Scared": "/visualnovel/Gangster4Images/Gangster4Scared.png",
-		"Shock": "/visualnovel/Gangster4Images/Gangster4Shock.png"
-	}]},
+			"number": 3,
+			"name": "Gangster2",
+			"emotions": [{
+				"Neutral": "/visualnovel/Gangster2Images/Gangster2Neutral.png",
+				"Angry": "/visualnovel/Gangster2Images/Gangster2Angry.png",
+				"Sneer": "/visualnovel/Gangster2Images/Gangster2Sneer.png",
+				"Laughing": "/visualnovel/Gangster2Images/Gangster2Laughing.png",
+				"Smile": "/visualnovel/Gangster2Images/Gangster2Smile.png",
+				"Shock": "/visualnovel/Gangster2Images/Gangster2Shock.png",
+				"Stern": "/visualnovel/Gangster2Images/Gangster2Stern.png",
+				"SinisterGrin": "/visualnovel/Gangster2Images/Gangster2SinisterGrin.png"
+			}]
+		}, {
 
 
+			"number": 4,
+			"name": "Gangster3",
+			"emotions": [{
+				"Neutral": "/visualnovel/Gangster3Images/Gangster3Neutral.png",
+				"Angry": "/visualnovel/Gangster3Images/Gangster3Angry.png",
+				"Sneer": "/visualnovel/Gangster3Images/Gangster3Sneer.png",
+				"Laughing": "/visualnovel/Gangster3Images/Gangster3Laughing.png",
+				"Smile": "/visualnovel/Gangster3Images/Gangster3Smile.png",
+				"Shock": "/visualnovel/Gangster3Images/Gangster3Shock.png",
+				"SinisterGrin": "/visualnovel/Gangster3Images/Gangster3SinisterGrin.png"
+			}]
+		}, {
 
-]
+
+			"number": 5,
+			"name": "Gangster4",
+			"emotions": [{
+				"Neutral": "/visualnovel/Gangster4Images/Gangster4Neutral.png",
+				"Sad": "/visualnovel/Gangster4Images/Gangster4Sad.png",
+				"Scared": "/visualnovel/Gangster4Images/Gangster4Scared.png",
+				"Shock": "/visualnovel/Gangster4Images/Gangster4Shock.png"
+			}]
+		}]
+	}

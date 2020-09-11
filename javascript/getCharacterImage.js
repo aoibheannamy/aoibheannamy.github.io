@@ -32,7 +32,7 @@ function setCharacterImage() {
 
     switch (charEmotion) {
         case "Neutral":
-            img = loadImage(characterImage.number[charNo].Neutral);
+            img = loadImage(characterImage.number[charNo].emotions["Neutral"]);
             break;
         case "Angry":
             img = loadImage(characterImage.number[charNo].Angry);

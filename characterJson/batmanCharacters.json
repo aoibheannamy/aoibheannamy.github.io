@@ -1,6 +1,7 @@
 var characters = [{
 		"number": 1,
 		"name": "Joker",
+"emotions":[{
 		"Neutral": "/visualnovel/jokerImages/JokerNeutral.png",
 		"Angry": "/visualnovel/jokerImages/JokerAngry.png",
 		"Stern": "/visualnovel/jokerImages/JokerStern.png",
@@ -10,7 +11,7 @@ var characters = [{
 		"Grin": "/visualnovel/jokerImages/JokerGrin.png",
 		"Grimace": "/visualnovel/jokerImages/JokerGrimace.png",
 		"Anxious": "/visualnovel/jokerImages/JokerAnxious.png"
-	}, {
+	}]}, {
 		"number": 2,
 		"name": "Gangster1",
 		"Neutral": "/visualnovel/Gangster1Images/Gangster1Neutral.png",

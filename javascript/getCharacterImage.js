@@ -12,9 +12,10 @@ function setCharacterImage() {
     var data = myTable.getData();
 
     // load and insert image
-    var charNo = ("\""+data[rowIndex].CharacterNumber+"\"");
+    var charNo = (data[rowIndex].CharacterNumber);
 
     var charEmotion = data[rowIndex].Emotion;
+    console.log("Char no: "+charNo+", emotion: "+charEmotion);
 
     // read in JSON file of character images
     try {
@@ -28,11 +29,12 @@ function setCharacterImage() {
         console.log("There was an error in parsing the JSON file!!");
     }
 
+    console.log("Character parsed: "+characterImage);
 
 
     switch (charEmotion) {
         case "Neutral":
-            img = loadImage(characterImage.number[charNo].emotions["Neutral"]);
+            img = loadImage(characterImage.number[charNo].emotions[charEmotion]);
             break;
         case "Angry":
             img = loadImage(characterImage.number[charNo].Angry);

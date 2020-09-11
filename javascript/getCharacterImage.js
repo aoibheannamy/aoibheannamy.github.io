@@ -28,6 +28,12 @@ function setCharacterImage() {
     }
 
 
+    /**
+     * This switch function take the variable charEmotion which finds the emotion stored in the table
+     * for a particular rowIndex, and matches it to the corresponding image stored in JSON object
+     * charNo-1 takes the character number from the table, and subtracts 1 to get the index of the data
+     * in the JSON object
+     */
     switch (charEmotion) {
         case "Neutral":
             img = loadImage(characterImage.emotions[charNo - 1].Neutral);

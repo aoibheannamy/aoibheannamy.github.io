@@ -13,14 +13,14 @@ function setCharacterImage() {
     // get the character number and respective emotion for that rowIndex
     var charNo = (data[rowIndex].CharacterNumber);
     var charEmotion = data[rowIndex].Emotion;
-    console.log("Char no: "+charNo+", emotion: "+charEmotion);
+    console.log("Char no: " + charNo + ", emotion: " + charEmotion);
 
     // read in JSON file of character images
     try {
         // use the JSON.stringify() method to convert the data into a string before attempting to parse it
         var stringified = JSON.stringify(characters);
         // see stringified 
-        console.log("Stringified: "+stringified);
+        console.log("Stringified: " + stringified);
         // Now characterImage is the parsed result
         characterImage = JSON.parse(stringified);
 
@@ -29,12 +29,12 @@ function setCharacterImage() {
         console.log("There was an error in parsing the JSON file!!");
     }
 
-    console.log("Character parsed: "+characterImage);
+    console.log("Character parsed: " + characterImage);
 
 
     switch (charEmotion) {
         case "Neutral":
-            img = loadImage(characterImage.data[0].emotions[0].charEmotion);
+            img = loadImage(characterImage.emotions[charNo - 1].Neutral);
             break;
         case "Angry":
             img = loadImage(characterImage.number[charNo].Angry);

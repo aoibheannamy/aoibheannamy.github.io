@@ -4,7 +4,7 @@ var backgrounds = {
 	"Beach": "/visualnovel/backgrounds/beach.jpg",
 	"Forest": "/visualnovel/backgrounds/forest.jpg",
 	"Bedroom": "/visualnovel/backgrounds/bedroom.jpg",
-	"Club/Bar": "/visualnovel/backgrounds/club.jpg",
+	"ClubBar": "/visualnovel/backgrounds/club.jpg",
 	"Office": "/visualnovel/backgrounds/office.jpg",
 	"Prison": "/visualnovel/backgrounds/prison.jpg",
 	"Street": "/visualnovel/backgrounds/street.jpg",

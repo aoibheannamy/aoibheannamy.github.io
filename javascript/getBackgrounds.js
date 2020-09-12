@@ -38,8 +38,8 @@ function setBackgroundImage() {
         } else if (this.value == "Bedroom") {
             id = locationBack.data[0].Bedroom;
             bg = loadImage(id);
-        } else if (this.value == "Club/Bar") {
-            id = locationBack.data[0].Club / Bar;
+        } else if (this.value == "ClubBar") {
+            id = locationBack.data[0].ClubBar;
             bg = loadImage(id);
         } else if (this.value == "Office") {
             var id = locationBack.data[0].Office;

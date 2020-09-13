@@ -1,17 +1,27 @@
+/*
+* styling for body
+*/
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: white;  
 }
-
+/*
+* styling for navbar links
+*/
 li.nav-item {
     padding-left: 2%;
     padding-right: 2%;
 }
+/*
+* styling for navbar links
+*/
 .navbar-expand-lg .navbar-nav .nav-link{
     padding-right: 5%;
 }
 
-
+/*
+* styling for image banners
+*/
 .imagebanner{
     background-color:  white;
     background-image: url(../Images/film.png);
@@ -20,7 +30,9 @@ li.nav-item {
     padding: 15%;
     
 }
-
+/*
+* styling for navbar
+*/
 .mynavbar {
     background-color: #000000;
     margin-bottom: 1%;
@@ -29,45 +41,71 @@ li.nav-item {
     height: 5%;
 
 }
+/*
+* styling for navbar links
+*/
 a.nav-link{
     color: aliceblue;
 }
-
+/*
+* styling for intro class
+*/
 .intro{
     text-align: center;
 }
+/*
+* styling for header 2
+*/
 h2{
     padding-top: 3%;
 }
-
+/*
+* styling for active page on navbar
+*/
 .nav-links a.active {
     border-bottom: 4px solid rgba(3, 22, 85, 0.849);
     color: rgba(3, 22, 85, 0.849);
 }
 
-
+/*
+* styling for buttons
+*/
 .mybuttons {
     background-color: rgba(79, 82, 92, 0.562);
     border: 2px solid rgba(48, 49, 53, 0.849);
     color: rgba(255, 255, 255, 0.849);
     padding: 1%;
 }
+/*
+* styling for buttons when hovered over
+*/
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #565858;
     border-color: #19191a; /*set the color you want here*/
 }
-
+/*
+* styling for page-body class
+*/
 .page-body {
     margin-right: 5%;
     margin-left: 5%;
 }
+/*
+* styling for quotes
+*/
 #myquote{
     text-align: center;
 }
+/*
+* styling for all list (ul) elements
+*/
 .mylist{
     margin-left: 5%;
 }
+/*
+* styling for forms
+*/
 .myform{
     border: thin solid rgb(88, 88, 88);
     padding: 5%;
@@ -75,15 +113,16 @@ h2{
     background: rgb(201, 197, 197);
     margin: 5%;
 }
-
+/*
+* styling for figure
+*/
 figure{
     margin: 5%;
 }
-.mycard{
-    margin-left: 40%;
-    margin-bottom: 20%;
-}
 
+/*
+* styling for footer
+*/
 footer {
     margin-top: 30%;
     padding-top: 10%;
@@ -92,18 +131,26 @@ footer {
     color: white;
 }
 
+/*
+*Makes sure the footer has a top margin of 30%
+*/
 .mt-auto, .my-auto {
     margin-top: 30%; 
 }
 
 
-
+/*
+* styling for titles
+*/
 .mytitles {
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 3%;
     color: rgba(41, 44, 53, 0.849);
 }
+/*
+* styling for main headers
+*/
 .myheader {
     margin-top: 5%;
     margin-bottom: 6%;
@@ -113,7 +160,9 @@ footer {
 }
 
 
-
+/*
+* styling for paragraphs
+*/
 .mypara {
     margin-bottom: 3%;
     margin-left: 5%;
@@ -121,6 +170,9 @@ footer {
     text-align: justify;
 }
 
+/*
+* styling for paragraphs on the home page
+*/
 .myparahome{
     margin-bottom: 3%;
     margin-left: 5%;
@@ -128,7 +180,9 @@ footer {
     text-align: center;
 }
 
-
+/*
+* styling for check boxes in tables
+*/
 .checkbox {
     display: inline-flex;
     vertical-align: text-bottom;
@@ -147,6 +201,9 @@ footer {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 
+/*
+* styling for tables
+*/
 table,
 th,
 td {

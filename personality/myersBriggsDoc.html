@@ -96,41 +96,42 @@
 			</center>
 
 
-			<div class="myform row">
-				<div class="col"><label for="charName">Character Name:</label>
-					<input type="text" class="" id="charName" placeholder="e.g. Albus Dumbledore">
+			<div class="myform">
+				<div class=" row">
+					<div class="col"><label for="charName">Character Name:</label>
+						<input type="text" class="" id="charName" placeholder="e.g. Albus Dumbledore">
+					</div>
+					<div class="col"><label for="filmName">Film/Television show:</label>
+						<input type="text" class="" id="filmName" placeholder="e.g. Harry Potter">
+					</div>
+					<div class="col"><label for="chooseMyersBriggs">Select Myers Briggs:</label><br>
+						<select class="" id="chooseMyersBriggs">
+							<option value="">Select:</option>
+							<option value="estj">ESTJ</option>
+							<option value="esfj">ESFJ</option>
+							<option value="isfj">ISFJ</option>
+							<option value="istj">ISTJ</option>
+							<option value="istp">ISTP</option>
+							<option value="isfp">ISFP</option>
+							<option value="esfp">ESFP</option>
+							<option value="estp">ESTP</option>
+							<option value="entp">ENTP</option>
+							<option value="intp">INTP</option>
+							<option value="intj">INTJ</option>
+							<option value="entj">ENTJ</option>
+							<option value="enfj">ENFJ</option>
+							<option value="infj">INFJ</option>
+							<option value="infp">INFP</option>
+							<option value="enfp">ENFP</option>
+						</select>
+					</div>
 				</div>
-				<div class="col"><label for="filmName">Film/Television show:</label>
-					<input type="text" class="" id="filmName" placeholder="e.g. Harry Potter">
-				</div>
-				<div class="col"><label for="chooseMyersBriggs">Select Myers Briggs:</label><br>
-					<select class="" id="chooseMyersBriggs">
-						<option value="">Select:</option>
-						<option value="estj">ESTJ</option>
-						<option value="esfj">ESFJ</option>
-						<option value="isfj">ISFJ</option>
-						<option value="istj">ISTJ</option>
-						<option value="istp">ISTP</option>
-						<option value="isfp">ISFP</option>
-						<option value="esfp">ESFP</option>
-						<option value="estp">ESTP</option>
-						<option value="entp">ENTP</option>
-						<option value="intp">INTP</option>
-						<option value="intj">INTJ</option>
-						<option value="entj">ENTJ</option>
-						<option value="enfj">ENFJ</option>
-						<option value="infj">INFJ</option>
-						<option value="infp">INFP</option>
-						<option value="enfp">ENFP</option>
-					</select>
+				<div class="row">
+					<div class="col-sm-10">
+						<input type="button" class="mybuttons" value="Add New Character" id="add" />
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-10">
-					<input type="button" class="mybuttons" value="Add New Character" id="add" />
-				</div>
-			</div>
-			</form>
 
 			<script>
 				/**
@@ -214,9 +215,11 @@
 						Conventional • Leader</em></blockquote>
 				<p class="mypara">ESTJs are traditionalists who like to take charge
 					of
-					situations. They are pragmatic and like things to be organized and clear. They are driven by a need
+					situations. They are pragmatic and like things to be organized and clear. They are driven by a
+					need
 					to
-					analyse and bring order to the world. ESTJs comprise approximately 9% of the general population, 11%
+					analyse and bring order to the world. ESTJs comprise approximately 9% of the general population,
+					11%
 					of
 					men, and 6% of women.</p>
 				<ul id="estj" class="bulleted-list mylist">
@@ -255,7 +258,8 @@
 				<p class="mypara">ESFJs are outgoing and community-minded people who
 					value loyalty, dependability, and practicality. They are driven by an active and intense caring
 					about
-					people along with a strong desire to bring harmony to their relationships. ESFJs make up about 12%
+					people along with a strong desire to bring harmony to their relationships. ESFJs make up about
+					12%
 					of
 					the general population, 17% of women, and 8% of men.</p>
 				<ul id="esfj" class="bulleted-list mylist">
@@ -265,7 +269,8 @@
 				<blockquote id="myquote" class=""><em>Polite • Easily Offended • Timid •
 						Dutiful • Private</em></blockquote>
 				<p class="mypara">ISFJs are quiet, caring, and dependable people who
-					have a strong sense of personal responsibility. They are realistic and excellent organizers. ISFJs
+					have a strong sense of personal responsibility. They are realistic and excellent organizers.
+					ISFJs
 					make
 					up about 14% of the general population, 19% of women, and 8% of men.</p>
 				<ul id="isfj" class="bulleted-list mylist">
@@ -317,7 +322,8 @@
 						• Avoidant • Unemotional</em></blockquote>
 				<p class="mypara">ISTPs are driven by a desire to understand how
 					things
-					work. They are logical and realistic people who enjoy solving problems in a hands-on way. ISTPs make
+					work. They are logical and realistic people who enjoy solving problems in a hands-on way. ISTPs
+					make
 					up
 					about 5% of the general population, 9% of men, and 2% of women.</p>
 				<ul id="istp" class="bulleted-list mylist">
@@ -352,7 +358,8 @@
 						Indecisive • Guarded</em></blockquote>
 				<p class="mypara">ISFPs are the quintessential free spirit. They
 					feel
-					deeply and often have an adventurous approach to life. They are quiet, adaptable, and compassionate.
+					deeply and often have an adventurous approach to life. They are quiet, adaptable, and
+					compassionate.
 					ISFPs make up about 9% of the general population, 10% of women, and 8% of men.</p>
 				<ul id="isfp" class="bulleted-list mylist">
 					<li>Harry Potter – Harry Potter</li>
@@ -374,7 +381,8 @@
 						Spontaneous • Emotional</em></blockquote>
 				<p class="mypara">ESFPs are enthusiastic about having new
 					experiences
-					and meeting new people. They are warm and adaptable realists who prefer to go with the flow. ESFPs
+					and meeting new people. They are warm and adaptable realists who prefer to go with the flow.
+					ESFPs
 					comprise approximately 9% of the general population, 10% of women, and 7% of men.</p>
 				<ul id="esfp" class="bulleted-list mylist">
 					<li>Simba – The Lion King</li>
@@ -393,7 +401,8 @@
 						Open • Decisive</em></blockquote>
 				<p class="mypara">ESTPs are enthusiastic adventurers and realists
 					who
-					accept the world as it is and focus on enjoying new activities and challenges. ESTPs make up about
+					accept the world as it is and focus on enjoying new activities and challenges. ESTPs make up
+					about
 					4% of
 					the general population, 6% of men, and 3% of women.</p>
 				<ul id="estp" class="bulleted-list mylist">
@@ -412,7 +421,8 @@
 					excited
 					by innovation. They are energetic, enthusiastic, and spontaneous people with a deep need to
 					understand
-					the world around them. ENTPs comprise approximately 3% of the general population, 4% of men, and 2%
+					the world around them. ENTPs comprise approximately 3% of the general population, 4% of men, and
+					2%
 					of
 					women.</p>
 				<ul id="entp" class="bulleted-list mylist">
@@ -451,7 +461,8 @@
 						• Detached</em></blockquote>
 				<p class="mypara">INTPs have a deep need to make sense of the world
 					and
-					are generally logical, analytical, and emotionally detached. They enjoy new ideas and are adaptable
+					are generally logical, analytical, and emotionally detached. They enjoy new ideas and are
+					adaptable
 					in
 					their lifestyle, if not always their thinking. INTPs comprise approximately 3% of the general
 					population, 5% of men, and 2% of women.</p>
@@ -474,7 +485,8 @@
 					of
 					possibilities and a deep need to understand the world around them. They are logical, systematic
 					thinkers
-					who enjoy turning their visions into reality. INTJs make up about 2% of the general population, 3%
+					who enjoy turning their visions into reality. INTJs make up about 2% of the general population,
+					3%
 					of
 					men, and 1% of women.</p>
 				<ul id="intj" class="bulleted-list mylist">
@@ -515,7 +527,8 @@
 						Ambitious
 						• Dominant</em></blockquote>
 				<p class="mypara">ENTJs are forceful personalities who excel at
-					conceptual strategy and executing plans. They are future-oriented and natural leaders. ENTJs make up
+					conceptual strategy and executing plans. They are future-oriented and natural leaders. ENTJs
+					make up
 					about 2% of the general population, 3% of men, and 1% of women.</p>
 				<ul id="entj" class="bulleted-list mylist">
 					<li>Roy Petty – Ozark</li>
@@ -551,7 +564,8 @@
 					by a
 					need for relational harmony. They tend to be warmly expressive and empathetic people who enjoy
 					helping
-					others reach their potential. ENFJs make up about 3% of the general population, 3% of women, and 2%
+					others reach their potential. ENFJs make up about 3% of the general population, 3% of women, and
+					2%
 					of
 					men.</p>
 				<ul id="enfj" class="bulleted-list mylist">
@@ -602,7 +616,8 @@
 						Disorganized • Avoidant</em></blockquote>
 				<p class="mypara">INFPs are the dreamers of the world. They are
 					deeply
-					idealistic and passionate about their beliefs, ideas, and relationships. INFPs make up about 4% of
+					idealistic and passionate about their beliefs, ideas, and relationships. INFPs make up about 4%
+					of
 					the
 					general population, 5% of women, and 4% of men.</p>
 				<ul id="infp" class="bulleted-list mylist">

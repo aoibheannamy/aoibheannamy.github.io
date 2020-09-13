@@ -17,7 +17,7 @@ li.nav-item {
     background-image: url(../Images/film.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    padding: 25%;
+    padding: 15%;
     
 }
 
@@ -73,6 +73,7 @@ figure{
 
 footer {
     margin-top: 30%;
+    padding-top: 10%;
     background-color: rgba(41, 44, 53, 0.849);
     text-align: justify;
     color: white;

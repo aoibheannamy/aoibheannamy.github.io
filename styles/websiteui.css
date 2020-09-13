@@ -59,7 +59,9 @@ h2{
 #myquote{
     text-align: center;
 }
-
+#mylist{
+    margin-left: 5%;
+}
 
 figure{
     margin: 5%;

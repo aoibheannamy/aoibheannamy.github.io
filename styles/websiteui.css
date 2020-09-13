@@ -76,6 +76,9 @@ h2{
     color: rgba(255, 255, 255, 0.849);
     padding: 1%;
 }
+/*
+* styling for links inside buttons with class mybuttons
+*/
 a.mybuttons{
     color: white;
 }

@@ -18,7 +18,8 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 		<div class="d-flex flex-grow-1">
-			<span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+			<span class="w-100 d-lg-none d-block">
+				<!-- hidden spacer to center brand on mobile --></span>
 			<a class='navbar-brand' href='../index.html'>Scene to Visual Novel</a>
 			<div class="w-100 text-right">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
@@ -64,7 +65,7 @@
 			<h1 class="page-title myheader">Hero Vs Villain Myers Briggs Personality Types</h1>
 		</header>
 		<div class="page-body">
-			<table class="collection-content">
+			<table class="collection-content" id="example-table">
 				<thead>
 					<tr>
 						<th><span class="icon property-icon"><svg viewBox="0 0 14 14"
@@ -1557,6 +1558,10 @@
 			</table>
 		</div>
 	</article>
+
+	<script>
+		var table = new Tabulator("#example-table", {});
+	</script>
 
 	<footer class="footer py-3">
 		<div class="container">

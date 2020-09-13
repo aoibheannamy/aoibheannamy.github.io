@@ -135,8 +135,8 @@
 
 					<li>Eric Taylor – Friday Night Lights</li>
 				</ul>
-				<input type="text" id="newCharEstj"/>
-				<input type="button" class="mybuttons" value="Add New Character" id='add'/>
+				<input type="text" id="newCharEstj" />
+				<input type="button" class="mybuttons" value="Add New Character" id='add' />
 				<h2 class="mytitles"><strong>ESFJ – The Provider</strong></h2>
 				<blockquote id="myquote" class=""><em>Organized • Outgoing • Affectionate •
 						Open • Easy to Read</em></blockquote>
@@ -556,18 +556,21 @@
 	/**
 	 * The function below adds the user input into the respective
 	 * Myers Briggs <ul> list as a new bullet point
-	 */ 
+	 */
 	// define listener for button - onclick
-	document.getElementById("add").onclick = function(){
+	document.getElementById("add").onclick = function () {
 		// get input text
 		// check which id it is so entry goes into correct list
-		var text, listItem;
-		if(document.getElementById("newCharEstj")){
+		var text, newElement;
+		if (document.getElementById("newCharEstj")) {
+			// get text from user input
 			text = document.getElementById("newCharEstj").value;
-			// create new list element
-			listItem = "<li>"+text+"</li>";
+			// create a node for new input
+			newElement = document.createElement('li'); // is a node
+			// set innerHTML of new element
+			newElement.innerHTML = text;
 			// use appendChild to add new entry to list!!
-			document.getElementById("estj").appendChild(listItem);
+			document.getElementById("estj").appendChild(newElement);
 		}
 	}
 </script>

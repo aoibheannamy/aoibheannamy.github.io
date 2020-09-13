@@ -73,11 +73,12 @@
 					Intuitive, T for Thinker or F for Feeler, and P for Perceiver or J for Judger. This is the breakdown
 					for
 					the characters from <a href="https://openpsychometrics.org/tests/characters/">Open-Source
-						Psychometrics.</a> Project Statistical &quot;Which Character&quot;
+						Psychometrics</a> Project Statistical &quot;Which Character&quot;
 					Personality Quiz including a description of the sixteen personality types. </p>
 				<center>
 					<div>Click here to view character personality data:
-						<button type="button" class="btn btn-dark" href="heroVsVillain.html">Character Personality
+						<button type="button" class="btn btn-primary mybuttons" href="heroVsVillain.html">Character
+							Personality
 							Types
 						</button>
 					</div>
@@ -98,38 +99,112 @@
 			<form class="myform">
 				<div class="form-row">
 					<div class="col"><label for="charName">Character Name:</label>
-						<input type="text" class="form-control" id="charaName" placeholder="e.g. Albus Dumbledore">
+						<input type="text" class="form-control" id="charName" placeholder="e.g. Albus Dumbledore">
 					</div>
 					<div class="col"><label for="filmName">Film/Television show:</label>
 						<input type="text" class="form-control" id="filmName" placeholder="e.g. Harry Potter">
 					</div>
 					<div class="col"><label for="chooseMyersBriggs">Select Myers Briggs:</label>
 						<select class="form-control" id="chooseMyersBriggs">
-							<option>ESTJ</option>
-							<option>ESFJ</option>
-							<option>ISFJ</option>
-							<option>ISTJ</option>
-							<option>ISTP</option>
-							<option>ISFP</option>
-							<option>ESFP</option>
-							<option>ESTP</option>
-							<option>ENTP</option>
-							<option>INTP</option>
-							<option>INTJ</option>
-							<option>ENTJ</option>
-							<option>ENFJ</option>
-							<option>INFJ</option>
-							<option>INFP</option>
-							<option>ENFP</option>
+							<option value="">Select:</option>
+							<option value="estj">ESTJ</option>
+							<option value="esfj">ESFJ</option>
+							<option value="isfj">ISFJ</option>
+							<option value="istj">ISTJ</option>
+							<option value="istp">ISTP</option>
+							<option value="isfp">ISFP</option>
+							<option value="esfp">ESFP</option>
+							<option value="estp">ESTP</option>
+							<option value="entp">ENTP</option>
+							<option value="intp">INTP</option>
+							<option value="intj">INTJ</option>
+							<option value="entj">ENTJ</option>
+							<option value="enfj">ENFJ</option>
+							<option value="infj">INFJ</option>
+							<option value="infp">INFP</option>
+							<option value="enfp">ENFP</option>
 						</select>
 					</div>
 				</div>
 				<div class="form-group row">
 					<div class="col-sm-10">
-						<button type="submit" id="submitButton" class="mybuttons text-center btn btn-primary">Add New Character</button>
+						<button type="submit" id="submitButton" class="mybuttons text-center btn btn-primary">Add New
+							Character</button>
 					</div>
 				</div>
 			</form>
+
+			<script>
+				/**
+				 * The function below adds the user input into the respective
+				 * Myers Briggs <ul> list as a new bullet point
+				 */
+				// define listener for button - onclick
+				document.getElementById("submitButton").onclick = function () {
+					// get input text
+					// check which id it is so entry goes into correct list
+					var name, film, myersBriggs, newElement;
+					// get values from user input
+					name = document.getElementById("charName").value;
+					film = document.getElementById("filmName").value;
+					myersBriggs = document.getElementById("chooseMyersBriggs").value;
+					// create a node for new input
+					newElement = document.createElement('li');
+					// set innerHTML of new element
+					newElement.innerHTML = (text + " - " + film);
+					if (myersBriggs == "estj") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("estj").appendChild(newElement);
+					} else if (myersBriggs == "esfj") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("esfj").appendChild(newElement);
+					} else if (myersBriggs == "isfj") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("isfj").appendChild(newElement);
+					} else if (myersBriggs == "istj") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("istj").appendChild(newElement);
+					} else if (myersBriggs == "istp") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("istp").appendChild(newElement);
+					} else if (myersBriggs == "isfp") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("isfp").appendChild(newElement);
+					} else if (myersBriggs == "esfp") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("esfp").appendChild(newElement);
+					} else if (myersBriggs == "estp") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("estp").appendChild(newElement);
+					} else if (myersBriggs == "entp") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("entp").appendChild(newElement);
+					} else if (myersBriggs == "intp") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("intp").appendChild(newElement);
+					} else if (myersBriggs == "intj") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("intj").appendChild(newElement);
+					} else if (myersBriggs == "entj") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("entj").appendChild(newElement);
+					} else if (myersBriggs == "esfj") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("esfj").appendChild(newElement);
+					} else if (myersBriggs == "infj") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("infj").appendChild(newElement);
+					} else if (myersBriggs == "infp") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("infp").appendChild(newElement);
+					} else if (myersBriggs == "enfp") {
+						// use appendChild to add new entry to list!!
+						document.getElementById("entp").appendChild(newElement);
+					} else {
+						alert("Make sure you select a corresponding Myers Briggs representation for the new character and try again!")
+					}
+				}
+			</script>
 
 			<div id="">
 				<h2 class="mytitles"><strong>ESTJ – The Supervisor</strong></h2>
@@ -172,8 +247,7 @@
 
 					<li>Eric Taylor – Friday Night Lights</li>
 				</ul>
-				<input type="text" id="newCharEstj" />
-				<input type="button" class="mybuttons" value="Add New Character" id='add' />
+
 				<h2 class="mytitles"><strong>ESFJ – The Provider</strong></h2>
 				<blockquote id="myquote" class=""><em>Organized • Outgoing • Affectionate •
 						Open • Easy to Read</em></blockquote>
@@ -183,7 +257,7 @@
 					people along with a strong desire to bring harmony to their relationships. ESFJs make up about 12%
 					of
 					the general population, 17% of women, and 8% of men.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="esfj" class="bulleted-list mylist">
 					<li>Woody – Toy Story</li>
 				</ul>
 				<h2 class="mytitles"><strong>ISFJ – The Protector</strong></h2>
@@ -193,7 +267,7 @@
 					have a strong sense of personal responsibility. They are realistic and excellent organizers. ISFJs
 					make
 					up about 14% of the general population, 19% of women, and 8% of men.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="isfj" class="bulleted-list mylist">
 					<li>Will Turner – Pirates of the Caribbean</li>
 
 
@@ -209,7 +283,7 @@
 					of
 					personal responsibility. They take their work seriously and pay great attention to detail. ISTJs
 					comprise approximately 12% of the general population, 16% of men, and 7% of women.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="istj" class="bulleted-list mylist">
 					<li>Darth Vader – Star Wars</li>
 
 
@@ -245,7 +319,7 @@
 					work. They are logical and realistic people who enjoy solving problems in a hands-on way. ISTPs make
 					up
 					about 5% of the general population, 9% of men, and 2% of women.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="istp" class="bulleted-list mylist">
 					<li>Arya Stark – Game of Thrones</li>
 
 
@@ -279,7 +353,7 @@
 					feel
 					deeply and often have an adventurous approach to life. They are quiet, adaptable, and compassionate.
 					ISFPs make up about 9% of the general population, 10% of women, and 8% of men.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="isfp" class="bulleted-list mylist">
 					<li>Harry Potter – Harry Potter</li>
 
 
@@ -301,7 +375,7 @@
 					experiences
 					and meeting new people. They are warm and adaptable realists who prefer to go with the flow. ESFPs
 					comprise approximately 9% of the general population, 10% of women, and 7% of men.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="esfp" class="bulleted-list mylist">
 					<li>Simba – The Lion King</li>
 
 
@@ -321,7 +395,7 @@
 					accept the world as it is and focus on enjoying new activities and challenges. ESTPs make up about
 					4% of
 					the general population, 6% of men, and 3% of women.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="estp" class="bulleted-list mylist">
 					<li>Ryan Howard – The Office</li>
 
 
@@ -340,7 +414,7 @@
 					the world around them. ENTPs comprise approximately 3% of the general population, 4% of men, and 2%
 					of
 					women.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="entp" class="bulleted-list mylist">
 					<li>Dennis Nedry – Jurassic Park</li>
 
 
@@ -380,7 +454,7 @@
 					in
 					their lifestyle, if not always their thinking. INTPs comprise approximately 3% of the general
 					population, 5% of men, and 2% of women.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="intp" class="bulleted-list mylist">
 					<li>John Munch – Law &amp; Order SVU</li>
 
 
@@ -402,7 +476,7 @@
 					who enjoy turning their visions into reality. INTJs make up about 2% of the general population, 3%
 					of
 					men, and 1% of women.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="intj" class="bulleted-list mylist">
 					<li>Mr Darcy – Pride and Prejudice</li>
 
 
@@ -442,7 +516,7 @@
 				<p class="mypara">ENTJs are forceful personalities who excel at
 					conceptual strategy and executing plans. They are future-oriented and natural leaders. ENTJs make up
 					about 2% of the general population, 3% of men, and 1% of women.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="entj" class="bulleted-list mylist">
 					<li>Roy Petty – Ozark</li>
 
 
@@ -479,7 +553,7 @@
 					others reach their potential. ENFJs make up about 3% of the general population, 3% of women, and 2%
 					of
 					men.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="enfj" class="bulleted-list mylist">
 					<li>Peeta Mellark – The Hunger Games</li>
 
 
@@ -503,7 +577,7 @@
 					symbols, and possibilities. They are passionate, idealistic, and have a deep concern for
 					others.
 					INFJs make up about 2% of the general population, 2% of women, and 1% of men.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="infj" class="bulleted-list mylist">
 					<li>Loki – Marvel Cinematic Universe</li>
 
 
@@ -530,7 +604,7 @@
 					idealistic and passionate about their beliefs, ideas, and relationships. INFPs make up about 4% of
 					the
 					general population, 5% of women, and 4% of men.</p>
-				<ul id="mylist" class="bulleted-list">
+				<ul id="infp" class="bulleted-list mylist">
 					<li>Benjamin Sisko – Star Trek Deep Space Nine</li>
 
 
@@ -589,27 +663,6 @@
 	</footer>
 
 </body>
-<script>
-	/**
-	 * The function below adds the user input into the respective
-	 * Myers Briggs <ul> list as a new bullet point
-	 */
-	// define listener for button - onclick
-	document.getElementById("add").onclick = function () {
-		// get input text
-		// check which id it is so entry goes into correct list
-		var text, newElement;
-		if (document.getElementById("newCharEstj")) {
-			// get text from user input
-			text = document.getElementById("newCharEstj").value;
-			// create a node for new input
-			newElement = document.createElement('li'); // is a node
-			// set innerHTML of new element
-			newElement.innerHTML = text;
-			// use appendChild to add new entry to list!!
-			document.getElementById("estj").appendChild(newElement);
-		}
-	}
-</script>
+
 
 </html>

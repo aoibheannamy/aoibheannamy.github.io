@@ -50,6 +50,7 @@ h2{
     background-color: rgba(79, 82, 92, 0.562);
     border: 2px solid rgba(48, 49, 53, 0.849);
     color: rgba(255, 255, 255, 0.849);
+    padding: 1%;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;

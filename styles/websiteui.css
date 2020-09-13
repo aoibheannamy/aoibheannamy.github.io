@@ -62,6 +62,9 @@ h2{
 .mylist{
     margin-left: 5%;
 }
+.myform{
+    border: thin solid rgb(88, 88, 88);
+}
 
 figure{
     margin: 5%;

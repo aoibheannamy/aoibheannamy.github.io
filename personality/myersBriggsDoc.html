@@ -561,13 +561,13 @@
 	document.getElementById("add").onclick = function(){
 		// get input text
 		// check which id it is so entry goes into correct list
-		var text, li;
+		var text, listItem;
 		if(document.getElementById("newCharEstj")){
 			text = document.getElementById("newCharEstj").value;
 			// create new list element
-			li = "<li>"+text+"</li>";
+			listItem = "<li>"+text+"</li>";
 			// use appendChild to add new entry to list!!
-			document.getElementById("mylist estj").appendChild(li);
+			document.getElementById("mylist estj").appendChild(listItem);
 		}
 	}
 </script>

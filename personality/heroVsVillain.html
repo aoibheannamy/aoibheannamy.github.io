@@ -64,6 +64,17 @@
 		</div>
 	</nav>
 
+	<div>
+		<button id="reactivity-add" class="mybuttons">Add New Row</button>
+		<div>
+			<button id="download-csv" class="mybuttons">Download CSV</button>
+			<button id="download-json" class="mybuttons">Download JSON</button>
+			<button id="download-xlsx" class="mybuttons">Download XLSX</button>
+			<button id="download-pdf" class="mybuttons">Download PDF</button>
+			<button id="download-html" class="mybuttons">Download HTML</button>
+		</div>
+	</div>
+
 
 	<article class="page sans myArticle">
 		<header>
@@ -1445,37 +1456,71 @@
 				</tbody>
 			</table>
 		</div>
-		rticle>
+	</article>
 
-		<script>
-			// convert table with ID=example-table into a tabulator table
-			var table = new Tabulator("#example-table", {
-				tooltips: true, //example option (enable tooltips on all cells)
-				columns: [ //set column definitions for imported table data
-					{ title: "Universe", editor: "input" },
-					{ title: "Character", editor: "input" },
-					{ title: "Main Hero/Protagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross"},
-					{ title: "Main Villain/Antagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross"},
-					{ title: "Myers Briggs Type", editor: "input" },
-				],
+	<script>
+		// convert table with ID=example-table into a tabulator table
+		var table = new Tabulator("#example-table", {
+			tooltips: true, //example option (enable tooltips on all cells)
+			columns: [ //set column definitions for imported table data - allow data to be edited
+				{ title: "Universe", editor: "input" },
+				{ title: "Character", editor: "input" },
+				{ title: "Main Hero/Protagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross" },
+				{ title: "Main Villain/Antagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross" },
+				{ title: "Myers Briggs Type", editor: "input" },
+			],
 
+		});
+
+		//add row to bottom of table on button click
+		document.getElementById("reactivity-add").addEventListener("click", function () {
+			tabledata.push({ });
+		});
+
+
+		//trigger download of data.csv file
+		document.getElementById("download-csv").addEventListener("click", function () {
+			table.download("csv", "data.csv");
+		});
+
+		//trigger download of data.json file
+		document.getElementById("download-json").addEventListener("click", function () {
+			table.download("json", "data.json");
+		});
+
+		//trigger download of data.xlsx file
+		document.getElementById("download-xlsx").addEventListener("click", function () {
+			table.download("xlsx", "data.xlsx", { sheetName: "Hero v. Villain Myers Briggs" });
+		});
+
+		//trigger download of data.pdf file
+		document.getElementById("download-pdf").addEventListener("click", function () {
+			table.download("pdf", "data.pdf", {
+				orientation: "portrait", //set page orientation to portrait
+				title: "Hero v. Villain Myers Briggs", //add title to report
 			});
-		</script>
+		});
 
-		<footer class="footer py-3">
-			<div class="container">
-				<span>
-					<h3>Scene to Visual Novel</h3>
-				</span>
-				<h5 class="text-muted">Links</h5>
-				<ul class="footer-links">
-					<li><a href="../index.html">Home</a></li>
-					<li><a href="../visualnovel/visualnovel.html">Visual Novel</a></li>
-				</ul>
+		//trigger download of data.html file
+		document.getElementById("download-html").addEventListener("click", function () {
+			table.download("html", "heroVVillain.html", { style: true });
+		});
+	</script>
 
-			</div>
-			<p class="copyright text-center">Copyright &copy; by Aoibheann Maye. All rights reserved.</p>
-		</footer>
+	<footer class="footer py-3">
+		<div class="container">
+			<span>
+				<h3>Scene to Visual Novel</h3>
+			</span>
+			<h5 class="text-muted">Links</h5>
+			<ul class="footer-links">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../visualnovel/visualnovel.html">Visual Novel</a></li>
+			</ul>
+
+		</div>
+		<p class="copyright text-center">Copyright &copy; by Aoibheann Maye. All rights reserved.</p>
+	</footer>
 
 </body>
 

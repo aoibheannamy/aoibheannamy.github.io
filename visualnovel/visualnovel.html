@@ -202,8 +202,7 @@
 
             rowIndex++;
             if (rowIndex < rowCount) {
-                setTimeout(playVisualNovel, 10000);
-                setTimeout(7000);
+                setTimeout(playVisualNovel, 6000);
             } else {
                 textWords = ("Visual Novel finished for this scene!");
             }
@@ -215,13 +214,11 @@
         * Function which draws the text fields
         */
         function drawWords() {
-            fill(0);
             stroke(0);
             strokeWeight(2);
             textSize(20);
             text(textWords, 330, 80, 200, 200);
             textSize(16);
-            fill(0);
             stroke(0);
             strokeWeight(1);
             text(charSpeaking, 430, 130);

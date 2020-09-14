@@ -39,7 +39,8 @@
         .mybutton {
             margin-left: 35%;
         }
-        .myfooter{
+
+        .myfooter {
             margin-top: 10%;
         }
     </style>
@@ -158,12 +159,16 @@
             clear();
             // make sure the background image has been chosen before continuing
             if (background(bg)) {
-                // call in function to iterate through the table when play button is clicked
-                document.getElementById("play-button").onclick = function () { playVisualNovel() };
+                // declare image as loaded img
+                image(img, 0, height / 2, img.width / 2, img.height / 2);
+                text(textWords, 330, 80, 200, 200);
+                text(charSpeaking, 430, 130);
+
             }
         }
 
-
+        // call in function to iterate through the table when play button is clicked
+        document.getElementById("play-button").onclick = function () { playVisualNovel() };
         /**
          * This function calls the functions to get the character images dependent on emotion
          * as well as to get the character's dialogue for rowIndex before slowly iterating
@@ -177,8 +182,7 @@
             // load and insert image
             // call in function to set and load the correct image for character dependent on rowIndex 
             setCharacterImage();
-            // declare image as loaded img
-            image(img, 0, height / 2, img.width / 2, img.height / 2);
+
             console.log("Image: " + img);
             // call function to get dialogue from tabulator table for rowIndex 
             // - contains the data required for the drawWords() function

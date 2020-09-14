@@ -221,6 +221,14 @@ footer {
 }
 
 /*
+* styling for links on personality home pages
+*/
+.link-to-page{
+    margin-left: 5%;
+    color: teal;
+}
+
+/*
 * styling for tables
 */
 table,

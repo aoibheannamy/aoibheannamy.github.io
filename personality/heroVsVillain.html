@@ -1442,10 +1442,10 @@
 				{ title: "Universe", editor: "input" },
 				{ title: "Character", editor: "input" },
 				{
-					title: "Main Hero/Protagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross", formatterParams: { crossElement: false }
+					title: "Main Hero/Protagonist", hozAlign: "center", editor: "tickCross", formatter: "tickCross", formatterParams: { crossElement: false }
 				},
 				{
-					title: "Main Villain/Antagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross", formatterParams: { crossElement: false }
+					title: "Main Villain/Antagonist", hozAlign: "center", editor: "tickCross", formatter: "tickCross", formatterParams: { crossElement: false }
 				},
 				{ title: "Myers Briggs Type", editor: "input" },
 			],
@@ -1454,7 +1454,7 @@
 
 		//add row to bottom of table on button click
 		document.getElementById("reactivity-add").addEventListener("click", function () {
-			table.push({});
+			table.addRow({});
 		});
 
 

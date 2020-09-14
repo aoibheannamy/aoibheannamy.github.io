@@ -159,7 +159,7 @@
             // clear canvas after every draw call
             clear();
             // speech bubble just needs called once for the whole game
-           // drawSpeechBubble();
+            // drawSpeechBubble();
             // make sure the background image has been chosen before continuing
             if (background(bg)) {
                 // draw a speech bubble
@@ -169,7 +169,9 @@
                 // declare image as loaded img
                 image(img, 0, height / 2, 3 * img.width / 4, 3 * img.height / 4);
                 // declare text fields
+                fill(0, 0, 0);
                 text(textWords, 330, 80, 200, 200);
+                fill(0, 0, 0);
                 text(charSpeaking, 430, 130);
 
 

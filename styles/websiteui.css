@@ -52,7 +52,7 @@ li.nav-item {
 /*
 * styling for navbar dropdowns
 */
-.nav-item .dropdown .dropdown-menu{
+.navbar-nav .dropdown-menu .nav-item .dropdown {
     background-color: rgb(71, 71, 71);
     color: white;
 }

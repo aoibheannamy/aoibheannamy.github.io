@@ -144,7 +144,7 @@
             // set background as placeholder image to begin with
             bg = loadImage('../Images/placeholderImage.jpg');
             // set img as placeholder image to begin with
-            img = loadImage('../Images/placeholderImage.jpg');
+            img = loadImage('../Images/transparentImage.png');
 
             // set container to hold the canvas
             canvas.parent('sketch-holder');
@@ -162,9 +162,11 @@
             // make sure the background image has been chosen before continuing
             if (background(bg)) {
                 // declare image as loaded img
-                image(img, 0, height / 2, img.width / 2, img.height / 2);
+                image(img, 0, 2 * height / 3, 2 * img.width / 3, 2 * img.height / 3);
+                drawSpeechBubble();
                 text(textWords, 330, 80, 200, 200);
                 text(charSpeaking, 430, 130);
+
 
             }
         }

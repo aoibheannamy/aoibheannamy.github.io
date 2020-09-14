@@ -13,6 +13,7 @@ function setCharacterImage() {
     // get the character number and respective emotion for that rowIndex
     var charNo = (data[rowIndex].CharacterNumber);
     var charEmotion = data[rowIndex].Emotion;
+    console.log("Char no: "+charNo+", emotion: "+charEmotion);
     
     // read in JSON file of character images
     try {

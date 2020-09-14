@@ -149,8 +149,7 @@
             // set container to hold the canvas
             canvas.parent('sketch-holder');
             textAlign(CENTER, CENTER);
-            // speech bubble just needs called once for the whole game
-            drawSpeechBubble();
+
         }
 
         /**
@@ -159,11 +158,12 @@
         function draw() {
             // clear canvas after every draw call
             clear();
-
+            // speech bubble just needs called once for the whole game
+            drawSpeechBubble();
             // make sure the background image has been chosen before continuing
             if (background(bg)) {
                 // declare image as loaded img
-                image(img, 0, 2 * height / 3, 2 * img.width / 3, 2 * img.height / 3);
+                image(img, 0, height / 2, 2 * img.width / 3, 2 * img.height / 3);
                 // declare text fields
                 text(textWords, 330, 80, 200, 200);
                 text(charSpeaking, 430, 130);

@@ -131,7 +131,7 @@ figure{
 * styling for footer
 */
 footer {
-    margin-top: 20%;
+    margin-top: 10%;
     padding-top: 10%;
     background-color: rgba(41, 44, 53, 0.849);
     text-align: justify;
@@ -178,6 +178,10 @@ footer {
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
+}
+
+.first{
+    margin-top: 5%;
 }
 
 /*

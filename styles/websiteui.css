@@ -42,6 +42,13 @@ li.nav-item {
 
 }
 /*
+* styling for navbar dropdowns
+*/
+.nav-item .dropdown .dropdown-menu{
+    background-color: rgb(71, 71, 71);
+    color: white;
+}
+/*
 * styling for navbar links
 */
 a.nav-link{

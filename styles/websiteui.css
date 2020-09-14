@@ -223,7 +223,7 @@ footer {
 /*
 * styling for links on personality home pages
 */
-.link-to-page{
+.personalityLink{
     margin-left: 5%;
     color: teal;
 }

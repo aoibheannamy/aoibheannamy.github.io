@@ -120,7 +120,7 @@
 						<td class="cell-J@qi">
 							<div>false</div>
 						</td>
-						<td class="cell-F}oX">ENFP<span class="selected-value select-value-color-red">ESTJ</td>
+						<td class="cell-F}oX">ENFP/ ESTJ</td>
 					</tr>
 					<tr id="95562d5b-0243-4ff1-a19a-d7878fb04652">
 						<td class="cell-title">Ozark</td>
@@ -1441,8 +1441,14 @@
 			columns: [ //set column definitions for imported table data - allow data to be edited
 				{ title: "Universe", editor: "input" },
 				{ title: "Character", editor: "input" },
-				{ title: "Main Hero/Protagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross" },
-				{ title: "Main Villain/Antagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross" },
+				{
+					title: "Main Hero/Protagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross", formatterParams: { crossElement: false }, editor: false,
+					align: "center", headerSort: false, editable: false
+				},
+				{
+					title: "Main Villain/Antagonist", hozAlign: "center", formatter: "tickCross", editor: "tickCross", formatterParams: { crossElement: false }, editor: false,
+					align: "center", headerSort: false, editable: false
+				},
 				{ title: "Myers Briggs Type", editor: "input" },
 			],
 

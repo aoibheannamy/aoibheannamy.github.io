@@ -159,9 +159,13 @@
             // clear canvas after every draw call
             clear();
             // speech bubble just needs called once for the whole game
-            drawSpeechBubble();
+           // drawSpeechBubble();
             // make sure the background image has been chosen before continuing
             if (background(bg)) {
+                // draw a speech bubble
+                fill(290);
+                stroke(0);
+                ellipse(430, 150, 250, 160);
                 // declare image as loaded img
                 image(img, 0, height / 2, 2 * img.width / 3, 2 * img.height / 3);
                 // declare text fields
@@ -211,29 +215,26 @@
         * Function which draws the text fields
         */
         function drawWords() {
-            if (rowIndex >= 1) {
-                fill(0);
-                stroke(0);
-                strokeWeight(2);
-                textSize(20);
-                text(textWords, 330, 80, 200, 200);
-                textSize(16);
-                fill(0);
-                stroke(0);
-                strokeWeight(1);
-                text(charSpeaking, 430, 130);
-                // test output
-                console.log("Char Speaking: " + charSpeaking);
-                console.log("Text words:" + textWords);
-            }
+            fill(0);
+            stroke(0);
+            strokeWeight(2);
+            textSize(20);
+            text(textWords, 330, 80, 200, 200);
+            textSize(16);
+            fill(0);
+            stroke(0);
+            strokeWeight(1);
+            text(charSpeaking, 430, 130);
+            // test output
+            console.log("Char Speaking: " + charSpeaking);
+            console.log("Text words:" + textWords);
+
         }
         /*
         * Function which draws the speech bubble
         */
         function drawSpeechBubble() {
-            fill(290);
-            stroke(0);
-            ellipse(430, 150, 250, 160);
+
 
         }
 

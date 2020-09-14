@@ -158,11 +158,11 @@
             // make sure the background image has been chosen before continuing
             if (background(bg)) {
                 // call in function to iterate through the table
-                playVisualNovel();
+                document.getElementById("play-button").onclick = function () { playVisualNovel() };
             }
         }
 
-        document.getElementById("play-button").onclick = function () { playVisualNovel() };
+
         /**
          * This function calls the functions to get the character images dependent on emotion
          * as well as to get the character's dialogue for rowIndex before slowly iterating

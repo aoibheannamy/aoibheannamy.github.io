@@ -75,6 +75,7 @@ h2{
     border: 2px solid rgba(48, 49, 53, 0.849);
     color: rgba(255, 255, 255, 0.849);
     padding: 1%;
+    border-radius: 25px;
 }
 /*
 * styling for links inside buttons with class mybuttons

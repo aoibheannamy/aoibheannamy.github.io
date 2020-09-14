@@ -64,16 +64,7 @@
 		</div>
 	</nav>
 
-	<div>
-		<button id="reactivity-add" class="mybuttons">Add New Row</button>
-		<div>
-			<button id="download-csv" class="mybuttons">Download CSV</button>
-			<button id="download-json" class="mybuttons">Download JSON</button>
-			<button id="download-xlsx" class="mybuttons">Download XLSX</button>
-			<button id="download-pdf" class="mybuttons">Download PDF</button>
-			<button id="download-html" class="mybuttons">Download HTML</button>
-		</div>
-	</div>
+
 
 
 	<article class="page sans myArticle">
@@ -81,6 +72,16 @@
 			<h1 class="page-title myheader">Hero Vs Villain Myers Briggs Personality Types</h1>
 		</header>
 		<div class="page-body">
+			<div>
+				<button id="reactivity-add" class="mybuttons">Add New Row</button>
+				<div>
+					<button id="download-csv" class="mybuttons">Download CSV</button>
+					<button id="download-json" class="mybuttons">Download JSON</button>
+					<button id="download-xlsx" class="mybuttons">Download XLSX</button>
+					<button id="download-pdf" class="mybuttons">Download PDF</button>
+					<button id="download-html" class="mybuttons">Download HTML</button>
+				</div>
+			</div>
 			<table class="collection-content" id="example-table">
 				<thead>
 					<tr>
@@ -1474,7 +1475,7 @@
 
 		//add row to bottom of table on button click
 		document.getElementById("reactivity-add").addEventListener("click", function () {
-			tabledata.push({ });
+			tabledata.push({});
 		});
 
 

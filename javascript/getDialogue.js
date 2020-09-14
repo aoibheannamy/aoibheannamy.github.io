@@ -15,10 +15,10 @@ function readDialogue() {
 
     // get their inflection
     var inflection = data[rowIndex].Inflection;
-    console.log("Character " + charSpeak + inflection + "\"" + textWords + "\".");
+    console.log("Character " + charSpeak +" "+ inflection + "\"" + textWords + "\".");
 
     if (charSpeak != 0) {
-        charSpeaking = "Character " + charSpeak + inflection + ":";
+        charSpeaking = "Character " + charSpeak +" "+ inflection + ":";
     } else {
         charSpeaking = "No Character is speaking.";
     }

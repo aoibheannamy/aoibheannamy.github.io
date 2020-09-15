@@ -180,6 +180,15 @@ footer {
     color: rgba(41, 44, 53, 0.849);
 }
 /*
+* styling for titles on character personality pages
+*/
+.mytitlesChar {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    color: rgba(41, 44, 53, 0.849);
+}
+/*
 * styling for main headers
 */
 .myheader {

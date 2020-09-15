@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Lord Voldemort Personality Statistics</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="../../styles/websiteui.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+	<link href="https://unpkg.com/tabulator-tables@4.6.3/dist/css/tabulator.min.css" rel="stylesheet">
+	<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.6.3/dist/js/tabulator.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.5/jspdf.plugin.autotable.js"></script>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="d-flex flex-grow-1">
+			<span class="w-100 d-lg-none d-block">
+				<!-- hidden spacer to center brand on mobile --></span>
+			<a class='navbar-brand' href='../../index.html'>Scene to Visual Novel</a>
+			<div class="w-100 text-right">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</div>
+		<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+			<ul class="navbar-nav ml-auto flex-nowrap">
+				<li class='nav-item'>
+					<a class='nav-link' href='../../index.html'>Home <span class='sr-only'>(current)</span></a>
+				</li>
+				<li class='nav-item dropdown'>
+					<a class='nav-link dropdown-toggle active' href='#' id='navbarDropdownMenuLink' role='button'
+						data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+						Personality Information
+					</a>
+					<div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+						<a class='dropdown-item active' href='../myersBriggsDoc.html'>Myers Briggs
+							Description</a>
+						<a class='dropdown-item ' href='../heroVsVillain.html'>Heroes V. Villain
+							Personalities</a>
+						<a class='dropdown-item' href='../goodvbadvambig.html'>Antagonist/Protagonist
+							Database</a>
+						<a class='dropdown-item' href='../matchesFromOtherUniverses.html'>Personality Matches
+							from other Universes</a>
+						<a class='dropdown-item' href='../gameOfThrones/gotHome.html'>Game of Thrones Universe</a>
+						<a class='dropdown-item' href='HPHome.html'>Harry Potter Universe</a>
+						<a class='dropdown-item' href='../lordOTRings/LoTRHome.html'>Lord of the Rings Universe</a>
+					</div>
+				</li>
+				<li class='nav-item'>
+					<a class='nav-link' href='../../visualnovel/visualnovel.html'>Visual Novel</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<article class="page sans myArticle">
+		<header>
+			<div id="myHeading">
+                <img class="icon" src="../../Images/HPImages/Voldemort.jpg" />
+                <h1 class="page-title myheader">Lord Voldemort Personality Statistics</h1>
+            </div>
+		</header>
+		<p class="mypara">Statistics for the character of Lord Voldemort from Harry Potter, courtesy of the Open-Source
+			Psychometrics Project.
+			<a href="https://openpsychometrics.org/tests/characters/">Open-Source Psychometrics</a></p>
+		<div class="page-body">
+
+            <!--Table for full personality list-->
+            <h3 class="mytitles">Full Personality Trait List</h3>
+			<table class="collection-content" id="example-table1">
+				<thead>
+					<tr>
+						<th>Personality Traits</th>
+						<th>Average Rating</th>
+						<th>Rank</th>
+					</tr>
+				</thead>
+				<tbody>
+                     <tr><td>arrogant (not humble)</td><td>93.5</td><td>18</td></tr>
+                     <tr><td>competitive (not cooperative)</td><td>92.3</td><td>18</td></tr>
+                     <tr><td>judgemental (not accepting)</td><td>91.6</td><td>20</td></tr>
+                     <tr><td>bourgeoisie (not proletariat)</td><td>90</td><td>4</td></tr>
+                     <tr><td>rich (not poor)</td><td>90.9</td><td>44</td></tr>
+                     <tr><td>quarrelsome (not warm)</td><td>90.7</td><td>22</td></tr>
+                     <tr><td>insulting (not complimentary)</td><td>89.3</td><td>12</td></tr>
+                     <tr><td>lavish (not frugal)</td><td>87.9</td><td>21</td></tr>
+                     <tr><td>vain (not demure)</td><td>88.6</td><td>20</td></tr>
+                     <tr><td>rude (not respectful)</td><td>87.7</td><td>21</td></tr>
+                     <tr><td>ivory-tower (not blue-collar)</td><td>86.6</td><td>37</td></tr>
+                     <tr><td>impatient (not patient)</td><td>86.6</td><td>35</td></tr>
+                     <tr><td>moody (not stable)</td><td>87.4</td><td>32</td></tr>
+                     <tr><td>guarded (not open)</td><td>85.8</td><td>73</td></tr>
+                     <tr><td>selfish (not altruistic)</td><td>86.8</td><td>54</td></tr>
+                     <tr><td>angry (not good-humored)</td><td>86.8</td><td>15</td></tr>
+                     <tr><td>suspicious (not trusting)</td><td>85.6</td><td>56</td></tr>
+                     <tr><td>biased (not impartial)</td><td>86.5</td><td>34</td></tr>
+                     <tr><td>tense (not relaxed)</td><td>86</td><td>57</td></tr>
+                     <tr><td>mischievous (not well behaved)</td><td>85.8</td><td>84</td></tr>
+                     <tr><td>manicured (not scruffy)</td><td>84.8</td><td>116</td></tr>
+                     <tr><td>sarcastic (not genuine)</td><td>85.7</td><td>17</td></tr>
+                     <tr><td>authoritarian (not democratic)</td><td>84.6</td><td>52</td></tr>
+                     <tr><td>flamboyant (not modest)</td><td>84.4</td><td>43</td></tr>
+                     <tr><td>jealous (not compersive)</td><td>85.3</td><td>25</td></tr>
+                     <tr><td>bitter (not sweet)</td><td>85.2</td><td>48</td></tr>
+                     <tr><td>cold (not warm)</td><td>84.1</td><td>50</td></tr>
+                     <tr><td>close-minded (not open-minded)</td><td>83.8</td><td>30</td></tr>
+                     <tr><td>vengeful (not forgiving)</td><td>83.6</td><td>72</td></tr>
+                     <tr><td>feisty (not gracious)</td><td>83.6</td><td>64</td></tr>
+                     <tr><td>cunning (not honorable)</td><td>83.2</td><td>58</td></tr>
+                     <tr><td>sad (not happy)</td><td>83.1</td><td>26</td></tr>
+                     <tr><td>poisonous (not nurturing)</td><td>82.6</td><td>56</td></tr>
+                     <tr><td>suspicious (not awkward)</td><td>81</td><td>64</td></tr>
+                     <tr><td>extreme (not moderate)</td><td>81</td><td>107</td></tr>
+                     <tr><td>dramatic (not no-nonsense)</td><td>82</td><td>56</td></tr>
+                     <tr><td>edgy (not politically correct)</td><td>80.8</td><td>78</td></tr>
+                     <tr><td>young (not old)</td><td>81.7</td><td>93</td></tr>
+                     <tr><td>driven (not unambitious)</td><td>80.6</td><td>249</td></tr>
+                     <tr><td>night owl (not morning lark)</td><td>80.2</td><td>85</td></tr>
+                     <tr><td>anxious (not calm)</td><td>79.8</td><td>66</td></tr>
+                     <tr><td>sorrowful (not cheery)</td><td>79</td><td>62</td></tr>
+                     <tr><td>juvenile (not mature)</td><td>80</td><td>59</td></tr>
+                     <tr><td>cruel (not kind)</td><td>79.8</td><td>50</td></tr>
+                     <tr><td>skeptical (not spiritual)</td><td>78.6</td><td>118</td></tr>
+                     <tr><td>bold (not shy)</td><td>77.5</td><td>299</td></tr>
+                     <tr><td>demonic (not angelic)</td><td>77.5</td><td>74</td></tr>
+                     <tr><td>rigid (not flexible)</td><td>77.5</td><td>80</td></tr>
+                     <tr><td>sheltered (not street-smart)</td><td>78.2</td><td>48</td></tr>
+                     <tr><td>deviant (not average)</td><td>77.1</td><td>123</td></tr>
+                     <tr><td>hypocritical (not equitable)</td><td>76.6</td><td>64</td></tr>
+                     <tr><td>bossy (not meek)</td><td>76.9</td><td>213</td></tr>
+                     <tr><td>highbrow (not lowbrow)</td><td>75.8</td><td>94</td></tr>
+                     <tr><td>stylish (not slovenly)</td><td>75.6</td><td>164</td></tr>
+                     <tr><td>emotional (not logical)</td><td>76.5</td><td>105</td></tr>
+                     <tr><td>ferocious (not pacifist)</td><td>76.1</td><td>151</td></tr>
+                     <tr><td>strict (not lenient)</td><td>76</td><td>126</td></tr>
+                     <tr><td>debased (not pure)</td><td>76</td><td>100</td></tr>
+                     <tr><td>pessimistic (not optimistic)</td><td>75</td><td>66</td></tr>
+                     <tr><td>obsessed (not aloof)</td><td>74.6</td><td>102</td></tr>
+                     <tr><td>foolish (not wise)</td><td>74.5</td><td>79</td></tr>
+                     <tr><td>enslaved (not emancipated)</td><td>75.5</td><td>16</td></tr>
+                     <tr><td>complicated (not simple)</td><td>74.3</td><td>133</td></tr>
+                     <tr><td>codependent (not independent)</td><td>74.2</td><td>71</td></tr>
+                     <tr><td>depressed (not bright)</td><td>74.9</td><td>45</td></tr>
+                     <tr><td>gossiping (not confidential)</td><td>74.6</td><td>82</td></tr>
+                     <tr><td>charming (not trusting)</td><td>74.3</td><td>99</td></tr>
+                     <tr><td>deliberate (not spontaneous)</td><td>73.2</td><td>215</td></tr>
+                     <tr><td>political (not nonpolitical)</td><td>74.1</td><td>93</td></tr>
+                     <tr><td>villainous (not heroic)</td><td>72.9</td><td>76</td></tr>
+                     <tr><td>loud (not quiet)</td><td>72.9</td><td>154</td></tr>
+                     <tr><td>thin (not thick)</td><td>73.1</td><td>100</td></tr>
+                     <tr><td>sensitive (not thick-skinned)</td><td>72</td><td>86</td></tr>
+                     <tr><td>serious (not playful)</td><td>71.2</td><td>222</td></tr>
+                     <tr><td>spicy (not mild)</td><td>72.1</td><td>188</td></tr>
+                     <tr><td>refined (not rugged)</td><td>72</td><td>174</td></tr>
+                     <tr><td>apprentice (not master)</td><td>71.3</td><td>82</td></tr>
+                     <tr><td>impulsive (not cautious)</td><td>71.2</td><td>150</td></tr>
+                     <tr><td>family-first (not work-first)</td><td>71</td><td>147</td></tr>
+                     <tr><td>uncreative (not open to new experinces)</td><td>69.6</td><td>56</td></tr>
+                     <tr><td>jock (not nerd)</td><td>69.4</td><td>121</td></tr>
+                     <tr><td>crafty (not scholarly)</td><td>69.3</td><td>234</td></tr>
+                     <tr><td>indulgent (not sober)</td><td>70.1</td><td>164</td></tr>
+                     <tr><td>neat (not messy)</td><td>70.1</td><td>230</td></tr>
+                     <tr><td>playful (not shy)</td><td>69.4</td><td>260</td></tr>
+                     <tr><td>instinctual (not reasoned)</td><td>68.3</td><td>188</td></tr>
+                     <tr><td>lustful (not chaste)</td><td>69.1</td><td>190</td></tr>
+                     <tr><td>plays hard (not works hard)</td><td>68</td><td>111</td></tr>
+                     <tr><td>ludicrous (not sensible)</td><td>69</td><td>112</td></tr>
+                     <tr><td>humorless (not funny)</td><td>67.8</td><td>102</td></tr>
+                     <tr><td>lewd (not tasteful)</td><td>68.7</td><td>112</td></tr>
+                     <tr><td>backdoor (not official)</td><td>67.5</td><td>216</td></tr>
+                     <tr><td>cosmopolitan (not provincial)</td><td>68.3</td><td>122</td></tr>
+                     <tr><td>head@clouds (not down2earth)</td><td>67.2</td><td>139</td></tr>
+                     <tr><td>traitorous (not loyal)</td><td>67.1</td><td>76</td></tr>
+                     <tr><td>conventional (not creative)</td><td>67.1</td><td>122</td></tr>
+                     <tr><td>cringeworthy (not inspiring)</td><td>67.1</td><td>140</td></tr>
+                     <tr><td>outlaw (not sheriff)</td><td>67.6</td><td>185</td></tr>
+                     <tr><td>puny (not mighty)</td><td>66.4</td><td>69</td></tr>
+                     <tr><td>insecure (not confident)</td><td>66.4</td><td>73</td></tr>
+                     <tr><td>extrovert (not introvert)</td><td>67.3</td><td>211</td></tr>
+                     <tr><td>assertive (not passive)</td><td>67.3</td><td>330</td></tr>
+                     <tr><td>traditional (not unorthodox)</td><td>67.1</td><td>123</td></tr>
+                     <tr><td>neurotypical (not autistic)</td><td>66.1</td><td>327</td></tr>
+                     <tr><td>fast (not slow)</td><td>67</td><td>242</td></tr>
+                     <tr><td>creepy (not disarming)</td><td>66.5</td><td>79</td></tr>
+                     <tr><td>kinky (not vanilla)</td><td>66.1</td><td>165</td></tr>
+                     <tr><td>libertarian (not socialist)</td><td>65.8</td><td>144</td></tr>
+                     <tr><td>literal (not metaphorical)</td><td>64.7</td><td>223</td></tr>
+                     <tr><td>classical (not avant-garde)</td><td>65.4</td><td>194</td></tr>
+                     <tr><td>active (not slothful)</td><td>65.2</td><td>410</td></tr>
+                     <tr><td>scandalous (not proper)</td><td>65.2</td><td>207</td></tr>
+                     <tr><td>monochrome (not multicolored)</td><td>64.2</td><td>151</td></tr>
+                     <tr><td>worldly (not innocent)</td><td>64.1</td><td>323</td></tr>
+                     <tr><td>empirical (not theoretical)</td><td>65</td><td>163</td></tr>
+                     <tr><td>sickly (not healthy)</td><td>65</td><td>74</td></tr>
+                     <tr><td>historical (not modern)</td><td>63.8</td><td>166</td></tr>
+                     <tr><td>scientific (not artistic)</td><td>63.5</td><td>228</td></tr>
+                     <tr><td>methodical (not astonishing)</td><td>64.5</td><td>242</td></tr>
+                     <tr><td>precise (not vague)</td><td>63.1</td><td>285</td></tr>
+                     <tr><td>scheduled (not spontaneous)</td><td>63.8</td><td>278</td></tr>
+                     <tr><td>sporty (not bookish)</td><td>63.7</td><td>169</td></tr>
+                     <tr><td>practical (not imaginative)</td><td>62.7</td><td>297</td></tr>
+                     <tr><td>real (not philosophical)</td><td>62.5</td><td>301</td></tr>
+                     <tr><td>nihilist (not existentialist)</td><td>63.5</td><td>83</td></tr>
+                     <tr><td>captain (not first-mate)</td><td>63.4</td><td>210</td></tr>
+                     <tr><td>eloquent (not unpolished)</td><td>63.1</td><td>288</td></tr>
+                     <tr><td>hurried (not leisurely)</td><td>61.9</td><td>191</td></tr>
+                     <tr><td>atheist (not theist)</td><td>61.9</td><td>235</td></tr>
+                     <tr><td>direct (not roundabout)</td><td>62.7</td><td>330</td></tr>
+                     <tr><td>wild (not tame)</td><td>62.7</td><td>283</td></tr>
+                     <tr><td>stick-in-the-mud (not adventurous)</td><td>61.6</td><td>145</td></tr>
+                     <tr><td>high-tech (not low-tech)</td><td>62.5</td><td>181</td></tr>
+                     <tr><td>purple (not orange)</td><td>61.3</td><td>145</td></tr>
+                     <tr><td>subjective (not objective)</td><td>61</td><td>185</td></tr>
+                     <tr><td>high IQ (not low IQ)</td><td>61.9</td><td>451</td></tr>
+                     <tr><td>coordinated (not clumsy)</td><td>61.7</td><td>352</td></tr>
+                     <tr><td>chaotic (not orderly)</td><td>60.4</td><td>216</td></tr>
+                     <tr><td>mathematical (not literary)</td><td>61.3</td><td>159</td></tr>
+                     <tr><td>weird (not normal)</td><td>60.2</td><td>282</td></tr>
+                     <tr><td>heathen (not devout)</td><td>60.2</td><td>171</td></tr>
+                     <tr><td>repulsive (not attractive)</td><td>59.6</td><td>120</td></tr>
+                     <tr><td>gendered (not androgynous)</td><td>58.9</td><td>533</td></tr>
+                     <tr><td>expressive (not stoic)</td><td>58.5</td><td>286</td></tr>
+                     <tr><td>careful (not brave)</td><td>58.5</td><td>142</td></tr>
+                     <tr><td>repetitive (not varied)</td><td>59.4</td><td>293</td></tr>
+                     <tr><td>beautiful (not ugly)</td><td>59.3</td><td>416</td></tr>
+                     <tr><td>self-disciplined (not disorganized)</td><td>58.2</td><td>408</td></tr>
+                     <tr><td>basic (not hipster)</td><td>58.1</td><td>344</td></tr>
+                     <tr><td>resistant (not resigned)</td><td>58.1</td><td>438</td></tr>
+                     <tr><td>masculine (not feminine)</td><td>58.8</td><td>342</td></tr>
+                     <tr><td>utilitarian (not decorative)</td><td>58.8</td><td>355</td></tr>
+                     <tr><td>specialist (not generalist)</td><td>57.5</td><td>296</td></tr>
+                     <tr><td>alpha (not beta)</td><td>58.4</td><td>371</td></tr>
+                     <tr><td>dominant (not submissive)</td><td>58.2</td><td>386</td></tr>
+                     <tr><td>hesitant (not decisive)</td><td>57.9</td><td>129</td></tr>
+                     <tr><td>insider (not outsider)</td><td>57.7</td><td>191</td></tr>
+                     <tr><td>charming (not awkward)</td><td>57.4</td><td>336</td></tr>
+                     <tr><td>apathetic (not curious)</td><td>56.1</td><td>97</td></tr>
+                     <tr><td>conspiracist (not sheeple)</td><td>56</td><td>365</td></tr>
+                     <tr><td>disreputable (not prestigious)</td><td>55.9</td><td>194</td></tr>
+                     <tr><td>hard (not soft)</td><td>56.8</td><td>315</td></tr>
+                     <tr><td>self-assured (not self-conscious)</td><td>55.7</td><td>439</td></tr>
+                     <tr><td>idealist (not realist)</td><td>56.6</td><td>260</td></tr>
+                     <tr><td>barbaric (not civilized)</td><td>56.4</td><td>152</td></tr>
+                     <tr><td>helpless (not resourceful)</td><td>55.4</td><td>80</td></tr>
+                     <tr><td>mysterious (not unambiguous)</td><td>56.1</td><td>199</td></tr>
+                     <tr><td>cryptic (not straightforward)</td><td>54.4</td><td>142</td></tr>
+                     <tr><td>private (not gregarious)</td><td>54.4</td><td>357</td></tr>
+                     <tr><td>bold (not serious)</td><td>54.4</td><td>317</td></tr>
+                     <tr><td>extraordinary (not mundane)</td><td>54.3</td><td>412</td></tr>
+                     <tr><td>animalistic (not human)</td><td>54.2</td><td>150</td></tr>
+                     <tr><td>tall (not short)</td><td>55.1</td><td>339</td></tr>
+                     <tr><td>intellectual (not physical)</td><td>55</td><td>368</td></tr>
+                     <tr><td>chatty (not reserved)</td><td>54.8</td><td>297</td></tr>
+                     <tr><td>diligent (not lazy)</td><td>54.7</td><td>518</td></tr>
+                     <tr><td>involved (not remote)</td><td>53.7</td><td>443</td></tr>
+                     <tr><td>soulless (not soulful)</td><td>54.7</td><td>135</td></tr>
+                     <tr><td>unlucky (not fortunate)</td><td>54.4</td><td>276</td></tr>
+                     <tr><td>incompetent (not competent)</td><td>53.3</td><td>124</td></tr>
+                     <tr><td>'left-brained' (not 'right-brained')</td><td>53.1</td><td>164</td></tr>
+                     <tr><td>queer (not straight)</td><td>53</td><td>85</td></tr>
+                     <tr><td>armoured (not vulnerable)</td><td>52.9</td><td>396</td></tr>
+                     <tr><td>charismatic (not uninspiring)</td><td>53.9</td><td>478</td></tr>
+                     <tr><td>rational (not whimsical)</td><td>53.6</td><td>381</td></tr>
+                     <tr><td>focused on the future (not focused on the present)</td><td>52.6</td><td>238</td></tr>
+                     <tr><td>tiresome (not interesting)</td><td>53.6</td><td>153</td></tr>
+                     <tr><td>arcane (not mainstream)</td><td>53.4</td><td>339</td></tr>
+                     <tr><td>luddite (not technophile)</td><td>53</td><td>329</td></tr>
+                     <tr><td>slacker (not workaholic)</td><td>51.8</td><td>156</td></tr>
+                     <tr><td>hard (not soft)</td><td>52.4</td><td>354</td></tr>
+                     <tr><td>unprepared (not hoarder)</td><td>52.2</td><td>211</td></tr>
+                     <tr><td>dunce (not genius)</td><td>52.1</td><td>188</td></tr>
+                     <tr><td>obedient (not rebellious)</td><td>52.1</td><td>214</td></tr>
+                     <tr><td>child free (not pronatalist)</td><td>50.9</td><td>440</td></tr>
+                     <tr><td>individualist (not communal)</td><td>51.7</td><td>373</td></tr>
+                     <tr><td>transient (not permanent)</td><td>50.5</td><td>284</td></tr>
+                     <tr><td>smooth (not rough)</td><td>51.2</td><td>333</td></tr>
+                     <tr><td>explorer (not builder)</td><td>51.1</td><td>314</td></tr>
+                     <tr><td>industrial (not domestic)</td><td>50.1</td><td>363</td></tr>
+				</tbody>
+			</table>
+            <!--Table for top 5 most and least similar characters-->
+            <h3 class="mytitles">Top Five Most and Least Similar Characters</h3>
+			<table class="collection-content" id="example-table2">
+				<thead>
+					<tr>
+						<th>Most Similar Characters</th>
+						<th>Least Similar Characters</th>
+					</tr>
+				</thead>
+				<tbody>
+                     <tr><td>1. Pete Campbell (0.834)</td><td>1. Friar Tuck (-0.693)</td></tr>
+                     <tr><td>2. Joffrey Baratheon (0.782)</td><td>2. Arthur Weasley (-0.636)</td></tr>
+                     <tr><td>3. Prince John (0.762)</td><td>3. Beth March (-0.59)</td></tr>
+                     <tr><td>4. Tom Buchanan (0.762)</td><td>4. Steve Brady (-0.581)</td></tr>
+                     <tr><td>5. Regina George (0.758)</td><td>5. Francis Mulcahy (-0.58)</td></tr>
+				</tbody>
+			</table>
+            <!--Table for full personality match list-->
+            <h3 class="mytitles">Full Personality Match List</h3>
+			<table class="collection-content" id="example-table3">
+				<thead>
+					<tr>
+						<th>Full Match List</th>
+						<th>Universe</th>
+						<th>% Match</th>
+					</tr>
+				</thead>
+				<tbody>
+                     <tr><td>2. Lucille Bluth</td><td>Arrested Development</td><td>90%</td></tr>
+                     <tr><td>3. Selina Meyer</td><td>Veep</td><td>88%</td></tr>
+                     <tr><td>4. Sal Maroni</td><td>The Dark Knight</td><td>87%</td></tr>
+                     <tr><td>5. Evelyn Harper</td><td>Two and Half Men</td><td>87%</td></tr>
+                     <tr><td>6. Terry Benedict</td><td>Ocean's 11</td><td>87%</td></tr>
+                     <tr><td>7. Cersei Lannister</td><td>Game of Thrones</td><td>86%</td></tr>
+                     <tr><td>8. Jan Levinson</td><td>The Office</td><td>86%</td></tr>
+                     <tr><td>9. Azula</td><td>Avatar The Last Airbender</td><td>86%</td></tr>
+                     <tr><td>10. Benjamin Horne</td><td>Twin Peaks</td><td>86%</td></tr>
+                     <tr><td>11. Tom Buchanan</td><td>The Great Gatsby</td><td>86%</td></tr>
+                     <tr><td>12. Regina George</td><td>Mean Girls</td><td>86%</td></tr>
+                     <tr><td>13. Dr. Rene Belloq</td><td>Raiders of the Lost Ark</td><td>86%</td></tr>
+                     <tr><td>14. Chuck Bass</td><td>Gossip Girl</td><td>86%</td></tr>
+                     <tr><td>15. Dan Egan</td><td>Veep</td><td>86%</td></tr>
+                     <tr><td>16. Topper</td><td>Outer Banks</td><td>86%</td></tr>
+                     <tr><td>17. Clarence Royce</td><td>The Wire</td><td>85%</td></tr>
+                     <tr><td>18. Logan Delos</td><td>Westworld</td><td>85%</td></tr>
+                     <tr><td>19. Roger Sterling</td><td>Mad Men</td><td>85%</td></tr>
+                     <tr><td>20. Gavin Belson</td><td>Silicon Valley</td><td>85%</td></tr>
+                     <tr><td>21. Tyrell Wellick</td><td>Mr. Robot</td><td>85%</td></tr>
+                     <tr><td>22. Ryan Howard</td><td>The Office</td><td>84%</td></tr>
+                     <tr><td>23. Dukat</td><td>Star Trek Deep Space Nine</td><td>84%</td></tr>
+                     <tr><td>24. Clay Davis</td><td>The Wire</td><td>84%</td></tr>
+                     <tr><td>25. Betty Draper</td><td>Mad Men</td><td>84%</td></tr>
+                     <tr><td>26. Prince John</td><td>Robin Hood</td><td>84%</td></tr>
+                     <tr><td>27. Marsellus Wallace</td><td>Pulp Fiction</td><td>84%</td></tr>
+                     <tr><td>28. Carlos Solis</td><td>Desperate Housewives</td><td>84%</td></tr>
+                     <tr><td>29. Emilio Barzini</td><td>The Godfather</td><td>84%</td></tr>
+                     <tr><td>30. Scarlett O'Hara</td><td>Gone With the Wind</td><td>84%</td></tr>
+                     <tr><td>31. Jackie Burkhart</td><td>That 70's Show</td><td>83%</td></tr>
+                     <tr><td>32. Jeff Winger</td><td>Community</td><td>83%</td></tr>
+                     <tr><td>33. Mr. Big</td><td>Sex and the City</td><td>83%</td></tr>
+                     <tr><td>34. Cordelia Chase</td><td>Buffy the Vampire Slayer</td><td>83%</td></tr>
+                     <tr><td>35. Catherine Martell</td><td>Twin Peaks</td><td>83%</td></tr>
+                     <tr><td>36. Cheryl Blossom</td><td>Riverdale</td><td>83%</td></tr>
+                     <tr><td>37. Blair Waldorf</td><td>Gossip Girl</td><td>83%</td></tr>
+                     <tr><td>38. Lily van der Woodsen</td><td>Gossip Girl</td><td>83%</td></tr>
+                     <tr><td>39. Joey Donner</td><td>10 Things I Hate About You</td><td>83%</td></tr>
+                     <tr><td>40. Joffrey Baratheon</td><td>Game of Thrones</td><td>82%</td></tr>
+                     <tr><td>41. Shannon Rutherford</td><td>LOST</td><td>82%</td></tr>
+                     <tr><td>42. Charlotte Hale</td><td>Westworld</td><td>82%</td></tr>
+                     <tr><td>43. Pete Campbell</td><td>Mad Men</td><td>82%</td></tr>
+                     <tr><td>44. Dominar Rygel XVI</td><td>Farscape</td><td>82%</td></tr>
+                     <tr><td>45. Tony Soprano</td><td>The Sopranos</td><td>82%</td></tr>
+                     <tr><td>46. Firelord Ozai</td><td>Avatar The Last Airbender</td><td>81%</td></tr>
+                     <tr><td>47. Lady Mary Crawley</td><td>Downton Abbey</td><td>81%</td></tr>
+                     <tr><td>48. Tommy Carcetti</td><td>The Wire</td><td>81%</td></tr>
+                     <tr><td>49. Sheriff of Nottingham</td><td>Robin Hood</td><td>81%</td></tr>
+                     <tr><td>50. Mellie Grant</td><td>Scandal</td><td>81%</td></tr>
+                     <tr><td>51. Sonny Corleone</td><td>The Godfather</td><td>81%</td></tr>
+                     <tr><td>52. Darth Vader</td><td>Star Wars</td><td>80%</td></tr>
+                     <tr><td>53. Lee Sizemore</td><td>Westworld</td><td>80%</td></tr>
+                     <tr><td>54. Harvey Dent</td><td>The Dark Knight</td><td>80%</td></tr>
+                     <tr><td>55. Don Draper</td><td>Mad Men</td><td>80%</td></tr>
+                     <tr><td>56. Leland Palmer</td><td>Twin Peaks</td><td>80%</td></tr>
+                     <tr><td>57. Jordan Baker</td><td>The Great Gatsby</td><td>80%</td></tr>
+                     <tr><td>58. Piper Chapman</td><td>Orange is the New Black</td><td>80%</td></tr>
+                     <tr><td>59. Rosalie Hale</td><td>Twilight</td><td>80%</td></tr>
+                     <tr><td>60. Lindsay Bluth Funke</td><td>Arrested Development</td><td>80%</td></tr>
+                     <tr><td>61. Gabrielle Solis</td><td>Desperate Housewives</td><td>80%</td></tr>
+                     <tr><td>62. Angel Eyes</td><td>The Good, the Bad, and the Ugly</td><td>80%</td></tr>
+                     <tr><td>63. Santana Lopez</td><td>Glee</td><td>80%</td></tr>
+                     <tr><td>64. Jaime Lannister</td><td>Game of Thrones</td><td>79%</td></tr>
+                     <tr><td>65. Robert California</td><td>The Office</td><td>79%</td></tr>
+                     <tr><td>66. Lady Catherine de Bourgh</td><td>Pride and Prejudice</td><td>79%</td></tr>
+                     <tr><td>67. Quark</td><td>Star Trek Deep Space Nine</td><td>79%</td></tr>
+                     <tr><td>68. Pierce Hawthorne</td><td>Community</td><td>79%</td></tr>
+                     <tr><td>69. Coriolanus Snow</td><td>The Hunger Games</td><td>79%</td></tr>
+                     <tr><td>70. Judith Harper-Melnick</td><td>Two and Half Men</td><td>79%</td></tr>
+                     <tr><td>71. George Bluth, Sr.</td><td>Arrested Development</td><td>79%</td></tr>
+                     <tr><td>72. Countess Vronskaya</td><td>Anna Karenina</td><td>79%</td></tr>
+                     <tr><td>73. Marnie Michaels</td><td>Girls</td><td>79%</td></tr>
+                     <tr><td>74. Moira Rose</td><td>Schitt's Creek</td><td>79%</td></tr>
+                     <tr><td>75. Frank Costello</td><td>The Departed</td><td>79%</td></tr>
+                     <tr><td>76. Summer Smith</td><td>Rick and Morty</td><td>79%</td></tr>
+                     <tr><td>77. Tywin Lannister</td><td>Game of Thrones</td><td>78%</td></tr>
+                     <tr><td>78. Rita Skeeter</td><td>Harry Potter</td><td>78%</td></tr>
+                     <tr><td>79. Loki</td><td>Marvel Cinematic Universe</td><td>78%</td></tr>
+                     <tr><td>80. Thomas Barrow</td><td>Downton Abbey</td><td>78%</td></tr>
+                     <tr><td>81. Scar</td><td>The Lion King</td><td>78%</td></tr>
+                     <tr><td>82. Vicious</td><td>Cowboy Bebop</td><td>78%</td></tr>
+                     <tr><td>83. Sue Sylvester</td><td>Glee</td><td>78%</td></tr>
+                     <tr><td>84. Prudence Night</td><td>Chilling Adventures of Sabrina</td><td>78%</td></tr>
+                     <tr><td>85. Veronica Lodge</td><td>Riverdale</td><td>78%</td></tr>
+                     <tr><td>86. Colin Sullivan</td><td>The Departed</td><td>78%</td></tr>
+                     <tr><td>87. Christopher Moltisanti</td><td>The Sopranos</td><td>78%</td></tr>
+                     <tr><td>88. Junior Soprano</td><td>The Sopranos</td><td>78%</td></tr>
+                     <tr><td>89. Barney Stinson</td><td>How I Met Your Mother</td><td>78%</td></tr>
+                     <tr><td>90. Man in Black</td><td>Westworld</td><td>77%</td></tr>
+                     <tr><td>91. Lau</td><td>The Dark Knight</td><td>77%</td></tr>
+                     <tr><td>92. Amy March</td><td>Little Women</td><td>77%</td></tr>
+                     <tr><td>93. Robert Fischer</td><td>Inception</td><td>77%</td></tr>
+                     <tr><td>94. Princess Elizaveta 'Betsy' Tverskaya</td><td>Anna Karenina</td><td>77%</td></tr>
+                     <tr><td>95. Edie Britt</td><td>Desperate Housewives</td><td>77%</td></tr>
+                     <tr><td>96. Mary Wardwell</td><td>Chilling Adventures of Sabrina</td><td>77%</td></tr>
+                     <tr><td>97. Fitzgerald Grant</td><td>Scandal</td><td>77%</td></tr>
+                     <tr><td>98. Connor Walsh</td><td>How To Get Away With Murder</td><td>77%</td></tr>
+                     <tr><td>99. Lord Voldemort</td><td>Harry Potter</td><td>76%</td></tr>
+                     <tr><td>100. Bellatrix Lestrange</td><td>Harry Potter</td><td>76%</td></tr>
+                     <tr><td>101. George Wickham</td><td>Pride and Prejudice</td><td>76%</td></tr>
+                     <tr><td>102. Winn Adami</td><td>Star Trek Deep Space Nine</td><td>76%</td></tr>
+                     <tr><td>103. Boromir</td><td>Lord of the Rings</td><td>76%</td></tr>
+                     <tr><td>104. Avon Barksdale</td><td>The Wire</td><td>76%</td></tr>
+                     <tr><td>105. Josie Packard</td><td>Twin Peaks</td><td>76%</td></tr>
+                     <tr><td>106. Faye Valentine</td><td>Cowboy Bebop</td><td>76%</td></tr>
+                     <tr><td>107. Gretchen Wieners</td><td>Mean Girls</td><td>76%</td></tr>
+                     <tr><td>108. Mal Cobb</td><td>Inception</td><td>76%</td></tr>
+                     <tr><td>109. Mr. Saito</td><td>Inception</td><td>76%</td></tr>
+                     <tr><td>110. James Taggart</td><td>Atlas Shrugged</td><td>76%</td></tr>
+                     <tr><td>111. Lisa</td><td>The Room</td><td>76%</td></tr>
+                     <tr><td>112. Count Alexei Vronsky</td><td>Anna Karenina</td><td>76%</td></tr>
+                     <tr><td>113. David Rose</td><td>Schitt's Creek</td><td>76%</td></tr>
+                     <tr><td>114. Father Faustus Blackwood</td><td>Chilling Adventures of Sabrina</td><td>76%</td></tr>
+                     <tr><td>115. Cyrus Beene</td><td>Scandal</td><td>76%</td></tr>
+                     <tr><td>116. Michaela Pratt</td><td>How To Get Away With Murder</td><td>76%</td></tr>
+                     <tr><td>117. Freddie Lounds</td><td>Hannibal</td><td>76%</td></tr>
+                     <tr><td>118. Damon Salvatore</td><td>The Vampire Diaries</td><td>76%</td></tr>
+                     <tr><td>119. Will Gardner</td><td>The Good Wife</td><td>76%</td></tr>
+                     <tr><td>120. Villanelle</td><td>Killing Eve</td><td>76%</td></tr>
+                     <tr><td>121. Petyr Baelish</td><td>Game of Thrones</td><td>75%</td></tr>
+                     <tr><td>122. Addison Montgomery</td><td>Grey's Anatomy</td><td>75%</td></tr>
+                     <tr><td>123. Mr. Burns</td><td>The Simpsons</td><td>75%</td></tr>
+                     <tr><td>124. Marie Schrader</td><td>Breaking Bad</td><td>75%</td></tr>
+                     <tr><td>125. Violet Crawley, Dowager Countess of Grantham</td><td>Downton Abbey</td><td>75%</td></tr>
+                     <tr><td>126. Samantha Jones</td><td>Sex and the City</td><td>75%</td></tr>
+                     <tr><td>127. Mercutio</td><td>Romeo and Juliet</td><td>75%</td></tr>
+                     <tr><td>128. Francisco d'Anconia</td><td>Atlas Shrugged</td><td>75%</td></tr>
+                     <tr><td>129. Elaine Benes</td><td>Seinfeld</td><td>75%</td></tr>
+                     <tr><td>130. Wendy Byrde</td><td>Ozark</td><td>75%</td></tr>
+                     <tr><td>131. Baron Vladimir Harkonnen</td><td>Dune</td><td>75%</td></tr>
+                     <tr><td>132. John Abruzzi</td><td>Prison Break</td><td>75%</td></tr>
+                     <tr><td>133. Rowan Pope</td><td>Scandal</td><td>75%</td></tr>
+                     <tr><td>134. Patty Hewes</td><td>Damages</td><td>75%</td></tr>
+                     <tr><td>135. Samuel Norton</td><td>The Shawshank Redemption</td><td>75%</td></tr>
+                     <tr><td>136. Robin Scherbatsky</td><td>How I Met Your Mother</td><td>75%</td></tr>
+                     <tr><td>137. Rhett Butler</td><td>Gone With the Wind</td><td>75%</td></tr>
+                     <tr><td>138. Alexander Conklin</td><td>The Bourne Identity</td><td>75%</td></tr>
+                     <tr><td>139. Dolores Umbridge</td><td>Harry Potter</td><td>74%</td></tr>
+                     <tr><td>140. Rachel Green</td><td>Friends</td><td>74%</td></tr>
+                     <tr><td>141. Kelly Kapoor</td><td>The Office</td><td>74%</td></tr>
+                     <tr><td>142. Ervin Burrell</td><td>The Wire</td><td>74%</td></tr>
+                     <tr><td>143. Audrey Horne</td><td>Twin Peaks</td><td>74%</td></tr>
+                     <tr><td>144. Charlie Harper</td><td>Two and Half Men</td><td>74%</td></tr>
+                     <tr><td>145. George Oscar 'Gob' Bluth</td><td>Arrested Development</td><td>74%</td></tr>
+                     <tr><td>146. Tahani Al-Jamil</td><td>The Good Place</td><td>74%</td></tr>
+                     <tr><td>147. Denny Crane</td><td>Boston Legal</td><td>74%</td></tr>
+                     <tr><td>148. Tom Haverford</td><td>Parks and Recreation</td><td>73%</td></tr>
+                     <tr><td>149. Shane Walsh</td><td>The Walking Dead</td><td>73%</td></tr>
+                     <tr><td>150. Joey Quinn</td><td>Dexter</td><td>73%</td></tr>
+                     <tr><td>151. Number Six</td><td>Battlestar Galactica</td><td>73%</td></tr>
+                     <tr><td>152. Eleanor Sung-Young</td><td>Crazy Rich Asians</td><td>73%</td></tr>
+                     <tr><td>153. Agent Smith</td><td>The Matrix</td><td>73%</td></tr>
+                     <tr><td>154. Smash Williams</td><td>Friday Night Lights</td><td>73%</td></tr>
+                     <tr><td>155. Mia Wallace</td><td>Pulp Fiction</td><td>73%</td></tr>
+                     <tr><td>156. Alexis Rose</td><td>Schitt's Creek</td><td>73%</td></tr>
+                     <tr><td>157. Zelda Spellman</td><td>Chilling Adventures of Sabrina</td><td>73%</td></tr>
+                     <tr><td>158. Olivia Pope</td><td>Scandal</td><td>73%</td></tr>
+                     <tr><td>159. Serena van der Woodsen</td><td>Gossip Girl</td><td>73%</td></tr>
+                     <tr><td>160. Carolyn Martens</td><td>Killing Eve</td><td>73%</td></tr>
+                     <tr><td>161. Byron Hadley</td><td>The Shawshank Redemption</td><td>73%</td></tr>
+                     <tr><td>162. Paulie 'Walnuts' Gualtieri</td><td>The Sopranos</td><td>73%</td></tr>
+                     <tr><td>163. Daenerys Targaryen</td><td>Game of Thrones</td><td>72%</td></tr>
+                     <tr><td>164. Olenna Tyrell</td><td>Game of Thrones</td><td>72%</td></tr>
+                     <tr><td>165. Oberyn Martell</td><td>Game of Thrones</td><td>72%</td></tr>
+                     <tr><td>166. Zuko</td><td>Avatar The Last Airbender</td><td>72%</td></tr>
+                     <tr><td>167. William Rawls</td><td>The Wire</td><td>72%</td></tr>
+                     <tr><td>168. Russell 'Stringer' Bell</td><td>The Wire</td><td>72%</td></tr>
+                     <tr><td>169. Daisy Buchanan</td><td>The Great Gatsby</td><td>72%</td></tr>
+                     <tr><td>170. Roy Petty</td><td>Ozark</td><td>72%</td></tr>
+                     <tr><td>171. Princess Anna Karenina</td><td>Anna Karenina</td><td>72%</td></tr>
+                     <tr><td>172. Bree Van de Kamp</td><td>Desperate Housewives</td><td>72%</td></tr>
+                     <tr><td>173. The Wicked Witch of the West</td><td>The Wizard of Oz</td><td>72%</td></tr>
+                     <tr><td>174. Annalise Keating</td><td>How To Get Away With Murder</td><td>72%</td></tr>
+                     <tr><td>175. Dr. Hannibal Lecter</td><td>Hannibal</td><td>72%</td></tr>
+                     <tr><td>176. Cary Agos</td><td>The Good Wife</td><td>72%</td></tr>
+                     <tr><td>177. India Wilkes</td><td>Gone With the Wind</td><td>72%</td></tr>
+                     <tr><td>178. James Bond</td><td>Tommorrow Never Dies</td><td>72%</td></tr>
+                     <tr><td>179. Margaery Tyrell</td><td>Game of Thrones</td><td>71%</td></tr>
+                     <tr><td>180. Lydia Bennet</td><td>Pride and Prejudice</td><td>71%</td></tr>
+                     <tr><td>181. Effie Trinket</td><td>The Hunger Games</td><td>71%</td></tr>
+                     <tr><td>182. Gaius Baltar</td><td>Battlestar Galactica</td><td>71%</td></tr>
+                     <tr><td>183. Colin Khoo</td><td>Crazy Rich Asians</td><td>71%</td></tr>
+                     <tr><td>184. Hector Barbossa</td><td>Pirates of the Caribbean</td><td>71%</td></tr>
+                     <tr><td>185. Mycroft Holmes</td><td>Sherlock</td><td>71%</td></tr>
+                     <tr><td>186. Alex Vause</td><td>Orange is the New Black</td><td>71%</td></tr>
+                     <tr><td>187. Maeby Funke</td><td>Arrested Development</td><td>71%</td></tr>
+                     <tr><td>188. Agatha</td><td>Chilling Adventures of Sabrina</td><td>71%</td></tr>
+                     <tr><td>189. Dr. Neil Melendez</td><td>The Good Doctor</td><td>71%</td></tr>
+                     <tr><td>190. Diane Lockhart</td><td>The Good Wife</td><td>71%</td></tr>
+                     <tr><td>191. Konstantin</td><td>Killing Eve</td><td>71%</td></tr>
+                     <tr><td>192. Claire Standish</td><td>The Breakfast Club</td><td>71%</td></tr>
+                     <tr><td>193. Silvio Dante</td><td>The Sopranos</td><td>71%</td></tr>
+                     <tr><td>194. Cornelius Fudge</td><td>Harry Potter</td><td>70%</td></tr>
+                     <tr><td>195. Tony Stark</td><td>Marvel Cinematic Universe</td><td>70%</td></tr>
+                     <tr><td>196. Thanos</td><td>Marvel Cinematic Universe</td><td>70%</td></tr>
+                     <tr><td>197. Andrea</td><td>The Walking Dead</td><td>70%</td></tr>
+                     <tr><td>198. Thomas Matthews</td><td>Dexter</td><td>70%</td></tr>
+                     <tr><td>199. Maurice Levy</td><td>The Wire</td><td>70%</td></tr>
+                     <tr><td>200. Rachel Menken</td><td>Mad Men</td><td>70%</td></tr>
+                     <tr><td>201. Cypher</td><td>The Matrix</td><td>70%</td></tr>
+                     <tr><td>202. Jay Gatsby</td><td>The Great Gatsby</td><td>70%</td></tr>
+                     <tr><td>203. the Alien</td><td>Alien</td><td>70%</td></tr>
+                     <tr><td>204. Michelle</td><td>The Room</td><td>70%</td></tr>
+                     <tr><td>205. Kevin Pearson</td><td>This Is Us</td><td>70%</td></tr>
+                     <tr><td>206. Charlotte Byrde</td><td>Ozark</td><td>70%</td></tr>
+                     <tr><td>207. Bob Kelso</td><td>Scrubs</td><td>70%</td></tr>
+                     <tr><td>208. Brad Bellick</td><td>Prison Break</td><td>70%</td></tr>
+                     <tr><td>209. Mrs. Bennet</td><td>Pride and Prejudice</td><td>69%</td></tr>
+                     <tr><td>210. Elim Garak</td><td>Star Trek Deep Space Nine</td><td>69%</td></tr>
+                     <tr><td>211. Krusty the Clown</td><td>The Simpsons</td><td>69%</td></tr>
+                     <tr><td>212. Tyler Durden</td><td>Fight Club</td><td>69%</td></tr>
+                     <tr><td>213. Carrie Bradshaw</td><td>Sex and the City</td><td>69%</td></tr>
+                     <tr><td>214. Maria LaGuerta</td><td>Dexter</td><td>69%</td></tr>
+                     <tr><td>215. Theresa Cullen</td><td>Westworld</td><td>69%</td></tr>
+                     <tr><td>216. Anthony Garcia</td><td>The Dark Knight</td><td>69%</td></tr>
+                     <tr><td>217. James Norrington</td><td>Pirates of the Caribbean</td><td>69%</td></tr>
+                     <tr><td>218. Bobby Briggs</td><td>Twin Peaks</td><td>69%</td></tr>
+                     <tr><td>219. Margaret 'Hot Lips' Houlihan</td><td>M*A*S*H</td><td>69%</td></tr>
+                     <tr><td>220. Rachel Berry</td><td>Glee</td><td>69%</td></tr>
+                     <tr><td>221. John Murphy</td><td>The 100</td><td>69%</td></tr>
+                     <tr><td>222. Laurel Lance</td><td>Arrow</td><td>69%</td></tr>
+                     <tr><td>223. Dr. Harry Wells</td><td>The Flash</td><td>69%</td></tr>
+                     <tr><td>224. Dr. Marcus Andrews</td><td>The Good Doctor</td><td>69%</td></tr>
+                     <tr><td>225. Martha Rodgers</td><td>Castle</td><td>69%</td></tr>
+                     <tr><td>226. Scorpius</td><td>Farscape</td><td>69%</td></tr>
+                     <tr><td>227. Janice Soprano</td><td>The Sopranos</td><td>69%</td></tr>
+                     <tr><td>228. Michael Corleone</td><td>The Godfather</td><td>69%</td></tr>
+                     <tr><td>229. Viktor Krum</td><td>Harry Potter</td><td>68%</td></tr>
+                     <tr><td>230. Petunia Dursley</td><td>Harry Potter</td><td>68%</td></tr>
+                     <tr><td>231. James Doakes</td><td>Dexter</td><td>68%</td></tr>
+                     <tr><td>232. Spiros 'Vondas' Vondopoulos</td><td>The Wire</td><td>68%</td></tr>
+                     <tr><td>233. Bruce Wayne</td><td>The Dark Knight</td><td>68%</td></tr>
+                     <tr><td>234. The Joker</td><td>The Dark Knight</td><td>68%</td></tr>
+                     <tr><td>235. Saul Tigh</td><td>Battlestar Galactica</td><td>68%</td></tr>
+                     <tr><td>236. Erlich Bachman</td><td>Silicon Valley</td><td>68%</td></tr>
+                     <tr><td>237. Vincent Vega</td><td>Pulp Fiction</td><td>68%</td></tr>
+                     <tr><td>238. Anthony DiNozzo</td><td>NCIS</td><td>68%</td></tr>
+                     <tr><td>239. Frank Burns</td><td>M*A*S*H</td><td>68%</td></tr>
+                     <tr><td>240. The Wizard of Oz</td><td>The Wizard of Oz</td><td>68%</td></tr>
+                     <tr><td>241. Abby Whelan</td><td>Scandal</td><td>68%</td></tr>
+                     <tr><td>242. Laurel Castillo</td><td>How To Get Away With Murder</td><td>68%</td></tr>
+                     <tr><td>243. F. Tony Scarapiducci</td><td>Space Force</td><td>68%</td></tr>
+                     <tr><td>244. Thea Queen</td><td>Arrow</td><td>68%</td></tr>
+                     <tr><td>245. Allison Hargreeves</td><td>The Umbrella Academy</td><td>68%</td></tr>
+                     <tr><td>246. Amy Brookheimer</td><td>Veep</td><td>68%</td></tr>
+                     <tr><td>247. Bianca Stratford</td><td>10 Things I Hate About You</td><td>68%</td></tr>
+                     <tr><td>248. Principal Vernon</td><td>The Breakfast Club</td><td>68%</td></tr>
+                     <tr><td>249. Gus Fring</td><td>Breaking Bad</td><td>67%</td></tr>
+                     <tr><td>250. Marty Hart</td><td>True Detective</td><td>67%</td></tr>
+                     <tr><td>251. Britta Perry</td><td>Community</td><td>67%</td></tr>
+                     <tr><td>252. Ben Chang</td><td>Community</td><td>67%</td></tr>
+                     <tr><td>253. Merle Dixon</td><td>The Walking Dead</td><td>67%</td></tr>
+                     <tr><td>254. Lyla Garrity</td><td>Friday Night Lights</td><td>67%</td></tr>
+                     <tr><td>255. Emmett Cullen</td><td>Twilight</td><td>67%</td></tr>
+                     <tr><td>256. Perry Cox</td><td>Scrubs</td><td>67%</td></tr>
+                     <tr><td>257. Jessa Johansson</td><td>Girls</td><td>67%</td></tr>
+                     <tr><td>258. Theodore 'T-Bag' Bagwell</td><td>Prison Break</td><td>67%</td></tr>
+                     <tr><td>259. Major Arnold Toht</td><td>Raiders of the Lost Ark</td><td>67%</td></tr>
+                     <tr><td>260. Michael</td><td>The Good Place</td><td>67%</td></tr>
+                     <tr><td>261. Asher Millstone</td><td>How To Get Away With Murder</td><td>67%</td></tr>
+                     <tr><td>262. Frank Delfino</td><td>How To Get Away With Murder</td><td>67%</td></tr>
+                     <tr><td>263. Dr. Alana Bloom</td><td>Hannibal</td><td>67%</td></tr>
+                     <tr><td>264. Dr. Bedelia Du Maurier</td><td>Hannibal</td><td>67%</td></tr>
+                     <tr><td>265. Tess Ocean</td><td>Ocean's 11</td><td>67%</td></tr>
+                     <tr><td>266. Carmela Soprano</td><td>The Sopranos</td><td>67%</td></tr>
+                     <tr><td>267. Melisandre</td><td>Game of Thrones</td><td>66%</td></tr>
+                     <tr><td>268. Bart Simpson</td><td>The Simpsons</td><td>66%</td></tr>
+                     <tr><td>269. Walter White</td><td>Breaking Bad</td><td>66%</td></tr>
+                     <tr><td>270. Skyler White</td><td>Breaking Bad</td><td>66%</td></tr>
+                     <tr><td>271. Joan Holloway</td><td>Mad Men</td><td>66%</td></tr>
+                     <tr><td>272. Elizabeth Swann</td><td>Pirates of the Caribbean</td><td>66%</td></tr>
+                     <tr><td>273. Jian-Yang</td><td>Silicon Valley</td><td>66%</td></tr>
+                     <tr><td>274. Romeo Montague</td><td>Romeo and Juliet</td><td>66%</td></tr>
+                     <tr><td>275. Myrtle Wilson</td><td>The Great Gatsby</td><td>66%</td></tr>
+                     <tr><td>276. Dagny Taggart</td><td>Atlas Shrugged</td><td>66%</td></tr>
+                     <tr><td>277. Mark</td><td>The Room</td><td>66%</td></tr>
+                     <tr><td>278. Countess Lidia Ivanovna</td><td>Anna Karenina</td><td>66%</td></tr>
+                     <tr><td>279. Red John</td><td>The Mentalist</td><td>66%</td></tr>
+                     <tr><td>280. Kurt Hummel</td><td>Glee</td><td>66%</td></tr>
+                     <tr><td>281. Oliver Queen</td><td>Arrow</td><td>66%</td></tr>
+                     <tr><td>282. Rusty Ryan</td><td>Ocean's 11</td><td>66%</td></tr>
+                     <tr><td>283. Sansa Stark</td><td>Game of Thrones</td><td>65%</td></tr>
+                     <tr><td>284. Andy Bernard</td><td>The Office</td><td>65%</td></tr>
+                     <tr><td>285. James 'Sawyer' Ford</td><td>LOST</td><td>65%</td></tr>
+                     <tr><td>286. Preston Burke</td><td>Grey's Anatomy</td><td>65%</td></tr>
+                     <tr><td>287. Edna Krabappel</td><td>The Simpsons</td><td>65%</td></tr>
+                     <tr><td>288. Jayne Cobb</td><td>Firefly + Serenity</td><td>65%</td></tr>
+                     <tr><td>289. June George</td><td>Mean Girls</td><td>65%</td></tr>
+                     <tr><td>290. Sid Phillips</td><td>Toy Story</td><td>65%</td></tr>
+                     <tr><td>291. Tyra Collette</td><td>Friday Night Lights</td><td>65%</td></tr>
+                     <tr><td>292. Jerry Seinfeld</td><td>Seinfeld</td><td>65%</td></tr>
+                     <tr><td>293. Hannah Horvath</td><td>Girls</td><td>65%</td></tr>
+                     <tr><td>294. Noah Puckerman</td><td>Glee</td><td>65%</td></tr>
+                     <tr><td>295. Dr. Robert Chase</td><td>House, M.D.</td><td>65%</td></tr>
+                     <tr><td>296. Eleanor Shellstrop</td><td>The Good Place</td><td>65%</td></tr>
+                     <tr><td>297. Diego Hargreeves</td><td>The Umbrella Academy</td><td>65%</td></tr>
+                     <tr><td>298. Caroline Forbes</td><td>The Vampire Diaries</td><td>65%</td></tr>
+                     <tr><td>299. Sarah Cameron</td><td>Outer Banks</td><td>65%</td></tr>
+                     <tr><td>300. Tom Shayes</td><td>Damages</td><td>65%</td></tr>
+                     <tr><td>301. Dr. Hannibal Lecter</td><td>The Silence of the Lambs</td><td>65%</td></tr>
+                     <tr><td>302. Bronn</td><td>Game of Thrones</td><td>64%</td></tr>
+                     <tr><td>303. Cristina Yang</td><td>Grey's Anatomy</td><td>64%</td></tr>
+                     <tr><td>304. Sarah O'Brien</td><td>Downton Abbey</td><td>64%</td></tr>
+                     <tr><td>305. Maeve Millay</td><td>Westworld</td><td>64%</td></tr>
+                     <tr><td>306. Dr. Ian Malcolm</td><td>Jurassic Park</td><td>64%</td></tr>
+                     <tr><td>307. Sherlock Holmes</td><td>Sherlock</td><td>64%</td></tr>
+                     <tr><td>308. Benvolio</td><td>Romeo and Juliet</td><td>64%</td></tr>
+                     <tr><td>309. Theodore Laurence</td><td>Little Women</td><td>64%</td></tr>
+                     <tr><td>310. Dom Cobb</td><td>Inception</td><td>64%</td></tr>
+                     <tr><td>311. Ellis Wyatt</td><td>Atlas Shrugged</td><td>64%</td></tr>
+                     <tr><td>312. Edward Cullen</td><td>Twilight</td><td>64%</td></tr>
+                     <tr><td>313. Darlene Snell</td><td>Ozark</td><td>64%</td></tr>
+                     <tr><td>314. Prince Stepan 'Stiva' Oblonsky</td><td>Anna Karenina</td><td>64%</td></tr>
+                     <tr><td>315. Octavia Blake</td><td>The 100</td><td>64%</td></tr>
+                     <tr><td>316. Jake Ballard</td><td>Scandal</td><td>64%</td></tr>
+                     <tr><td>317. Erin Naird</td><td>Space Force</td><td>64%</td></tr>
+                     <tr><td>318. Jonah Ryan</td><td>Veep</td><td>64%</td></tr>
+                     <tr><td>319. Alan Shore</td><td>Boston Legal</td><td>64%</td></tr>
+                     <tr><td>320. Shirley Schmidt</td><td>Boston Legal</td><td>64%</td></tr>
+                     <tr><td>321. Michael Kelso</td><td>That 70's Show</td><td>63%</td></tr>
+                     <tr><td>322. Nelson Muntz</td><td>The Simpsons</td><td>63%</td></tr>
+                     <tr><td>323. Han Solo</td><td>Star Wars</td><td>63%</td></tr>
+                     <tr><td>324. Saul Goodman</td><td>Breaking Bad</td><td>63%</td></tr>
+                     <tr><td>325. Preston 'Bodie' Broadus</td><td>The Wire</td><td>63%</td></tr>
+                     <tr><td>326. Dolores Abernathy</td><td>Westworld</td><td>63%</td></tr>
+                     <tr><td>327. Donna Hayward</td><td>Twin Peaks</td><td>63%</td></tr>
+                     <tr><td>328. Mr. Potato Head</td><td>Toy Story</td><td>63%</td></tr>
+                     <tr><td>329. Flaca Gonzales</td><td>Orange is the New Black</td><td>63%</td></tr>
+                     <tr><td>330. Nurse Mildred Ratched</td><td>One Flew Over the Cuckoo's Nest</td><td>63%</td></tr>
+                     <tr><td>331. Andrew Clark</td><td>The Breakfast Club</td><td>63%</td></tr>
+                     <tr><td>332. Sgt. Sean Dignam</td><td>The Departed</td><td>63%</td></tr>
+                     <tr><td>333. A.J. Soprano</td><td>The Sopranos</td><td>63%</td></tr>
+                     <tr><td>334. Stannis Baratheon</td><td>Game of Thrones</td><td>62%</td></tr>
+                     <tr><td>335. Shae</td><td>Game of Thrones</td><td>62%</td></tr>
+                     <tr><td>336. Robert Crawley, 7th Earl of Grantham</td><td>Downton Abbey</td><td>62%</td></tr>
+                     <tr><td>337. Penny</td><td>The Big Bang Theory</td><td>62%</td></tr>
+                     <tr><td>338. Lori Grimes</td><td>The Walking Dead</td><td>62%</td></tr>
+                     <tr><td>339. Robert Ford</td><td>Westworld</td><td>62%</td></tr>
+                     <tr><td>340. Rick Blaine</td><td>Casablanca</td><td>62%</td></tr>
+                     <tr><td>341. Salvatore Romano</td><td>Mad Men</td><td>62%</td></tr>
+                     <tr><td>342. Ringo</td><td>Pulp Fiction</td><td>62%</td></tr>
+                     <tr><td>343. William Riker</td><td>Star Trek The Next Generation</td><td>62%</td></tr>
+                     <tr><td>344. Johnny Rose</td><td>Schitt's Creek</td><td>62%</td></tr>
+                     <tr><td>345. Dr. Gregory House</td><td>House, M.D.</td><td>62%</td></tr>
+                     <tr><td>346. Sabrina Spellman</td><td>Chilling Adventures of Sabrina</td><td>62%</td></tr>
+                     <tr><td>347. Jack Crawford</td><td>Hannibal</td><td>62%</td></tr>
+                     <tr><td>348. Kalinda Sharma</td><td>The Good Wife</td><td>62%</td></tr>
+                     <tr><td>349. Meadow Soprano</td><td>The Sopranos</td><td>62%</td></tr>
+                     <tr><td>350. Rick Sanchez</td><td>Rick and Morty</td><td>62%</td></tr>
+                     <tr><td>351. Tyrion Lannister</td><td>Game of Thrones</td><td>61%</td></tr>
+                     <tr><td>352. Horace Slughorn</td><td>Harry Potter</td><td>61%</td></tr>
+                     <tr><td>353. Stanley Hudson</td><td>The Office</td><td>61%</td></tr>
+                     <tr><td>354. Josh Lyman</td><td>The West Wing</td><td>61%</td></tr>
+                     <tr><td>355. Gamora</td><td>Marvel Cinematic Universe</td><td>61%</td></tr>
+                     <tr><td>356. Alex Karev</td><td>Grey's Anatomy</td><td>61%</td></tr>
+                     <tr><td>357. Thomas 'Herc' Hauk</td><td>The Wire</td><td>61%</td></tr>
+                     <tr><td>358. Henry Francis</td><td>Mad Men</td><td>61%</td></tr>
+                     <tr><td>359. Rosa Diaz</td><td>Brooklyn Nine-Nine</td><td>61%</td></tr>
+                     <tr><td>360. Bonnie Winterbottom</td><td>How To Get Away With Murder</td><td>61%</td></tr>
+                     <tr><td>361. Nate Archibald</td><td>Gossip Girl</td><td>61%</td></tr>
+                     <tr><td>362. Gisele Yashar</td><td>Fast & Furious</td><td>61%</td></tr>
+                     <tr><td>363. Danny Ocean</td><td>Ocean's 11</td><td>61%</td></tr>
+                     <tr><td>364. Monica Geller</td><td>Friends</td><td>60%</td></tr>
+                     <tr><td>365. Benjamin Linus</td><td>LOST</td><td>60%</td></tr>
+                     <tr><td>366. Kate Austen</td><td>LOST</td><td>60%</td></tr>
+                     <tr><td>367. Juliet Burke</td><td>LOST</td><td>60%</td></tr>
+                     <tr><td>368. Bernadette Rostenkowski</td><td>The Big Bang Theory</td><td>60%</td></tr>
+                     <tr><td>369. Kara 'Starbuck' Thrace</td><td>Battlestar Galactica</td><td>60%</td></tr>
+                     <tr><td>370. Angel</td><td>Buffy the Vampire Slayer</td><td>60%</td></tr>
+                     <tr><td>371. John Hammond</td><td>Jurassic Park</td><td>60%</td></tr>
+                     <tr><td>372. Jack Sparrow</td><td>Pirates of the Caribbean</td><td>60%</td></tr>
+                     <tr><td>373. Dinesh Chugtai</td><td>Silicon Valley</td><td>60%</td></tr>
+                     <tr><td>374. Monica Hall</td><td>Silicon Valley</td><td>60%</td></tr>
+                     <tr><td>375. Jules Winnfield</td><td>Pulp Fiction</td><td>60%</td></tr>
+                     <tr><td>376. Randle Patrick McMurphy</td><td>One Flew Over the Cuckoo's Nest</td><td>60%</td></tr>
+                     <tr><td>377. Mushu</td><td>Mulan</td><td>60%</td></tr>
+                     <tr><td>378. John Bender</td><td>The Breakfast Club</td><td>60%</td></tr>
+                     <tr><td>379. Cobra Bubbles</td><td>Lilo & Stitch</td><td>60%</td></tr>
+                     <tr><td>380. Vito Corleone</td><td>The Godfather</td><td>60%</td></tr>
+                     <tr><td>381. Angela Martin</td><td>The Office</td><td>59%</td></tr>
+                     <tr><td>382. Nick Fury</td><td>Marvel Cinematic Universe</td><td>59%</td></tr>
+                     <tr><td>383. Derek Shepherd</td><td>Grey's Anatomy</td><td>59%</td></tr>
+                     <tr><td>384. Rhonda Pearlman</td><td>The Wire</td><td>59%</td></tr>
+                     <tr><td>385. Ziggy Sobotka</td><td>The Wire</td><td>59%</td></tr>
+                     <tr><td>386. Lee 'Apollo' Adama</td><td>Battlestar Galactica</td><td>59%</td></tr>
+                     <tr><td>387. Dennis Nedry</td><td>Jurassic Park</td><td>59%</td></tr>
+                     <tr><td>388. Seth</td><td>Superbad</td><td>59%</td></tr>
+                     <tr><td>389. Buzz Lightyear</td><td>Toy Story</td><td>59%</td></tr>
+                     <tr><td>390. Johnny</td><td>The Room</td><td>59%</td></tr>
+                     <tr><td>391. Dr. Eric Foreman</td><td>House, M.D.</td><td>59%</td></tr>
+                     <tr><td>392. Elena Gilbert</td><td>The Vampire Diaries</td><td>59%</td></tr>
+                     <tr><td>393. Mr. Robot</td><td>Mr. Robot</td><td>59%</td></tr>
+                     <tr><td>394. Angela Moss</td><td>Mr. Robot</td><td>59%</td></tr>
+                     <tr><td>395. M</td><td>Tommorrow Never Dies</td><td>59%</td></tr>
+                     <tr><td>396. Abbey Bartlet</td><td>The West Wing</td><td>58%</td></tr>
+                     <tr><td>397. Midge Pinciotti</td><td>That 70's Show</td><td>58%</td></tr>
+                     <tr><td>398. April Ludgate</td><td>Parks and Recreation</td><td>58%</td></tr>
+                     <tr><td>399. The Operative</td><td>Firefly + Serenity</td><td>58%</td></tr>
+                     <tr><td>400. Goh Peik Lin</td><td>Crazy Rich Asians</td><td>58%</td></tr>
+                     <tr><td>401. Julia</td><td>Cowboy Bebop</td><td>58%</td></tr>
+                     <tr><td>402. Ash</td><td>Alien</td><td>58%</td></tr>
+                     <tr><td>403. Red Reznikov</td><td>Orange is the New Black</td><td>58%</td></tr>
+                     <tr><td>404. Julie Taylor</td><td>Friday Night Lights</td><td>58%</td></tr>
+                     <tr><td>405. George Costanza</td><td>Seinfeld</td><td>58%</td></tr>
+                     <tr><td>406. Dr. Lisa Cuddy</td><td>House, M.D.</td><td>58%</td></tr>
+                     <tr><td>407. Alicia Florrick</td><td>The Good Wife</td><td>58%</td></tr>
+                     <tr><td>408. Chiana</td><td>Farscape</td><td>58%</td></tr>
+                     <tr><td>409. Theon Greyjoy</td><td>Game of Thrones</td><td>57%</td></tr>
+                     <tr><td>410. Fleur Delacour</td><td>Harry Potter</td><td>57%</td></tr>
+                     <tr><td>411. Mr. Darcy</td><td>Pride and Prejudice</td><td>57%</td></tr>
+                     <tr><td>412. Black Widow</td><td>Marvel Cinematic Universe</td><td>57%</td></tr>
+                     <tr><td>413. Jane Margolis</td><td>Breaking Bad</td><td>57%</td></tr>
+                     <tr><td>414. Sheldon Cooper</td><td>The Big Bang Theory</td><td>57%</td></tr>
+                     <tr><td>415. Leslie Winkle</td><td>The Big Bang Theory</td><td>57%</td></tr>
+                     <tr><td>416. Ian Duncan</td><td>Community</td><td>57%</td></tr>
+                     <tr><td>417. Marla Singer</td><td>Fight Club</td><td>57%</td></tr>
+                     <tr><td>418. Miranda Hobbes</td><td>Sex and the City</td><td>57%</td></tr>
+                     <tr><td>419. Jimmy McNulty</td><td>The Wire</td><td>57%</td></tr>
+                     <tr><td>420. Paul Kinsey</td><td>Mad Men</td><td>57%</td></tr>
+                     <tr><td>421. Elliot Stabler</td><td>Law & Order SVU</td><td>57%</td></tr>
+                     <tr><td>422. Elliot Reid</td><td>Scrubs</td><td>57%</td></tr>
+                     <tr><td>423. Worf</td><td>Star Trek The Next Generation</td><td>57%</td></tr>
+                     <tr><td>424. Nate Lahey</td><td>How To Get Away With Murder</td><td>57%</td></tr>
+                     <tr><td>425. Nick Stokes</td><td>CSI Crime Scene Investigation</td><td>57%</td></tr>
+                     <tr><td>426. Kat Stratford</td><td>10 Things I Hate About You</td><td>57%</td></tr>
+                     <tr><td>427. Richard Castle</td><td>Castle</td><td>57%</td></tr>
+                     <tr><td>428. Varys</td><td>Game of Thrones</td><td>56%</td></tr>
+                     <tr><td>429. Thor</td><td>Marvel Cinematic Universe</td><td>56%</td></tr>
+                     <tr><td>430. Red Forman</td><td>That 70's Show</td><td>56%</td></tr>
+                     <tr><td>431. Gollum</td><td>Lord of the Rings</td><td>56%</td></tr>
+                     <tr><td>432. Lady Edith Crawley</td><td>Downton Abbey</td><td>56%</td></tr>
+                     <tr><td>433. Inara Serra</td><td>Firefly + Serenity</td><td>56%</td></tr>
+                     <tr><td>434. Nick Sobotka</td><td>The Wire</td><td>56%</td></tr>
+                     <tr><td>435. Sharon 'Boomer' Valerii</td><td>Battlestar Galactica</td><td>56%</td></tr>
+                     <tr><td>436. Harry Crane</td><td>Mad Men</td><td>56%</td></tr>
+                     <tr><td>437. Juliet Capulet</td><td>Romeo and Juliet</td><td>56%</td></tr>
+                     <tr><td>438. Karen Smith</td><td>Mean Girls</td><td>56%</td></tr>
+                     <tr><td>439. Lorna Morello</td><td>Orange is the New Black</td><td>56%</td></tr>
+                     <tr><td>440. Shoshanna Shapiro</td><td>Girls</td><td>56%</td></tr>
+                     <tr><td>441. Tuco</td><td>The Good, the Bad, and the Ugly</td><td>56%</td></tr>
+                     <tr><td>442. Jenny Curran</td><td>Forrest Gump</td><td>56%</td></tr>
+                     <tr><td>443. Dan Taylor</td><td>Forrest Gump</td><td>56%</td></tr>
+                     <tr><td>444. Mercedes Jones</td><td>Glee</td><td>56%</td></tr>
+                     <tr><td>445. Clarke Griffin</td><td>The 100</td><td>56%</td></tr>
+                     <tr><td>446. General Mark R. Naird</td><td>Space Force</td><td>56%</td></tr>
+                     <tr><td>447. Dominique DiPierro</td><td>Mr. Robot</td><td>56%</td></tr>
+                     <tr><td>448. Yao</td><td>Mulan</td><td>56%</td></tr>
+                     <tr><td>449. Letty Ortiz</td><td>Fast & Furious</td><td>56%</td></tr>
+                     <tr><td>450. Ross Geller</td><td>Friends</td><td>55%</td></tr>
+                     <tr><td>451. Sam Seaborn</td><td>The West Wing</td><td>55%</td></tr>
+                     <tr><td>452. Meredith Grey</td><td>Grey's Anatomy</td><td>55%</td></tr>
+                     <tr><td>453. Bert Cooper</td><td>Mad Men</td><td>55%</td></tr>
+                     <tr><td>454. Buffy Summers</td><td>Buffy the Vampire Slayer</td><td>55%</td></tr>
+                     <tr><td>455. Astrid Leong-Teo</td><td>Crazy Rich Asians</td><td>55%</td></tr>
+                     <tr><td>456. Aaron Samuels</td><td>Mean Girls</td><td>55%</td></tr>
+                     <tr><td>457. Tim Riggins</td><td>Friday Night Lights</td><td>55%</td></tr>
+                     <tr><td>458. Butch Coolidge</td><td>Pulp Fiction</td><td>55%</td></tr>
+                     <tr><td>459. Lady Jessica</td><td>Dune</td><td>55%</td></tr>
+                     <tr><td>460. Tasha Yar</td><td>Star Trek The Next Generation</td><td>55%</td></tr>
+                     <tr><td>461. Benjamin Miles 'C-Note' Franklin</td><td>Prison Break</td><td>55%</td></tr>
+                     <tr><td>462. Betty Cooper</td><td>Riverdale</td><td>55%</td></tr>
+                     <tr><td>463. Quentin Lance</td><td>Arrow</td><td>55%</td></tr>
+                     <tr><td>464. Li Shang</td><td>Mulan</td><td>55%</td></tr>
+                     <tr><td>465. Walter Stratford</td><td>10 Things I Hate About You</td><td>55%</td></tr>
+                     <tr><td>466. Jack Crawford</td><td>The Silence of the Lambs</td><td>55%</td></tr>
+                     <tr><td>467. Severus Snape</td><td>Harry Potter</td><td>54%</td></tr>
+                     <tr><td>468. Meredith Palmer</td><td>The Office</td><td>54%</td></tr>
+                     <tr><td>469. Peter Jason Quill</td><td>Marvel Cinematic Universe</td><td>54%</td></tr>
+                     <tr><td>470. Steven Hyde</td><td>That 70's Show</td><td>54%</td></tr>
+                     <tr><td>471. Princess Leia</td><td>Star Wars</td><td>54%</td></tr>
+                     <tr><td>472. Hank Schrader</td><td>Breaking Bad</td><td>54%</td></tr>
+                     <tr><td>473. Haymitch Abernathy</td><td>The Hunger Games</td><td>54%</td></tr>
+                     <tr><td>474. Debra Morgan</td><td>Dexter</td><td>54%</td></tr>
+                     <tr><td>475. Cedric Daniels</td><td>The Wire</td><td>54%</td></tr>
+                     <tr><td>476. Bunk Moreland</td><td>The Wire</td><td>54%</td></tr>
+                     <tr><td>477. Lane Pryce</td><td>Mad Men</td><td>54%</td></tr>
+                     <tr><td>478. Bertram Gilfoyle</td><td>Silicon Valley</td><td>54%</td></tr>
+                     <tr><td>479. Nicky Nichols</td><td>Orange is the New Black</td><td>54%</td></tr>
+                     <tr><td>480. Cosmo Kramer</td><td>Seinfeld</td><td>54%</td></tr>
+                     <tr><td>481. Quinn Perkins</td><td>Scandal</td><td>54%</td></tr>
+                     <tr><td>482. Brian Zeller</td><td>Hannibal</td><td>54%</td></tr>
+                     <tr><td>483. Iris West</td><td>The Flash</td><td>54%</td></tr>
+                     <tr><td>484. Leo McGarry</td><td>The West Wing</td><td>53%</td></tr>
+                     <tr><td>485. C. J. Cregg</td><td>The West Wing</td><td>53%</td></tr>
+                     <tr><td>486. Toph Beifong</td><td>Avatar The Last Airbender</td><td>53%</td></tr>
+                     <tr><td>487. Jack Shephard</td><td>LOST</td><td>53%</td></tr>
+                     <tr><td>488. Dr. Strange</td><td>Marvel Cinematic Universe</td><td>53%</td></tr>
+                     <tr><td>489. Moe Szyslak</td><td>The Simpsons</td><td>53%</td></tr>
+                     <tr><td>490. Maggie Hart</td><td>True Detective</td><td>53%</td></tr>
+                     <tr><td>491. Craig Pelton</td><td>Community</td><td>53%</td></tr>
+                     <tr><td>492. Dexter Morgan</td><td>Dexter</td><td>53%</td></tr>
+                     <tr><td>493. Ellis Carver</td><td>The Wire</td><td>53%</td></tr>
+                     <tr><td>494. Odafin Tutuola</td><td>Law & Order SVU</td><td>53%</td></tr>
+                     <tr><td>495. Walter Skinner</td><td>The X-Files</td><td>53%</td></tr>
+                     <tr><td>496. Henry Rearden</td><td>Atlas Shrugged</td><td>53%</td></tr>
+                     <tr><td>497. John Galt</td><td>Atlas Shrugged</td><td>53%</td></tr>
+                     <tr><td>498. Jasper Hale</td><td>Twilight</td><td>53%</td></tr>
+                     <tr><td>499. Marty Byrde</td><td>Ozark</td><td>53%</td></tr>
+                     <tr><td>500. Benjamin 'Hawkeye' Pierce</td><td>M*A*S*H</td><td>53%</td></tr>
+                     <tr><td>501. Sara Sidle</td><td>CSI Crime Scene Investigation</td><td>53%</td></tr>
+                     <tr><td>502. Eve Polastri</td><td>Killing Eve</td><td>53%</td></tr>
+                     <tr><td>503. Peter Clemenza</td><td>The Godfather</td><td>53%</td></tr>
+                     <tr><td>504. Sandor Clegane</td><td>Game of Thrones</td><td>52%</td></tr>
+                     <tr><td>505. Robb Stark</td><td>Game of Thrones</td><td>52%</td></tr>
+                     <tr><td>506. Asha Greyjoy</td><td>Game of Thrones</td><td>52%</td></tr>
+                     <tr><td>507. Michael Scott</td><td>The Office</td><td>52%</td></tr>
+                     <tr><td>508. Kira Nerys</td><td>Star Trek Deep Space Nine</td><td>52%</td></tr>
+                     <tr><td>509. Julian Bashir</td><td>Star Trek Deep Space Nine</td><td>52%</td></tr>
+                     <tr><td>510. Ron Swanson</td><td>Parks and Recreation</td><td>52%</td></tr>
+                     <tr><td>511. Malcolm Reynolds</td><td>Firefly + Serenity</td><td>52%</td></tr>
+                     <tr><td>512. Charlotte York</td><td>Sex and the City</td><td>52%</td></tr>
+                     <tr><td>513. Omar Little</td><td>The Wire</td><td>52%</td></tr>
+                     <tr><td>514. Ashley Stubbs</td><td>Westworld</td><td>52%</td></tr>
+                     <tr><td>515. Spike Spiegel</td><td>Cowboy Bebop</td><td>52%</td></tr>
+                     <tr><td>516. Pennsatucky Doggett</td><td>Orange is the New Black</td><td>52%</td></tr>
+                     <tr><td>517. Berta</td><td>Two and Half Men</td><td>52%</td></tr>
+                     <tr><td>518. Ruth Langmore</td><td>Ozark</td><td>52%</td></tr>
+                     <tr><td>519. Thufir Hawat</td><td>Dune</td><td>52%</td></tr>
+                     <tr><td>520. Princess Ekaterina 'Kitty' Shcherbatskaya</td><td>Anna Karenina</td><td>52%</td></tr>
+                     <tr><td>521. Patrick Jane</td><td>The Mentalist</td><td>52%</td></tr>
+                     <tr><td>522. Bellamy Blake</td><td>The 100</td><td>52%</td></tr>
+                     <tr><td>523. Dr. Abigail Griffin</td><td>The 100</td><td>52%</td></tr>
+                     <tr><td>524. Luther Hargreeves</td><td>The Umbrella Academy</td><td>52%</td></tr>
+                     <tr><td>525. Abigail Hobbs</td><td>Hannibal</td><td>52%</td></tr>
+                     <tr><td>526. Patrick Verona</td><td>10 Things I Hate About You</td><td>52%</td></tr>
+                     <tr><td>527. Ellen Parsons</td><td>Damages</td><td>52%</td></tr>
+                     <tr><td>528. Dominic Toretto</td><td>Fast & Furious</td><td>52%</td></tr>
+                     <tr><td>529. Lily Aldrin</td><td>How I Met Your Mother</td><td>52%</td></tr>
+                     <tr><td>530. Arya Stark</td><td>Game of Thrones</td><td>51%</td></tr>
+                     <tr><td>531. Moaning Myrtle</td><td>Harry Potter</td><td>51%</td></tr>
+                     <tr><td>532. Joey Tribbiani</td><td>Friends</td><td>51%</td></tr>
+                     <tr><td>533. Dwight Schrute</td><td>The Office</td><td>51%</td></tr>
+                     <tr><td>534. Joey Lucas</td><td>The West Wing</td><td>51%</td></tr>
+                     <tr><td>535. Jin-Soo Kwon</td><td>LOST</td><td>51%</td></tr>
+                     <tr><td>536. Michael Dawson</td><td>LOST</td><td>51%</td></tr>
+                     <tr><td>537. Jadzia Dax</td><td>Star Trek Deep Space Nine</td><td>51%</td></tr>
+                     <tr><td>538. Izzie Stevens</td><td>Grey's Anatomy</td><td>51%</td></tr>
+                     <tr><td>539. Homer Simpson</td><td>The Simpsons</td><td>51%</td></tr>
+                     <tr><td>540. Cora Crawley, Countess of Grantham</td><td>Downton Abbey</td><td>51%</td></tr>
+                     <tr><td>541. Howard Wolowitz</td><td>The Big Bang Theory</td><td>51%</td></tr>
+                     <tr><td>542. Simba</td><td>The Lion King</td><td>51%</td></tr>
+                     <tr><td>543. Ilsa Lund</td><td>Casablanca</td><td>51%</td></tr>
+                     <tr><td>544. Victor Laszlo</td><td>Casablanca</td><td>51%</td></tr>
+                     <tr><td>545. Nick Young</td><td>Crazy Rich Asians</td><td>51%</td></tr>
+                     <tr><td>546. Jacob Snell</td><td>Ozark</td><td>51%</td></tr>
+                     <tr><td>547. Duke Leto Atreides</td><td>Dune</td><td>51%</td></tr>
+                     <tr><td>548. Mary Alice Young</td><td>Desperate Housewives</td><td>51%</td></tr>
+                     <tr><td>549. Blondie</td><td>The Good, the Bad, and the Ugly</td><td>51%</td></tr>
+                     <tr><td>550. Marion Ravenwood</td><td>Raiders of the Lost Ark</td><td>51%</td></tr>
+                     <tr><td>551. Archie Andrews</td><td>Riverdale</td><td>51%</td></tr>
+                     <tr><td>552. Dr. Adrian Mallory</td><td>Space Force</td><td>51%</td></tr>
+                     <tr><td>553. Klaus Hargreeves</td><td>The Umbrella Academy</td><td>51%</td></tr>
+                     <tr><td>554. Captain Jim Brass</td><td>CSI Crime Scene Investigation</td><td>51%</td></tr>
+                     <tr><td>555. Darlene</td><td>Mr. Robot</td><td>51%</td></tr>
+                     <tr><td>556. JJ</td><td>Outer Banks</td><td>51%</td></tr>
+                     <tr><td>557. Kate Beckett</td><td>Castle</td><td>51%</td></tr>
+                     <tr><td>558. Ty Lee</td><td>Avatar The Last Airbender</td><td>50%</td></tr>
+                     <tr><td>559. Mike Ehrmantraut</td><td>Breaking Bad</td><td>50%</td></tr>
+                     <tr><td>560. Gimli</td><td>Lord of the Rings</td><td>50%</td></tr>
+                     <tr><td>561. Zoe Washburne</td><td>Firefly + Serenity</td><td>50%</td></tr>
+                     <tr><td>562. Annie Edison</td><td>Community</td><td>50%</td></tr>
+                     <tr><td>563. Frank Sobotka</td><td>The Wire</td><td>50%</td></tr>
+                     <tr><td>564. Damian Leigh</td><td>Mean Girls</td><td>50%</td></tr>
+                     <tr><td>565. Becca</td><td>Superbad</td><td>50%</td></tr>
+                     <tr><td>566. Sam Healy</td><td>Orange is the New Black</td><td>50%</td></tr>
+                     <tr><td>567. Randall Pearson</td><td>This Is Us</td><td>50%</td></tr>
+                     <tr><td>568. Sophie</td><td>This Is Us</td><td>50%</td></tr>
+                     <tr><td>569. Adam Sackler</td><td>Girls</td><td>50%</td></tr>
+                     <tr><td>570. Tom Scavo</td><td>Desperate Housewives</td><td>50%</td></tr>
+                     <tr><td>571. Captain Marvel</td><td>Marvel Cinematic Universe</td><td>49%</td></tr>
+                     <tr><td>572. Bob Pinciotti</td><td>That 70's Show</td><td>49%</td></tr>
+                     <tr><td>573. Principal Skinner</td><td>The Simpsons</td><td>49%</td></tr>
+                     <tr><td>574. Simon Tam</td><td>Firefly + Serenity</td><td>49%</td></tr>
+                     <tr><td>575. Kima Greggs</td><td>The Wire</td><td>49%</td></tr>
+                     <tr><td>576. Ray Arnold</td><td>Jurassic Park</td><td>49%</td></tr>
+                     <tr><td>577. Janis Ian</td><td>Mean Girls</td><td>49%</td></tr>
+                     <tr><td>578. Jules</td><td>Superbad</td><td>49%</td></tr>
+                     <tr><td>579. Raymond Holt</td><td>Brooklyn Nine-Nine</td><td>49%</td></tr>
+                     <tr><td>580. Helen Seinfeld</td><td>Seinfeld</td><td>49%</td></tr>
+                     <tr><td>581. Beth Pearson</td><td>This Is Us</td><td>49%</td></tr>
+                     <tr><td>582. Christopher Turk</td><td>Scrubs</td><td>49%</td></tr>
+                     <tr><td>583. Carla Espinosa</td><td>Scrubs</td><td>49%</td></tr>
+                     <tr><td>584. Susan Mayer</td><td>Desperate Housewives</td><td>49%</td></tr>
+                     <tr><td>585. Tina Cohen-Chang</td><td>Glee</td><td>49%</td></tr>
+                     <tr><td>586. Stefan Salvatore</td><td>The Vampire Diaries</td><td>49%</td></tr>
+                     <tr><td>587. Ka D'Argo</td><td>Farscape</td><td>49%</td></tr>
+                     <tr><td>588. Heywood</td><td>The Shawshank Redemption</td><td>49%</td></tr>
+                     <tr><td>589. Dr. Jumba Jookiba</td><td>Lilo & Stitch</td><td>49%</td></tr>
+                     <tr><td>590. Stitch</td><td>Lilo & Stitch</td><td>49%</td></tr>
+                     <tr><td>591. Tom Hagen</td><td>The Godfather</td><td>49%</td></tr>
+                     <tr><td>592. Toby Ziegler</td><td>The West Wing</td><td>48%</td></tr>
+                     <tr><td>593. Worf</td><td>Star Trek Deep Space Nine</td><td>48%</td></tr>
+                     <tr><td>594. Jesse Pinkman</td><td>Breaking Bad</td><td>48%</td></tr>
+                     <tr><td>595. Norman Wilson</td><td>The Wire</td><td>48%</td></tr>
+                     <tr><td>596. Ken Cosgrove</td><td>Mad Men</td><td>48%</td></tr>
+                     <tr><td>597. Peter Gregory</td><td>Silicon Valley</td><td>48%</td></tr>
+                     <tr><td>598. Trinity</td><td>The Matrix</td><td>48%</td></tr>
+                     <tr><td>599. Jo March</td><td>Little Women</td><td>48%</td></tr>
+                     <tr><td>600. Leroy Jethro Gibbs</td><td>NCIS</td><td>48%</td></tr>
+                     <tr><td>601. Veronica Donovan</td><td>Prison Break</td><td>48%</td></tr>
+                     <tr><td>602. Dr. Audrey Lim</td><td>The Good Doctor</td><td>48%</td></tr>
+                     <tr><td>603. Aeryn Sun</td><td>Farscape</td><td>48%</td></tr>
+                     <tr><td>604. George Weasley</td><td>Harry Potter</td><td>47%</td></tr>
+                     <tr><td>605. Elizabeth Bennet</td><td>Pride and Prejudice</td><td>47%</td></tr>
+                     <tr><td>606. Black Panther</td><td>Marvel Cinematic Universe</td><td>47%</td></tr>
+                     <tr><td>607. Donna Pinciotti</td><td>That 70's Show</td><td>47%</td></tr>
+                     <tr><td>608. Charlie Carson</td><td>Downton Abbey</td><td>47%</td></tr>
+                     <tr><td>609. River Tam</td><td>Firefly + Serenity</td><td>47%</td></tr>
+                     <tr><td>610. Nala</td><td>The Lion King</td><td>47%</td></tr>
+                     <tr><td>611. Dana Scully</td><td>The X-Files</td><td>47%</td></tr>
+                     <tr><td>612. Officer Slater</td><td>Superbad</td><td>47%</td></tr>
+                     <tr><td>613. Bo Peep</td><td>Toy Story</td><td>47%</td></tr>
+                     <tr><td>614. Jason Street</td><td>Friday Night Lights</td><td>47%</td></tr>
+                     <tr><td>615. Morty Seinfeld</td><td>Seinfeld</td><td>47%</td></tr>
+                     <tr><td>616. Wesley Crusher</td><td>Star Trek The Next Generation</td><td>47%</td></tr>
+                     <tr><td>617. Lynette Scavo</td><td>Desperate Housewives</td><td>47%</td></tr>
+                     <tr><td>618. Indiana Jones</td><td>Raiders of the Lost Ark</td><td>47%</td></tr>
+                     <tr><td>619. Ambrose Spellman</td><td>Chilling Adventures of Sabrina</td><td>47%</td></tr>
+                     <tr><td>620. Dr. Madolyn Madden</td><td>The Departed</td><td>47%</td></tr>
+                     <tr><td>621. Ygritte</td><td>Game of Thrones</td><td>46%</td></tr>
+                     <tr><td>622. Minerva McGonagall</td><td>Harry Potter</td><td>46%</td></tr>
+                     <tr><td>623. Jim Halpert</td><td>The Office</td><td>46%</td></tr>
+                     <tr><td>624. Josiah Bartlet</td><td>The West Wing</td><td>46%</td></tr>
+                     <tr><td>625. Fez</td><td>That 70's Show</td><td>46%</td></tr>
+                     <tr><td>626. Miranda Bailey</td><td>Grey's Anatomy</td><td>46%</td></tr>
+                     <tr><td>627. Legolas</td><td>Lord of the Rings</td><td>46%</td></tr>
+                     <tr><td>628. Lady Sybil Crawley</td><td>Downton Abbey</td><td>46%</td></tr>
+                     <tr><td>629. Chris Partlow</td><td>The Wire</td><td>46%</td></tr>
+                     <tr><td>630. Timon</td><td>The Lion King</td><td>46%</td></tr>
+                     <tr><td>631. Mufasa</td><td>The Lion King</td><td>46%</td></tr>
+                     <tr><td>632. Olivia Benson</td><td>Law & Order SVU</td><td>46%</td></tr>
+                     <tr><td>633. Shelly Johnson</td><td>Twin Peaks</td><td>46%</td></tr>
+                     <tr><td>634. Maxwell Klinger</td><td>M*A*S*H</td><td>46%</td></tr>
+                     <tr><td>635. Jean-Luc Picard</td><td>Star Trek The Next Generation</td><td>46%</td></tr>
+                     <tr><td>636. Kimball Cho</td><td>The Mentalist</td><td>46%</td></tr>
+                     <tr><td>637. Grace Florrick</td><td>The Good Wife</td><td>46%</td></tr>
+                     <tr><td>638. Ashley Wilkes</td><td>Gone With the Wind</td><td>46%</td></tr>
+                     <tr><td>639. Jason Bourne</td><td>The Bourne Identity</td><td>46%</td></tr>
+                     <tr><td>640. Cho Chang</td><td>Harry Potter</td><td>45%</td></tr>
+                     <tr><td>641. Nymphadora Tonks</td><td>Harry Potter</td><td>45%</td></tr>
+                     <tr><td>642. Sirius Black</td><td>Harry Potter</td><td>45%</td></tr>
+                     <tr><td>643. Mr. William Collins</td><td>Pride and Prejudice</td><td>45%</td></tr>
+                     <tr><td>644. Charles Bingley</td><td>Pride and Prejudice</td><td>45%</td></tr>
+                     <tr><td>645. Richard Webber</td><td>Grey's Anatomy</td><td>45%</td></tr>
+                     <tr><td>646. Mark Brendanawicz</td><td>Parks and Recreation</td><td>45%</td></tr>
+                     <tr><td>647. Troy Barnes</td><td>Community</td><td>45%</td></tr>
+                     <tr><td>648. Michael Lee</td><td>The Wire</td><td>45%</td></tr>
+                     <tr><td>649. D'Angelo Barksdale</td><td>The Wire</td><td>45%</td></tr>
+                     <tr><td>650. Samuel 'Longshot' Anders</td><td>Battlestar Galactica</td><td>45%</td></tr>
+                     <tr><td>651. Robin Hood</td><td>Robin Hood</td><td>45%</td></tr>
+                     <tr><td>652. Woody</td><td>Toy Story</td><td>45%</td></tr>
+                     <tr><td>653. Taystee Jefferson</td><td>Orange is the New Black</td><td>45%</td></tr>
+                     <tr><td>654. Peter</td><td>The Room</td><td>45%</td></tr>
+                     <tr><td>655. Alice Cullen</td><td>Twilight</td><td>45%</td></tr>
+                     <tr><td>656. Oscar Bluth</td><td>Arrested Development</td><td>45%</td></tr>
+                     <tr><td>657. Rachel Garrison</td><td>Ozark</td><td>45%</td></tr>
+                     <tr><td>658. Paul Atreides</td><td>Dune</td><td>45%</td></tr>
+                     <tr><td>659. Dan Humphrey</td><td>Gossip Girl</td><td>45%</td></tr>
+                     <tr><td>660. John Diggle</td><td>Arrow</td><td>45%</td></tr>
+                     <tr><td>661. Jimmy Price</td><td>Hannibal</td><td>45%</td></tr>
+                     <tr><td>662. Beverly Katz</td><td>Hannibal</td><td>45%</td></tr>
+                     <tr><td>663. John B</td><td>Outer Banks</td><td>45%</td></tr>
+                     <tr><td>664. Javier Esposito</td><td>Castle</td><td>45%</td></tr>
+                     <tr><td>665. Catelyn Stark</td><td>Game of Thrones</td><td>44%</td></tr>
+                     <tr><td>666. Alastor Moody</td><td>Harry Potter</td><td>44%</td></tr>
+                     <tr><td>667. Sokka</td><td>Avatar The Last Airbender</td><td>44%</td></tr>
+                     <tr><td>668. Benjamin Sisko</td><td>Star Trek Deep Space Nine</td><td>44%</td></tr>
+                     <tr><td>669. Peggy Carter</td><td>Marvel Cinematic Universe</td><td>44%</td></tr>
+                     <tr><td>670. Barney Gumble</td><td>The Simpsons</td><td>44%</td></tr>
+                     <tr><td>671. Katniss Everdeen</td><td>The Hunger Games</td><td>44%</td></tr>
+                     <tr><td>672. Clementine Pennyfeather</td><td>Westworld</td><td>44%</td></tr>
+                     <tr><td>673. William Adama</td><td>Battlestar Galactica</td><td>44%</td></tr>
+                     <tr><td>674. Laura Roslin</td><td>Battlestar Galactica</td><td>44%</td></tr>
+                     <tr><td>675. Felix Gaeta</td><td>Battlestar Galactica</td><td>44%</td></tr>
+                     <tr><td>676. Peggy Olson</td><td>Mad Men</td><td>44%</td></tr>
+                     <tr><td>677. Fox Mulder</td><td>The X-Files</td><td>44%</td></tr>
+                     <tr><td>678. Jack O'Neill</td><td>Stargate SG-1</td><td>44%</td></tr>
+                     <tr><td>679. George S. Hammond</td><td>Stargate SG-1</td><td>44%</td></tr>
+                     <tr><td>680. Terry Jeffords</td><td>Brooklyn Nine-Nine</td><td>44%</td></tr>
+                     <tr><td>681. Amy Santiago</td><td>Brooklyn Nine-Nine</td><td>44%</td></tr>
+                     <tr><td>682. Jacob Black</td><td>Twilight</td><td>44%</td></tr>
+                     <tr><td>683. Kate Pearson</td><td>This Is Us</td><td>44%</td></tr>
+                     <tr><td>684. Count Alexei Karenin</td><td>Anna Karenina</td><td>44%</td></tr>
+                     <tr><td>685. Lincoln Burrows</td><td>Prison Break</td><td>44%</td></tr>
+                     <tr><td>686. Michael Scofield</td><td>Prison Break</td><td>44%</td></tr>
+                     <tr><td>687. Brittany Pierce</td><td>Glee</td><td>44%</td></tr>
+                     <tr><td>688. Jason Mendoza</td><td>The Good Place</td><td>44%</td></tr>
+                     <tr><td>689. Captain Angela Ali</td><td>Space Force</td><td>44%</td></tr>
+                     <tr><td>690. Allison Reynolds</td><td>The Breakfast Club</td><td>44%</td></tr>
+                     <tr><td>691. Alexis Castle</td><td>Castle</td><td>44%</td></tr>
+                     <tr><td>692. Dr. Jennifer Melfi</td><td>The Sopranos</td><td>44%</td></tr>
+                     <tr><td>693. Hermione Granger</td><td>Harry Potter</td><td>43%</td></tr>
+                     <tr><td>694. C-3PO</td><td>Star Wars</td><td>43%</td></tr>
+                     <tr><td>695. Rust Cohle</td><td>True Detective</td><td>43%</td></tr>
+                     <tr><td>696. Harry Morgan</td><td>Dexter</td><td>43%</td></tr>
+                     <tr><td>697. Rachel Dawes</td><td>The Dark Knight</td><td>43%</td></tr>
+                     <tr><td>698. Anastasia Dualla</td><td>Battlestar Galactica</td><td>43%</td></tr>
+                     <tr><td>699. Stan Rizzo</td><td>Mad Men</td><td>43%</td></tr>
+                     <tr><td>700. Morpheus</td><td>The Matrix</td><td>43%</td></tr>
+                     <tr><td>701. Dallas</td><td>Alien</td><td>43%</td></tr>
+                     <tr><td>702. Tami Taylor</td><td>Friday Night Lights</td><td>43%</td></tr>
+                     <tr><td>703. Jake Peralta</td><td>Brooklyn Nine-Nine</td><td>43%</td></tr>
+                     <tr><td>704. Carlisle Cullen</td><td>Twilight</td><td>43%</td></tr>
+                     <tr><td>705. Michael Bluth</td><td>Arrested Development</td><td>43%</td></tr>
+                     <tr><td>706. Dr. Marcus Brody</td><td>Raiders of the Lost Ark</td><td>43%</td></tr>
+                     <tr><td>707. Kevin Keller</td><td>Riverdale</td><td>43%</td></tr>
+                     <tr><td>708. Brian O'Conner</td><td>Fast & Furious</td><td>43%</td></tr>
+                     <tr><td>709. Billy Costigan</td><td>The Departed</td><td>43%</td></tr>
+                     <tr><td>710. Sayid Jarrah</td><td>LOST</td><td>42%</td></tr>
+                     <tr><td>711. Odo</td><td>Star Trek Deep Space Nine</td><td>42%</td></tr>
+                     <tr><td>712. Nog</td><td>Star Trek Deep Space Nine</td><td>42%</td></tr>
+                     <tr><td>713. Leslie Knope</td><td>Parks and Recreation</td><td>42%</td></tr>
+                     <tr><td>714. Shirley Bennett</td><td>Community</td><td>42%</td></tr>
+                     <tr><td>715. Rick Grimes</td><td>The Walking Dead</td><td>42%</td></tr>
+                     <tr><td>716. The Narrator</td><td>Fight Club</td><td>42%</td></tr>
+                     <tr><td>717. D.I. Greg Lestrade</td><td>Sherlock</td><td>42%</td></tr>
+                     <tr><td>718. Cady Heron</td><td>Mean Girls</td><td>42%</td></tr>
+                     <tr><td>719. Eric Taylor</td><td>Friday Night Lights</td><td>42%</td></tr>
+                     <tr><td>720. Abby Sciuto</td><td>NCIS</td><td>42%</td></tr>
+                     <tr><td>721. Beverly Crusher</td><td>Star Trek The Next Generation</td><td>42%</td></tr>
+                     <tr><td>722. Deanna Troi</td><td>Star Trek The Next Generation</td><td>42%</td></tr>
+                     <tr><td>723. Teresa Lisbon</td><td>The Mentalist</td><td>42%</td></tr>
+                     <tr><td>724. Dr. Allison Cameron</td><td>House, M.D.</td><td>42%</td></tr>
+                     <tr><td>725. Jughead Jones</td><td>Riverdale</td><td>42%</td></tr>
+                     <tr><td>726. Bonnie Bennett</td><td>The Vampire Diaries</td><td>42%</td></tr>
+                     <tr><td>727. Caitlin Snow</td><td>The Flash</td><td>42%</td></tr>
+                     <tr><td>728. Joe West</td><td>The Flash</td><td>42%</td></tr>
+                     <tr><td>729. Kiara</td><td>Outer Banks</td><td>42%</td></tr>
+                     <tr><td>730. Basher Tarr</td><td>Ocean's 11</td><td>42%</td></tr>
+                     <tr><td>731. Capt. Oliver Queenan</td><td>The Departed</td><td>42%</td></tr>
+                     <tr><td>732. Harry Potter</td><td>Harry Potter</td><td>41%</td></tr>
+                     <tr><td>733. Chandler Bing</td><td>Friends</td><td>41%</td></tr>
+                     <tr><td>734. Donna Moss</td><td>The West Wing</td><td>41%</td></tr>
+                     <tr><td>735. Desmond Hume</td><td>LOST</td><td>41%</td></tr>
+                     <tr><td>736. Kasidy Yates</td><td>Star Trek Deep Space Nine</td><td>41%</td></tr>
+                     <tr><td>737. Lisa Simpson</td><td>The Simpsons</td><td>41%</td></tr>
+                     <tr><td>738. Angel Batista</td><td>Dexter</td><td>41%</td></tr>
+                     <tr><td>739. Rupert Giles</td><td>Buffy the Vampire Slayer</td><td>41%</td></tr>
+                     <tr><td>740. Mrs. Hudson</td><td>Sherlock</td><td>41%</td></tr>
+                     <tr><td>741. Donald Cragen</td><td>Law & Order SVU</td><td>41%</td></tr>
+                     <tr><td>742. Melinda Warner</td><td>Law & Order SVU</td><td>41%</td></tr>
+                     <tr><td>743. Janet Fraiser</td><td>Stargate SG-1</td><td>41%</td></tr>
+                     <tr><td>744. Maid Marian</td><td>Robin Hood</td><td>41%</td></tr>
+                     <tr><td>745. Arthur</td><td>Inception</td><td>41%</td></tr>
+                     <tr><td>746. Jake Harper</td><td>Two and Half Men</td><td>41%</td></tr>
+                     <tr><td>747. Guinan</td><td>Star Trek The Next Generation</td><td>41%</td></tr>
+                     <tr><td>748. Raven Reyes</td><td>The 100</td><td>41%</td></tr>
+                     <tr><td>749. David Rosen</td><td>Scandal</td><td>41%</td></tr>
+                     <tr><td>750. Matt Donovan</td><td>The Vampire Diaries</td><td>41%</td></tr>
+                     <tr><td>751. Elliot Alderson</td><td>Mr. Robot</td><td>41%</td></tr>
+                     <tr><td>752. Dr. Aaron Glassman</td><td>The Good Doctor</td><td>41%</td></tr>
+                     <tr><td>753. Kevin Ryan</td><td>Castle</td><td>41%</td></tr>
+                     <tr><td>754. Mia Toretto</td><td>Fast & Furious</td><td>41%</td></tr>
+                     <tr><td>755. Agt. Wendell Pleakley</td><td>Lilo & Stitch</td><td>41%</td></tr>
+                     <tr><td>756. Q</td><td>Tommorrow Never Dies</td><td>41%</td></tr>
+                     <tr><td>757. Marie Kreutz</td><td>The Bourne Identity</td><td>41%</td></tr>
+                     <tr><td>758. Filius Flitwick</td><td>Harry Potter</td><td>40%</td></tr>
+                     <tr><td>759. John Locke</td><td>LOST</td><td>40%</td></tr>
+                     <tr><td>760. Merry Brandybuck</td><td>Lord of the Rings</td><td>40%</td></tr>
+                     <tr><td>761. Vince Masuka</td><td>Dexter</td><td>40%</td></tr>
+                     <tr><td>762. Jet Black</td><td>Cowboy Bebop</td><td>40%</td></tr>
+                     <tr><td>763. Samantha Carter</td><td>Stargate SG-1</td><td>40%</td></tr>
+                     <tr><td>764. Fogell </td><td>McLovin</td><td></td></tr>
+                     <tr><td>765. Ellen Ripley</td><td>Alien</td><td>40%</td></tr>
+                     <tr><td>766. Lambert</td><td>Alien</td><td>40%</td></tr>
+                     <tr><td>767. Parker</td><td>Alien</td><td>40%</td></tr>
+                     <tr><td>768. Rebecca Pearson</td><td>This Is Us</td><td>40%</td></tr>
+                     <tr><td>769. Tobias Funke</td><td>Arrested Development</td><td>40%</td></tr>
+                     <tr><td>770. Data</td><td>Star Trek The Next Generation</td><td>40%</td></tr>
+                     <tr><td>771. Wayne Rigsby</td><td>The Mentalist</td><td>40%</td></tr>
+                     <tr><td>772. Huck</td><td>Scandal</td><td>40%</td></tr>
+                     <tr><td>773. Vanya Hargreeves</td><td>The Umbrella Academy</td><td>40%</td></tr>
+                     <tr><td>774. Will Graham</td><td>Hannibal</td><td>40%</td></tr>
+                     <tr><td>775. Mulan</td><td>Mulan</td><td>40%</td></tr>
+                     <tr><td>776. Ling</td><td>Mulan</td><td>40%</td></tr>
+                     <tr><td>777. John Crichton</td><td>Farscape</td><td>40%</td></tr>
+                     <tr><td>778. Lilo Pelekai</td><td>Lilo & Stitch</td><td>40%</td></tr>
+                     <tr><td>779. Nani Pelekai</td><td>Lilo & Stitch</td><td>40%</td></tr>
+                     <tr><td>780. Albus Dumbledore</td><td>Harry Potter</td><td>39%</td></tr>
+                     <tr><td>781. Jake Sisko</td><td>Star Trek Deep Space Nine</td><td>39%</td></tr>
+                     <tr><td>782. Captain America</td><td>Marvel Cinematic Universe</td><td>39%</td></tr>
+                     <tr><td>783. Kitty Forman</td><td>That 70's Show</td><td>39%</td></tr>
+                     <tr><td>784. Pippin Took</td><td>Lord of the Rings</td><td>39%</td></tr>
+                     <tr><td>785. Mary Cooper</td><td>The Big Bang Theory</td><td>39%</td></tr>
+                     <tr><td>786. Carol Peletier</td><td>The Walking Dead</td><td>39%</td></tr>
+                     <tr><td>787. Gale Hawthorne</td><td>The Hunger Games</td><td>39%</td></tr>
+                     <tr><td>788. Alfred Pennyworth</td><td>The Dark Knight</td><td>39%</td></tr>
+                     <tr><td>789. John Munch</td><td>Law & Order SVU</td><td>39%</td></tr>
+                     <tr><td>790. Alan Harper</td><td>Two and Half Men</td><td>39%</td></tr>
+                     <tr><td>791. Fernando Sucre</td><td>Prison Break</td><td>39%</td></tr>
+                     <tr><td>792. Mike Delfino</td><td>Desperate Housewives</td><td>39%</td></tr>
+                     <tr><td>793. Felicity Smoak</td><td>Arrow</td><td>39%</td></tr>
+                     <tr><td>794. Dr. Claire Browne</td><td>The Good Doctor</td><td>39%</td></tr>
+                     <tr><td>795. Clarice Starling</td><td>The Silence of the Lambs</td><td>39%</td></tr>
+                     <tr><td>796. Phoebe Buffay</td><td>Friends</td><td>38%</td></tr>
+                     <tr><td>797. Charlie Pace</td><td>LOST</td><td>38%</td></tr>
+                     <tr><td>798. Hawkeye</td><td>Marvel Cinematic Universe</td><td>38%</td></tr>
+                     <tr><td>799. Waylon Smithers</td><td>The Simpsons</td><td>38%</td></tr>
+                     <tr><td>800. Amy Farrah Fowler</td><td>The Big Bang Theory</td><td>38%</td></tr>
+                     <tr><td>801. Karl 'Helo' Agathon</td><td>Battlestar Galactica</td><td>38%</td></tr>
+                     <tr><td>802. Will Turner</td><td>Pirates of the Caribbean</td><td>38%</td></tr>
+                     <tr><td>803. Buster Bluth</td><td>Arrested Development</td><td>38%</td></tr>
+                     <tr><td>804. Ray Ploshansky</td><td>Girls</td><td>38%</td></tr>
+                     <tr><td>805. Lincoln 'L.J.' Burrows, Jr.</td><td>Prison Break</td><td>38%</td></tr>
+                     <tr><td>806. Sun-Hwa Kwon</td><td>LOST</td><td>37%</td></tr>
+                     <tr><td>807. Ann Perkins</td><td>Parks and Recreation</td><td>37%</td></tr>
+                     <tr><td>808. Elsie Hughes</td><td>Westworld</td><td>37%</td></tr>
+                     <tr><td>809. Lucius Fox</td><td>The Dark Knight</td><td>37%</td></tr>
+                     <tr><td>810. Dale Cooper</td><td>Twin Peaks</td><td>37%</td></tr>
+                     <tr><td>811. Teal'c</td><td>Stargate SG-1</td><td>37%</td></tr>
+                     <tr><td>812. Denny</td><td>The Room</td><td>37%</td></tr>
+                     <tr><td>813. Dale Harding</td><td>One Flew Over the Cuckoo's Nest</td><td>37%</td></tr>
+                     <tr><td>814. Julie Mayer</td><td>Desperate Housewives</td><td>37%</td></tr>
+                     <tr><td>815. Stevie Budd</td><td>Schitt's Creek</td><td>37%</td></tr>
+                     <tr><td>816. Will Schuester</td><td>Glee</td><td>37%</td></tr>
+                     <tr><td>817. The Cowardly Lion</td><td>The Wizard of Oz</td><td>37%</td></tr>
+                     <tr><td>818. Brienne of Tarth</td><td>Game of Thrones</td><td>36%</td></tr>
+                     <tr><td>819. Katara</td><td>Avatar The Last Airbender</td><td>36%</td></tr>
+                     <tr><td>820. Beryl Patmore</td><td>Downton Abbey</td><td>36%</td></tr>
+                     <tr><td>821. Raj Koothrappali</td><td>The Big Bang Theory</td><td>36%</td></tr>
+                     <tr><td>822. Daryl Dixon</td><td>The Walking Dead</td><td>36%</td></tr>
+                     <tr><td>823. Akecheta</td><td>Westworld</td><td>36%</td></tr>
+                     <tr><td>824. Neo</td><td>The Matrix</td><td>36%</td></tr>
+                     <tr><td>825. Meg March</td><td>Little Women</td><td>36%</td></tr>
+                     <tr><td>826. Esme Cullen</td><td>Twilight</td><td>36%</td></tr>
+                     <tr><td>827. Donald Mallard</td><td>NCIS</td><td>36%</td></tr>
+                     <tr><td>828. Chani</td><td>Dune</td><td>36%</td></tr>
+                     <tr><td>829. Geordi La Forge</td><td>Star Trek The Next Generation</td><td>36%</td></tr>
+                     <tr><td>830. Chidi Anagonye</td><td>The Good Place</td><td>36%</td></tr>
+                     <tr><td>831. Janet</td><td>The Good Place</td><td>36%</td></tr>
+                     <tr><td>832. Dr. Shaun Murphy</td><td>The Good Doctor</td><td>36%</td></tr>
+                     <tr><td>833. Mike McLintock</td><td>Veep</td><td>36%</td></tr>
+                     <tr><td>834. Niko Polastri</td><td>Killing Eve</td><td>36%</td></tr>
+                     <tr><td>835. Gandalf</td><td>Lord of the Rings</td><td>35%</td></tr>
+                     <tr><td>836. John Bates</td><td>Downton Abbey</td><td>35%</td></tr>
+                     <tr><td>837. Billy Keikeya</td><td>Battlestar Galactica</td><td>35%</td></tr>
+                     <tr><td>838. Richard Hendricks</td><td>Silicon Valley</td><td>35%</td></tr>
+                     <tr><td>839. Norma Jennings</td><td>Twin Peaks</td><td>35%</td></tr>
+                     <tr><td>840. Ed</td><td>Cowboy Bebop</td><td>35%</td></tr>
+                     <tr><td>841. Bella Swan</td><td>Twilight</td><td>35%</td></tr>
+                     <tr><td>842. Toby Damon</td><td>This Is Us</td><td>35%</td></tr>
+                     <tr><td>843. John Michael Dorian</td><td>Scrubs</td><td>35%</td></tr>
+                     <tr><td>844. Grace Van Pelt</td><td>The Mentalist</td><td>35%</td></tr>
+                     <tr><td>845. Sallah</td><td>Raiders of the Lost Ark</td><td>35%</td></tr>
+                     <tr><td>846. Pope</td><td>Outer Banks</td><td>35%</td></tr>
+                     <tr><td>847. Han Lue</td><td>Fast & Furious</td><td>35%</td></tr>
+                     <tr><td>848. Linus Caldwell</td><td>Ocean's 11</td><td>35%</td></tr>
+                     <tr><td>849. Eddard Stark</td><td>Game of Thrones</td><td>34%</td></tr>
+                     <tr><td>850. Molly Weasley</td><td>Harry Potter</td><td>34%</td></tr>
+                     <tr><td>851. Charlie Young</td><td>The West Wing</td><td>34%</td></tr>
+                     <tr><td>852. Georgiana Darcy</td><td>Pride and Prejudice</td><td>34%</td></tr>
+                     <tr><td>853. Claire Littleton</td><td>LOST</td><td>34%</td></tr>
+                     <tr><td>854. Eric Forman</td><td>That 70's Show</td><td>34%</td></tr>
+                     <tr><td>855. Elsie Carson</td><td>Downton Abbey</td><td>34%</td></tr>
+                     <tr><td>856. Abed Nadir</td><td>Community</td><td>34%</td></tr>
+                     <tr><td>857. Lester Freamon</td><td>The Wire</td><td>34%</td></tr>
+                     <tr><td>858. Dennis 'Cutty' Wise</td><td>The Wire</td><td>34%</td></tr>
+                     <tr><td>859. Xander Harris</td><td>Buffy the Vampire Slayer</td><td>34%</td></tr>
+                     <tr><td>860. James Hurley</td><td>Twin Peaks</td><td>34%</td></tr>
+                     <tr><td>861. The Nurse</td><td>Romeo and Juliet</td><td>34%</td></tr>
+                     <tr><td>862. Barry Allen</td><td>The Flash</td><td>34%</td></tr>
+                     <tr><td>863. Ellis Boyd 'Red' Redding</td><td>The Shawshank Redemption</td><td>34%</td></tr>
+                     <tr><td>864. Ted Mosby</td><td>How I Met Your Mother</td><td>34%</td></tr>
+                     <tr><td>865. Ginny Weasley</td><td>Harry Potter</td><td>33%</td></tr>
+                     <tr><td>866. Aragorn</td><td>Lord of the Rings</td><td>33%</td></tr>
+                     <tr><td>867. Dr. Alan Grant</td><td>Jurassic Park</td><td>33%</td></tr>
+                     <tr><td>868. Dr. Ellie Sattler</td><td>Jurassic Park</td><td>33%</td></tr>
+                     <tr><td>869. Ariadne</td><td>Inception</td><td>33%</td></tr>
+                     <tr><td>870. Crazy Eyes</td><td>Orange is the New Black</td><td>33%</td></tr>
+                     <tr><td>871. Jack Pearson</td><td>This Is Us</td><td>33%</td></tr>
+                     <tr><td>872. Sara Tancredi</td><td>Prison Break</td><td>33%</td></tr>
+                     <tr><td>873. Artie Abrams</td><td>Glee</td><td>33%</td></tr>
+                     <tr><td>874. Dr. James Wilson</td><td>House, M.D.</td><td>33%</td></tr>
+                     <tr><td>875. Dorothy Gale</td><td>The Wizard of Oz</td><td>33%</td></tr>
+                     <tr><td>876. Miles O'Brien</td><td>Star Trek Deep Space Nine</td><td>32%</td></tr>
+                     <tr><td>877. Marge Simpson</td><td>The Simpsons</td><td>32%</td></tr>
+                     <tr><td>878. Bernard Lowe</td><td>Westworld</td><td>32%</td></tr>
+                     <tr><td>879. Rachel Chu</td><td>Crazy Rich Asians</td><td>32%</td></tr>
+                     <tr><td>880. Dr. John Watson</td><td>Sherlock</td><td>32%</td></tr>
+                     <tr><td>881. Sheriff Truman</td><td>Twin Peaks</td><td>32%</td></tr>
+                     <tr><td>882. Jonah Byrde</td><td>Ozark</td><td>32%</td></tr>
+                     <tr><td>883. Dr. Chan Kaifang</td><td>Space Force</td><td>32%</td></tr>
+                     <tr><td>884. Al Robbins</td><td>CSI Crime Scene Investigation</td><td>32%</td></tr>
+                     <tr><td>885. Melanie Hamilton</td><td>Gone With the Wind</td><td>32%</td></tr>
+                     <tr><td>886. Mammy</td><td>Gone With the Wind</td><td>32%</td></tr>
+                     <tr><td>887. Jorah Mormont</td><td>Game of Thrones</td><td>31%</td></tr>
+                     <tr><td>888. Ron Weasley</td><td>Harry Potter</td><td>31%</td></tr>
+                     <tr><td>889. Ned Flanders</td><td>The Simpsons</td><td>31%</td></tr>
+                     <tr><td>890. Kaylee Frye</td><td>Firefly + Serenity</td><td>31%</td></tr>
+                     <tr><td>891. Hoban Washburne</td><td>Firefly + Serenity</td><td>31%</td></tr>
+                     <tr><td>892. James Gordon</td><td>The Dark Knight</td><td>31%</td></tr>
+                     <tr><td>893. Charlie Cheswick</td><td>One Flew Over the Cuckoo's Nest</td><td>31%</td></tr>
+                     <tr><td>894. Oliver Hampton</td><td>How To Get Away With Murder</td><td>31%</td></tr>
+                     <tr><td>895. Ben Hargreeves</td><td>The Umbrella Academy</td><td>31%</td></tr>
+                     <tr><td>896. Brian Johnson</td><td>The Breakfast Club</td><td>31%</td></tr>
+                     <tr><td>897. Jon Snow</td><td>Game of Thrones</td><td>30%</td></tr>
+                     <tr><td>898. Brandon Stark</td><td>Game of Thrones</td><td>30%</td></tr>
+                     <tr><td>899. Kevin Malone</td><td>The Office</td><td>30%</td></tr>
+                     <tr><td>900. Jane Bennet</td><td>Pride and Prejudice</td><td>30%</td></tr>
+                     <tr><td>901. Daisy Mason</td><td>Downton Abbey</td><td>30%</td></tr>
+                     <tr><td>902. Leonard Hofstadter</td><td>The Big Bang Theory</td><td>30%</td></tr>
+                     <tr><td>903. Teddy Flood</td><td>Westworld</td><td>30%</td></tr>
+                     <tr><td>904. The Oracle</td><td>The Matrix</td><td>30%</td></tr>
+                     <tr><td>905. Nick Carraway</td><td>The Great Gatsby</td><td>30%</td></tr>
+                     <tr><td>906. Daniel Jackson</td><td>Stargate SG-1</td><td>30%</td></tr>
+                     <tr><td>907. Charlie Swan</td><td>Twilight</td><td>30%</td></tr>
+                     <tr><td>908. Cisco Ramon</td><td>The Flash</td><td>30%</td></tr>
+                     <tr><td>909. Mark Watney</td><td>The Martian</td><td>30%</td></tr>
+                     <tr><td>910. Iroh</td><td>Avatar The Last Airbender</td><td>29%</td></tr>
+                     <tr><td>911. Stuart Bloom</td><td>The Big Bang Theory</td><td>29%</td></tr>
+                     <tr><td>912. Derrial Book</td><td>Firefly + Serenity</td><td>29%</td></tr>
+                     <tr><td>913. Carl Grimes</td><td>The Walking Dead</td><td>29%</td></tr>
+                     <tr><td>914. Joshamee Gibbs</td><td>Pirates of the Caribbean</td><td>29%</td></tr>
+                     <tr><td>915. Ed Hurley</td><td>Twin Peaks</td><td>29%</td></tr>
+                     <tr><td>916. Lucy Moran</td><td>Twin Peaks</td><td>29%</td></tr>
+                     <tr><td>917. Timothy McGee</td><td>NCIS</td><td>29%</td></tr>
+                     <tr><td>918. Miguel Rivas</td><td>This Is Us</td><td>29%</td></tr>
+                     <tr><td>919. Ted Mullens</td><td>Schitt's Creek</td><td>29%</td></tr>
+                     <tr><td>920. Wes Gibbins</td><td>How To Get Away With Murder</td><td>29%</td></tr>
+                     <tr><td>921. Greg Sanders</td><td>CSI Crime Scene Investigation</td><td>29%</td></tr>
+                     <tr><td>922. David Phillips</td><td>CSI Crime Scene Investigation</td><td>29%</td></tr>
+                     <tr><td>923. Gary Walsh</td><td>Veep</td><td>29%</td></tr>
+                     <tr><td>924. Morty Smith</td><td>Rick and Morty</td><td>29%</td></tr>
+                     <tr><td>925. Phyllis Lapin</td><td>The Office</td><td>28%</td></tr>
+                     <tr><td>926. Kelly Erin Hannon</td><td>The Office</td><td>28%</td></tr>
+                     <tr><td>927. Bruce Banner</td><td>Marvel Cinematic Universe</td><td>28%</td></tr>
+                     <tr><td>928. Luke Skywalker</td><td>Star Wars</td><td>28%</td></tr>
+                     <tr><td>929. Rita Bennett</td><td>Dexter</td><td>28%</td></tr>
+                     <tr><td>930. Pumbaa</td><td>The Lion King</td><td>28%</td></tr>
+                     <tr><td>931. Willow Rosenberg</td><td>Buffy the Vampire Slayer</td><td>28%</td></tr>
+                     <tr><td>932. Jared Dunn</td><td>Silicon Valley</td><td>28%</td></tr>
+                     <tr><td>933. Evan</td><td>Superbad</td><td>28%</td></tr>
+                     <tr><td>934. Rex</td><td>Toy Story</td><td>28%</td></tr>
+                     <tr><td>935. Wyatt Langmore</td><td>Ozark</td><td>28%</td></tr>
+                     <tr><td>936. Harvey Kinkle</td><td>Chilling Adventures of Sabrina</td><td>28%</td></tr>
+                     <tr><td>937. Hilda Spellman</td><td>Chilling Adventures of Sabrina</td><td>28%</td></tr>
+                     <tr><td>938. Luna Lovegood</td><td>Harry Potter</td><td>27%</td></tr>
+                     <tr><td>939. Pam Beesly</td><td>The Office</td><td>27%</td></tr>
+                     <tr><td>940. Anna Bates</td><td>Downton Abbey</td><td>27%</td></tr>
+                     <tr><td>941. Nelson Bighetti</td><td>Silicon Valley</td><td>27%</td></tr>
+                     <tr><td>942. Billy Bibbit</td><td>One Flew Over the Cuckoo's Nest</td><td>27%</td></tr>
+                     <tr><td>943. Princess Darya 'Dolly' Oblonskaya</td><td>Anna Karenina</td><td>27%</td></tr>
+                     <tr><td>944. Kenny Stowton</td><td>Killing Eve</td><td>27%</td></tr>
+                     <tr><td>945. Andy Dufresne</td><td>The Shawshank Redemption</td><td>27%</td></tr>
+                     <tr><td>946. Hakoda</td><td>Avatar The Last Airbender</td><td>26%</td></tr>
+                     <tr><td>947. Obi-Wan Kenobi</td><td>Star Wars</td><td>26%</td></tr>
+                     <tr><td>948. Reginald 'Bubbles' Cousins</td><td>The Wire</td><td>26%</td></tr>
+                     <tr><td>949. Galen Tyrol</td><td>Battlestar Galactica</td><td>26%</td></tr>
+                     <tr><td>950. Cally Henderson</td><td>Battlestar Galactica</td><td>26%</td></tr>
+                     <tr><td>951. Molly Hooper</td><td>Sherlock</td><td>26%</td></tr>
+                     <tr><td>952. Charles Boyle</td><td>Brooklyn Nine-Nine</td><td>26%</td></tr>
+                     <tr><td>953. Jimmy Palmer</td><td>NCIS</td><td>26%</td></tr>
+                     <tr><td>954. Rosalind Walker</td><td>Chilling Adventures of Sabrina</td><td>26%</td></tr>
+                     <tr><td>955. Davos Seaworth</td><td>Game of Thrones</td><td>25%</td></tr>
+                     <tr><td>956. Aang</td><td>Avatar The Last Airbender</td><td>25%</td></tr>
+                     <tr><td>957. Milhouse Van Houten</td><td>The Simpsons</td><td>25%</td></tr>
+                     <tr><td>958. Glenn Rhee</td><td>The Walking Dead</td><td>25%</td></tr>
+                     <tr><td>959. Little John</td><td>Robin Hood</td><td>25%</td></tr>
+                     <tr><td>960. Marmee March</td><td>Little Women</td><td>25%</td></tr>
+                     <tr><td>961. Cameron James</td><td>10 Things I Hate About You</td><td>25%</td></tr>
+                     <tr><td>962. Brooks Hatlen</td><td>The Shawshank Redemption</td><td>25%</td></tr>
+                     <tr><td>963. Rom</td><td>Star Trek Deep Space Nine</td><td>24%</td></tr>
+                     <tr><td>964. Flynn White</td><td>Breaking Bad</td><td>24%</td></tr>
+                     <tr><td>965. Ms. Sharon Norbury</td><td>Mean Girls</td><td>24%</td></tr>
+                     <tr><td>966. Betsy Heron</td><td>Mean Girls</td><td>24%</td></tr>
+                     <tr><td>967. William H. 'Shakespeare' Hill</td><td>This Is Us</td><td>24%</td></tr>
+                     <tr><td>968. George Michael Bluth</td><td>Arrested Development</td><td>24%</td></tr>
+                     <tr><td>969. Francis Mulcahy</td><td>M*A*S*H</td><td>24%</td></tr>
+                     <tr><td>970. Konstantin 'Kostya' Levin</td><td>Anna Karenina</td><td>24%</td></tr>
+                     <tr><td>971. William Mason</td><td>Downton Abbey</td><td>23%</td></tr>
+                     <tr><td>972. Felix Lutz</td><td>Westworld</td><td>23%</td></tr>
+                     <tr><td>973. Marshall Eriksen</td><td>How I Met Your Mother</td><td>23%</td></tr>
+                     <tr><td>974. Remus Lupin</td><td>Harry Potter</td><td>22%</td></tr>
+                     <tr><td>975. Apu Nahasapeemapetilon</td><td>The Simpsons</td><td>22%</td></tr>
+                     <tr><td>976. Samwise Gamgee</td><td>Lord of the Rings</td><td>22%</td></tr>
+                     <tr><td>977. Beatrice 'Beadie' Russell</td><td>The Wire</td><td>22%</td></tr>
+                     <tr><td>978. Rubeus Hagrid</td><td>Harry Potter</td><td>21%</td></tr>
+                     <tr><td>979. Frodo Baggins</td><td>Lord of the Rings</td><td>21%</td></tr>
+                     <tr><td>980. Beth March</td><td>Little Women</td><td>21%</td></tr>
+                     <tr><td>981. Matt Saracen</td><td>Friday Night Lights</td><td>21%</td></tr>
+                     <tr><td>982. Hugo 'Hurley' Reyes</td><td>LOST</td><td>20%</td></tr>
+                     <tr><td>983. George O'Malley</td><td>Grey's Anatomy</td><td>20%</td></tr>
+                     <tr><td>984. Roland 'Prez' Pryzbylewski</td><td>The Wire</td><td>20%</td></tr>
+                     <tr><td>985. Chien-Po</td><td>Mulan</td><td>20%</td></tr>
+                     <tr><td>986. Peeta Mellark</td><td>The Hunger Games</td><td>19%</td></tr>
+                     <tr><td>987. Forrest Gump</td><td>Forrest Gump</td><td>19%</td></tr>
+                     <tr><td>988. Samwell Tarly</td><td>Game of Thrones</td><td>18%</td></tr>
+                     <tr><td>989. Arthur Weasley</td><td>Harry Potter</td><td>18%</td></tr>
+                     <tr><td>990. Dobby</td><td>Harry Potter</td><td>18%</td></tr>
+                     <tr><td>991. Dale Horvath</td><td>The Walking Dead</td><td>18%</td></tr>
+                     <tr><td>992. 'Chief' Bromden</td><td>One Flew Over the Cuckoo's Nest</td><td>18%</td></tr>
+                     <tr><td>993. Pete Martell</td><td>Twin Peaks</td><td>17%</td></tr>
+                     <tr><td>994. Walter 'Radar' O'Reilly</td><td>M*A*S*H</td><td>17%</td></tr>
+                     <tr><td>995. The Scarecrow</td><td>The Wizard of Oz</td><td>17%</td></tr>
+                     <tr><td>996. Steve Brady</td><td>Sex and the City</td><td>16%</td></tr>
+                     <tr><td>997. Landry Clarke</td><td>Friday Night Lights</td><td>16%</td></tr>
+                     <tr><td>998. The Tin Man</td><td>The Wizard of Oz</td><td>16%</td></tr>
+                     <tr><td>999. Friar Laurence</td><td>Romeo and Juliet</td><td>15%</td></tr>
+                     <tr><td>1000. Friar Tuck</td><td>Robin Hood</td><td>15%</td></tr>
+				</tbody>
+			</table>
+			</tbody>
+			</table>
+		</div>
+	</article>
+
+
+	<script>
+		// convert table with ID=example-table1 into a tabulator table
+		var table = new Tabulator("#example-table1", {
+			pagination: "local",
+			paginationSize: 10,
+			layout:"fitColumns",
+		});
+
+		// convert table with ID=example-table2 into a tabulator table
+		var table = new Tabulator("#example-table2", {
+			layout:"fitColumns",
+		});
+
+		// convert table with ID=example-table3 into a tabulator table
+		var table = new Tabulator("#example-table3", {
+			pagination: "local",
+			paginationSize: 10,
+			layout:"fitColumns",
+		});
+
+
+	</script>
+	
+	<footer class="footer py-3">
+		<div class="container">
+			<span>
+				<h3>Scene to Visual Novel</h3>
+			</span>
+			<h5 class="text-muted">Links</h5>
+			<ul class="footer-links">
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../visualnovel/visualnovel.html">Visual Novel</a></li>
+			</ul>
+
+		</div>
+		<p class="copyright text-center">Copyright &copy; by Aoibheann Maye. All rights reserved.</p>
+	</footer>
+
+
+</body>
+
+</html>

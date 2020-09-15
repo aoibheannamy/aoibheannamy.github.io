@@ -226,7 +226,8 @@ footer {
 /*
 * styling for tabulator tables for character personalities
 */
-#example-table1 #example-table2 #example-table3{
+#example-table1, #example-table2, #example-table3{
+    margin-top: 10%;
     margin: 10%;
     padding: 10%;
 }

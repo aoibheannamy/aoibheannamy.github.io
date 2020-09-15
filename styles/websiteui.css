@@ -234,8 +234,9 @@ footer {
 #myHeading img {
     float:left;
     margin-right:10px;
+    margin-left: 5px ;
     position: relative;
-    top:2px;
+    top:1px;
   }
 
 

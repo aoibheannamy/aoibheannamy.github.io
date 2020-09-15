@@ -227,6 +227,12 @@ footer {
     margin-left: 5%;
     color: teal;
 }
+/*
+* styling for tabulator tables for character personalities
+*/
+#example-table1 #example-table2 #example-table3{
+    margin: 10%;
+}
 
 /*
 * styling for tables

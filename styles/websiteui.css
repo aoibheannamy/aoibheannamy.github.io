@@ -229,8 +229,14 @@ footer {
 #example-table1, #example-table2, #example-table3{
     margin-top: 10%;
     margin: 10%;
-    padding: 10%;
 }
+
+#myHeading img {
+    float:left;
+    margin-right:10px;
+    position: relative;
+    top:2px;
+  }
 
 
 

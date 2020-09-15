@@ -38,6 +38,22 @@ li.nav-item {
     padding: 15%;
     height: 15%;
 }
+.LotRimagebanner{
+    background-color:  white;
+    background-image: url(../Images/LotRImages/LotRBanner.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 15%;
+    height: 15%;
+}
+.HPimagebanner{
+    background-color:  white;
+    background-image: url(../Images/HPImages/hpbanner.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 15%;
+    height: 15%;
+}
 /*
 * styling for navbar
 */

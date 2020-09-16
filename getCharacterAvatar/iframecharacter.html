@@ -33,7 +33,9 @@
     <script type="text/javascript">
         //create table to hold the character appearances that were labelled via Amazon's mechanical Turk
         var local_data = charDetails;
+        
         var table = new Tabulator("#example-table", {
+            table.setData(local_data);
             index: "numberOfCharacters",
             selectable: 1,
             pagination: "local",
@@ -71,6 +73,7 @@
                 },
 
             ],
+            
             // this function accesses the row which has been selected, or clicked
 
             rowClick: function (e, row) {
@@ -153,6 +156,7 @@
         for (var loop = 1; loop < 10; loop++) {
             table.addRow({ numberOfCharacters: loop }, false);
         }
+        table.setData(local_data);
 
 
     </script>

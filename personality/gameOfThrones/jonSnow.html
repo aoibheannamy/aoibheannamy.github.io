@@ -53,7 +53,7 @@
                             from other Universes</a>
                         <a class='dropdown-item' href='gotHome.html'>Game of Thrones</a>
                         <a class='dropdown-item' href='../harryPotter/HPHome.html'>Harry Potter Universe</a>
-						<a class='dropdown-item' href='../lordOTRings/LoTRHome.html'>Lord of the Rings Universe</a>
+                        <a class='dropdown-item' href='../lordOTRings/LoTRHome.html'>Lord of the Rings Universe</a>
                     </div>
                 </li>
                 <li class='nav-item'>
@@ -63,14 +63,14 @@
         </div>
     </nav>
 
-    	<!--Breadcrumb-->
-	<nav aria-label="breadcrumb">
-		<ol class="breadcrumb">
+    <!--Breadcrumb-->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
             <li class="breadcrumb-item"><a href="gotHome.html">Game of Thrones</a></li>
-			<li class="breadcrumb-item active" aria-current="page">Jon Snow</li>
-		</ol>
-	</nav>
+            <li class="breadcrumb-item active" aria-current="page">Jon Snow</li>
+        </ol>
+    </nav>
 
     <article class="page sans myArticle">
         <header>
@@ -1134,10 +1134,15 @@
             </table>
             <!--Table for full personality match list-->
             <h5 class="mytitlesChar">Full Personality Match List</h5>
-
             <table class="collection-content" id="example-table3">
                 <thead>
-
+                    <tr>
+                        <th>Full Match List</th>
+                        <th>Universe</th>
+                        <th>% Match</th>
+                    </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td>1. Jon Snow</td>
                         <td>Game of Thrones</td>
@@ -4378,7 +4383,7 @@
                         <td>Parks and Recreation</td>
                         <td>19%</td>
                     </tr>
-                    </tbody>
+                </tbody>
             </table>
             </tbody>
             </table>
@@ -4392,23 +4397,24 @@
         var table = new Tabulator("#example-table1", {
             pagination: "local",
             paginationSize: 10,
-            layout:"fitColumns",
+            layout: "fitColumns",
         });
 
         // convert table with ID=example-table2 into a tabulator table
         var table = new Tabulator("#example-table2", {
-            layout:"fitColumns",
+            layout: "fitColumns",
         });
 
         // convert table with ID=example-table3 into a tabulator table
         var table = new Tabulator("#example-table3", {
             pagination: "local",
             paginationSize: 10,
-            layout:"fitColumns",
+            layout: "fitColumns",
         });
 
 
     </script>
+    
     <footer class="footer py-3">
         <div class="container">
             <span>

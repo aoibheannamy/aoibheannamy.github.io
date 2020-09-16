@@ -1442,6 +1442,7 @@
 		// convert table with ID=example-table into a tabulator table
 		var table = new Tabulator("#example-table", {
 			tooltips: true, //example option (enable tooltips on all cells)
+			layout: "fitColumns",
 			columns: [ //set column definitions for imported table data - allow data to be edited
 				{ title: "Universe", editor: "input" },
 				{ title: "Character", editor: "input" },

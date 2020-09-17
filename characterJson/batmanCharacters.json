@@ -27,7 +27,7 @@ var characters = {
 			"Angry": "/visualnovel/Gangster2Images/Gangster2Angry.png",
 			"Sneer": "/visualnovel/Gangster2Images/Gangster2Sneer.png",
 			"Laughing": "/visualnovel/Gangster2Images/Gangster2Laughing.png",
-			"Smile": "/visualnovel/Gangster2Images/Gangster2Smile.png",
+			"Grin": "/visualnovel/Gangster2Images/Gangster2Grin.png",
 			"Shock": "/visualnovel/Gangster2Images/Gangster2Shock.png",
 			"Stern": "/visualnovel/Gangster2Images/Gangster2Stern.png",
 			"SinisterGrin": "/visualnovel/Gangster2Images/Gangster2SinisterGrin.png"
@@ -38,7 +38,7 @@ var characters = {
 			"Angry": "/visualnovel/Gangster3Images/Gangster3Angry.png",
 			"Sneer": "/visualnovel/Gangster3Images/Gangster3Sneer.png",
 			"Laughing": "/visualnovel/Gangster3Images/Gangster3Laughing.png",
-			"Smile": "/visualnovel/Gangster3Images/Gangster3Smile.png",
+			"Grin": "/visualnovel/Gangster3Images/Gangster3Grin.png",
 			"Shock": "/visualnovel/Gangster3Images/Gangster3Shock.png",
 			"SinisterGrin": "/visualnovel/Gangster3Images/Gangster3SinisterGrin.png"
 

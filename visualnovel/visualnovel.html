@@ -80,7 +80,8 @@
                             from other Universes</a>
                         <a class='dropdown-item' href='../personality/gameOfThrones/gotHome.html'>Game of Thrones</a>
                         <a class='dropdown-item' href='../personality/harryPotter/HPHome.html'>Harry Potter Universe</a>
-						<a class='dropdown-item' href='../personality/lordOTRings/LoTRHome.html'>Lord of the Rings Universe</a>
+                        <a class='dropdown-item' href='../personality/lordOTRings/LoTRHome.html'>Lord of the Rings
+                            Universe</a>
                     </div>
                 </li>
                 <li class='nav-item'>
@@ -89,6 +90,33 @@
             </ul>
         </div>
     </nav>
+
+    <script type="text/javascript">
+        $(window).on('load',function(){
+            $('#myModal').modal('show');
+        });
+    </script>
+
+    <!-- Modal to give user play instructions-->
+    <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog"
+        aria-labelledby="myModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mytitles" id="">Welcome to the Visual Novel!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    To begin the visual novel experience, simply choose your background using the dropdown, then click "Play Visual Novel". Just sit back and enjoy!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--This div is to hold the canvas for the visual novel-->
     <div class="row">

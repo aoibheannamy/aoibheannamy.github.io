@@ -36,10 +36,10 @@
         var local_data = charDetails;
         console.log("table data: "+local_data);
         var table = new Tabulator("#example-table", {
+            data: local_data,
             index: "numberOfCharacters",
             selectable: 1,
             pagination: "local",
-            data: local_data,
             layout: "fitColumns",
             placeholder: "No Data Available",
             columns: [

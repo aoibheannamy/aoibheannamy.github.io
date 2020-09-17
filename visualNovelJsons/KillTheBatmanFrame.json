@@ -2247,7 +2247,7 @@ var esp_data = [{
 	"Props": null
 }, {
 	"FrameNumber": 106,
-	"CharacterNumber": null,
+	"CharacterNumber": 1.0,
 	"Agreeableness/Niceness": null,
 	"Confidence": null,
 	"FacialExpression": "Neutral",

@@ -91,15 +91,8 @@
         </div>
     </nav>
 
-    <script type="text/javascript">
-        $(window).on('load',function(){
-            $('#myModal').modal('show');
-        });
-    </script>
-
     <!-- Modal to give user play instructions-->
-    <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog"
-        aria-labelledby="myModal" aria-hidden="true">
+    <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -109,7 +102,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    To begin the visual novel experience, simply choose your background using the dropdown, then click "Play Visual Novel". Just sit back and enjoy!
+                    To begin the visual novel experience, simply choose your background using the dropdown, then click
+                    "Play Visual Novel". Just sit back and enjoy!
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -334,5 +328,11 @@
         <p class="copyright text-center">Copyright &copy; by Aoibheann Maye. All rights reserved.</p>
     </footer>
 </body>
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('#myModal').modal('show');
+    });
+</script>
+
 
 </html>

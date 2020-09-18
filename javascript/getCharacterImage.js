@@ -27,7 +27,6 @@ function setCharacterImage() {
         console.log("There was an error in parsing the JSON file!!");
     }
 
-
     /**
      * This switch function take the variable charEmotion which finds the emotion stored in the table
      * for a particular rowIndex, and matches it to the corresponding image stored in JSON object

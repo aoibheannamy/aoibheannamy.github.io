@@ -17,12 +17,12 @@
     <script type="text/javascript" src="../javascript/getBackgrounds.js"></script>
     <script type="text/javascript" src="../javascript/getCharacterImage.js"></script>
     <script type="text/javascript" src="../javascript/getDialogue.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/websiteui.css">
@@ -178,7 +178,6 @@
             // set container to hold the canvas
             canvas.parent('sketch-holder');
             textAlign(CENTER, CENTER);
-
         }
 
         /**
@@ -187,9 +186,7 @@
         function draw() {
             // clear canvas after every draw call
             clear();
-            // speech bubble just needs called once for the whole game
-            // drawSpeechBubble();
-            // make sure the background image has been chosen before continuing
+            // make sure the background image has been loaded before continuing
             if (background(bg)) {
                 // draw a speech bubble
                 fill(290);
@@ -202,8 +199,6 @@
                 text(textWords, 330, 80, 200, 200);
                 fill(0, 0, 0);
                 text(charSpeaking, 430, 130);
-
-
             }
         }
 
@@ -216,21 +211,16 @@
          *  When play button is clicked, the visual novel will play - iterating through every row in the table 
          */
         function playVisualNovel() {
-            console.log("Play button clicked!");
-
             var rowCount = table.getDataCount();
             // load and insert image
             // call in function to set and load the correct image for character dependent on rowIndex 
             setCharacterImage();
-
-            console.log("Image: " + img);
             // call function to get dialogue from tabulator table for rowIndex 
             // - contains the data required for the drawWords() function
             readDialogue();
             // call drawWords() function to print to screen
             drawWords(width * 0.5);
-
-
+            // iterate through the frames
             rowIndex++;
             if (rowIndex < rowCount) {
                 setTimeout(playVisualNovel, 6000);
@@ -266,7 +256,6 @@
         <!-- ---------------------------------------------------------------- -->
         <script type="text/javascript">
             var local_data = esp_data;  //name inside json file -->	
-
             var table = new Tabulator("#example-table", {
                 index: "FrameNumber",
                 selectable: 1,
@@ -276,14 +265,7 @@
                 layout: "fitColumns",
                 placeholder: "No Data Available",
                 columns: [
-                    {
-                        title: "Frame", field: "FrameNumber", editor: "input", cellClick: function (e, cell) {
-                            var cellValue = cell.getValue();
-                            // console.log(cellValue);
-                            var data = cell.getData();
-                            //console.log("Data: "+data.toString());
-                        }
-                    },
+                    {title: "Frame", field: "FrameNumber", editor: "input"},
                     { title: "Character", field: "CharacterNumber", editor: "input" },
                     { title: "Niceness", field: "Agreeableness/Niceness", editor: "input" },
                     { title: "Confidence", field: "Confidence", editor: "input" },
@@ -306,13 +288,9 @@
                     rowIndex = row.getIndex();
                     // displays index
                     console.log("Row index: " + rowIndex);
-
                 }
             });
-
-
         </script>
-        <!-- -------------------------------------------------------------------- -->
     </div>
     </div>
     </div>

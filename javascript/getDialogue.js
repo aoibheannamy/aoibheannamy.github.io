@@ -15,14 +15,11 @@ function readDialogue() {
     // get their inflection
     var inflection = data[rowIndex].Inflection;
     
-
     if (charSpeak != 0) {
         charSpeaking = "Character " + charSpeak +" "+ inflection + ":";
     } else {
         charSpeaking = "No Character is speaking.";
     }
-
-
 }
 
 

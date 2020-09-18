@@ -80,10 +80,6 @@
 				legitimacy in their universe.
 				<a href="https://openpsychometrics.org/tests/characters/">Open-Source Psychometrics</a></div>
 			<div class="row">
-				<!--Add new row-->
-				<button id="reactivity-add" class="mybuttons">Add New Row</button>
-			</div>
-			<div class="row">
 				<!--Download options-->
 				<button id="download-csv" class="mybuttons">Download CSV</button>
 				<button id="download-json" class="mybuttons">Download JSON</button>
@@ -1456,12 +1452,6 @@
 			],
 
 		});
-
-		//add row to bottom of table on button click
-		document.getElementById("reactivity-add").addEventListener("click", function () {
-			table.addRow({});
-		});
-
 
 		//trigger download of data.csv file
 		document.getElementById("download-csv").addEventListener("click", function () {

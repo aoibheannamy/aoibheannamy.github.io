@@ -39,37 +39,10 @@
 
     <script type="text/javascript">
         //create table to hold the character appearances that were labelled via Amazon's mechanical Turk
-        //var local_data = charDetails;
-
-        var tabledata = [{
-	"numberOfCharacters": 1,
-	"Names": "Snatch1",
-	"blouse": null,
-	"complexion": "#ffdfc4",
-	"dress": null,
-	"earrings": null,
-	"eyeColour": "#182183",
-	"facialHair": null,
-	"gender": "m",
-	"glasses": null,
-	"hair": "balding",
-	"hairColour": "#706a13",
-	"hat": "cowboy",
-	"jacket": null,
-	"makeup": null,
-	"pants": "jeans",
-	"scar": null,
-	"shirt": "tshirt",
-	"shoes": null,
-	"skirt": null,
-	"tattoo": null,
-	"tie": null,
-	"vest": "vest"
-}]
-        //console.log("table data: " + local_data);
+        var local_data = charDetails;
+        console.log("table data: " + local_data);
         var table = new Tabulator("#example-table", {
-            
-            //data: local_data,
+            data: local_data,
             index: "numberOfCharacters",
             selectable: 1,
             pagination: "local",
@@ -106,7 +79,6 @@
                 },
 
             ],
-            
 
             // this function accesses the row which has been selected, or clicked
 
@@ -190,7 +162,7 @@
         for (var loop = 1; loop < 10; loop++) {
             table.addRow({ numberOfCharacters: loop }, false);
         }
-        table.setData(tabledata);
+        table.setData(local_data);
 
 
     </script>

@@ -21,7 +21,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": "vest"
+	"vest": "vest",
 }, {
 	"numberOfCharacters": 2,
 	"Names": "Snatch2",
@@ -45,7 +45,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 3,
 	"Names": "SpectacularNowFemale",
@@ -69,7 +69,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 4,
 	"Names": "SpectacularNowMale",
@@ -93,7 +93,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 5,
 	"Names": "GoodWillHuntingMatt",
@@ -117,7 +117,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 6,
 	"Names": "GoodWillHuntingRobin",
@@ -141,7 +141,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 7,
 	"Names": "TheBreakUpMale",
@@ -165,7 +165,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 8,
 	"Names": "TheBreakUpFemale",
@@ -189,7 +189,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 9,
 	"Names": "Joker",
@@ -213,7 +213,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": "neck",
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 10,
 	"Names": "Gangster3",
@@ -237,7 +237,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": null,
-	"vest": null
+	"vest": null,
 }, {
 	"numberOfCharacters": 11,
 	"Names": "Gangster1",
@@ -261,7 +261,7 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": "neck",
-	"vest": "vest"
+	"vest": "vest",
 }, {
 	"numberOfCharacters": 12,
 	"Names": "Gangster2",
@@ -285,5 +285,5 @@ var charDetails = [{
 	"skirt": null,
 	"tattoo": null,
 	"tie": "neck",
-	"vest": null
+	"vest": null,
 },]

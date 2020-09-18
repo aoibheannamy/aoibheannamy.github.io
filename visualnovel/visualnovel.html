@@ -194,10 +194,12 @@
                 ellipse(430, 150, 250, 160);
                 // declare image as loaded img
                 image(img, 0, height / 2, 3 * img.width / 4, 3 * img.height / 4);
-                // declare text fields
+                // declare text fields and set colour and size
                 fill(0, 0, 0);
+                textSize(20);
                 text(textWords, 330, 80, 200, 200);
                 fill(0, 0, 0);
+                textSize(16);
                 text(charSpeaking, 430, 130);
             }
         }
@@ -207,7 +209,7 @@
         /**
          * This function calls the functions to get the character images dependent on emotion
          * as well as to get the character's dialogue for rowIndex before slowly iterating
-         * throughout all the table rows, with a 7s delay between each frame
+         * throughout all the table rows, with a 6s delay between each frame
          *  When play button is clicked, the visual novel will play - iterating through every row in the table 
          */
         function playVisualNovel() {
@@ -218,33 +220,14 @@
             // call function to get dialogue from tabulator table for rowIndex 
             // - contains the data required for the drawWords() function
             readDialogue();
-            // call drawWords() function to print to screen
-            //drawWords(width * 0.5);
             // iterate through the frames
             rowIndex++;
             if (rowIndex < rowCount) {
                 setTimeout(playVisualNovel, 6000);
             } else {
-                textWords = ("Visual Novel finished for this scene!");
+                alert("Visual Novel finished for this scene!");
             }
         }
-
-
-
-        /*
-        * Function which draws the text fields
-        */
-        function drawWords() {
-            textSize(20);
-            text(textWords, 330, 80, 200, 200);
-            textSize(16);
-            text(charSpeaking, 430, 130);
-            // test output
-            console.log("Char Speaking: " + charSpeaking);
-            console.log("Text words:" + textWords);
-
-        }
-
 
     </script>
 

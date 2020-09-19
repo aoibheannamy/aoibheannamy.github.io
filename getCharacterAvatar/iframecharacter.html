@@ -95,9 +95,6 @@
         });
 
         table.replaceData(local_data);
-        for (var loop = 1; loop < 10; loop++) {
-            table.addRow({ numberOfCharacters: loop }, false);
-        }
 
         document.getElementById("generateAvatar").onclick = function () { generateAvatar() };
         document.getElementById("clearAvatar").onclick = function () { clearAvatar() };

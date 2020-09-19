@@ -42,6 +42,7 @@
     <script type="text/javascript">
         //create table to hold the character appearances that were labelled via Amazon's mechanical Turk
         var local_data = charDetails;
+        var rowIndex;
         console.log("table data: " + local_data);
         var table = new Tabulator("#example-table", {
             data: local_data,
@@ -85,8 +86,6 @@
             // this function accesses the row which has been selected, or clicked
 
             rowClick: function (e, row) {
-                // declare variables for row variables
-                var rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings;
                 // get index of row selected
                 rowIndex = row.getIndex();
                 // print index to console
@@ -95,61 +94,6 @@
                 var rowData = row.getData();
                 // print row data to console
                 console.log(rowData);
-
-                // split up row data into separate variables
-                // the following variables should always have a value
-                // need to add the prefixes before so that charactercreator.org can read them correctly!!
-                rowGender = "sex=" + row.getData().gender;
-                rowComplexion = "skinColor=" + row.getData().complexion;
-                rowEyeColour = "irisColor=" + row.getData().eyeColour;
-                rowHair = "hair=" + row.getData().hair;
-                rowHairColour = "hairColor=" + row.getData().hairColour;
-
-                // these variables are optional, so need the check the value is not null before setting to the corresponding variable
-
-                rowFacialHair = "facialhair=" + row.getData().facialHair;
-                rowShirt = "shirt=" + row.getData().shirt;
-                rowBlouse = "blouse=" + row.getData().blouse;
-                rowDress = "dress=" + row.getData().dress;
-                rowSkirt = "skirt=" + row.getData().skirt;
-                rowPants = "pants=" + row.getData().pants;
-                rowJacket = "jacket=" + row.getData().jacket;
-                rowTie = "tie=" + row.getData().tie;
-                rowVest = "vest=" + row.getData().vest;
-                rowGlasses = "glasses=" + row.getData().glasses;
-                rowShoes = "shoes=" + row.getData().shoes;
-                rowTattoos = "tatoo=" + row.getData().tattoos;
-                rowScars = "scar=" + row.getData().scars;
-                rowHat = "hat=" + row.getData().hat;
-                rowEarrings = "earings=" + row.getData().earrings;
-                rowMakeup = "makeup=" + row.getData().makeup;
-
-
-                // pass parameters into current parent URL to be transferred into iframe URL
-                var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];
-
-                // remove commas from array and replace with & instead through the join() method
-                parameterArray = parameterArray.join('&');
-
-                /**
-                 * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
-                 */
-                function generateAvatar() {
-                    var mainUrl = "https://aoibheannamy.github.io/getCharacterAvatar/charactercreator.html/";
-                    //var urlParams = new URLSearchParams(window.location.search);
-                    urlParams = parameterArray.toString();
-                    var ref = document.URL;
-
-                    var iframeUrl = mainUrl + '#' + urlParams;
-                    console.log(iframeUrl);
-                    document.getElementById('myiframe').src = iframeUrl;
-                }
-                /**
-                 * This function clears the iframe src so that another selection can be made.
-                 */
-                function clearAvatar() {
-                    document.getElementById('myiframe').src = "";
-                }
 
             }
 
@@ -163,6 +107,70 @@
 
         document.getElementById("generateAvatar").onclick = function () { generateAvatar() };
         document.getElementById("clearAvatar").onclick = function () { clearAvatar() };
+
+        /**
+         * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
+        */
+        function generateAvatar() {
+            myTable = Tabulator.prototype.findTable('#example-table')[0];
+            var data = myTable.getData();
+            // get the parameters
+            // split up row data into separate variables
+            // the following variables should always have a value
+            // need to add the prefixes before so that charactercreator.org can read them correctly!!
+            // declare variables for row variables
+            var rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings;
+            rowGender = "sex=" + data[rowIndex].gender;
+            rowComplexion = "skinColor=" + data[rowIndex].complexion;
+            rowEyeColour = "irisColor=" + data[rowIndex].eyeColour;
+            rowHair = "hair=" + data[rowIndex].hair;
+            rowHairColour = "hairColor=" + data[rowIndex].hairColour;
+
+            // these variables are optional, so need the check the value is not null before setting to the corresponding variable
+
+            rowFacialHair = "facialhair=" + data[rowIndex].facialHair;
+            rowShirt = "shirt=" + data[rowIndex].shirt;
+            rowBlouse = "blouse=" + data[rowIndex].blouse;
+            rowDress = "dress=" + data[rowIndex].dress;
+            rowSkirt = "skirt=" + data[rowIndex].skirt;
+            rowPants = "pants=" + data[rowIndex].pants;
+            rowJacket = "jacket=" + data[rowIndex].jacket;
+            rowTie = "tie=" + data[rowIndex].tie;
+            rowVest = "vest=" + data[rowIndex].vest;
+            rowGlasses = "glasses=" + data[rowIndex].glasses;
+            rowShoes = "shoes=" + data[rowIndex].shoes;
+            rowTattoos = "tatoo=" + data[rowIndex].tattoos;
+            rowScars = "scar=" + data[rowIndex].scars;
+            rowHat = "hat=" + data[rowIndex].hat;
+            rowEarrings = "earings=" + data[rowIndex].earrings;
+            rowMakeup = "makeup=" + data[rowIndex].makeup;
+
+
+            // pass parameters into current parent URL to be transferred into iframe URL
+            var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];
+
+            // remove commas from array and replace with & instead through the join() method
+            parameterArray = parameterArray.join('&');
+
+
+
+
+            var mainUrl = "https://aoibheannamy.github.io/getCharacterAvatar/charactercreator.html/";
+            //var urlParams = new URLSearchParams(window.location.search);
+            urlParams = parameterArray.toString();
+            var ref = document.URL;
+
+            var iframeUrl = mainUrl + '#' + urlParams;
+            console.log(iframeUrl);
+            document.getElementById('myiframe').src = iframeUrl;
+        }
+        /**
+        * This function clears the iframe src so that another selection can be made.
+        */
+        function clearAvatar() {
+            document.getElementById('myiframe').src = "";
+        }
+
 
 
 

@@ -33,8 +33,10 @@
     <!--Create div for the tabulator table-->
     <div id="example-table" style="width: 90%; margin-bottom: 30px;"></div>
     <!--Create buttons for interactivity between table and iframe-->
-    <button type="button" class="btn btn-info" id="generateAvatar" onclick="generateAvatar()">Generate Character Avatar!</button>
-    <button type="button" class="btn btn-info" id="clearAvatar" onclick="clearAvatar()">Clear Character Avatar Selection!</button>
+    <button type="button" class="btn btn-info" id="generateAvatar" onclick="generateAvatar()">Generate Character
+        Avatar!</button>
+    <button type="button" class="btn btn-info" id="clearAvatar" onclick="clearAvatar()">Clear Character Avatar
+        Selection!</button>
 
 
     <script type="text/javascript">
@@ -129,12 +131,6 @@
                 // remove commas from array and replace with & instead through the join() method
                 parameterArray = parameterArray.join('&');
 
-
-
-                document.getElementById("generateAvatar").onclick = function () { generateAvatar() };
-                document.getElementById("clearAvatar").onclick = function () { clearAvatar() };
-
-
                 /**
                  * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
                  */
@@ -164,7 +160,11 @@
         for (var loop = 1; loop < 10; loop++) {
             table.addRow({ numberOfCharacters: loop }, false);
         }
-    
+
+        document.getElementById("generateAvatar").onclick = function () { generateAvatar() };
+        document.getElementById("clearAvatar").onclick = function () { clearAvatar() };
+
+
 
     </script>
 

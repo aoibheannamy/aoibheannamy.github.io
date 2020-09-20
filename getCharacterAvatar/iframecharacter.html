@@ -20,6 +20,16 @@
     <link rel="stylesheet" href="../styles/websiteui.css">
     <script type="text/javascript" src="CharactersLabelledDetailsBest.json"></script>
 </head>
+<style>
+    body {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .avatarButton {
+        margin-bottom: 5%;
+    }
+</style>
 
 <body>
 
@@ -88,7 +98,8 @@
                 </div>
                 <div class="modal-body">
                     The JSON object with the labelled character appearances is preloaded into the table below. To
-                    generate the corresponding avatar images simply click the row you wish, and click Generate! To make
+                    generate the corresponding avatar images simply click the row you wish, and click Generate! Then all
+                    you have to do is click the hamburger icon to the right of the avatar, and choose Download! To make
                     another selection, press the Clear button before repeating the steps.
                 </div>
                 <div class="modal-footer">
@@ -109,9 +120,11 @@
     <!--Create div for the tabulator table-->
     <div id="example-table" style="width: 90%; margin-bottom: 30px;"></div>
     <!--Create buttons for interactivity between table and iframe-->
-    <button type="button" class="btn btn-info" id="generateAvatar" onclick="generateAvatar()">Generate Character
+    <button type="button" class="btn btn-info avatarButton" id="generateAvatar" onclick="generateAvatar()">Generate
+        Character
         Avatar!</button>
-    <button type="button" class="btn btn-info" id="clearAvatar" onclick="clearAvatar()">Clear Character Avatar
+    <button type="button" class="btn btn-info avatarButton" id="clearAvatar" onclick="clearAvatar()">Clear Character
+        Avatar
         Selection!</button>
 
 

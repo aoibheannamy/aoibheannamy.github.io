@@ -128,10 +128,63 @@
 
     <!--This div is to hold the canvas for the visual novel-->
     <div class="row">
-        <div id="sketch-holder">
+        <div class="col">
+            <div id="sketch-holder">
 
+            </div>
+        </div>
+        <div class="col">
+            <video height="80%" width="80%" id="video">
+                <source src="../video/TheDarkKnight-KilltheBatman.mkv">
+                </source>
+            </video>
         </div>
     </div>
+
+
+    <script>
+        // list of frames which correspond to the frames labelled for the visual novel
+        // the video will stop playing/pause for 3000ms at each frame so visual novel can link up       
+
+        var stopFrames = [40, 80, 120, 160, 200, 240, 280, 320, 360, 400, 440, 480, 520, 560, 600, 640, 680, 720, 760, 800, 840, 880, 920, 960, 1000, 1040, 1080, 1120, 1160, 1200, 1240, 1280, 1320, 1360, 1400, 1440];
+
+        var currentFrame = $('#currentFrame');
+        var video = VideoFrame({
+            id: 'video',
+            frameRate: 29.97,
+            callback: function (frame) {
+                if (stopFrames.includes(frame)) {
+                    stopVideoFor(2000);
+                }
+            }
+        });
+
+        function stopVideoFor(ms) {
+            video.video.pause();
+            video.stopListen();
+
+            setTimeout(() => {
+                video.video.play();
+                video.listen('frame');
+            }, ms);
+        }
+
+
+        function playVideo() {
+            if (video.video.paused) {
+                video.video.play();
+                video.listen('frame');
+            } else {
+                video.video.pause();
+                video.stopListen();
+                $("#play-button").html('Play');
+            }
+        }
+
+    </script>
+
+
+
 
     <!--This dropdown dictates which background image is used in the visual novel-->
     <div class="mybackgroundselect">
@@ -223,6 +276,8 @@
          */
         function playVisualNovel() {
             var rowCount = table.getDataCount();
+            // begin to play video alongside visual novel
+            playVideo();
             // load and insert image
             // call in function to set and load the correct image for character dependent on rowIndex 
             setCharacterImage();

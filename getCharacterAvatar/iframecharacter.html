@@ -52,25 +52,25 @@
                 { title: "Character", field: "numberOfCharacters", editor: "input" },
                 { title: "Name", field: "names", editor: "input" },
                 { title: "Blouse", field: "blouse", editor: "input", },
-                { title: "Complexion", field: "complexion", editor: "input",  },
-                { title: "Dress", field: "dress", editor: "input",  },
+                { title: "Complexion", field: "complexion", editor: "input", },
+                { title: "Dress", field: "dress", editor: "input", },
                 { title: "Earrings", field: "earrings", hozAlign: "center", editor: "input", },
                 { title: "Eye Colour", field: "eyeColour", editor: "input", },
-                { title: "Facial Hair", field: "facialHair", editor: "input",  },
+                { title: "Facial Hair", field: "facialHair", editor: "input", },
                 { title: "Gender", field: "gender", editor: "input", },
                 { title: "Glasses", field: "glasses", hozAlign: "right", editor: "input", },
-                { title: "Hair Style", field: "hair", editor: "input",  },
+                { title: "Hair Style", field: "hair", editor: "input", },
                 { title: "Hair Colour", field: "hairColour", editor: "input", },
                 { title: "Hat", field: "hat", hozAlign: "center", editor: "input", },
                 { title: "Jacket", field: "jacket", editor: "input", },
-                { title: "Makeup", field: "makeup", hozAlign: "center", editor: "input",  },
-                { title: "Trousers", field: "pants", editor: "input",  },
+                { title: "Makeup", field: "makeup", hozAlign: "center", editor: "input", },
+                { title: "Trousers", field: "pants", editor: "input", },
                 { title: "Scars", field: "scars", hozAlign: "center", editor: "input", },
-                { title: "Shirt", field: "shirt", editor: "input",  },
-                { title: "Shoes", field: "shoes", editor: "input",  },
-                { title: "Skirt", field: "skirt", editor: "input",  },
+                { title: "Shirt", field: "shirt", editor: "input", },
+                { title: "Shoes", field: "shoes", editor: "input", },
+                { title: "Skirt", field: "skirt", editor: "input", },
                 { title: "Tattoos", field: "tattoos", hozAlign: "center", editor: "input", },
-                { title: "Tie", field: "tie", editor: "input",  },
+                { title: "Tie", field: "tie", editor: "input", },
                 { title: "Vest", field: "vest", editor: "input", },
             ],
 
@@ -86,80 +86,74 @@
                 // print row data to console
                 console.log(rowData);
 
+                // split up row data into separate variables
+                // the following variables should always have a value
+                // need to add the prefixes before so that charactercreator.org can read them correctly!!
+                rowGender = "sex=" + row.getData().gender;
+                rowComplexion = "skinColor=" + row.getData().complexion;
+                rowEyeColour = "irisColor=" + row.getData().eyeColour;
+                rowHair = "hair=" + row.getData().hair;
+                rowHairColour = "hairColor=" + row.getData().hairColour;
+
+                // these variables are optional, so need the check the value is not null before setting to the corresponding variable
+
+                rowFacialHair = "facialhair=" + row.getData().facialHair;
+                rowShirt = "shirt=" + row.getData().shirt;
+                rowBlouse = "blouse=" + row.getData().blouse;
+                rowDress = "dress=" + row.getData().dress;
+                rowSkirt = "skirt=" + row.getData().skirt;
+                rowPants = "pants=" + row.getData().pants;
+                rowJacket = "jacket=" + row.getData().jacket;
+                rowTie = "tie=" + row.getData().tie;
+                rowVest = "vest=" + row.getData().vest;
+                rowGlasses = "glasses=" + row.getData().glasses;
+                rowShoes = "shoes=" + row.getData().shoes;
+                rowTattoos = "tatoo=" + row.getData().tattoos;
+                rowScars = "scar=" + row.getData().scars;
+                rowHat = "hat=" + row.getData().hat;
+                rowEarrings = "earings=" + row.getData().earrings;
+                rowMakeup = "makeup=" + row.getData().makeup;
+
+
+                // pass parameters into current parent URL to be transferred into iframe URL
+                var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];
+
+                // remove commas from array and replace with & instead through the join() method
+                parameterArray = parameterArray.join('&');
+
+                /**
+                 * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
+                 */
+                function generateAvatar() {
+
+
+
+                    var mainUrl = "https://aoibheannamy.github.io/getCharacterAvatar/charactercreator.html";
+                    //var urlParams = new URLSearchParams(window.location.search);
+                    urlParams = parameterArray.toString();
+                    var ref = document.URL;
+
+                    var iframeUrl = mainUrl + '#' + urlParams;
+                    console.log(iframeUrl);
+                    document.getElementById('myiframe').src = iframeUrl;
+                }
+                /**
+                 * This function clears the iframe src so that another selection can be made.
+                 */
+                function clearAvatar() {
+                    document.getElementById('myiframe').src = "";
+                }
+
             }
 
 
         });
-        // replace data 
+
         table.replaceData(local_data);
 
-        // generate onclick functions for buttons
+
         document.getElementById("generateAvatar").onclick = function () { generateAvatar() };
         document.getElementById("clearAvatar").onclick = function () { clearAvatar() };
-
-        /**
-         * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
-        */
-        function generateAvatar() {
-            myTable = Tabulator.prototype.findTable('#example-table')[0];
-            var data = myTable.getData();
-            // get the parameters
-            // split up row data into separate variables
-            // the following variables should always have a value
-            // need to add the prefixes before so that charactercreator.org can read them correctly!!
-            // declare variables for row variables
-            var rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings;
-            rowGender = "sex=" + data[rowIndex].gender;
-            rowComplexion = "skinColor=" + data[rowIndex].complexion;
-            rowEyeColour = "irisColor=" + data[rowIndex].eyeColour;
-            rowHair = "hair=" + data[rowIndex].hair;
-            rowHairColour = "hairColor=" + data[rowIndex].hairColour;
-
-            // these variables are optional, so need the check the value is not null before setting to the corresponding variable
-
-            rowFacialHair = "facialhair=" + data[rowIndex].facialHair;
-            rowShirt = "shirt=" + data[rowIndex].shirt;
-            rowBlouse = "blouse=" + data[rowIndex].blouse;
-            rowDress = "dress=" + data[rowIndex].dress;
-            rowSkirt = "skirt=" + data[rowIndex].skirt;
-            rowPants = "pants=" + data[rowIndex].pants;
-            rowJacket = "jacket=" + data[rowIndex].jacket;
-            rowTie = "tie=" + data[rowIndex].tie;
-            rowVest = "vest=" + data[rowIndex].vest;
-            rowGlasses = "glasses=" + data[rowIndex].glasses;
-            rowShoes = "shoes=" + data[rowIndex].shoes;
-            rowTattoos = "tatoo=" + data[rowIndex].tattoos;
-            rowScars = "scar=" + data[rowIndex].scars;
-            rowHat = "hat=" + data[rowIndex].hat;
-            rowEarrings = "earings=" + data[rowIndex].earrings;
-            rowMakeup = "makeup=" + data[rowIndex].makeup;
-
-
-            // pass parameters into current parent URL to be transferred into iframe URL
-            var parameterArray = [rowGender, rowComplexion, rowEyeColour, rowHair, rowHairColour, rowFacialHair, rowShirt, rowBlouse, rowDress, rowJacket, rowSkirt, rowPants, rowTie, rowVest, rowShoes, rowMakeup, rowScars, rowTattoos, rowGlasses, rowHat, rowEarrings];
-
-            // remove commas from array and replace with & instead through the join() method
-            parameterArray = parameterArray.join('&');
-
-
-
-
-            var mainUrl = "https://aoibheannamy.github.io/getCharacterAvatar/charactercreator.html";
-            //var urlParams = new URLSearchParams(window.location.search);
-            urlParams = parameterArray.toString();
-            var ref = document.URL;
-
-            var iframeUrl = mainUrl + '#' + urlParams;
-            console.log(iframeUrl);
-            document.getElementById('myiframe').src = iframeUrl;
-        }
-        /**
-        * This function clears the iframe src so that another selection can be made.
-        */
-        function clearAvatar() {
-            document.getElementById('myiframe').src = "";
-        }
-
 
 
 

@@ -143,6 +143,12 @@
                 // remove commas from array and replace with & instead through the join() method
                 parameterArray = parameterArray.join('&');
 
+                document.getElementById("generateAvatar").onclick = function () { generateAvatar() };
+                document.getElementById("clearAvatar").onclick = function () { clearAvatar() };
+
+
+
+
                 /**
                  * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
                  */
@@ -172,10 +178,6 @@
         });
 
         table.replaceData(local_data);
-
-
-        document.getElementById("generateAvatar").onclick = function () { generateAvatar() };
-        document.getElementById("clearAvatar").onclick = function () { clearAvatar() };
 
 
 

@@ -17,10 +17,64 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/websiteui.css">
     <script type="text/javascript" src="CharactersLabelledDetailsBest.json"></script>
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block">
+                <!-- hidden spacer to center brand on mobile --></span>
+            <a class='navbar-brand' href='../../index.html'>Scene to Visual Novel</a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class='nav-item'>
+                    <a class='nav-link' href='../index.html'>Home <span class='sr-only'>(current)</span></a>
+                </li>
+                <li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button'
+                        data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                        Personality Information
+                    </a>
+                    <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+                        <a class='dropdown-item' href='../personality/myersBriggsDoc.html'>Myers Briggs
+                            Description</a>
+                        <a class='dropdown-item ' href='../personality/heroVsVillain.html'>Heroes V. Villain
+                            Personalities</a>
+                        <a class='dropdown-item' href='../personality/goodvbadvambig.html'>Antagonist/Protagonist
+                            Database</a>
+                        <a class='dropdown-item' href='../personality/matchesFromOtherUniverses.html'>Personality
+                            Matches
+                            from other Universes</a>
+                        <a class='dropdown-item' href='../personality/gameOfThrones/gotHome.html'>Game of Thrones
+                            Universe</a>
+                        <a class='dropdown-item' href='../personality/harryPotter/HPHome.html'>Harry Potter Universe</a>
+                        <a class='dropdown-item' href='../personality/lordOTRings/LoTRHome.html'>Lord of the Rings
+                            Universe</a>
+                    </div>
+                </li>
+                <li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle active' href='#' id='navbarDropdownMenuLink' role='button'
+                        data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                        Visual Novel
+                    </a>
+                    <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+                        <a class='dropdown-item' href='../visualnovel/visualnovel.html'>Play Visual Novel</a>
+                        <a class='dropdown-item ' href='iframecharacter.html'>Generate Avatar Images</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
 
     <!-- Modal to give user play instructions-->
     <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
@@ -183,6 +237,23 @@
 
 
     </script>
+
+
+    <footer class="footer mt-auto py-3 myfooter">
+        <div class="container">
+            <span>
+                <h3>Scene to Visual Novel</h3>
+            </span>
+            <h5 class="text-muted">Links</h5>
+            <ul class="footer-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../visualnovel/visualnovel.html">Visual Novel</a></li>
+            </ul>
+
+        </div>
+
+        <p class="copyright text-center">Copyright &copy; by Aoibheann Maye. All rights reserved.</p>
+    </footer>
 
     <script type="text/javascript">
         $(window).on('load', function () {

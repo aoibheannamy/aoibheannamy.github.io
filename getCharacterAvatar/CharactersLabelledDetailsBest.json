@@ -203,7 +203,7 @@ var charDetails = [{
 		"gender": "m",
 		"glasses": null,
 		"hair": "manga",
-		"hairColour": "#1a1a1a",
+		"hairColour": "#006400",
 		"hat": null,
 		"jacket": "suit",
 		"makeup": null,

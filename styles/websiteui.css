@@ -168,7 +168,18 @@ footer {
     text-align: justify;
     color: white;
 }
-
+/*
+* styling for container on iframecharacter.html
+*/
+.mycontainer {
+    margin-left: 5%;
+}
+/*
+* styling for buttons on iframecharacter.html
+*/
+.avatarButton {
+    margin-bottom: 5%;
+}
 
 /*
 * styling for titles

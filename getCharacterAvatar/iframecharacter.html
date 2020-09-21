@@ -77,7 +77,7 @@
     </nav>
 
 
-    <!-- Modal to give user play instructions-->
+    <!-- Modal to give user instructions-->
     <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -99,8 +99,11 @@
             </div>
         </div>
     </div>
+
+    <!--use container to apply styling to page-->
     <div class="container mycontainer">
-        <!--Create iframe container -->
+
+        <!--Create iframe container for edited character creator -->
         <div class="embed-responsive embed-responsive-16by9"
             style="border: 1px solid rgba(0,0,0,.1); border-radius: 0.25rem; min-height: 400px;">
             <iframe id="myiframe" class="embed-responsive-item" src="" style="width: 100%; height: 400px;">
@@ -205,37 +208,32 @@
                     document.getElementById("generateAvatar").onclick = function () { generateAvatar() };
                     document.getElementById("clearAvatar").onclick = function () { clearAvatar() };
 
-
-
-
                     /**
                      * This function will, when the Generate Avatar button is clicked, reload the iframe to include the parameters 
                      */
                     function generateAvatar() {
-
-
-
+                        // set main url as that which is in the iframe
                         var mainUrl = "https://aoibheannamy.github.io/getCharacterAvatar/charactercreator.html";
-                        //var urlParams = new URLSearchParams(window.location.search);
-                        urlParams = parameterArray.toString();
-                        var ref = document.URL;
 
+                        // turn the parameter array into a string
+                        urlParams = parameterArray.toString();
+
+                        // put together mainURL, followed by a hash, with the urlParams
                         var iframeUrl = mainUrl + '#' + urlParams;
                         console.log(iframeUrl);
+                        // set the iframe's src as the iframeURL
                         document.getElementById('myiframe').src = iframeUrl;
                     }
+                    
                     /**
                      * This function clears the iframe src so that another selection can be made.
                      */
                     function clearAvatar() {
                         document.getElementById('myiframe').src = "";
                     }
-
                 }
-
-
             });
-
+            // replace the data to ensure the table is loaded correctly
             table.replaceData(local_data);
 
 

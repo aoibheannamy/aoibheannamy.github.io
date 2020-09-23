@@ -1,0 +1,2 @@
+# Female SVG 
+This folder contains all the edited and specifically chosen SVG files used for female avatars in the altered Character Creator pages - _characterCreatorTurk.html_ and _characterCreator.html_.

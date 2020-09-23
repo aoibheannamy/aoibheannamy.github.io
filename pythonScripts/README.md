@@ -1,0 +1,8 @@
+# Python Scripts Folder
+This folder contains all the python scripts utilised over the course of the project. All these scripts were ran from the virtual Flask environment created at the beginning of the project.
+* **convertToJson.py**: This script was used to grab the answers from a MTurk task result file, while excluding all the properties. It specifically chose columns which included the labelled results, before converting it into a JSON object. Easy to reuse, only requires the directory of spreadsheet to be updated and/or update the columns which need extracted.
+* **convertToJsonEasy.py**: This script was used to convert a simple spreadsheet, i.e. one where all columns needed to be used, into a JSON object. Easy to reuse, only requires the directory of spreadsheet to be updated.
+* **getFrames.py**: This script was used to convert all the videos in a folder into their respective frames images, which were saved with the frame number in their name. Easy to reuse, only requires the video folder directory to be changed or updated depending on what needs converted.
+* **numberOfFrames.py**: This script was used to figure out how many frames a specific video would have. Easy to reuse, only requires the video link to be changed.
+* **youtube.py**: This script was used to download videos/playlists from YouTube, specifically the MovieClips channel, for future labelling. Easy to reuse, only requires the video or playlist link to be changed.
+* **youtubeURL.py**: This script was used to gather all the URLs of videos within a playlist on YouTube.Easy to reuse, only requires the video or playlist link to be changed.

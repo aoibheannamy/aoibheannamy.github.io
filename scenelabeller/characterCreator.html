@@ -1,0 +1,126 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+    <div>
+        <strong>Instructions: </strong> 
+        <span>Click the link below to review the website and collect the following information if it's available.</span>
+        <p>We are conducting an academic study to parameterise film and tv characters physical appearances for the creation of visual novels.</p>
+        <p>We would like you to look at the following image of a film/tv character and use the link below to create a corresponding avatar to represent them.</p>
+        <p>Select the link below to complete the study.</p>
+        <ul>
+            <li>
+                Don't worry about changing the colours of the attire/accessories.
+            </li>
+            <li>
+                <strong>Please choose the closest approximation with the options provided:</strong> e.g. if the specific clothing option is not available, choose something that would portray the same effect i.e. casual wear would be a sweatshirt.
+            </li>
+            <li>
+                When you are happy with the representation of the character you have made, click the <strong>"Character Finished!"</strong> button and data will appear in the table below.
+            </li>
+            <li>
+               <strong>Copy <u>exactly</u> what is in the table, e.g. for eye colour it will appear like #552200.</strong>
+            </li>
+            <li>
+                Paste entries into the form in the corresponding places.
+            </li>
+            <li>
+                If any column in the table is blank, <strong>leave that part of the form blank.</strong>
+            </li>
+            <li>
+                Do <strong>not</strong> fill out the form with anything bar the data from the table.
+            </li>
+            
+        </ul>  
+        <div>
+            <div>
+                <p><strong>Link to the Website:</strong></p>
+
+                <!-- Your website URLs will be substituted for the "url" variable when you publish 
+                       a batch with an input file containing multiple website URLs -->
+                <a href="https://aoibheannamy.github.io/" target="_blank">https://aoibheannamy.github.io/c</a>
+                
+                <div class="container"><img src="${image_url}" style="width:80%;" /></div>
+
+            </div>
+
+            <div>
+               <p><strong>Gender:</strong></p>
+               <crowd-input name="gender" placeholder="e.g. m/f" />
+            </div>
+            <div>
+               <p><strong>Complexion:</strong></p>
+               <crowd-input name="complexion" placeholder="e.g. #a8756c" />
+            </div>
+            <div>
+               <p><strong>Eye colour:</strong></p>
+               <crowd-input name="eyeColour" placeholder="e.g. #552200" />
+            </div>
+            <div>
+               <p><strong>Hair colour:</strong></p>
+               <crowd-input name="hairColour" placeholder="e.g. #1a1a1a" />
+            </div>
+            <div>
+               <p><strong>Hair style:</strong></p>
+               <crowd-input name="hair" placeholder="e.g. down" />
+            </div>
+            <div>
+               <p><strong>Facial Hair:</strong></p>
+               <crowd-input name="facialHair" placeholder="e.g. goatee" />
+            </div>
+            <div>
+               <p><strong>Shirt:</strong></p>
+               <crowd-input name="shirt" placeholder="e.g. colar" />
+            </div>
+            <div>
+               <p><strong>Blouse:</strong></p>
+               <crowd-input name="blouse" placeholder="e.g. cherry" />
+            </div>
+            <div>
+               <p><strong>Dress:</strong></p>
+               <crowd-input name="dress" placeholder="e.g. accolade" />
+            </div>
+            <div>
+               <p><strong>Tie:</strong></p>
+               <crowd-input name="tie" placeholder="e.g. bow" />
+            </div>
+            <div>
+               <p><strong>Vest:</strong></p>
+               <crowd-input name="vest" placeholder="e.g. vest" />
+            </div>
+            <div>
+               <p><strong>Jacket:</strong></p>
+               <crowd-input name="jacket" placeholder="e.g. suit" />
+            </div>
+            <div>
+               <p><strong>Trousers:</strong></p>
+               <crowd-input name="pants" placeholder="e.g. suit" />
+            </div>
+            <div>
+               <p><strong>Skirt:</strong></p>
+               <crowd-input name="skirt" placeholder="e.g. school" />
+            </div>
+            <div>
+               <p><strong>Shoes:</strong></p>
+               <crowd-input name="shoes" placeholder="e.g. highheels" />
+            </div>
+
+            <div>
+                <p><strong>Distinctive Features:</strong></p>
+                <p><crowd-input name="glasses" placeholder="Glasses"></crowd-input></p>
+                <p><crowd-input name="hat" placeholder="Hat"></crowd-input></p>
+                <p><crowd-input name="earrings" placeholder="Earrings"></crowd-input></p>
+                <p><crowd-input name="makeup" placeholder="Makeup"></crowd-input></p>
+                <p><crowd-input name="tattoo" placeholder="Tattoo"></crowd-input></p>
+                <p><crowd-input name="scar" placeholder="Scar"></crowd-input></p>
+            </div>
+
+           
+        </div>
+    </div>
+</crowd-form>

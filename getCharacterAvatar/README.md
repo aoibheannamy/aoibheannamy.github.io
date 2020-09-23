@@ -1,0 +1,4 @@
+# Get Character Avatar Folder
+* **charactercreator.html**: This page is the adapted character creator page with reduced capabilities, such as no dropdowns and options except the download button.
+* **iframecharacter.html**: This page is used for users to create and save a character avatar image from the list of manually labelled character properties. A tabulator table reads in the below JSON object containing character appearances, and has an iframe linked to the above edited character creator page. The suer simply has to click on a row in the table and click generate to produce the image of the avatar, which can then be downloaded.
+* **CharactersLabelledDetailsBest.json**: This JSON object contains the best labelled details from a MTurk task, and is read into the page above. It can be edited easily simply by adding/removing characters in the JSON object, which when loaded, will appear in the tabulator table.

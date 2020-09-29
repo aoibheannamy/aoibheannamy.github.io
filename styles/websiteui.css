@@ -2,12 +2,15 @@
 * styling for body
 */
 
-html, body {
+body, html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: white;
     margin: 0;
     width: 100%;
     box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
 }
 
 /*

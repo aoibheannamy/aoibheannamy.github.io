@@ -1,98 +1,119 @@
 /*
 * styling for body
 */
-body {
+
+html, body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: white;  
+    background-color: white;
+    margin: 0;
+    width: 100%;
 }
+
 /*
 * styling for navbar links
 */
+
 li.nav-item {
     padding-left: 2%;
     padding-right: 2%;
 }
+
 /*
 * styling for navbar links
 */
-.navbar-expand-lg .navbar-nav .nav-link{
-    padding-right: 5%;
+.navbar{
+    width: 100%;
 }
+
 
 /*
 * styling for image banners
 */
-.imagebanner{
-    background-color:  white;
+
+.imagebanner {
+    background-color: white;
     background-image: url(../Images/film.png);
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 15%;
-    
 }
-.GOTimagebanner{
-    background-color:  white;
+
+.GOTimagebanner {
+    background-color: white;
     background-image: url(../Images/GOTImages/banner.png);
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 15%;
     height: 15%;
 }
-.LotRimagebanner{
-    background-color:  white;
+
+.LotRimagebanner {
+    background-color: white;
     background-image: url(../Images/LotRImages/LotRBanner.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 15%;
     height: 15%;
 }
-.HPimagebanner{
-    background-color:  white;
+
+.HPimagebanner {
+    background-color: white;
     background-image: url(../Images/HPImages/hpbanner.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 15%;
     height: 15%;
 }
+
 /*
 * styling for navbar
 */
+
 .mynavbar {
     background-color: #000000;
     margin-bottom: 1%;
     width: 100%;
     color: aliceblue;
     height: 5%;
-
 }
+
 /*
 * styling for navbar dropdowns
 */
+
 .navbar-nav .dropdown-menu .nav-item .dropdown {
     background-color: rgb(71, 71, 71);
     color: white;
 }
+
 /*
 * styling for navbar links
 */
-a.nav-link{
+
+a.nav-link {
     color: aliceblue;
 }
+
 /*
 * styling for intro class
 */
-.intro{
+
+.intro {
     text-align: center;
 }
+
 /*
 * styling for header 2
 */
-h2{
+
+h2 {
     padding-top: 3%;
 }
+
 /*
 * styling for active page on navbar
 */
+
 .nav-links a.active {
     border-bottom: 4px solid rgba(3, 22, 85, 0.849);
     color: rgba(3, 22, 85, 0.849);
@@ -101,6 +122,7 @@ h2{
 /*
 * styling for buttons
 */
+
 .mybuttons {
     background-color: rgba(79, 82, 92, 0.562);
     border: 2px solid rgba(48, 49, 53, 0.849);
@@ -108,59 +130,75 @@ h2{
     padding: 1%;
     border-radius: 15px;
 }
+
 /*
 * styling for links inside buttons with class mybuttons
 */
-a.mybuttons{
+
+a.mybuttons {
     color: white;
 }
+
 /*
 * styling for buttons when hovered over
 */
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #565858;
-    border-color: #19191a; /*set the color you want here*/
+    border-color: #19191a;
+    /*set the color you want here*/
 }
+
 /*
 * styling for page-body class
 */
+
 .page-body {
     margin-right: 5%;
     margin-left: 5%;
 }
+
 /*
 * styling for quotes
 */
-#myquote{
+
+#myquote {
     text-align: center;
 }
+
 /*
 * styling for all list (ul) elements
 */
-.mylist{
+
+.mylist {
     margin-left: 5%;
 }
+
 /*
 * styling for forms
 */
-.myform{
+
+.myform {
     border: thin solid rgb(88, 88, 88);
     padding: 5%;
     border-radius: 25px;
     background: rgb(201, 197, 197);
     margin: 5%;
 }
+
 /*
 * styling for figure
 */
-figure{
+
+figure {
     margin: 5%;
 }
 
 /*
 * styling for footer
 */
+
 footer {
     margin-top: 10%;
     padding-top: 10%;
@@ -168,15 +206,19 @@ footer {
     text-align: justify;
     color: white;
 }
+
 /*
 * styling for container on iframecharacter.html
 */
+
 .mycontainer {
     margin-left: 5%;
 }
+
 /*
 * styling for buttons on iframecharacter.html
 */
+
 .avatarButton {
     margin-bottom: 5%;
 }
@@ -184,24 +226,29 @@ footer {
 /*
 * styling for titles
 */
+
 .mytitles {
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 3%;
     color: rgba(41, 44, 53, 0.849);
 }
+
 /*
 * styling for titles on character personality pages
 */
+
 .mytitlesChar {
     margin-top: 2%;
     margin-bottom: 2%;
     text-align: center;
     color: rgba(41, 44, 53, 0.849);
 }
+
 /*
 * styling for main headers
 */
+
 .myheader {
     margin-top: 5%;
     margin-bottom: 6%;
@@ -210,10 +257,10 @@ footer {
     text-align: center;
 }
 
-
 /*
 * styling for paragraphs
 */
+
 .mypara {
     margin-bottom: 3%;
     margin-left: 5%;
@@ -224,43 +271,42 @@ footer {
 /*
 * styling for paragraphs on the home page
 */
-.myparahome{
+
+.myparahome {
     margin-bottom: 3%;
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
 }
 
-.first{
+.first {
     margin-top: 5%;
 }
-
 
 /*
 * styling for links on personality home pages
 */
-.personalityLink{
+
+.personalityLink {
     margin-left: 5%;
     color: teal;
 }
+
 /*
 * styling for tabulator tables for character personalities
 */
-#example-table1, #example-table2, #example-table3{
+
+#example-table1, #example-table2, #example-table3 {
     margin-top: 10%;
     margin: 10%;
 }
 
 #myHeading img {
-    float:left;
-    margin-right:10px;
-    margin-left: 5px ;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
     position: relative;
-    top:1px;
-  }
-
-
-
-@media screen and (max-width:1000px) {
-    
+    top: 1px;
 }
+
+@media screen and (max-width:1000px) {}

@@ -217,7 +217,8 @@
         /**
          * This function calls the functions to get the character images dependent on emotion
          * as well as to get the character's dialogue for rowIndex before slowly iterating
-         * throughout all the table rows, with a 6s delay between each frame
+         * throughout all the table rows, with a 6s delay between each frame -
+         * for the purpose of the video demonstration, the time interval will be decreased to 3 seconds.
          *  When play button is clicked, the visual novel will play - iterating through every row in the table 
          */
         function playVisualNovel() {
@@ -231,7 +232,7 @@
             // iterate through the frames
             rowIndex++;
             if (rowIndex < rowCount) {
-                setTimeout(playVisualNovel, 6000);
+                setTimeout(playVisualNovel, 3000);
             } else {
                 alert("Visual Novel finished for this scene!");
             }
